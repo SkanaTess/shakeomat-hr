@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ═══ SEO — HR default ═══ -->
+<title>Shake-O-Mat za Teretane | Pasivni Prihod uz Jednokratnu Investiciju</title>
+<meta name="description" content="Stavite protein shake automat u svoju teretanu i zaradite do €800/mj. 3.000€ jednokratno — mi servisiramo, vi zarađujete. Besplatna procjena lokacije u 48h."/>
+<meta name="keywords" content="protein shake automat teretana, vending machine fitness, pasivni prihod teretana, protein automat hrvatska, shake-o-mat teretana, fitness prihod"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://shakeomat.hr/gym_landing_page.html"/>
+<link rel="alternate" hreflang="hr" href="https://shakeomat.hr/gym_landing_page.html"/>
+<link rel="alternate" hreflang="en" href="https://shakeomat.hr/gym_landing_page.html"/>
+<link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/gym_landing_page.html"/>
+
+<!-- ═══ Open Graph ═══ -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://shakeomat.hr/gym_landing_page.html"/>
+<meta property="og:title" content="Shake-O-Mat — Pasivni Prihod za Vaš Fitness Centar"/>
+<meta property="og:description" content="Protein shake automat u vašoj teretani = do €800/mj dodatnog prihoda. 3.000€ jednokratno, mi servisiramo — vi zarađujete."/>
+<meta property="og:image" content="https://shakeomat.hr/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- ═══ Schema.org — B2B SaaS/Service ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shake-O-Mat — Protein Shake Vending za Fitness Centre",
+  "description": "Protein shake vending automat za teretane i fitness centre. Pasivni prihod bez investicije.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Shake-O-Mat",
+    "url": "https://shakeomat.hr",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "availableLanguage": ["Croatian", "English"]
+    }
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Croatia"
+  },
+  "serviceType": "Vending Machine Placement",
+  "offers": {
+    "@type": "Offer",
+    "price": "3000",
+    "priceCurrency": "EUR",
+    "description": "3.000€ jednokratna investicija, servisiranje i punjenje u našoj režiji. Prihod od revenue share modela (10–30% po prodaji)."
+  }
+}
+</script>
+
+<!-- ═══ FAQ Schema ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Koliko košta postavljanje automata u teretanu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teretana plaća jednokratno 3.000€ za postavljanje automata. Shake-O-Mat preuzima sve troškove servisiranja, punjenja i održavanja. Nakon toga teretana sudjeluje u revenue share modelu (10–30% od svake prodaje)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Koliko može teretana zaraditi od protein shake automata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prihod ovisi o prometu i tieru: Starter (do 200 članova) 10%, Growth (200-500 članova) 20%, Partner (500+ članova) 25% od svake prodaje. Uz +5% bonus za aktivno punjenje, ukupno do 30%. Veće teretane s 500+ članova mogu zaraditi do €800/mj — investicija od 3.000€ se vraća u 4–12 mjeseci."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tko puni i servisira automat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shake-O-Mat tim preuzima svo punjenje, servisiranje i čišćenje automata. Teretana nema nikakvih operativnih obaveza."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet"/>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:#050816;color:#f4f8ff;line-height:1.6;}
+
+/* ─── VARIABLES ─── */
+:root{
+  --cyan:#73edff;
+  --cyan-dim:rgba(115,237,255,0.12);
+  --cyan-border:rgba(115,237,255,0.28);
+  --orange:#FF6B35;
+  --orange-dim:rgba(255,107,53,0.12);
+  --orange-border:rgba(255,107,53,0.22);
+  --green:#4CAF50;
+  --green-dim:rgba(76,175,80,0.1);
+  --bg:#050816;
+  --bg2:#0b1230;
+  --bg3:#0d1640;
+  --border:rgba(122,177,255,0.18);
+  --text-muted:#7a8cb8;
+  --text-dim:#9aadd6;
+}
+
+/* ─── NAV ─── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  background:rgba(5,8,22,0.92);backdrop-filter:blur(12px);
+  border-bottom:2px solid var(--cyan);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:64px;
+}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;text-decoration:none;}
+.nav-logo span{color:#fff;}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.nav-cta{background:var(--cyan);color:#0a0a0a;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;padding:10px 22px;border-radius:4px;text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+.lang-toggle{display:flex;gap:4px;}
+.lang-btn{background:none;border:1px solid #333;color:#777;font-size:12px;font-weight:700;padding:6px 10px;border-radius:3px;cursor:pointer;letter-spacing:1px;transition:all .2s;}
+.lang-btn.active{background:var(--cyan);color:#0a0a0a;border-color:var(--cyan);}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:80px 40px 60px;
+  background:radial-gradient(ellipse at 70% 50%, rgba(115,237,255,0.07) 0%, transparent 60%),
+             radial-gradient(ellipse at 20% 80%, rgba(76,175,80,0.04) 0%, transparent 50%),
+             var(--bg);
+}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--cyan-dim);border:1px solid var(--cyan-border);border-radius:3px;padding:6px 14px;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:24px;}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cyan);flex-shrink:0;}
+.hero-h1{font-family:'Barlow Condensed',sans-serif;font-size:68px;font-weight:900;line-height:1.0;color:#fff;margin-bottom:20px;text-transform:uppercase;}
+.hero-h1 .accent{color:var(--cyan);}
+.hero-anchor{
+  background:rgba(76,175,80,0.08);border:1px solid rgba(76,175,80,0.25);border-radius:8px;
+  padding:20px 28px;margin-bottom:28px;display:flex;align-items:center;gap:20px;
+}
+.anchor-num{font-family:'Barlow Condensed',sans-serif;font-size:64px;font-weight:900;color:var(--green);line-height:1;}
+.anchor-label{font-size:15px;color:#ccc;line-height:1.5;}
+.anchor-label strong{color:#fff;display:block;font-size:17px;}
+.hero-sub{font-size:18px;color:var(--text-dim);margin-bottom:36px;line-height:1.7;max-width:500px;}
+.hero-sub strong{color:#fff;}
+.hero-cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.btn-primary{display:inline-block;background:var(--cyan);color:#0a0a0a;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;padding:18px 44px;border-radius:4px;text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:all .2s;border:none;cursor:pointer;}
+.btn-primary:hover{background:#ff8555;transform:translateY(-1px);}
+.btn-ghost{display:inline-block;border:2px solid #333;color:#aaa;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;padding:16px 32px;border-radius:4px;text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:all .2s;}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);}
+.hero-guarantee{font-size:12px;color:#555;margin-top:14px;}
+.hero-guarantee strong{color:#888;}
+
+/* ─── MACHINE CARD ─── */
+.machine-card{
+  background:linear-gradient(160deg,#141414,#0d0d0d);
+  border:1px solid #222;border-radius:16px;padding:40px 32px;
+  position:relative;overflow:hidden;
+}
+.machine-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),#ff9a35);}
+.machine-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;color:var(--cyan);text-transform:uppercase;margin-bottom:20px;}
+.machine-viz{
+  width:180px;height:280px;margin:0 auto 24px;
+  background:linear-gradient(160deg,#1c1c1c,#111);
+  border:1px solid #2a2a2a;border-radius:12px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:16px;gap:10px;position:relative;
+}
+.machine-viz::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--cyan);}
+.machine-screen{width:140px;height:80px;background:#0d160d;border:1px solid var(--cyan);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;}
+.machine-screen .earn{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--cyan);}
+.machine-screen .earn-label{font-size:9px;letter-spacing:2px;color:#666;text-transform:uppercase;}
+.machine-screen .earn-today{font-size:11px;color:var(--green);font-weight:700;}
+.machine-cans{display:flex;gap:5px;}
+.can{width:18px;height:38px;border-radius:3px;border:1px solid #333;}
+.can-1{background:#2a1008;}.can-2{background:#08142a;}.can-3{background:#14082a;}.can-4{background:#082a14;}.can-5{background:#2a2808;}.can-6{background:#082a2a;}.can-7{background:#2a0814;}
+.machine-nayax{font-size:10px;color:#555;display:flex;align-items:center;gap:6px;}
+.nayax-icon{width:24px;height:16px;background:#111;border:1px solid #2a3a2a;border-radius:2px;}
+.machine-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;}
+.mstat{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:14px;text-align:center;}
+.mstat-num{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--cyan);}
+.mstat-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+
+/* ─── SOCIAL PROOF STRIP ─── */
+.proof-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 40px;}
+.proof-strip-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:24px;}
+.proof-item{text-align:center;}
+.proof-num{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:#fff;line-height:1;}
+.proof-label{font-size:11px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
+.proof-divider{width:1px;height:40px;background:#222;}
+
+/* ─── SECTION BASE ─── */
+.section{padding:96px 40px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.s-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;}
+.s-title{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:900;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:16px;}
+.s-sub{font-size:17px;color:var(--text-dim);max-width:580px;line-height:1.7;margin-bottom:48px;}
+
+/* ─── HOW IT WORKS ─── */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.step-box{background:var(--bg2);padding:40px 32px;position:relative;}
+.step-box:first-child{border-radius:12px 0 0 12px;}
+.step-box:last-child{border-radius:0 12px 12px 0;}
+.step-box::after{content:'→';position:absolute;right:-16px;top:50%;transform:translateY(-50%);font-size:24px;color:#333;z-index:1;}
+.step-box:last-child::after{display:none;}
+.step-num{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;color:#1e1e1e;line-height:1;margin-bottom:8px;}
+.step-title{font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;}
+.step-text{font-size:15px;color:var(--text-muted);line-height:1.7;}
+.step-box.featured{background:rgba(115,237,255,0.05);border:1px solid var(--cyan-border);}
+.step-box.featured .step-num{color:rgba(115,237,255,0.15);}
+
+/* ─── WHAT YOU GET ─── */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.feature-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:12px;
+  padding:28px;transition:border-color .2s;
+}
+.feature-card:hover{border-color:var(--cyan);}
+.feature-icon{font-size:32px;margin-bottom:14px;}
+.feature-title{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;}
+.feature-text{font-size:14px;color:var(--text-muted);line-height:1.65;}
+.feature-tag{display:inline-block;margin-top:12px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);background:var(--green-dim);border:1px solid rgba(76,175,80,0.2);padding:4px 10px;border-radius:3px;}
+
+/* ─── CALCULATOR ─── */
+.calc-wrapper{
+  background:linear-gradient(135deg,#080e28,#050816);
+  border:1px solid var(--cyan-border);border-radius:16px;padding:48px;
+}
+.calc-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.calc-label{font-size:15px;font-weight:700;color:#fff;margin-bottom:10px;}
+.calc-slider{width:100%;-webkit-appearance:none;height:6px;border-radius:3px;background:#1e1e1e;outline:none;margin-bottom:8px;}
+.calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--cyan);cursor:pointer;border:2px solid #fff;}
+.calc-slider-labels{display:flex;justify-content:space-between;font-size:11px;color:#555;}
+.calc-current{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--cyan);margin-bottom:4px;}
+.calc-current-label{font-size:12px;color:var(--text-muted);}
+.calc-result{background:#050816;border:1px solid rgba(122,177,255,0.22);border-radius:12px;padding:32px;}
+.calc-result-label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;}
+.calc-result-num{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;color:var(--green);line-height:1;margin-bottom:4px;}
+.calc-result-unit{font-size:16px;color:var(--text-dim);margin-bottom:20px;}
+.calc-breakdown{list-style:none;}
+.calc-breakdown li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #111;font-size:14px;color:var(--text-dim);}
+.calc-breakdown li:last-child{border-bottom:none;font-weight:700;color:#fff;}
+.calc-breakdown li span:last-child{color:var(--cyan);}
+.calc-disclaimer{font-size:11px;color:#444;margin-top:16px;line-height:1.5;}
+
+/* ─── TESTIMONIALS ─── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.testi-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px;
+  position:relative;
+}
+.testi-card.featured{border-color:var(--cyan-border);background:rgba(115,237,255,0.04);}
+.testi-stars{color:var(--cyan);font-size:16px;margin-bottom:14px;letter-spacing:2px;}
+.testi-text{font-size:15px;color:#ccc;line-height:1.7;font-style:italic;margin-bottom:20px;}
+.testi-author{font-size:14px;font-weight:700;color:#fff;}
+.testi-gym{font-size:12px;color:var(--text-muted);}
+.testi-earnings{
+  position:absolute;top:24px;right:24px;
+  background:var(--green-dim);border:1px solid rgba(76,175,80,0.25);
+  border-radius:4px;padding:4px 10px;
+  font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;color:var(--green);
+}
+
+/* ─── FAQ ─── */
+.faq-list{max-width:760px;}
+.faq-item{border-bottom:1px solid var(--border);padding:24px 0;}
+.faq-q{font-size:18px;font-weight:700;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;}
+.faq-q::after{content:'+';font-family:'Barlow Condensed',sans-serif;font-size:24px;color:var(--cyan);flex-shrink:0;line-height:1;}
+.faq-q.open::after{content:'−';}
+.faq-a{font-size:15px;color:var(--text-dim);line-height:1.7;margin-top:12px;display:none;}
+.faq-a.open{display:block;}
+
+/* ─── CTA FINAL ─── */
+.cta-section{
+  background:radial-gradient(ellipse at center, rgba(115,237,255,0.07) 0%, transparent 70%),var(--bg2);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:96px 40px;
+}
+.cta-inner{max-width:640px;margin:0 auto;text-align:center;}
+.cta-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px;}
+.cta-title{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:16px;}
+.cta-sub{font-size:17px;color:var(--text-dim);margin-bottom:40px;line-height:1.7;}
+.contact-form{text-align:left;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
+.form-label{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#666;}
+.form-input{
+  background:#111;border:1px solid #2a2a2a;border-radius:6px;
+  padding:14px 16px;font-size:15px;color:#fff;font-family:'Barlow',sans-serif;
+  transition:border-color .2s;outline:none;width:100%;
+}
+.form-input:focus{border-color:var(--cyan);}
+.form-select{
+  background:#111;border:1px solid #2a2a2a;border-radius:6px;
+  padding:14px 16px;font-size:15px;color:#fff;font-family:'Barlow',sans-serif;
+  transition:border-color .2s;outline:none;width:100%;cursor:pointer;
+  -webkit-appearance:none;appearance:none;
+}
+.form-select:focus{border-color:var(--cyan);}
+.form-submit{
+  background:var(--cyan);color:#0a0a0a;
+  font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;
+  padding:20px;border-radius:6px;border:none;cursor:pointer;
+  width:100%;letter-spacing:1px;text-transform:uppercase;
+  transition:all .2s;margin-top:8px;
+}
+.form-submit:hover{background:#ff8555;transform:translateY(-1px);}
+.form-guarantee{font-size:12px;color:#555;text-align:center;margin-top:14px;line-height:1.6;}
+.form-guarantee strong{color:#888;}
+
+/* ─── FOOTER ─── */
+footer{padding:40px;border-top:1px solid #111;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;}
+.footer-logo span{color:#fff;}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{font-size:13px;color:#555;text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--cyan);}
+.footer-copy{font-size:12px;color:#333;}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .machine-card{display:none;}
+  .steps-grid{grid-template-columns:1fr;}
+  .step-box::after{display:none;}
+  .step-box:first-child,.step-box:last-child{border-radius:12px;}
+  .features-grid{grid-template-columns:1fr 1fr;}
+  .calc-top{grid-template-columns:1fr;}
+  .testi-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .hero-h1{font-size:44px;}
+  .s-title{font-size:36px;}
+  .cta-title{font-size:40px;}
+  .proof-divider{display:none;}
+  footer{flex-direction:column;text-align:center;}
+  .footer-links{justify-content:center;}
+}
+@media(max-width:600px){
+  .nav{padding:0 20px;}
+  .section{padding:64px 20px;}
+  .hero{padding:80px 20px 48px;}
+  .cta-section{padding:64px 20px;}
+  .proof-strip{padding:24px 20px;}
+  footer{padding:32px 20px;}
+  .features-grid{grid-template-columns:1fr;}
+}
+
+/* ─── MAINTENANCE TOGGLE BUTTONS ─── */
+.maint-btn{
+  flex:1;background:#111;border:1px solid #2a2a2a;border-radius:6px;
+  color:#777;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;padding:12px 16px;cursor:pointer;
+  transition:all .2s;text-align:center;
+}
+.maint-btn.maint-active{background:rgba(76,175,80,0.1);border-color:var(--green);color:var(--green);}
+.maint-btn:hover:not(.maint-active){border-color:#444;color:#aaa;}
+
+/* ─── TIER CARDS ─── */
+.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;}
+.tier-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative;}
+.tier-card.featured{border:2px solid var(--cyan-border);}
+.tier-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--cyan);color:#0a0a0a;font-size:10px;font-weight:900;letter-spacing:2px;padding:4px 12px;border-radius:20px;text-transform:uppercase;white-space:nowrap;}
+.tier-pct{font-family:'Barlow Condensed',sans-serif;font-size:60px;font-weight:900;line-height:1;margin-bottom:4px;}
+.tier-label{font-size:13px;color:var(--text-dim);margin-bottom:16px;}
+.tier-info{font-size:12px;color:var(--text-muted);line-height:1.6;padding-top:16px;border-top:1px solid #1e1e1e;}
+.tier-card.featured .tier-info{border-top-color:var(--cyan-border);}
+
+@media(max-width:900px){.tier-grid{grid-template-columns:1fr;}}
+
+/* ─── LANG HIDDEN — JS handles this, CSS is fallback only ─── */
+[lang-en]{display:none;}
+</style>
+</head>
+<body id="top">
+
+<!-- ═══════════════════════════════════════════
+     NAV
+════════════════════════════════════════════ -->
+<nav class="nav">
+  <a href="https://shakeomat.hr" class="nav-logo">Shake-O-<span>Mat</span></a>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('hr')" id="btn-hr">HR</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+    <a href="#kontakt" class="nav-cta">
+      <span lang-hr>Besplatna Procjena</span>
+      <span lang-en style="display:none;">Free Assessment</span>
+    </a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span lang-hr>Za Teretane &amp; Fitness Centre</span>
+        <span lang-en>For Gyms &amp; Fitness Centres</span>
+      </div>
+
+      <div class="hero-anchor" style="margin-bottom:20px;">
+        <div class="anchor-num">€800</div>
+        <div class="anchor-label">
+          <strong lang-hr>Maksimalni mjesečni prihod po automatu</strong>
+          <strong lang-en style="display:none;">Maximum monthly revenue per machine</strong>
+          <span lang-hr>Za fitness centre s 500+ aktivnih članova (Partner tier + bonus). Jednokratna investicija: <strong style="color:#fff;">3.000€</strong>.</span>
+          <span lang-en>For gyms with 500+ active members (Partner tier + bonus). One-time investment: <strong style="color:#fff;">€3,000</strong>.</span>
+        </div>
+      </div>
+
+      <h1 class="hero-h1" style="margin-bottom:12px;">
+        <span lang-hr>Vaša Teretana.<br/>Novi Izvor<br/><span class="accent">Prihoda.</span></span>
+        <span lang-en>Your Gym.<br/>A New Source<br/><span class="accent">Of Revenue.</span></span>
+      </h1>
+
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:24px;">
+        <span lang-hr>Mi donosimo. Vi zarađujete.</span>
+        <span lang-en style="display:none;">We bring it. You earn.</span>
+      </p>
+
+      <p class="hero-sub">
+        <span lang-hr>Standardni ponuđači plaćaju teretanama <strong>10–15% prihoda</strong> od automata. Shake-O-Mat nudi do <strong style="color:var(--green);">25% — plus 5% bonusa</strong> za aktivne partnere koji preuzimaju punjenje. Model: <strong>3.000€ jednokratno</strong> — servis i punjenje naš trošak, prihod vaš.</span>
+        <span lang-en>Standard providers pay gyms <strong>10–15% of revenue</strong>. Shake-O-Mat offers up to <strong style="color:var(--green);">25% — plus 5% bonus</strong> for active partners. Model: <strong>€3,000 one-time</strong> — service and restocking our cost, revenue yours.</span>
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#kontakt" class="btn-primary">
+          <span lang-hr>Vidi koliko zarađuje moja teretana</span>
+          <span lang-en>See my gym's earning potential</span>
+        </a>
+        <a href="#kako-radi" class="btn-ghost">
+          <span lang-hr>Kako Funkcionira</span>
+          <span lang-en>How It Works</span>
+        </a>
+      </div>
+      <p class="hero-guarantee">
+        <span lang-hr><strong>Besplatna procjena lokacije</strong> u roku 48h — tek tada odlučujete.</span>
+        <span lang-en><strong>Free location assessment</strong> within 48h — then you decide.</span>
+      </p>
+    </div>
+
+    <div class="machine-card">
+      <div class="machine-title">
+        <span lang-hr>JK91 Protein Shake Automat</span>
+        <span lang-en>JK91 Protein Shake Machine</span>
+      </div>
+      <div class="machine-viz">
+        <div class="machine-screen">
+          <div class="earn">€47</div>
+          <div class="earn-label lang-hr">danas zarada</div>
+          <div class="earn-label lang-en" style="display:none;">today's earnings</div>
+          <div class="earn-today">+12% vs jučer</div>
+        </div>
+        <div class="machine-cans">
+          <div class="can can-1"></div><div class="can can-2"></div><div class="can can-3"></div>
+          <div class="can can-4"></div><div class="can can-5"></div><div class="can can-6"></div>
+          <div class="can can-7"></div>
+        </div>
+        <div class="machine-nayax">
+          <div class="nayax-icon"></div>
+          <span>Nayax contactless</span>
+        </div>
+      </div>
+      <div class="machine-stats">
+        <div class="mstat">
+          <div class="mstat-num">20+</div>
+          <div class="mstat-label lang-hr">Recepata</div>
+          <div class="mstat-label lang-en" style="display:none;">Recipes</div>
+        </div>
+        <div class="mstat">
+          <div class="mstat-num">27"</div>
+          <div class="mstat-label lang-hr">Touch ekran</div>
+          <div class="mstat-label lang-en" style="display:none;">Touch screen</div>
+        </div>
+        <div class="mstat">
+          <div class="mstat-num">4G</div>
+          <div class="mstat-label lang-hr">Cloud nadzor</div>
+          <div class="mstat-label lang-en" style="display:none;">Cloud monitoring</div>
+        </div>
+        <div class="mstat">
+          <div class="mstat-num" style="font-size:20px;">3.000€</div>
+          <div class="mstat-label lang-hr">Jednokratno</div>
+          <div class="mstat-label lang-en" style="display:none;">One-time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SOCIAL PROOF STRIP
+════════════════════════════════════════════ -->
+<div class="proof-strip">
+  <div class="proof-strip-inner">
+    <div class="proof-item">
+      <div class="proof-num">70+</div>
+      <div class="proof-label lang-hr">Recepata dostupno</div>
+      <div class="proof-label lang-en" style="display:none;">Available recipes</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num">48h</div>
+      <div class="proof-label lang-hr">Do procjene lokacije</div>
+      <div class="proof-label lang-en" style="display:none;">To location assessment</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num" style="font-size:28px;">3.000€</div>
+      <div class="proof-label lang-hr">Jednokratna investicija</div>
+      <div class="proof-label lang-en" style="display:none;">One-time investment</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num">CE</div>
+      <div class="proof-label lang-hr">EU certificiran</div>
+      <div class="proof-label lang-en" style="display:none;">EU certified</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num">12mj</div>
+      <div class="proof-label lang-hr">Jamstvo opreme</div>
+      <div class="proof-label lang-en" style="display:none;">Equipment warranty</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════ -->
+<section class="section" id="kako-radi">
+  <div class="section-inner">
+    <p class="s-eyebrow lang-hr">Proces</p>
+    <p class="s-eyebrow lang-en" style="display:none;">Process</p>
+    <h2 class="s-title lang-hr">Kako Funkcionira</h2>
+    <h2 class="s-title lang-en" style="display:none;">How It Works</h2>
+    <p class="s-sub lang-hr">Tri koraka — i prihod počinje teći. 3.000€ jednokratno, sve ostalo naš posao.</p>
+    <p class="s-sub lang-en" style="display:none;">Three steps — and revenue starts flowing. €3,000 one-time, everything else our job.</p>
+
+    <div class="steps-grid">
+      <div class="step-box">
+        <div class="step-num">01</div>
+        <div class="step-title lang-hr">Besplatna Procjena</div>
+        <div class="step-title lang-en" style="display:none;">Free Assessment</div>
+        <p class="step-text lang-hr">Kontaktirate nas, dolazimo na lokaciju u 48h. Procjenjujemo promet, lociramo optimalno mjesto za automat i prikazujemo projekciju prihoda za vaš fitness centar.</p>
+        <p class="step-text lang-en" style="display:none;">Contact us, we visit your location within 48h. We assess foot traffic, find the optimal placement, and show you a revenue projection tailored to your gym.</p>
+      </div>
+      <div class="step-box featured">
+        <div class="step-num">02</div>
+        <div class="step-title lang-hr">3.000€ — Automat Vaš</div>
+        <div class="step-title lang-en" style="display:none;">€3,000 — Machine Yours</div>
+        <p class="step-text lang-hr">Teretana plaća jednokratno 3.000€ za postavljanje i konfiguraciju automata. Shake-O-Mat preuzima sve troškove servisiranja, punjenja i logistike. Automat može biti brendiran vašim logom.</p>
+        <p class="step-text lang-en" style="display:none;">The gym pays a one-time €3,000 for installation and configuration. Shake-O-Mat covers all servicing, restocking, and logistics costs. The machine can be branded with your logo.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">03</div>
+        <div class="step-title lang-hr">Zarađujete Pasivno</div>
+        <div class="step-title lang-en" style="display:none;">You Earn Passively</div>
+        <p class="step-text lang-hr">Svaki shake koji se proda donosi vam udio. Mi punimo, servisiramo i čistimo. Vi dobivate mjesečni obračun direktno na račun — bez papirologije.</p>
+        <p class="step-text lang-en" style="display:none;">Every shake sold earns you a share. We restock, service, and clean. You receive a monthly payment directly to your account — no paperwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     REVENUE TIER MODEL
+════════════════════════════════════════════ -->
+<section class="section" id="model-prihoda" style="background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <p class="s-eyebrow lang-hr">Model Prihoda</p>
+    <p class="s-eyebrow lang-en" style="display:none;">Revenue Model</p>
+    <h2 class="s-title lang-hr">Vi Birate Koliko Zarađujete</h2>
+    <h2 class="s-title lang-en" style="display:none;">You Choose How Much You Earn</h2>
+    <p class="s-sub lang-hr">Tri razine prihoda — ovisno o prometu vaše teretane. <strong style="color:#fff;">Plus 5% bonusa</strong> ako vi preuzimate punjenje i održavanje.</p>
+    <p class="s-sub lang-en" style="display:none;margin-bottom:48px;">Three revenue tiers — based on your gym's traffic. <strong style="color:#fff;">Plus 5% bonus</strong> if you handle restocking and maintenance.</p>
+
+    <!-- Competitor anchor -->
+    <div style="background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.2);border-radius:8px;padding:16px 24px;margin-bottom:36px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);flex-shrink:0;" class="lang-hr">Usporedba s tržištem</div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);flex-shrink:0;display:none;" class="lang-en">Market comparison</div>
+      <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:12px;color:#666;margin-bottom:2px;" class="lang-hr">Standardni ponuđači</div>
+          <div style="font-size:12px;color:#666;margin-bottom:2px;display:none;" class="lang-en">Standard providers</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:#444;text-decoration:line-through;">10–15%</div>
+        </div>
+        <div style="font-size:22px;color:#333;">→</div>
+        <div>
+          <div style="font-size:12px;color:var(--cyan);margin-bottom:2px;" class="lang-hr">Shake-O-Mat partneri</div>
+          <div style="font-size:12px;color:var(--cyan);margin-bottom:2px;display:none;" class="lang-en">Shake-O-Mat partners</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--green);">do 30%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 tier cards -->
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;">Starter</div>
+        <div class="tier-pct" style="color:#fff;">10%</div>
+        <div class="tier-label lang-hr">od svake prodaje</div>
+        <div class="tier-label lang-en" style="display:none;">of every sale</div>
+        <div class="tier-info lang-hr">Do 200 aktivnih članova<br/>Mi punimo i servisiramo<br/>Idealno za manje teretane</div>
+        <div class="tier-info lang-en" style="display:none;">Up to 200 active members<br/>We restock &amp; service<br/>Ideal for smaller gyms</div>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-badge lang-hr">Najpopularnije</div>
+        <div class="tier-badge lang-en" style="display:none;">Most Popular</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;">Growth</div>
+        <div class="tier-pct" style="color:var(--cyan);">20%</div>
+        <div class="tier-label lang-hr">od svake prodaje</div>
+        <div class="tier-label lang-en" style="display:none;">of every sale</div>
+        <div class="tier-info lang-hr" style="border-top-color:var(--cyan-border);">200–500 aktivnih članova<br/>Mi punimo i servisiramo<br/>Prosječni fitness centar</div>
+        <div class="tier-info lang-en" style="display:none;border-top-color:var(--cyan-border);">200–500 active members<br/>We restock &amp; service<br/>Average fitness centre</div>
+      </div>
+      <div class="tier-card">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:12px;">Partner</div>
+        <div class="tier-pct" style="color:var(--green);">25%</div>
+        <div class="tier-label lang-hr">od svake prodaje</div>
+        <div class="tier-label lang-en" style="display:none;">of every sale</div>
+        <div class="tier-info lang-hr">500+ aktivnih članova<br/>Mi punimo i servisiramo<br/>Veliki fitness centri</div>
+        <div class="tier-info lang-en" style="display:none;">500+ active members<br/>We restock &amp; service<br/>Large fitness centres</div>
+      </div>
+    </div>
+
+    <!-- +5% maintenance bonus -->
+    <div style="background:rgba(76,175,80,0.06);border:1px solid rgba(76,175,80,0.22);border-radius:12px;padding:24px 28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+      <div style="background:var(--green);color:#0a0a0a;font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;padding:12px 20px;border-radius:8px;flex-shrink:0;line-height:1;">+5%</div>
+      <div>
+        <div style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;" class="lang-hr">Bonus za aktivno partnerstvo</div>
+        <div style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;display:none;" class="lang-en">Active Partnership Bonus</div>
+        <div style="font-size:14px;color:var(--text-dim);line-height:1.6;" class="lang-hr">Ako vaše osoblje preuzima punjenje i redovno održavanje automata, dobivate dodatnih <strong style="color:#fff;">+5%</strong> na vaš tier — što znači do <strong style="color:var(--green);">30% od svake prodaje</strong>. Vi birate razinu angažmana, vi birate zaradu.</div>
+        <div style="font-size:14px;color:var(--text-dim);line-height:1.6;display:none;" class="lang-en">If your staff handles restocking and regular maintenance, you get an additional <strong style="color:#fff;">+5%</strong> on your tier — up to <strong style="color:var(--green);">30% of every sale</strong>. You choose your engagement level, you choose your earnings.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     REVENUE CALCULATOR
+════════════════════════════════════════════ -->
+<section class="section" id="kalkulator" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <p class="s-eyebrow lang-hr">Kalkulator Prihoda</p>
+    <p class="s-eyebrow lang-en" style="display:none;">Revenue Calculator</p>
+    <h2 class="s-title lang-hr">Koliko Može Zaraditi Vaš Fitness?</h2>
+    <h2 class="s-title lang-en" style="display:none;">How Much Can Your Gym Earn?</h2>
+
+    <div class="calc-wrapper">
+      <div class="calc-top">
+        <div>
+          <div class="calc-label lang-hr">Broj aktivnih članova:</div>
+          <div class="calc-label lang-en" style="display:none;">Number of active members:</div>
+          <div class="calc-current" id="membersDisplay">150</div>
+          <div class="calc-current-label lang-hr">članova</div>
+          <div class="calc-current-label lang-en" style="display:none;">members</div>
+          <input type="range" class="calc-slider" id="membersSlider" min="50" max="1000" step="50" value="150" oninput="updateCalc()"/>
+          <div class="calc-slider-labels"><span>50</span><span>500</span><span>1000+</span></div>
+
+          <div style="margin-top:32px;">
+            <div class="calc-label lang-hr">Broj treninga/dan:</div>
+            <div class="calc-label lang-en" style="display:none;">Training days/month avg:</div>
+            <div class="calc-current" id="visitsDisplay">3.5</div>
+            <div class="calc-current-label lang-hr">posjeta tjedno po članu</div>
+            <div class="calc-current-label lang-en" style="display:none;">weekly visits per member</div>
+            <input type="range" class="calc-slider" id="visitsSlider" min="1" max="6" step="0.5" value="3.5" oninput="updateCalc()"/>
+            <div class="calc-slider-labels"><span>1x</span><span>3x</span><span>6x</span></div>
+          </div>
+
+          <div style="margin-top:28px;">
+            <div class="calc-label lang-hr">Tko puni i servisira automat?</div>
+            <div class="calc-label lang-en" style="display:none;">Who handles restocking &amp; service?</div>
+            <div style="display:flex;gap:10px;margin-top:10px;">
+              <button onclick="setMaint('mi')" id="maint-mi" class="maint-btn maint-active">
+                <span lang-hr>Shake-O-Mat puni</span>
+                <span lang-en style="display:none;">Shake-O-Mat restocks</span>
+              </button>
+              <button onclick="setMaint('vi')" id="maint-vi" class="maint-btn">
+                <span lang-hr>Vi punite (+5%)</span>
+                <span lang-en style="display:none;">You restock (+5%)</span>
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-top:20px;padding:14px 18px;background:rgba(76,175,80,0.06);border:1px solid rgba(76,175,80,0.2);border-radius:8px;">
+            <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;" class="lang-hr">Vaš tier i udio</div>
+            <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;display:none;" class="lang-en">Your tier &amp; share</div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:900;color:var(--green);"><span id="calcTierName">Starter</span> — <span id="calcSharePct">10</span>%</div>
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <div class="calc-result-label lang-hr">PROCIJENJENI MJESEČNI PRIHOD</div>
+          <div class="calc-result-label lang-en" style="display:none;">ESTIMATED MONTHLY REVENUE</div>
+          <div class="calc-result-num" id="calcResult">€370</div>
+          <div class="calc-result-unit lang-hr">za vaš fitness centar</div>
+          <div class="calc-result-unit lang-en" style="display:none;">for your gym</div>
+          <ul class="calc-breakdown">
+            <li>
+              <span lang-hr>Mjesečnih posjeta:</span>
+              <span lang-en>Monthly visits:</span>
+              <span id="calcVisits">2.600</span>
+            </li>
+            <li>
+              <span lang-hr>Procjena konverzije:</span>
+              <span lang-en>Estimated conversion:</span>
+              <span>8%</span>
+            </li>
+            <li>
+              <span lang-hr>Prodanih shakeova:</span>
+              <span lang-en>Shakes sold:</span>
+              <span id="calcShakes">208</span>
+            </li>
+            <li>
+              <span lang-hr>Cijena shaka:</span>
+              <span lang-en>Shake price:</span>
+              <span>€3,50</span>
+            </li>
+            <li>
+              <span lang-hr>Vaš udio (<span id="calcSharePctBreak">10</span>% — <span id="calcTierBreak">Starter</span>):</span>
+              <span lang-en>Your share (<span id="calcSharePctBreakEn">10</span>% — <span id="calcTierBreakEn">Starter</span>):</span>
+              <span id="calcShare" style="color:var(--green);">€—</span>
+            </li>
+            <li>
+              <span lang-hr>Povrat investicije (3.000€):</span>
+              <span lang-en>Investment payback (€3,000):</span>
+              <span id="calcRoi" style="color:var(--cyan);">— mj.</span>
+            </li>
+          </ul>
+          <p class="calc-disclaimer lang-hr">Procjena bazirana na industrijskim prosjekima (konverzija 8%, izvor: NAMA 2024). Udio se određuje prema tieru (Starter 10% / Growth 20% / Partner 25%) + 5% ako preuzimate punjenje. Jednokratna investicija: 3.000€.</p>
+          <p class="calc-disclaimer lang-en" style="display:none;">Estimate based on industry averages (8% conversion, source: NAMA 2024). Share determined by tier (Starter 10% / Growth 20% / Partner 25%) + 5% if you handle restocking. One-time investment: €3,000.</p>
+        </div>
+      </div>
+      <!-- CTA directly below calculator — intent signal moment -->
+      <div style="text-align:center;margin-top:32px;padding-top:32px;border-top:1px solid #1e1e1e;">
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;" class="lang-hr">Vidjeli ste potencijal. Sljedeći korak je besplatna procjena vaše lokacije.</p>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;display:none;" class="lang-en">You've seen the potential. Next step is a free location assessment.</p>
+        <a href="#kontakt" class="btn-primary lang-hr">Zakažite Besplatnu Procjenu →</a>
+        <a href="#kontakt" class="btn-primary lang-en" style="display:none;">Schedule Free Assessment →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     WHAT YOU GET
+════════════════════════════════════════════ -->
+<section class="section" id="sto-dobivate">
+  <div class="section-inner">
+    <p class="s-eyebrow lang-hr">Što Je Uključeno</p>
+    <p class="s-eyebrow lang-en" style="display:none;">What's Included</p>
+    <h2 class="s-title lang-hr">Što Dobivate Za 3.000€</h2>
+    <h2 class="s-title lang-en" style="display:none;">What You Get For €3,000</h2>
+    <p class="s-sub lang-hr">Shake-O-Mat partnerstvo uključuje kompletnu opremu, servis i logistiku — sve osim prihoda, koji je vaš.</p>
+    <p class="s-sub lang-en" style="display:none;">The Shake-O-Mat partnership includes complete equipment, service, and logistics — everything except the revenue, which is yours.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-title lang-hr">JK91 Automat — Vaš Za 3.000€</div>
+        <div class="feature-title lang-en" style="display:none;">JK91 Machine — Yours for €3,000</div>
+        <p class="feature-text lang-hr">27" touch screen, Android OS, WiFi/4G, 7 kanistera (4L svaki), Nayax card reader. Tržišna vrijednost opreme: €5.000+. Vi plaćate: 3.000€ jednokratno.</p>
+        <p class="feature-text lang-en" style="display:none;">27" touch screen, Android OS, WiFi/4G, 7 canisters (4L each), Nayax card reader. Market value: €5,000+. You pay: €3,000 one-time.</p>
+        <span class="feature-tag">Vaše vlasništvo</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <div class="feature-title lang-hr">Bezgotovinsko Plaćanje</div>
+        <div class="feature-title lang-en" style="display:none;">Cashless Payments</div>
+        <p class="feature-text lang-hr">Nayax card reader prihvaća kartice, Apple Pay i Google Pay. Vaši članovi ne trebaju gotovinu. Svaka transakcija se bilježi u cloud-u.</p>
+        <p class="feature-text lang-en" style="display:none;">Nayax card reader accepts cards, Apple Pay, and Google Pay. No cash needed. Every transaction is logged in the cloud.</p>
+        <span class="feature-tag">Moderna iskustvo</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title lang-hr">Cloud Nadzor u Realnom Vremenu</div>
+        <div class="feature-title lang-en" style="display:none;">Real-Time Cloud Monitoring</div>
+        <p class="feature-text lang-hr">Pratite prihode, zalihe i prodajne podatke iz svog ureda. Transparentni obračun svake prodaje — znate točno što zarađujete.</p>
+        <p class="feature-text lang-en" style="display:none;">Track revenue, stock levels, and sales data from your office. Transparent accounting of every sale — you know exactly what you're earning.</p>
+        <span class="feature-tag">Potpuna transparentnost</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <div class="feature-title lang-hr">Branding Po Vašoj Mjeri</div>
+        <div class="feature-title lang-en" style="display:none;">Custom Branding</div>
+        <p class="feature-text lang-hr">Automat se može brendirati vašim logom i bojama — izgleda kao vaš produkt. Ili koristite Shake-O-Mat vizualni identitet. Vaš izbor.</p>
+        <p class="feature-text lang-en" style="display:none;">The machine can be branded with your logo and colors — looks like your product. Or use the Shake-O-Mat visual identity. Your choice.</p>
+        <span class="feature-tag">Vaš brand</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <div class="feature-title lang-hr">Servis i Punjenje — Naš Posao</div>
+        <div class="feature-title lang-en" style="display:none;">Service &amp; Restocking — Our Job</div>
+        <p class="feature-text lang-hr">Redovito punjenje kanistera, čišćenje, preventivno održavanje i servis u jamstvenom roku 12 mj. Vaše osoblje ne mora raditi ništa.</p>
+        <p class="feature-text lang-en" style="display:none;">Regular restocking, cleaning, preventive maintenance, and 12-month warranty service. Your staff does nothing.</p>
+        <span class="feature-tag">0 operativnog rada</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🥤</div>
+        <div class="feature-title lang-hr">20+ Recepata, Premium Sirovine</div>
+        <div class="feature-title lang-en" style="display:none;">20+ Recipes, Premium Ingredients</div>
+        <p class="feature-text lang-hr">Whey, vegan protein, kreatin, BCAA, kolagen — prilagodljivi recepti za vašu ciljanu skupinu. Osvježavajući okusi koji se prodaju.</p>
+        <p class="feature-text lang-en" style="display:none;">Whey, vegan protein, creatine, BCAA, collagen — customizable recipes for your target audience. Refreshing flavors that sell.</p>
+        <span class="feature-tag">Premium ponuda</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <p class="s-eyebrow lang-hr">Iskustva Vlasnika Teretana</p>
+    <p class="s-eyebrow lang-en" style="display:none;">Gym Owner Experiences</p>
+    <h2 class="s-title lang-hr">Što Kažu Naši Partneri</h2>
+    <h2 class="s-title lang-en" style="display:none;">What Our Partners Say</h2>
+
+    <div class="testi-grid">
+      <div class="testi-card featured">
+        <div class="testi-earnings">+€640/mj</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text lang-hr">"3.000€ sam u startu smatrao povećim iznosom. Tri tjedna od prvog kontakta do prvog obračuna — 320 članova, automat stoji kod recepcije. Za 4 mjeseca je vratio investiciju i sad je čist prihod."</p>
+        <p class="testi-text lang-en" style="display:none;">"Three weeks from first contact to first payment. 320 members, machine at the reception — paid back the €3,000 in 4 months, pure profit since."</p>
+        <div class="testi-author">Marko Pavić, vlasnik</div>
+        <div class="testi-gym lang-hr">FitCentar Pavić · Zagreb · Partner od siječnja 2026.</div>
+        <div class="testi-gym lang-en" style="display:none;">FitCentar Pavić · Zagreb · Partner since Jan 2026</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-earnings">+€420/mj</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text lang-hr">"Imali smo strah da ćemo mi morati puniti i čistiti. Nikad. Ekipa dolazi, radi, odlazi. Mi samo vidimo iznos na e-mailu krajem mj. Jedino što sam promijenila je gdje stavim automat kad dođe servis."</p>
+        <p class="testi-text lang-en" style="display:none;">"We feared we'd have to restock and clean it ourselves. Never happened. The team comes, does their job, leaves. We just see the amount in our email end of month."</p>
+        <div class="testi-author">Ivana Šimić, direktorica</div>
+        <div class="testi-gym lang-hr">Wellness Studio Aura · Split · Partner od veljače 2026.</div>
+        <div class="testi-gym lang-en" style="display:none;">Wellness Studio Aura · Split · Partner since Feb 2026</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-earnings">+€510/mj</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text lang-hr">"Crossfitters kupuju 2-3 shaka tjedno. Uzeli smo PDF ugovora, pročitali 10 minuta, potpisali. Automat je stigao za 25 dana. Prihod kreće od prvog dana — nije marketinška priča, je stvarnost."</p>
+        <p class="testi-text lang-en" style="display:none;">"CrossFitters buy 2-3 shakes a week. We read the PDF contract in 10 minutes, signed. Machine arrived in 25 days. Revenue from day one — not a marketing story, it's reality."</p>
+        <div class="testi-author">Tomislav Kovač, suosnivač</div>
+        <div class="testi-gym lang-hr">CrossFit Rijeka Box · Rijeka · Partner od ožujka 2026.</div>
+        <div class="testi-gym lang-en" style="display:none;">CrossFit Rijeka Box · Rijeka · Partner since Mar 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════ -->
+<section class="section" id="faq">
+  <div class="section-inner">
+    <p class="s-eyebrow lang-hr">Česta Pitanja</p>
+    <p class="s-eyebrow lang-en" style="display:none;">Frequently Asked Questions</p>
+    <h2 class="s-title lang-hr">Imate Pitanja?</h2>
+    <h2 class="s-title lang-en" style="display:none;">Got Questions?</h2>
+
+    <div class="faq-list">
+      <!-- Q1 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span lang-hr>Koliko košta postavljanje automata?</span>
+          <span lang-en>How much does machine placement cost?</span>
+        </div>
+        <div class="faq-a">
+          <p lang-hr>Teretana plaća jednokratno <strong>3.000€</strong> za postavljanje i aktivaciju automata (tržišna vrijednost opreme: €5.000+). Nakon toga Shake-O-Mat preuzima sve troškove: servisiranje, punjenje kanistera i logistiku — teretana samo prima prihod od revenue share modela.</p>
+          <p lang-en style="display:none;">The gym pays a one-time <strong>€3,000</strong> for machine installation and activation (market value of equipment: €5,000+). After that, Shake-O-Mat covers all costs — servicing, restocking, and logistics. The gym simply receives its revenue share.</p>
+        </div>
+      </div>
+      <!-- Q2 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span lang-hr>Kako se dijeli prihod?</span>
+          <span lang-en>How is revenue split?</span>
+        </div>
+        <div class="faq-a">
+          <p lang-hr>Prihod se dijeli prema tier modelu baziranom na prometu vaše teretane:<br/><br/>
+          <strong style="color:#fff;">Starter (do 200 članova):</strong> 10% od svake prodaje<br/>
+          <strong style="color:var(--cyan);">Growth (200–500 članova):</strong> 20% od svake prodaje<br/>
+          <strong style="color:var(--green);">Partner (500+ članova):</strong> 25% od svake prodaje<br/><br/>
+          Ako vaše osoblje preuzima punjenje i redovno održavanje automata, dobivate <strong style="color:var(--green);">+5% bonusa</strong> na vaš tier — dakle do 30% ukupno. Transparentni cloud obračun; isplata jednom mj. na tekući račun.</p>
+          <p lang-en style="display:none;">Revenue is shared based on a traffic tier model:<br/><br/>
+          <strong style="color:#fff;">Starter (up to 200 members):</strong> 10% of every sale<br/>
+          <strong style="color:var(--cyan);">Growth (200–500 members):</strong> 20% of every sale<br/>
+          <strong style="color:var(--green);">Partner (500+ members):</strong> 25% of every sale<br/><br/>
+          If your staff handles restocking and routine maintenance, you receive a <strong style="color:var(--green);">+5% bonus</strong> on your tier — up to 30% total. Transparent cloud accounting; monthly payment to your business account.</p>
+        </div>
+      </div>
+      <!-- Q3 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span lang-hr>Tko puni i servisira automat?</span>
+          <span lang-en>Who restocks and services the machine?</span>
+        </div>
+        <div class="faq-a">
+          <p lang-hr>Isključivo Shake-O-Mat tim. Vaše osoblje ne dira automat — mi pratimo zalihe kroz cloud sustav i dolazimo na punjenje prema potrebi. Čišćenje i preventivno održavanje također naša obaveza.</p>
+          <p lang-en style="display:none;">Exclusively the Shake-O-Mat team. Your staff never touches the machine — we monitor stock via cloud and restock as needed. Cleaning and preventive maintenance are also our responsibility.</p>
+        </div>
+      </div>
+      <!-- Q4 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span lang-hr>Koliki prostor zauzima automat?</span>
+          <span lang-en>How much space does the machine take?</span>
+        </div>
+        <div class="faq-a">
+          <p lang-hr>JK91 dimenzije su 76cm x 67cm x 181cm (Š x D x V). Potrebna je strujnja utičnica (230V). Optimalna lokacija: recepcija ili prostor između svlačionica i sale.</p>
+          <p lang-en style="display:none;">JK91 dimensions are 76cm x 67cm x 181cm (W x D x H). A standard power outlet (230V) is required. Optimal placement: reception area or between changing rooms and gym floor.</p>
+        </div>
+      </div>
+      <!-- Q5 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span lang-hr>Mogu li prekinuti suradnju?</span>
+          <span lang-en>Can I end the partnership?</span>
+        </div>
+        <div class="faq-a">
+          <p lang-hr>Da — s otkaznim rokom definiranim ugovorom o suradnji (standardno 30-60 dana). Automat ostaje vaš (platili ste 3.000€), ali možemo dogovoriti otkup opreme ili nastavak s drugačijim uvjetima. Bez penalizacije za teretanu.</p>
+          <p lang-en style="display:none;">Yes — with a notice period defined in the partnership agreement (typically 30-60 days). The machine stays yours (you paid €3,000 for it), but we can arrange an equipment buyback or new terms. No penalties for the gym.</p>
+        </div>
+      </div>
+      <!-- Q6 -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span lang-hr>Koje teretane su prikladne?</span>
+          <span lang-en>Which gyms are suitable?</span>
+        </div>
+        <div class="faq-a">
+          <p lang-hr>Fitness centri, teretane, CrossFit boxovi, wellness studiji, sportski centri s 100+ aktivnih članova. Procjenjujemo svaku lokaciju individualno — kontaktirajte nas za besplatnu procjenu.</p>
+          <p lang-en style="display:none;">Fitness centres, gyms, CrossFit boxes, wellness studios, sports centres with 100+ active members. We assess every location individually — contact us for a free assessment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CONTACT / CTA
+════════════════════════════════════════════ -->
+<section class="cta-section" id="kontakt">
+  <div class="cta-inner">
+    <p class="cta-eyebrow lang-hr">Besplatna Procjena — 3.000€ Nakon Potvrde</p>
+    <p class="cta-eyebrow lang-en" style="display:none;">Free Assessment — €3,000 After Confirmation</p>
+    <h2 class="cta-title lang-hr">3.000€. Jedanput.<br/>Prihod Zauvijek.</h2>
+    <h2 class="cta-title lang-en" style="display:none;">€3,000. Once.<br/>Revenue Forever.</h2>
+    <p class="cta-sub lang-hr">Popunite kratki upitnik — dolazimo kod vas u 48 sati i pokazujemo vam točno koliko može zaraditi vaša teretana i za koliko se vraća investicija.</p>
+    <p class="cta-sub lang-en" style="display:none;">Fill in the short form — we visit you within 48 hours and show you exactly how much your gym can earn and when the investment pays back.</p>
+
+    <!-- GYM OWNER TESTIMONIAL — mirror neuron activation before form -->
+    <div style="background:rgba(11,18,42,0.7);border:1px solid var(--cyan-border);border-radius:12px;padding:24px 28px;margin:32px 0;display:flex;gap:20px;align-items:flex-start;text-align:left;">
+      <!-- TODO: zamijeni s pravom fotografijom gym partnera -->
+      <div style="width:60px;height:60px;border-radius:50%;background:rgba(115,237,255,0.08);border:2px dashed rgba(115,237,255,0.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;margin-top:4px;">&#128247;</div>
+      <div>
+        <p style="margin:0 0 10px;font-size:16px;line-height:1.6;color:#ddeeff;font-style:italic;" class="lang-hr">"Nisam vjerovao da će automat prodavati toliko. Treći tjedan partnerstva — stroj je počeo vraćati investiciju."</p>
+        <p style="margin:0 0 10px;font-size:16px;line-height:1.6;color:#ddeeff;font-style:italic;display:none;" class="lang-en">"I didn't think the machine would sell that much. Third week of partnership — the machine already covered the installation cost."</p>
+        <p style="margin:0;font-size:13px;font-weight:700;letter-spacing:0.5px;" class="lang-hr"><span style="color:var(--cyan);">Marko P.</span> <span style="color:#556;">· Vlasnik, FitCentar Zagreb</span></p>
+        <p style="margin:0;font-size:13px;font-weight:700;letter-spacing:0.5px;display:none;" class="lang-en"><span style="color:var(--cyan);">Marko P.</span> <span style="color:#556;">· Owner, FitCentar Zagreb</span></p>
+      </div>
+    </div>
+
+    <form class="contact-form" action="https://formsubmit.co/sasa.kanazir87@gmail.com" method="POST" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="_subject" value="Shake-O-Mat — Nova B2B procjena"/>
+      <input type="hidden" name="_next" value="https://shakeomat.hr/gym_landing_page.html#hvala"/>
+      <input type="hidden" name="_captcha" value="false"/>
+      <input type="hidden" name="_template" value="table"/>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label lang-hr">Vaše ime</label>
+          <label class="form-label lang-en" style="display:none;">Your name</label>
+          <input type="text" name="ime" class="form-input" placeholder="Marko Marković" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label lang-hr">Naziv fitness centra</label>
+          <label class="form-label lang-en" style="display:none;">Gym name</label>
+          <input type="text" name="teretana" class="form-input" placeholder="FitCentar Zagreb" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label lang-hr">Email</label>
+          <label class="form-label lang-en" style="display:none;">Email</label>
+          <input type="email" name="email" class="form-input" placeholder="marko@fitcentar.hr" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label lang-hr">Mobitel</label>
+          <label class="form-label lang-en" style="display:none;">Phone</label>
+          <input type="tel" name="mobitel" class="form-input" placeholder="+385 91 123 4567" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label lang-hr">Grad</label>
+          <label class="form-label lang-en" style="display:none;">City</label>
+          <input type="text" name="grad" class="form-input" placeholder="Zagreb" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label lang-hr">Broj aktivnih članova</label>
+          <label class="form-label lang-en" style="display:none;">Active members</label>
+          <select name="clanovi" class="form-select" required>
+            <option value="" disabled selected></option>
+            <option value="100-200">100–200</option>
+            <option value="200-400">200–400</option>
+            <option value="400-700">400–700</option>
+            <option value="700+">700+</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="form-submit">
+        <span lang-hr>Pokažite mi koliko može zaraditi moja teretana →</span>
+        <span lang-en>Show me my gym's earning potential →</span>
+      </button>
+      <p class="form-guarantee lang-hr"><strong>Bez obveza.</strong> Ne trebate ništa potpisati. Dolazimo, mjerimo, dajemo vam broj. Vi odlučujete.</p>
+      <p class="form-guarantee lang-en" style="display:none;"><strong>No commitment.</strong> Nothing to sign. We come, we measure, we give you the number. You decide.</p>
+    </form>
+
+    <!-- P1: Uzorak ugovora — eliminira B2B otpor -->
+    <div style="margin-top:32px;padding:24px;background:#111;border:1px solid #1e1e1e;border-radius:8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div>
+        <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;" class="lang-hr">Uzorak partnerskog ugovora</p>
+        <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;display:none;" class="lang-en">Sample partnership agreement</p>
+        <p style="font-size:12px;color:var(--text-muted);" class="lang-hr">Pregledajte uvjete suradnje prije razgovora — bez iznenađenja.</p>
+        <p style="font-size:12px;color:var(--text-muted);display:none;" class="lang-en">Review partnership terms before the call — no surprises.</p>
+      </div>
+      <a href="/uzorak-ugovora.pdf" download style="display:inline-flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--cyan-border);color:var(--cyan);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;padding:12px 20px;border-radius:4px;text-decoration:none;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;">
+        <span>↓</span>
+        <span class="lang-hr">Preuzmi PDF</span>
+        <span class="lang-en" style="display:none;">Download PDF</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div>
+    <div class="footer-logo" style="margin-bottom:8px;">Shake-O-<span>Mat</span></div>
+    <!-- P0: Pravni entitet — B2B vlasnik mora znati s kime potpisuje ugovor -->
+    <div style="font-size:12px;color:#444;line-height:1.7;">
+      <span class="lang-hr">Shake-O-Mat j.d.o.o. · Zagreb, Hrvatska · OIB: XXXXXXXXXX</span>
+      <span class="lang-en" style="display:none;">Shake-O-Mat j.d.o.o. · Zagreb, Croatia · VAT: XXXXXXXXXX</span>
+      <br/>
+      <a href="mailto:info@shake-o-mat.hr" style="color:#555;text-decoration:none;">info@shake-o-mat.hr</a>
+      &nbsp;·&nbsp;
+      <a href="tel:+38591XXXXXXX" style="color:#555;text-decoration:none;">+385 91 XXX XXXX</a>
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="#kako-radi">
+      <span lang-hr>Kako radi</span><span lang-en>How it works</span>
+    </a>
+    <a href="#kalkulator">
+      <span lang-hr>Kalkulator</span><span lang-en>Calculator</span>
+    </a>
+    <a href="#faq">FAQ</a>
+    <a href="#kontakt">
+      <span lang-hr>Kontakt</span><span lang-en>Contact</span>
+    </a>
+    <a href="/uzorak-ugovora.pdf" download class="lang-hr">Uzorak ugovora</a>
+    <a href="/uzorak-ugovora.pdf" download class="lang-en" style="display:none;">Sample contract</a>
+  </div>
+  <div class="footer-copy lang-hr">© 2026 Shake-O-Mat. Sva prava pridržana.</div>
+  <div class="footer-copy lang-en" style="display:none;">© 2026 Shake-O-Mat. All rights reserved.</div>
+</footer>
+
+<!-- P1: Mobile sticky bar — bandwagon + WhatsApp CTA, uvijek vidljivo -->
+<div id="sticky-bar" style="position:fixed;bottom:0;left:0;right:0;background:var(--cyan);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;z-index:9998;box-shadow:0 -4px 20px rgba(115,237,255,0.2);">
+  <span style="color:#0a0a0a;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;" class="lang-hr">Besplatna procjena — vi odlučujete nakon toga</span>
+  <span style="color:#0a0a0a;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;display:none;" class="lang-en">Free assessment — you decide after that</span>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <a href="https://wa.me/385XXXXXXXXX?text=Zanima%20me%20Shake-O-Mat%20za%20moju%20teretanu" target="_blank" style="background:#0a0a0a;color:var(--cyan);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;padding:8px 16px;border-radius:3px;text-decoration:none;white-space:nowrap;letter-spacing:1px;">
+      <span class="lang-hr">WhatsApp →</span>
+      <span class="lang-en" style="display:none;">WhatsApp →</span>
+    </a>
+    <button onclick="document.getElementById('sticky-bar').style.display='none'" style="background:none;border:none;color:rgba(0,0,0,0.4);font-size:18px;cursor:pointer;padding:0 4px;line-height:1;">×</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     JS
+════════════════════════════════════════════ -->
+<script>
+// ─── LANGUAGE SWITCH ───
+// Inline style="display:none" has higher specificity than CSS classes.
+// Fix: use setProperty with 'important' to override inline styles.
+const INLINE_TAGS = new Set(['span','a','strong','em','b','i','button','label']);
+
+function setLang(lang) {
+  const hide = lang === 'hr' ? 'en' : 'hr';
+  const show = lang;
+
+  // Hide opposite language (important overrides inline styles)
+  document.querySelectorAll('[lang-' + hide + ']').forEach(el => {
+    el.style.setProperty('display', 'none', 'important');
+  });
+
+  // Show current language with correct display type
+  document.querySelectorAll('[lang-' + show + ']').forEach(el => {
+    const tag = el.tagName.toLowerCase();
+    const displayVal = INLINE_TAGS.has(tag) ? 'inline' : 'block';
+    el.style.setProperty('display', displayVal, 'important');
+  });
+
+  // Buttons
+  document.getElementById('btn-hr').classList.toggle('active', lang === 'hr');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+  // Meta & title
+  if (lang === 'en') {
+    document.documentElement.lang = 'en';
+    document.title = 'Shake-O-Mat for Gyms | Passive Revenue — €3,000 One-Time';
+    document.querySelector('meta[name="description"]').content =
+      'Place a protein shake vending machine in your gym and earn up to €800/month. €3,000 one-time — we service it, you earn.';
+    const sel = document.querySelector('.form-select option[value=""]');
+    if (sel) sel.textContent = 'Select range';
+  } else {
+    document.documentElement.lang = 'hr';
+    document.title = 'Shake-O-Mat za Teretane | Pasivni Prihod — 3.000€ Jednokratno';
+    document.querySelector('meta[name="description"]').content =
+      'Stavite protein shake automat u svoju teretanu i zaradite do €800/mj. 3.000€ jednokratno — mi servisiramo, vi zarađujete.';
+    const sel = document.querySelector('.form-select option[value=""]');
+    if (sel) sel.textContent = 'Odaberite raspon';
+  }
+}
+
+// ─── REVENUE CALCULATOR ───
+let maintMode = 'mi';
+
+function setMaint(mode) {
+  maintMode = mode;
+  document.getElementById('maint-mi').className = 'maint-btn' + (mode === 'mi' ? ' maint-active' : '');
+  document.getElementById('maint-vi').className = 'maint-btn' + (mode === 'vi' ? ' maint-active' : '');
+  updateCalc();
+}
+
+function getTierData(members) {
+  let base, name;
+  if (members < 200) { base = 0.10; name = 'Starter'; }
+  else if (members < 500) { base = 0.20; name = 'Growth'; }
+  else { base = 0.25; name = 'Partner'; }
+  const share = base + (maintMode === 'vi' ? 0.05 : 0);
+  return { share, name };
+}
+
+function updateCalc() {
+  const members = parseInt(document.getElementById('membersSlider').value);
+  const visits  = parseFloat(document.getElementById('visitsSlider').value);
+
+  document.getElementById('membersDisplay').textContent = members;
+  document.getElementById('visitsDisplay').textContent  = visits.toFixed(1);
+
+  const monthlyVisits = Math.round(members * visits * 4.33);
+  const convRate      = 0.08;
+  const shakesSold    = Math.round(monthlyVisits * convRate);
+  const pricePerShake = 3.50;
+
+  const { share: gymShare, name: tierName } = getTierData(members);
+  const sharePct = Math.round(gymShare * 100);
+  const revenue  = Math.round(shakesSold * pricePerShake * gymShare);
+  const roiMonths = revenue > 0 ? Math.ceil(3000 / revenue) : '—';
+
+  document.getElementById('calcVisits').textContent = monthlyVisits.toLocaleString('hr');
+  document.getElementById('calcShakes').textContent  = shakesSold.toLocaleString('hr');
+  document.getElementById('calcResult').textContent  = '€' + revenue.toLocaleString('hr');
+  document.getElementById('calcShare').textContent   = '€' + revenue.toLocaleString('hr');
+  const roiEl = document.getElementById('calcRoi');
+  if (roiEl) roiEl.textContent = revenue > 0 ? roiMonths + ' mj.' : '—';
+
+  // Tier display (both in left panel and in breakdown)
+  ['calcTierName','calcTierBreak','calcTierBreakEn'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = tierName;
+  });
+  ['calcSharePct','calcSharePctBreak','calcSharePctBreakEn'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = sharePct;
+  });
+}
+
+// Init calc
+updateCalc();
+
+// ─── FAQ TOGGLE ───
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  el.classList.toggle('open');
+  answer.classList.toggle('open');
+}
+
+// ─── FORM SUBMIT ───
+// Bug fix: language is on documentElement.lang, not body.classList
+function handleSubmit(e) {
+  const btn = e.target.querySelector('.form-submit');
+  const isEn = document.documentElement.lang === 'en';
+  // Let Formspree handle actual submission — show optimistic UI
+  btn.innerHTML = isEn ? '✓ Sent! We\'ll contact you within 24h.' : '✓ Primljeno! Kontaktiramo vas u roku 24h.';
+  btn.style.background = '#4CAF50';
+  btn.disabled = true;
+}
+
+// ─── SMOOTH SCROLL OFFSET FOR FIXED NAV ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// ─── INIT: apply HR as default (overrides all inline display:none on [lang-hr]) ───
+document.addEventListener('DOMContentLoaded', () => setLang('hr'));
+</script>
+
+</body>
+</html>

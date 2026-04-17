@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ═══ SEO ═══ -->
+<title>Shake-O-Mat | Protein Shake Odmah Nakon Treninga</title>
+<meta name="description" content="Svježi protein shake za 45 sekundi — whey, vegan, kreatin, BCAA. Dostupno u tvojoj teretani. Kartično plaćanje, 20+ okusa, bez čekanja."/>
+<meta name="keywords" content="protein shake teretana, protein automat, shake after workout, whey shake hrvatska, vegan protein shake, kreatin shake, shake-o-mat"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://shakeomat.hr/b2c_landing_page.html"/>
+<link rel="alternate" hreflang="hr" href="https://shakeomat.hr/b2c_landing_page.html"/>
+<link rel="alternate" hreflang="en" href="https://shakeomat.hr/b2c_landing_page.html"/>
+<link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/b2c_landing_page.html"/>
+
+<!-- ═══ Open Graph ═══ -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://shakeomat.hr/b2c_landing_page.html"/>
+<meta property="og:title" content="Shake-O-Mat | Protein Shake u 45 Sekundi"/>
+<meta property="og:description" content="Anabolički prozor zatvara se za 45 minuta. Svježi protein shake odmah u tvojoj teretani — bez miješanja, kartično."/>
+<meta property="og:image" content="https://shakeomat.hr/og-b2c.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- ═══ Schema ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Shake-O-Mat Protein Shake",
+  "description": "Svježe miješani protein shake — whey, vegan, kreatin, BCAA, kolagen. Dostupno odmah u fitness centrima širom Hrvatske.",
+  "brand": {"@type": "Brand", "name": "Shake-O-Mat"},
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "3.50",
+    "availability": "https://schema.org/InStoreOnly",
+    "areaServed": {"@type": "Country", "name": "Croatia"}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Koliko košta protein shake iz Shake-O-Mat automata?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Cijena shaka iznosi oko €3,50. Plaćanje karticom, Apple Pay ili Google Pay — bez gotovine."}
+    },
+    {
+      "@type": "Question",
+      "name": "Koji proteini su dostupni u Shake-O-Mat automatu?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Shake-O-Mat nudi whey protein, vegan protein, kreatin shake, BCAA napitak i kolagen — više od 20 recepata s preciznim makronutrijentima."}
+    },
+    {
+      "@type": "Question",
+      "name": "U kojim teretanama se nalazi Shake-O-Mat?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Shake-O-Mat se postavlja u fitness centre, CrossFit boxove i wellness studije širom Hrvatske. Kontaktirajte nas ili pitajte u svojoj teretani."}
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet"/>
+
+<style>
+/* ════════════════════════════════
+   RESET & BASE
+════════════════════════════════ */
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:#e0ddd8;line-height:1.6;padding-bottom:64px;}
+
+:root{
+  --o:#FF6B35;
+  --o-dim:rgba(255,107,53,0.12);
+  --o-border:rgba(255,107,53,0.25);
+  --c:#73edff;
+  --c-dim:rgba(115,237,255,0.12);
+  --c-border:rgba(115,237,255,0.28);
+  --g:#4CAF50;
+  --g-dim:rgba(76,175,80,0.1);
+  --red:#ef4444;
+  --bg:#050816;
+  --bg2:#0b1230;
+  --border:rgba(122,177,255,0.18);
+  --muted:#7a8cb8;
+  --dim:#9aadd6;
+}
+
+/* ════════════════════════════════
+   NAV
+════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  background:rgba(5,8,22,0.92);backdrop-filter:blur(16px);
+  border-bottom:2px solid var(--c);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:64px;
+}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;
+  color:var(--c);letter-spacing:3px;text-transform:uppercase;text-decoration:none;}
+.nav-logo span{color:#fff;}
+.nav-right{display:flex;align-items:center;gap:14px;}
+.lang-toggle{display:flex;gap:4px;}
+.lang-btn{background:none;border:1px solid #333;color:#777;font-size:12px;font-weight:700;
+  padding:6px 10px;border-radius:3px;cursor:pointer;letter-spacing:1px;transition:all .2s;}
+.lang-btn.active{background:var(--c);color:#04101a;border-color:var(--c);}
+.nav-wa{
+  display:flex;align-items:center;gap:7px;
+  background:#25D366;color:#fff;
+  font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:900;
+  padding:9px 18px;border-radius:4px;text-decoration:none;letter-spacing:1px;
+  text-transform:uppercase;transition:opacity .2s;
+}
+.nav-wa:hover{opacity:.85;}
+
+/* ════════════════════════════════
+   HERO — Anabolički prozor
+════════════════════════════════ */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:88px 40px 64px;
+  background:
+    radial-gradient(ellipse at 65% 40%, rgba(115,237,255,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(27,162,255,0.05) 0%, transparent 40%),
+    var(--bg);
+}
+.hero-inner{max-width:1160px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;}
+
+/* Timer card */
+.timer-card{
+  background:linear-gradient(160deg,#160808,#0d0d0d);
+  border:1px solid rgba(239,68,68,0.3);border-radius:16px;
+  padding:36px 32px;text-align:center;position:relative;overflow:hidden;
+}
+.timer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--red),var(--o));}
+.timer-label-top{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--red);margin-bottom:10px;}
+.timer-display{
+  font-family:'Barlow Condensed',sans-serif;font-size:96px;font-weight:900;
+  color:var(--o);line-height:1;margin-bottom:4px;
+  text-shadow:0 0 40px rgba(255,107,53,0.3);
+  transition:color .5s;
+}
+.timer-display.urgent{color:var(--red);text-shadow:0 0 40px rgba(239,68,68,0.4);}
+.timer-unit{font-size:12px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:20px;}
+.timer-bar-wrap{background:#1a1a1a;border-radius:99px;height:8px;margin-bottom:16px;overflow:hidden;}
+.timer-bar{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--o),var(--red));
+  transition:width 1s linear;}
+.timer-science{font-size:12px;color:#555;line-height:1.6;}
+.timer-science strong{color:#888;}
+.timer-macros{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px;}
+.tmac{background:#111;border:1px solid var(--border);border-radius:8px;padding:12px 8px;text-align:center;}
+.tmac-val{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--o);}
+.tmac-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+
+/* Hero left */
+.hero-tag{display:inline-flex;align-items:center;gap:8px;
+  background:var(--o-dim);border:1px solid var(--o-border);
+  padding:6px 14px;border-radius:3px;
+  font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--o);
+  margin-bottom:24px;}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--o);}
+.hero-h1{font-family:'Barlow Condensed',sans-serif;font-size:66px;font-weight:900;
+  line-height:1.0;color:#fff;margin-bottom:16px;text-transform:uppercase;}
+.hero-h1 .acc{color:var(--o);}
+.hero-sub{font-size:18px;color:var(--dim);line-height:1.7;margin-bottom:32px;max-width:480px;}
+.hero-sub strong{color:#fff;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--o);color:#0a0a0a;
+  font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:900;
+  padding:16px 36px;border-radius:4px;text-decoration:none;
+  letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s;
+}
+.btn-primary:hover{background:#ff8555;transform:translateY(-1px);}
+.btn-ghost{
+  display:inline-block;border:2px solid #333;color:var(--dim);
+  font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;
+  padding:14px 28px;border-radius:4px;text-decoration:none;
+  letter-spacing:1px;text-transform:uppercase;transition:all .2s;
+}
+.btn-ghost:hover{border-color:var(--o);color:var(--o);}
+.hero-micro{font-size:12px;color:#555;margin-top:12px;}
+
+/* ════════════════════════════════
+   PROOF STRIP
+════════════════════════════════ */
+.proof-strip{
+  background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:28px 40px;
+}
+.proof-inner{max-width:1160px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:20px;}
+.pstat{text-align:center;}
+.pstat-num{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:#fff;line-height:1;}
+.pstat-lbl{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
+.pdiv{width:1px;height:36px;background:#222;}
+
+/* ════════════════════════════════
+   SECTIONS BASE
+════════════════════════════════ */
+.section{padding:88px 40px;}
+.s-inner{max-width:1160px;margin:0 auto;}
+.s-eye{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--c);margin-bottom:12px;}
+.s-title{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:900;
+  color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:14px;}
+.s-sub{font-size:17px;color:var(--dim);max-width:580px;line-height:1.7;margin-bottom:44px;}
+
+/* ════════════════════════════════
+   SCIENCE — zašto 45 min
+════════════════════════════════ */
+.science-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sci-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:32px;}
+.sci-box.featured{background:rgba(115,237,255,0.05);border-color:var(--c-border);}
+.sci-icon{font-size:28px;margin-bottom:12px;}
+.sci-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;}
+.sci-text{font-size:14px;color:var(--muted);line-height:1.65;}
+.sci-source{font-size:11px;color:#444;margin-top:10px;font-style:italic;}
+.sci-stat{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;
+  color:var(--c);line-height:1;margin-bottom:4px;}
+
+/* ════════════════════════════════
+   RECIPES
+════════════════════════════════ */
+.recipe-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.recipe-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:12px;
+  padding:24px 20px;position:relative;overflow:hidden;transition:border-color .2s;
+}
+.recipe-card:hover{border-color:var(--c);}
+.recipe-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.rc-whey::before{background:linear-gradient(90deg,#FF6B35,#ff9a35);}
+.rc-vegan::before{background:linear-gradient(90deg,#4CAF50,#8BC34A);}
+.rc-creatine::before{background:linear-gradient(90deg,#2196F3,#03A9F4);}
+.rc-bcaa::before{background:linear-gradient(90deg,#9C27B0,#E040FB);}
+.rc-collagen::before{background:linear-gradient(90deg,#E91E63,#FF5722);}
+.rc-recovery::before{background:linear-gradient(90deg,#FF9800,#FFC107);}
+.rc-icon{font-size:24px;margin-bottom:10px;}
+.rc-name{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px;}
+.rc-sub{font-size:12px;color:var(--muted);margin-bottom:14px;}
+.rc-macros{display:flex;gap:12px;}
+.rc-mac{text-align:center;}
+.rc-mac-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--c);}
+.rc-mac-lbl{font-size:10px;color:#555;text-transform:uppercase;letter-spacing:1px;}
+.rc-price{position:absolute;top:18px;right:18px;
+  font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--c);}
+
+/* ════════════════════════════════
+   HOW IT WORKS
+════════════════════════════════ */
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.step{background:var(--bg2);padding:40px 32px;position:relative;}
+.step:first-child{border-radius:12px 0 0 12px;}
+.step:last-child{border-radius:0 12px 12px 0;}
+.step::after{content:'→';position:absolute;right:-16px;top:50%;transform:translateY(-50%);
+  font-size:22px;color:#333;z-index:1;}
+.step:last-child::after{display:none;}
+.step.featured{background:var(--c-dim);border:1px solid var(--c-border);}
+.step-n{font-family:'Barlow Condensed',sans-serif;font-size:64px;font-weight:900;
+  color:#1a1a1a;line-height:1;margin-bottom:6px;}
+.step.featured .step-n{color:rgba(115,237,255,0.15);}
+.step-icon{font-size:28px;margin-bottom:10px;}
+.step-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;}
+.step-text{font-size:14px;color:var(--muted);line-height:1.65;}
+
+/* ════════════════════════════════
+   TESTIMONIALS
+════════════════════════════════ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.testi{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px;}
+.testi.feat{border-color:var(--c-border);background:rgba(115,237,255,0.04);}
+.testi-stars{color:var(--c);font-size:15px;letter-spacing:2px;margin-bottom:14px;}
+.testi-text{font-size:15px;color:#ccc;line-height:1.7;font-style:italic;margin-bottom:18px;}
+.testi-name{font-size:14px;font-weight:700;color:#fff;}
+.testi-meta{font-size:12px;color:var(--muted);}
+.testi-goal{display:inline-block;margin-top:10px;background:var(--g-dim);
+  border:1px solid rgba(76,175,80,0.2);color:var(--g);
+  font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:3px;}
+
+/* ════════════════════════════════
+   FAQ
+════════════════════════════════ */
+.faq-list{max-width:720px;}
+.faq-item{border-bottom:1px solid var(--border);padding:22px 0;}
+.faq-q{font-size:17px;font-weight:700;color:#fff;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:16px;}
+.faq-q::after{content:'+';font-family:'Barlow Condensed',sans-serif;font-size:24px;
+  color:var(--c);flex-shrink:0;line-height:1;}
+.faq-q.open::after{content:'−';}
+.faq-a{font-size:15px;color:var(--dim);line-height:1.7;margin-top:12px;display:none;}
+.faq-a.open{display:block;}
+
+/* ════════════════════════════════
+   FINAL CTA
+════════════════════════════════ */
+.cta-section{
+  background:radial-gradient(ellipse at center, rgba(115,237,255,0.07) 0%, transparent 65%),var(--bg2);
+  border-top:1px solid var(--border);padding:88px 40px;text-align:center;
+}
+.cta-inner{max-width:560px;margin:0 auto;}
+.cta-eye{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--c);margin-bottom:16px;}
+.cta-title{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;
+  color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:14px;}
+.cta-sub{font-size:17px;color:var(--dim);line-height:1.7;margin-bottom:36px;}
+.wa-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#25D366;color:#fff;
+  font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;
+  padding:20px 44px;border-radius:4px;text-decoration:none;
+  letter-spacing:1px;text-transform:uppercase;transition:all .2s;
+}
+.wa-btn:hover{background:#20b558;transform:translateY(-1px);}
+.cta-micro{font-size:12px;color:#555;margin-top:14px;line-height:1.6;}
+.cta-b2b{margin-top:32px;padding-top:24px;border-top:1px solid var(--border);}
+.cta-b2b-text{font-size:14px;color:#555;margin-bottom:10px;}
+.cta-b2b a{color:var(--c);text-decoration:none;font-weight:700;font-size:14px;}
+.cta-b2b a:hover{text-decoration:underline;}
+
+/* ════════════════════════════════
+   FOOTER
+════════════════════════════════ */
+footer{
+  padding:36px 40px;border-top:1px solid #111;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+}
+.f-logo{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;
+  color:var(--c);letter-spacing:3px;text-transform:uppercase;}
+.f-logo span{color:#fff;}
+.f-links{display:flex;gap:20px;flex-wrap:wrap;}
+.f-links a{font-size:13px;color:#555;text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--c);}
+.f-copy{font-size:12px;color:#2a2a2a;}
+
+/* ════════════════════════════════
+   STICKY MOBILE BAR
+════════════════════════════════ */
+#sticky{
+  position:fixed;bottom:0;left:0;right:0;z-index:9998;
+  background:var(--o);padding:11px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  box-shadow:0 -4px 20px rgba(255,107,53,0.35);
+}
+#sticky .s-txt{
+  font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:#0a0a0a;
+}
+#sticky .s-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--bg);color:var(--o);
+  font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;
+  padding:8px 16px;border-radius:3px;text-decoration:none;
+  letter-spacing:1px;text-transform:uppercase;white-space:nowrap;
+}
+#sticky .s-close{
+  background:none;border:none;color:rgba(0,0,0,0.35);font-size:20px;cursor:pointer;
+  line-height:1;padding:0 2px;flex-shrink:0;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;}
+  .timer-card{max-width:400px;margin:0 auto;}
+  .science-grid{grid-template-columns:1fr;}
+  .recipe-grid{grid-template-columns:repeat(2,1fr);}
+  .steps-row{grid-template-columns:1fr;}
+  .step::after{display:none;}
+  .step:first-child,.step:last-child{border-radius:12px;}
+  .testi-grid{grid-template-columns:1fr;}
+  .hero-h1{font-size:48px;}
+  .s-title{font-size:36px;}
+  .cta-title{font-size:38px;}
+}
+@media(max-width:600px){
+  .nav{padding:0 20px;}
+  .nav-wa .nav-wa-text{display:none;}
+  .hero{padding:80px 20px 48px;}
+  .section{padding:64px 20px;}
+  .proof-strip,.cta-section,footer{padding-left:20px;padding-right:20px;}
+  .recipe-grid{grid-template-columns:1fr 1fr;}
+  .pdiv{display:none;}
+  .hero-h1{font-size:40px;}
+}
+</style>
+</head>
+
+<!-- ════════════════════════════════
+   NOTE: No inline style="display:none" anywhere.
+   Language toggle works 100% via JS setProperty('important').
+════════════════════════════════ -->
+<body id="top">
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav">
+  <a href="./index.html" class="nav-logo">Shake-O-<span>Mat</span></a>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-hr" onclick="setLang('hr')">HR</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="https://wa.me/385XXXXXXXXX?text=Zanima%20me%20Shake-O-Mat" target="_blank" class="nav-wa">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="nav-wa-text" data-lang="hr">Pitaj nas</span>
+      <span class="nav-wa-text" data-lang="en">Ask us</span>
+    </a>
+  </div>
+</nav>
+
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+
+    <!-- Left -->
+    <div>
+      <div class="hero-tag">
+        <span data-lang="hr">Anabolički Prozor</span>
+        <span data-lang="en">Anabolic Window</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span data-lang="hr">45 Minuta.<br/>Jedna Šansa.<br/><span class="acc">Uzmi Sada.</span></span>
+        <span data-lang="en">45 Minutes.<br/>One Chance.<br/><span class="acc">Take It Now.</span></span>
+      </h1>
+
+      <p class="hero-sub">
+        <span data-lang="hr">Upravo si završio zadnju seriju. Mišići su topli, pluća rade. Ovo je <strong>45 minuta</strong> kada sve što uneseš ide direktno tamo gdje treba — i Shake-O-Mat je već spreman u tvojoj teretani.</span>
+        <span data-lang="en">You just finished your last set. Muscles warm, lungs working. This is the <strong>45 minutes</strong> when everything you take in goes exactly where it needs to go — and Shake-O-Mat is already there in your gym.</span>
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://wa.me/385XXXXXXXXX?text=Gdje%20mogu%20naci%20Shake-O-Mat%3F" target="_blank" class="btn-primary">
+          <span data-lang="hr">Pronađi Automat →</span>
+          <span data-lang="en">Find Machine →</span>
+        </a>
+        <a href="#recepti" class="btn-ghost">
+          <span data-lang="hr">Vidi Recepte</span>
+          <span data-lang="en">See Recipes</span>
+        </a>
+      </div>
+      <p class="hero-micro">
+        <span data-lang="hr">€3,50 · Kartično · Apple/Google Pay · Bez gotovine</span>
+        <span data-lang="en">€3.50 · Card · Apple/Google Pay · No cash needed</span>
+      </p>
+    </div>
+
+    <!-- Timer card -->
+    <div class="timer-card">
+      <div class="timer-label-top" id="timerLabel">
+        <span data-lang="hr">Anabolički prozor zatvara se za</span>
+        <span data-lang="en">Anabolic window closes in</span>
+      </div>
+      <div class="timer-display" id="timerDisplay">45:00</div>
+      <div class="timer-unit">
+        <span data-lang="hr">minuta:sekundi</span>
+        <span data-lang="en">minutes:seconds</span>
+      </div>
+      <div class="timer-bar-wrap">
+        <div class="timer-bar" id="timerBar" style="width:100%;"></div>
+      </div>
+      <p class="timer-science">
+        <span data-lang="hr"><strong>Zašto 45 min?</strong> Inzulinska osjetljivost mišića dostiže vrhunac odmah nakon treninga i opada eksponencijalno — J.Ivy, ACSM 2004.</span>
+        <span data-lang="en"><strong>Why 45 min?</strong> Muscle insulin sensitivity peaks right after training and declines exponentially — J.Ivy, ACSM 2004.</span>
+      </p>
+      <div class="timer-macros">
+        <div class="tmac">
+          <div class="tmac-val">30g</div>
+          <div class="tmac-lbl">
+            <span data-lang="hr">Proteina</span>
+            <span data-lang="en">Protein</span>
+          </div>
+        </div>
+        <div class="tmac">
+          <div class="tmac-val">45s</div>
+          <div class="tmac-lbl">
+            <span data-lang="hr">Do shaka</span>
+            <span data-lang="en">To shake</span>
+          </div>
+        </div>
+        <div class="tmac">
+          <div class="tmac-val">3×</div>
+          <div class="tmac-lbl">
+            <span data-lang="hr">Brža apsorpcija</span>
+            <span data-lang="en">Faster uptake</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════ PROOF STRIP ══════════ -->
+<div class="proof-strip">
+  <div class="proof-inner">
+    <div class="pstat">
+      <div class="pstat-num">20+</div>
+      <div class="pstat-lbl" data-lang="hr">Recepata</div>
+      <div class="pstat-lbl" data-lang="en">Recipes</div>
+    </div>
+    <div class="pdiv"></div>
+    <div class="pstat">
+      <div class="pstat-num">45s</div>
+      <div class="pstat-lbl" data-lang="hr">Do shaka</div>
+      <div class="pstat-lbl" data-lang="en">To shake</div>
+    </div>
+    <div class="pdiv"></div>
+    <div class="pstat">
+      <div class="pstat-num">€3,50</div>
+      <div class="pstat-lbl" data-lang="hr">Po shaku</div>
+      <div class="pstat-lbl" data-lang="en">Per shake</div>
+    </div>
+    <div class="pdiv"></div>
+    <div class="pstat">
+      <div class="pstat-num">0</div>
+      <div class="pstat-lbl" data-lang="hr">Gotovine potrebno</div>
+      <div class="pstat-lbl" data-lang="en">Cash needed</div>
+    </div>
+    <div class="pdiv"></div>
+    <div class="pstat">
+      <div class="pstat-num">CE</div>
+      <div class="pstat-lbl" data-lang="hr">EU certificiran</div>
+      <div class="pstat-lbl" data-lang="en">EU certified</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════ SOCIAL PROOF BAR ══════════ -->
+<div style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 40px;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;gap:40px;align-items:center;flex-wrap:wrap;justify-content:center;">
+    <div style="display:flex;align-items:center;gap:16px;flex:1;min-width:260px;max-width:380px;">
+      <!-- TODO: zamijeni s pravom fotografijom korisnika -->
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(115,237,255,0.08);border:2px dashed rgba(115,237,255,0.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;">&#128247;</div>
+      <div>
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;" data-lang="hr">"Shake odmah nakon zadnje serije — ne moram izlaziti iz teretane da nađem protein."</p>
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;display:none;" data-lang="en">"Shake right after the last set — I don't have to leave the gym to find protein."</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;" data-lang="hr">Marija K. · Fitness Zagreb</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;display:none;" data-lang="en">Marija K. · Fitness Zagreb</p>
+      </div>
+    </div>
+    <div style="width:1px;height:48px;background:var(--border);flex-shrink:0;display:none;" class="proof-divider"></div>
+    <div style="display:flex;align-items:center;gap:16px;flex:1;min-width:260px;max-width:380px;">
+      <!-- TODO: zamijeni s pravom fotografijom korisnika -->
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(115,237,255,0.08);border:2px dashed rgba(115,237,255,0.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;">&#128247;</div>
+      <div>
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;" data-lang="hr">"30g proteina, kartica, 45 sekundi. Jedino razumno rješenje za post-workout."</p>
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;display:none;" data-lang="en">"30g protein, card payment, 45 seconds. The only sensible post-workout solution."</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;" data-lang="hr">Tomislav R. · CrossFit Rijeka</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;display:none;" data-lang="en">Tomislav R. · CrossFit Rijeka</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SCIENCE ══════════ -->
+<section class="section" id="zasto">
+  <div class="s-inner">
+    <p class="s-eye" data-lang="hr">Zašto Odmah</p>
+    <p class="s-eye" data-lang="en">Why Right Now</p>
+    <h2 class="s-title">
+      <span data-lang="hr">Tvoje Tijelo Ne Čeka.</span>
+      <span data-lang="en">Your Body Won't Wait.</span>
+    </h2>
+    <p class="s-sub">
+      <span data-lang="hr">Istraživanja sportske nutricionistike pokazuju jasno: timing proteina nije mit — to je biokemija.</span>
+      <span data-lang="en">Sports nutrition research is clear: protein timing isn't a myth — it's biochemistry.</span>
+    </p>
+
+    <div class="science-grid">
+      <div class="sci-box featured">
+        <div class="sci-stat">3×</div>
+        <div class="sci-title" data-lang="hr">Brža sinteza proteina</div>
+        <div class="sci-title" data-lang="en">Faster protein synthesis</div>
+        <p class="sci-text">
+          <span data-lang="hr">Uzimanje 20–40g proteina unutar 45 min nakon treninga povećava mišićnu sintezu proteina do 3× više nego čekanje 2+ sata. Razlog: povišeni kortizol + mišićna glikogenoliza maksimiziraju GLUT-4 aktivnost.</span>
+          <span data-lang="en">Taking 20–40g of protein within 45 min post-training increases muscle protein synthesis up to 3× compared to waiting 2+ hours. Reason: elevated cortisol + muscle glycogenolysis maximise GLUT-4 activity.</span>
+        </p>
+        <p class="sci-source">Ivy JL, Sports Medicine 2004; Levenhagen DK, Am J Physiol 2001</p>
+      </div>
+      <div class="sci-box">
+        <div class="sci-icon">⚡</div>
+        <div class="sci-title" data-lang="hr">Inzulinska osjetljivost — vrhunac odmah</div>
+        <div class="sci-title" data-lang="en">Insulin sensitivity — peak right now</div>
+        <p class="sci-text">
+          <span data-lang="hr">Odmah nakon treninga mišićne stanice su maksimalno otvorene za glukozu i aminokiseline — kao prozor koji se zatvara. Protein + mala količina ugljikohidrata u tom prozoru maximizira anabolički odgovor i smanjuje katabolizam.</span>
+          <span data-lang="en">Right after training, muscle cells are maximally open to glucose and amino acids — like a window that's closing. Protein + small carbs within that window maximises anabolic response and reduces catabolism.</span>
+        </p>
+        <p class="sci-source">Tipton KD, J Nutr 2001; Burke LM, Int J Sport Nutr 2003</p>
+      </div>
+      <div class="sci-box">
+        <div class="sci-icon">🥤</div>
+        <div class="sci-title" data-lang="hr">Tekući protein — brža apsorpcija</div>
+        <div class="sci-title" data-lang="en">Liquid protein — faster absorption</div>
+        <p class="sci-text">
+          <span data-lang="hr">Tekući whey protein dostiže vrhunac apsorpcije već za 60–90 minuta — brže od čvrstih izvora proteina koji zahtijevaju probavu. Svježe mješanje bez konzervansa čuva integritet aminokiselinskog profila.</span>
+          <span data-lang="en">Liquid whey protein peaks absorption within 60–90 minutes — faster than solid protein sources that require digestion. Fresh mixing without preservatives preserves the amino acid profile integrity.</span>
+        </p>
+        <p class="sci-source">Boirie Y, PNAS 1997; Tang JE, J Appl Physiol 2009</p>
+      </div>
+      <div class="sci-box">
+        <div class="sci-icon">🌱</div>
+        <div class="sci-title" data-lang="hr">Vegan opcija — isti rezultat</div>
+        <div class="sci-title" data-lang="en">Vegan option — same results</div>
+        <p class="sci-text">
+          <span data-lang="hr">Miješani biljni proteini (grašak + riža) postižu usporediv anabolički odgovor s wheyem ako dostignu 2–3g leucina po obroku. Shake-O-Mat vegan recept je formuliran prema tim kriterijima.</span>
+          <span data-lang="en">Mixed plant proteins (pea + rice) achieve comparable anabolic response to whey when reaching 2–3g leucine per serving. Shake-O-Mat's vegan recipe is formulated to those criteria.</span>
+        </p>
+        <p class="sci-source">van Vliet S, J Nutr 2015; Babault N, JISSN 2015</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ RECIPES ══════════ -->
+<section class="section" id="recepti" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="s-inner">
+    <p class="s-eye" data-lang="hr">Recepti</p>
+    <p class="s-eye" data-lang="en">Recipes</p>
+    <h2 class="s-title">
+      <span data-lang="hr">Izaberi Svoj Shake</span>
+      <span data-lang="en">Choose Your Shake</span>
+    </h2>
+    <p class="s-sub">
+      <span data-lang="hr">Svaki recept svježe miješan na licu mjesta. Precizni makronutrijenti, bez skrivenih dodataka.</span>
+      <span data-lang="en">Every recipe freshly mixed on the spot. Precise macronutrients, no hidden additives.</span>
+    </p>
+
+    <div class="recipe-grid">
+      <div class="recipe-card rc-whey">
+        <div class="rc-price">€3,50</div>
+        <div class="rc-icon">💪</div>
+        <div class="rc-name">Whey Classic</div>
+        <div class="rc-sub" data-lang="hr">Chocolate / Vanilla</div>
+        <div class="rc-sub" data-lang="en">Chocolate / Vanilla</div>
+        <div class="rc-macros">
+          <div class="rc-mac"><div class="rc-mac-val">30g</div><div class="rc-mac-lbl">Protein</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">5g</div><div class="rc-mac-lbl">Carbs</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">160</div><div class="rc-mac-lbl">kcal</div></div>
+        </div>
+      </div>
+      <div class="recipe-card rc-vegan">
+        <div class="rc-price">€3,50</div>
+        <div class="rc-icon">🌱</div>
+        <div class="rc-name">Vegan Blend</div>
+        <div class="rc-sub" data-lang="hr">Grašak + Riža</div>
+        <div class="rc-sub" data-lang="en">Pea + Rice</div>
+        <div class="rc-macros">
+          <div class="rc-mac"><div class="rc-mac-val">26g</div><div class="rc-mac-lbl">Protein</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">8g</div><div class="rc-mac-lbl">Carbs</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">155</div><div class="rc-mac-lbl">kcal</div></div>
+        </div>
+      </div>
+      <div class="recipe-card rc-creatine">
+        <div class="rc-price">€3,50</div>
+        <div class="rc-icon">⚡</div>
+        <div class="rc-name">Creatine Boost</div>
+        <div class="rc-sub" data-lang="hr">Whey + Kreatin</div>
+        <div class="rc-sub" data-lang="en">Whey + Creatine</div>
+        <div class="rc-macros">
+          <div class="rc-mac"><div class="rc-mac-val">28g</div><div class="rc-mac-lbl">Protein</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">5g</div><div class="rc-mac-lbl">Creatine</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">160</div><div class="rc-mac-lbl">kcal</div></div>
+        </div>
+      </div>
+      <div class="recipe-card rc-bcaa">
+        <div class="rc-price">€3,50</div>
+        <div class="rc-icon">🔥</div>
+        <div class="rc-name">BCAA Recovery</div>
+        <div class="rc-sub" data-lang="hr">Berry / Lemon</div>
+        <div class="rc-sub" data-lang="en">Berry / Lemon</div>
+        <div class="rc-macros">
+          <div class="rc-mac"><div class="rc-mac-val">10g</div><div class="rc-mac-lbl">BCAA</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">0g</div><div class="rc-mac-lbl">Fat</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">45</div><div class="rc-mac-lbl">kcal</div></div>
+        </div>
+      </div>
+      <div class="recipe-card rc-collagen">
+        <div class="rc-price">€3,50</div>
+        <div class="rc-icon">✨</div>
+        <div class="rc-name">Collagen Glow</div>
+        <div class="rc-sub" data-lang="hr">Kolagen + Vitamin C</div>
+        <div class="rc-sub" data-lang="en">Collagen + Vitamin C</div>
+        <div class="rc-macros">
+          <div class="rc-mac"><div class="rc-mac-val">10g</div><div class="rc-mac-lbl">Collagen</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">200mg</div><div class="rc-mac-lbl">Vit C</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">55</div><div class="rc-mac-lbl">kcal</div></div>
+        </div>
+      </div>
+      <div class="recipe-card rc-recovery">
+        <div class="rc-price">€3,50</div>
+        <div class="rc-icon">🌙</div>
+        <div class="rc-name">Night Recovery</div>
+        <div class="rc-sub" data-lang="hr">Kazein + Magnezij</div>
+        <div class="rc-sub" data-lang="en">Casein + Magnesium</div>
+        <div class="rc-macros">
+          <div class="rc-mac"><div class="rc-mac-val">25g</div><div class="rc-mac-lbl">Casein</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">200mg</div><div class="rc-mac-lbl">Mg</div></div>
+          <div class="rc-mac"><div class="rc-mac-val">140</div><div class="rc-mac-lbl">kcal</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section class="section" id="kako">
+  <div class="s-inner">
+    <p class="s-eye" data-lang="hr">Kako Funkcionira</p>
+    <p class="s-eye" data-lang="en">How It Works</p>
+    <h2 class="s-title">
+      <span data-lang="hr">3 Koraka. 45 Sekundi.</span>
+      <span data-lang="en">3 Steps. 45 Seconds.</span>
+    </h2>
+
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-icon">👆</div>
+        <div class="step-title" data-lang="hr">Izaberi Recept</div>
+        <div class="step-title" data-lang="en">Choose Recipe</div>
+        <p class="step-text">
+          <span data-lang="hr">27" touch screen prikazuje sve recepte s makronutrijentima. Whey, vegan, kreatin, BCAA — po tvojim ciljevima.</span>
+          <span data-lang="en">27" touch screen shows all recipes with macronutrients. Whey, vegan, creatine, BCAA — by your goals.</span>
+        </p>
+      </div>
+      <div class="step featured">
+        <div class="step-n">02</div>
+        <div class="step-icon">💳</div>
+        <div class="step-title" data-lang="hr">Plati Karticom</div>
+        <div class="step-title" data-lang="en">Pay by Card</div>
+        <p class="step-text">
+          <span data-lang="hr">Nayax card reader — Visa, Mastercard, Apple Pay, Google Pay. €3,50. Bez gotovine, bez čekanja na kusur.</span>
+          <span data-lang="en">Nayax card reader — Visa, Mastercard, Apple Pay, Google Pay. €3.50. No cash, no waiting for change.</span>
+        </p>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-icon">🥤</div>
+        <div class="step-title" data-lang="hr">Preuzmi Svježi Shake</div>
+        <div class="step-title" data-lang="en">Pick Up Fresh Shake</div>
+        <p class="step-text">
+          <span data-lang="hr">Svježe miješano u 45 sekundi. Bez konzervansa, bez praška koji čekaš kod kuće, bez prljave šejkerice.</span>
+          <span data-lang="en">Freshly mixed in 45 seconds. No preservatives, no powder waiting at home, no dirty shaker bottle.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="s-inner">
+    <p class="s-eye" data-lang="hr">Iskustva</p>
+    <p class="s-eye" data-lang="en">Experiences</p>
+    <h2 class="s-title">
+      <span data-lang="hr">Što Kažu Korisnici</span>
+      <span data-lang="en">What Users Say</span>
+    </h2>
+
+    <div class="testi-grid">
+      <div class="testi feat">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">
+          <span data-lang="hr">"Godinu dana sam nosio shaker i prašak u torbi. Od kad je Shake-O-Mat u mom fitnessu, samo platim karticom i gotovo. Mišićna masa mi je porasla za 3kg za 4 mj — i mislim da je timing proteina stvarno bitan."</span>
+          <span data-lang="en">"For a year I carried a shaker and powder in my bag. Since Shake-O-Mat is in my gym, I just tap my card and done. Gained 3kg of muscle in 4 months — and I think protein timing really matters."</span>
+        </p>
+        <div class="testi-name">Luka Horvat, 28g</div>
+        <div class="testi-meta" data-lang="hr">Powerlifting · Zagreb · korisnik 5 mj.</div>
+        <div class="testi-meta" data-lang="en">Powerlifting · Zagreb · 5 months user</div>
+        <div class="testi-goal" data-lang="hr">+3kg mišićne mase</div>
+        <div class="testi-goal" data-lang="en">+3kg lean mass</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">
+          <span data-lang="hr">"Kao žena nisam htjela 'builder' shake — uzimam Collagen Glow. Koža, nokti, zglob su mi bolji. A to što mogu platiti mobitelom i ne petljati s praškom u svlačionici? Savršeno."</span>
+          <span data-lang="en">"As a woman I didn't want a 'builder' shake — I take Collagen Glow. Skin, nails, joints are all better. And being able to pay with my phone without messing with powder in the locker room? Perfect."</span>
+        </p>
+        <div class="testi-name">Ana Šimić, 32g</div>
+        <div class="testi-meta" data-lang="hr">Yoga + Pilates · Split · korisnica 3 mj.</div>
+        <div class="testi-meta" data-lang="en">Yoga + Pilates · Split · 3 months user</div>
+        <div class="testi-goal" data-lang="hr">Kolagen rutina</div>
+        <div class="testi-goal" data-lang="en">Collagen routine</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">
+          <span data-lang="hr">"Radim jutarnje treninge u 6h. Nema menze, nema proteinskog bara u blizini. Sad uzmem Creatine Boost odmah izlazeći iz sale — za 30 min sam u uredu s makrosima odrađenima. Bez kompromisa."</span>
+          <span data-lang="en">"I train at 6am. No canteen, no protein bar nearby. Now I grab Creatine Boost leaving the gym floor — 30 mins later I'm at the office with macros sorted. No compromise."</span>
+        </p>
+        <div class="testi-name">Tomislav Kos, 35g</div>
+        <div class="testi-meta" data-lang="hr">HIIT + CrossFit · Rijeka · korisnik 6 mj.</div>
+        <div class="testi-meta" data-lang="en">HIIT + CrossFit · Rijeka · 6 months user</div>
+        <div class="testi-goal" data-lang="hr">Jutarnji protokol</div>
+        <div class="testi-goal" data-lang="en">Morning protocol</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="section" id="faq">
+  <div class="s-inner">
+    <p class="s-eye" data-lang="hr">Pitanja</p>
+    <p class="s-eye" data-lang="en">Questions</p>
+    <h2 class="s-title">
+      <span data-lang="hr">Brzi Odgovori</span>
+      <span data-lang="en">Quick Answers</span>
+    </h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span data-lang="hr">Koliko košta jedan shake?</span>
+          <span data-lang="en">How much is one shake?</span>
+        </div>
+        <div class="faq-a">
+          <span data-lang="hr">€3,50 po shaku. Plaćanje isključivo karticom ili mobilnim — Visa, Mastercard, Apple Pay, Google Pay. Bez gotovine.</span>
+          <span data-lang="en">€3.50 per shake. Card or mobile payment only — Visa, Mastercard, Apple Pay, Google Pay. No cash.</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span data-lang="hr">Je li shake svježe napravljen ili iz boce?</span>
+          <span data-lang="en">Is the shake freshly made or from a bottle?</span>
+        </div>
+        <div class="faq-a">
+          <span data-lang="hr">Svježe mješan na licu mjesta iz suhe mješavine i filtrirane vode. Bez konzervansa, bez stabilizatora — kao da si ga sam napravio, samo brže i bez prljanja.</span>
+          <span data-lang="en">Freshly mixed on the spot from dry blend and filtered water. No preservatives, no stabilisers — like you made it yourself, just faster and mess-free.</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span data-lang="hr">Ima li opcija za vegan korisnika?</span>
+          <span data-lang="en">Is there a vegan option?</span>
+        </div>
+        <div class="faq-a">
+          <span data-lang="hr">Da — Vegan Blend (grašak + riža, 26g proteina). Formuliran s dovoljno leucina za usporediv anabolički odgovor s wheyem. Collagen Glow i BCAA Recovery su također bez mliječnih proteina.</span>
+          <span data-lang="en">Yes — Vegan Blend (pea + rice, 26g protein). Formulated with enough leucine for comparable anabolic response to whey. Collagen Glow and BCAA Recovery are also dairy-free.</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span data-lang="hr">U kojim teretanama se nalazi Shake-O-Mat?</span>
+          <span data-lang="en">Which gyms have Shake-O-Mat?</span>
+        </div>
+        <div class="faq-a">
+          <span data-lang="hr">Shake-O-Mat se postavlja u fitness centre, CrossFit boxove i wellness studije u Hrvatskoj. Piši nam na WhatsApp s imenom svoje teretane — provjerit ćemo je li automat već tamo ili dolazi uskoro.</span>
+          <span data-lang="en">Shake-O-Mat is being placed in fitness centres, CrossFit boxes, and wellness studios across Croatia. WhatsApp us with your gym name — we'll check if the machine is already there or coming soon.</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span data-lang="hr">Vlasnik sam teretane — kako mogu dobiti automat?</span>
+          <span data-lang="en">I own a gym — how can I get a machine?</span>
+        </div>
+        <div class="faq-a">
+          <span data-lang="hr">Posjeti <a href="./gym_landing_page.html" style="color:var(--c);">shakeomat.hr/gym_landing_page.html</a> — kompletne informacije o partnerskom programu, ROI kalkulatoru i procjeni lokacije.</span>
+          <span data-lang="en">Visit <a href="./gym_landing_page.html" style="color:var(--c);">shakeomat.hr/gym_landing_page.html</a> — full information about the partnership programme, ROI calculator, and location assessment.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ FINAL CTA ══════════ -->
+<section class="cta-section" id="kontakt">
+  <div class="cta-inner">
+    <p class="cta-eye" data-lang="hr">Pronađi Automat</p>
+    <p class="cta-eye" data-lang="en">Find The Machine</p>
+    <h2 class="cta-title">
+      <span data-lang="hr">Je Li Shake-O-Mat<br/>U Tvojoj Teretani?</span>
+      <span data-lang="en">Is Shake-O-Mat<br/>In Your Gym?</span>
+    </h2>
+    <p class="cta-sub">
+      <span data-lang="hr">Pošalji nam ime teretane na WhatsApp — odmah ti javljamo ili te stavljamo na listu čekanja.</span>
+      <span data-lang="en">Send us your gym name on WhatsApp — we'll let you know immediately or add you to the waiting list.</span>
+    </p>
+    <a href="https://wa.me/385XXXXXXXXX?text=Je%20li%20Shake-O-Mat%20u%20mojoj%20teretani%3F" target="_blank" class="wa-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span data-lang="hr">Pitaj na WhatsApp</span>
+      <span data-lang="en">Ask on WhatsApp</span>
+    </a>
+    <p class="cta-micro">
+      <span data-lang="hr">Ili javi svojoj teretani da žele Shake-O-Mat — pa ih usmjeri na <strong>shakeomat.hr</strong></span>
+      <span data-lang="en">Or tell your gym you want Shake-O-Mat — direct them to <strong>shakeomat.hr</strong></span>
+    </p>
+
+    <!-- Cross-link B2B -->
+    <div class="cta-b2b">
+      <p class="cta-b2b-text">
+        <span data-lang="hr">Vlasnik ili manager teretane?</span>
+        <span data-lang="en">Gym owner or manager?</span>
+      </p>
+      <a href="./gym_landing_page.html" data-lang="hr">Pogledaj partnerski program → Za teretane</a>
+      <a href="./gym_landing_page.html" data-lang="en">See partnership programme → For gyms</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div>
+    <a href="./index.html" class="f-logo" style="text-decoration:none;">Shake-O-<span>Mat</span></a>
+    <div style="font-size:12px;color:#333;margin-top:6px;">Shake-O-Mat j.d.o.o. · Zagreb, Hrvatska</div>
+  </div>
+  <div class="f-links">
+    <a href="#zasto" data-lang="hr">Zašto sada</a>
+    <a href="#zasto" data-lang="en">Why now</a>
+    <a href="#recepti" data-lang="hr">Recepti</a>
+    <a href="#recepti" data-lang="en">Recipes</a>
+    <a href="#faq">FAQ</a>
+    <a href="./gym_landing_page.html" data-lang="hr">Za teretane</a>
+    <a href="./gym_landing_page.html" data-lang="en">For gyms</a>
+  </div>
+  <div class="f-copy" data-lang="hr">© 2026 Shake-O-Mat. Sva prava pridržana.</div>
+  <div class="f-copy" data-lang="en">© 2026 Shake-O-Mat. All rights reserved.</div>
+</footer>
+
+<!-- Sticky bar -->
+<div id="sticky">
+  <span class="s-txt">
+    <span data-lang="hr">⏱ Anabolički prozor — uzmi protein odmah</span>
+    <span data-lang="en">⏱ Anabolic window — get protein now</span>
+  </span>
+  <a href="https://wa.me/385XXXXXXXXX?text=Gdje%20je%20Shake-O-Mat%3F" target="_blank" class="s-cta">
+    <span data-lang="hr">WhatsApp →</span>
+    <span data-lang="en">WhatsApp →</span>
+  </a>
+  <button class="s-close" onclick="document.getElementById('sticky').style.display='none'">×</button>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     JAVASCRIPT
+     PRAVILO: Nula inline style="display:none".
+     Sve se rješava kroz setProperty s 'important'.
+══════════════════════════════════════════════ -->
+<script>
+// ── LANG ENGINE ──────────────────────────────
+// Uses data-lang="hr" / data-lang="en" attributes.
+// setProperty('important') overrides ANY inline style.
+const INLINE = new Set(['span','a','strong','em','b','i','button','label','svg','path']);
+
+function getDisplay(el) {
+  return INLINE.has(el.tagName.toLowerCase()) ? 'inline' : 'block';
+}
+
+function setLang(lang) {
+  const hide = lang === 'hr' ? 'en' : 'hr';
+
+  document.querySelectorAll('[data-lang="' + hide + '"]').forEach(el => {
+    el.style.setProperty('display', 'none', 'important');
+  });
+  document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
+    el.style.setProperty('display', getDisplay(el), 'important');
+  });
+
+  document.getElementById('btn-hr').classList.toggle('active', lang === 'hr');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = lang;
+  localStorage.setItem('som_lang', lang);
+
+  if (lang === 'en') {
+    document.title = 'Shake-O-Mat | Protein Shake Right After Training';
+    document.querySelector('meta[name="description"]').content =
+      'Fresh protein shake in 45 seconds — whey, vegan, creatine, BCAA. Available in your gym. Card payment, 20+ flavours, no waiting.';
+  } else {
+    document.title = 'Shake-O-Mat | Protein Shake Odmah Nakon Treninga';
+    document.querySelector('meta[name="description"]').content =
+      'Svježi protein shake za 45 sekundi — whey, vegan, kreatin, BCAA. Dostupno u tvojoj teretani. Kartično plaćanje, 20+ okusa, bez čekanja.';
+  }
+}
+
+// Init on load — restore persisted language preference, default HR
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('som_lang');
+  setLang(saved === 'en' ? 'en' : 'hr');
+});
+
+// ── ANABOLIC WINDOW TIMER ────────────────────
+// Persists across page reloads via localStorage so urgency stays real
+(function() {
+  const TOTAL = 45 * 60; // 2700s
+  const KEY = 'som_timer_start';
+  const now = Date.now();
+
+  // Load or init start time
+  let stored = parseInt(localStorage.getItem(KEY), 10);
+  if (!stored || isNaN(stored) || now - stored > TOTAL * 1000) {
+    stored = now;
+    localStorage.setItem(KEY, stored);
+  }
+
+  function tick() {
+    const elapsedSec = Math.floor((Date.now() - stored) / 1000);
+    const remaining = Math.max(0, TOTAL - (elapsedSec % (TOTAL + 1)));
+
+    if (elapsedSec >= TOTAL) {
+      // reset cycle
+      stored = Date.now();
+      localStorage.setItem(KEY, stored);
+    }
+
+    const m = Math.floor(remaining / 60);
+    const s = remaining % 60;
+    const pct = (remaining / TOTAL) * 100;
+
+    const disp = document.getElementById('timerDisplay');
+    const bar  = document.getElementById('timerBar');
+    if (!disp) return;
+
+    disp.textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+    disp.classList.toggle('urgent', remaining < 600);
+
+    if (bar) {
+      bar.style.width = pct + '%';
+      bar.style.background = remaining < 600
+        ? 'var(--red)'
+        : 'linear-gradient(90deg, var(--o), var(--red))';
+    }
+  }
+
+  setInterval(tick, 1000);
+  tick();
+})();
+
+// ── FAQ ──────────────────────────────────────
+function toggleFaq(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+
+// ── SMOOTH SCROLL (offset for fixed nav) ─────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) {
+      e.preventDefault();
+      window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 72, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
