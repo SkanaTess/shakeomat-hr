@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Influencer Kit · Shake-o-mat</title>
+<meta name="description" content="UGC brief za nano-influencere · Zagreb · Q2 2026" />
+
+<!-- Google Fonts: Barlow Condensed 900 + Barlow 400/600 -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet" />
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<style>
+  :root {
+    --bg: #050816;
+    --bg-surface: #0B1230;
+    --blue: #1BA2FF;
+    --cyan: #73EDFF;
+    --green: #7DFF9B;
+    --orange: #FF9B46;
+    --white: #F4F8FF;
+    --muted: #8AA0C8;
+    --radius: 14px;
+    --radius-lg: 20px;
+    --max: 1100px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { color: var(--white); }
+
+  img { max-width: 100%; display: block; }
+
+  /* --- NAV --- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(5, 8, 22, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(138, 160, 200, 0.15);
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+  .logo .dot { color: var(--green); }
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  /* --- HERO --- */
+  .hero {
+    padding: 72px 20px 52px;
+    text-align: left;
+    max-width: var(--max);
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(800px 400px at 10% 0%, rgba(27, 162, 255, 0.15), transparent 60%),
+      radial-gradient(600px 300px at 90% 20%, rgba(125, 255, 155, 0.1), transparent 60%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(52px, 11vw, 128px);
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+  .hero h1 .accent { color: var(--green); }
+  .hero-sub {
+    font-size: clamp(16px, 2.2vw, 20px);
+    color: var(--muted);
+    margin-top: 20px;
+    max-width: 640px;
+  }
+  .hero-actions {
+    margin-top: 28px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    border: 0;
+    transition: transform .15s ease, background .2s ease;
+    text-decoration: none;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--green); color: var(--bg); }
+  .btn-ghost { background: transparent; border: 1.5px solid var(--muted); color: var(--white); }
+
+  /* --- SECTIONS --- */
+  section.block {
+    padding: 48px 20px;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .section-label .num {
+    color: var(--green);
+    font-weight: 900;
+    margin-right: 8px;
+  }
+  h2.section-title {
+    font-size: clamp(32px, 5vw, 52px);
+    color: var(--white);
+    margin-bottom: 26px;
+  }
+
+  /* --- CARD / GRID --- */
+  .card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138, 160, 200, 0.15);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .card h3 {
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .card p { color: var(--muted); font-size: 15px; }
+
+  .grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 720px) {
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* --- LIST STYLES --- */
+  .ulist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ulist li {
+    padding: 14px 16px;
+    background: var(--bg-surface);
+    border: 1px solid rgba(138, 160, 200, 0.12);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .ulist li::before {
+    content: "";
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--cyan);
+    margin-top: 9px;
+  }
+
+  /* --- CHECKLIST --- */
+  .checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .checklist li {
+    padding: 14px 16px;
+    background: var(--bg-surface);
+    border: 1px solid rgba(125, 255, 155, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+  }
+  .checklist li::before {
+    content: "";
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--green);
+    border-radius: 4px;
+    position: relative;
+    margin-top: 2px;
+  }
+  .checklist li::after {
+    content: "";
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 6px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid var(--green);
+    border-bottom: 2px solid var(--green);
+    transform: rotate(-45deg);
+  }
+
+  /* --- NOT A FIT --- */
+  .not-fit {
+    margin-top: 18px;
+    border-left: 3px solid var(--orange);
+    background: rgba(255, 155, 70, 0.08);
+    padding: 16px 20px;
+    border-radius: 8px;
+  }
+  .not-fit strong {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--orange);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .not-fit-items {
+    color: var(--muted);
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .not-fit-items span::before { content: "× "; color: var(--orange); font-weight: 900; }
+
+  /* --- COMPENSATION --- */
+  .comp-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138, 160, 200, 0.15);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .comp-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--green);
+  }
+  .comp-card:nth-child(2)::before { background: var(--cyan); }
+  .comp-card:nth-child(3)::before { background: var(--orange); }
+  .comp-card .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .comp-card:nth-child(2) .num { color: var(--cyan); }
+  .comp-card:nth-child(3) .num { color: var(--orange); }
+  .comp-card h3 { font-size: 20px; margin-bottom: 8px; }
+  .comp-note {
+    margin-top: 18px;
+    padding: 12px 16px;
+    border: 1px dashed rgba(138, 160, 200, 0.35);
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  /* --- PROHIBITED --- */
+  .prohibited {
+    border: 2px solid var(--orange);
+    background: rgba(255, 155, 70, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+  }
+  .prohibited h3 {
+    color: var(--orange);
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .prohibited-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .prohibited-list li {
+    padding: 12px 14px;
+    background: rgba(5, 8, 22, 0.5);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--white);
+    font-size: 15px;
+  }
+  .x-icon {
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--orange);
+    color: var(--bg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+    margin-top: 1px;
+  }
+
+  /* --- MINI CARDS (aesthetic) --- */
+  .mini-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138, 160, 200, 0.12);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+  }
+  .mini-card .ic {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba(115, 237, 255, 0.15);
+    color: var(--cyan);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .mini-card:nth-child(2) .ic { background: rgba(125, 255, 155, 0.15); color: var(--green); }
+  .mini-card:nth-child(3) .ic { background: rgba(255, 155, 70, 0.15); color: var(--orange); }
+  .mini-card:nth-child(4) .ic { background: rgba(27, 162, 255, 0.15); color: var(--blue); }
+  .mini-card p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    color: var(--white);
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1.15;
+  }
+
+  /* --- CAPTION CODE --- */
+  .caption-block {
+    background: var(--bg-surface);
+    border: 1px solid rgba(115, 237, 255, 0.25);
+    border-radius: var(--radius);
+    padding: 24px;
+    font-family: 'Courier New', ui-monospace, monospace;
+    color: var(--cyan);
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  .caption-block .placeholder { color: var(--muted); }
+  .caption-block .hashtag { color: var(--green); }
+
+  /* --- TIMELINE --- */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    counter-reset: step;
+    list-style: none;
+  }
+  .timeline li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 18px 20px;
+    background: var(--bg-surface);
+    border: 1px solid rgba(138, 160, 200, 0.15);
+    border-radius: 12px;
+  }
+  .timeline li::before {
+    counter-increment: step;
+    content: counter(step);
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: var(--green);
+    color: var(--bg);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline-text { flex: 1; }
+  .timeline-text h4 {
+    font-size: 18px;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+  .timeline-text span {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  /* --- CONTACT --- */
+  .contact-card {
+    background: linear-gradient(135deg, rgba(27, 162, 255, 0.15), rgba(125, 255, 155, 0.1));
+    border: 1px solid rgba(115, 237, 255, 0.3);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    text-align: center;
+  }
+  .contact-card h3 {
+    font-size: clamp(28px, 5vw, 44px);
+    color: var(--white);
+    margin-bottom: 18px;
+  }
+  .contact-card p {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .contact-card a {
+    font-weight: 600;
+    color: var(--cyan);
+  }
+
+  /* --- FOOTER --- */
+  footer {
+    border-top: 1px solid rgba(138, 160, 200, 0.15);
+    padding: 26px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+  /* --- PRINT --- */
+  @media print {
+    @page { margin: 12mm; size: A4; }
+    html, body {
+      background: #ffffff !important;
+      color: #000 !important;
+      font-size: 11pt;
+    }
+    .nav, .hero-actions, footer { display: none !important; }
+    .hero { padding: 0 0 18px; }
+    .hero::before { display: none; }
+    .hero h1 { color: #000 !important; font-size: 42pt; }
+    .hero-sub { color: #444 !important; }
+    section.block { padding: 18px 0; page-break-inside: avoid; max-width: 100%; }
+    h2.section-title { color: #000 !important; font-size: 20pt; }
+    .section-label { color: #555 !important; }
+    .section-label .num { color: var(--green) !important; }
+
+    .card, .comp-card, .mini-card, .timeline li,
+    .ulist li, .checklist li, .prohibited-list li,
+    .caption-block, .contact-card, .not-fit {
+      background: #ffffff !important;
+      border: 1px solid #ccc !important;
+      color: #000 !important;
+      page-break-inside: avoid;
+    }
+    .card h3, .comp-card h3, .mini-card p,
+    .timeline-text h4 { color: #000 !important; }
+    .card p, .timeline-text span, .comp-note { color: #333 !important; }
+
+    /* preserve accents */
+    .comp-card::before { background: var(--green) !important; }
+    .comp-card:nth-child(2)::before { background: var(--cyan) !important; }
+    .comp-card:nth-child(3)::before { background: var(--orange) !important; }
+    .comp-card .num { color: var(--green) !important; }
+    .comp-card:nth-child(2) .num { color: var(--cyan) !important; }
+    .comp-card:nth-child(3) .num { color: var(--orange) !important; }
+    .prohibited { border-color: var(--orange) !important; background: #fff7ef !important; }
+    .prohibited h3 { color: var(--orange) !important; }
+    .x-icon { background: var(--orange) !important; color: #fff !important; }
+    .timeline li::before { background: var(--green) !important; color: #000 !important; }
+    .caption-block { color: #000 !important; }
+    .caption-block .hashtag { color: var(--green) !important; }
+    .not-fit { border-left-color: var(--orange) !important; }
+    .not-fit strong { color: var(--orange) !important; }
+    .contact-card a { color: #007ACC !important; }
+    .ulist li::before { background: var(--blue) !important; }
+    .checklist li::before { border-color: var(--green) !important; }
+    .checklist li::after { border-color: var(--green) !important; }
+
+    a { color: #000 !important; text-decoration: underline; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="b2b.html">B2B</a>
+      <a href="portal.html">Portal</a>
+      <a href="gym_signage_pack.html">Signage</a>
+      <a href="influencer_kit.html" style="color:var(--white)">Influencer Kit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="eyebrow">Creator brief · Q2 2026</div>
+  <h1>INFLUENCER<br><span class="accent">KIT</span></h1>
+  <p class="hero-sub">UGC brief za nano-influencere · Zagreb · Q2 2026. Autenticni glasovi iz pravih teretana — real gym, real sweat, real shake.</p>
+  <div class="hero-actions">
+    <button class="btn btn-primary" onclick="window.print()">↓ Print / Save PDF</button>
+    <a href="mailto:kreativa@shakeomat.hr" class="btn btn-ghost">Apply via email</a>
+  </div>
+</header>
+
+<!-- SECTION 1 -->
+<section class="block">
+  <div class="section-label"><span class="num">01</span> Who we're looking for</div>
+  <h2 class="section-title">Koga tražimo</h2>
+  <ul class="ulist">
+    <li>10–15 nano-influencera (5K–20K followera)</li>
+    <li>Treniraju u Gyms4you, HOB, ili THE Fitness Zagreb</li>
+    <li>Niša: fitness, lifestyle — hrvatski jezik kao primarni</li>
+    <li>Autentičnost prije produkcije — real gym, real sweat</li>
+  </ul>
+  <div class="not-fit">
+    <strong>NOT a fit:</strong>
+    <div class="not-fit-items">
+      <span>Macro influenceri</span>
+      <span>Fitness modeli bez stvarnog treninga</span>
+      <span>Off-topic računi</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="block">
+  <div class="section-label"><span class="num">02</span> Compensation</div>
+  <h2 class="section-title">Što dobivaš</h2>
+  <div class="grid grid-3">
+    <div class="comp-card">
+      <div class="num">01</div>
+      <h3>Besplatni shakeovi</h3>
+      <p>Mjesec dana, bilo koji SKU, neograničeno. Treniraj i recovery-iraj bez računa.</p>
+    </div>
+    <div class="comp-card">
+      <div class="num">02</div>
+      <h3>Feature na @shakeomat</h3>
+      <p>Tvoj content na našem službenom kanalu — Reels + Stories rotacija.</p>
+    </div>
+    <div class="comp-card">
+      <div class="num">03</div>
+      <h3>Early access</h3>
+      <p>Prvi kušaš nove SKU-ove prije nego izađu na tržište. Beta tester status.</p>
+    </div>
+  </div>
+  <div class="comp-note">Napomena: Bez cash kompenzacije u pilot fazi. Autentičnost je prioritet — hoćemo pravu reakciju, ne sponzorsku glumu.</div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="block">
+  <div class="section-label"><span class="num">03</span> Content requirements</div>
+  <h2 class="section-title">Što očekujemo</h2>
+  <ul class="checklist">
+    <li>2× Reels ILI TikToks mjesečno (minimum)</li>
+    <li>1× Story po pojedenom shakeu (max 8/tjedan)</li>
+    <li>Aparat mora biti u kadru barem jednom po Reelu</li>
+    <li>Koristi hashtage: #ShakeOMat #RecoverRight #FreshEveryRep</li>
+    <li>Tag @shakeomat u svakom postu</li>
+  </ul>
+</section>
+
+<!-- SECTION 4 -->
+<section class="block">
+  <div class="section-label"><span class="num">04</span> Prohibited content</div>
+  <h2 class="section-title">Što NE smiješ</h2>
+  <div class="prohibited">
+    <h3>× Zabranjeno</h3>
+    <ul class="prohibited-list">
+      <li><span class="x-icon">×</span> BEZ health claims (bez "muscle building", bez "fat loss")</li>
+      <li><span class="x-icon">×</span> BEZ before/after fotografija tijela</li>
+      <li><span class="x-icon">×</span> BEZ medicinskog/kliničkog jezika</li>
+      <li><span class="x-icon">×</span> BEZ spominjanja konkurentskih brendova</li>
+      <li><span class="x-icon">×</span> BEZ pretjerano staged "perfect" contenta — real over polished</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section class="block">
+  <div class="section-label"><span class="num">05</span> Aesthetic guide</div>
+  <h2 class="section-title">Vizualni smjer</h2>
+  <div class="grid grid-4">
+    <div class="mini-card">
+      <div class="ic">01</div>
+      <p>Dark gym background preferred</p>
+    </div>
+    <div class="mini-card">
+      <div class="ic">02</div>
+      <p>Natural lighting (no studio)</p>
+    </div>
+    <div class="mini-card">
+      <div class="ic">03</div>
+      <p>Real sweat welcome</p>
+    </div>
+    <div class="mini-card">
+      <div class="ic">04</div>
+      <p>Brand colors in frame (cup, wrap, signage)</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+<section class="block">
+  <div class="section-label"><span class="num">06</span> Caption template</div>
+  <h2 class="section-title">Caption formula</h2>
+  <div class="caption-block"><span class="placeholder">[Hook — POV/question/statement]</span>
+
+<span class="placeholder">[Personal context — your training, why you took the shake]</span>
+
+<span class="placeholder">[Product moment — the SKU you chose, how it tasted/felt]</span>
+
+<span class="placeholder">[CTA — find your machine at shakeomat.hr]</span>
+
+<span class="hashtag">#ShakeOMat #FreshEveryRep #RecoverRight</span> @shakeomat</div>
+</section>
+
+<!-- SECTION 7 -->
+<section class="block">
+  <div class="section-label"><span class="num">07</span> Approval process</div>
+  <h2 class="section-title">Kako se prijaviti</h2>
+  <ol class="timeline">
+    <li>
+      <div class="timeline-text">
+        <h4>Apply via DM @shakeomat</h4>
+        <span>Pošalji poruku s linkom na profil + par riječi o tebi</span>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-text">
+        <h4>Review + brand fit match</h4>
+        <span>Pregledamo profil i sadržaj — odgovor u 48h</span>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-text">
+        <h4>Onboarding call (15 min)</h4>
+        <span>Kratki call, upoznavanje, logistika</span>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-text">
+        <h4>Welcome kit + prvi shakeovi</h4>
+        <span>Dobivaš access, promo kod i brand guidelines</span>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-text">
+        <h4>Post + tag — repeat monthly</h4>
+        <span>Post dogovorenog frequency-a, tag, relax</span>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- SECTION 8 -->
+<section class="block">
+  <div class="section-label"><span class="num">08</span> Contact</div>
+  <h2 class="section-title">Prijavi se</h2>
+  <div class="contact-card">
+    <h3>Spremi se — i javi se.</h3>
+    <p>DM <a href="https://instagram.com/shakeomat" target="_blank" rel="noopener">@shakeomat</a> na Instagramu</p>
+    <p>Email: <a href="mailto:kreativa@shakeomat.hr">kreativa@shakeomat.hr</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · Zagreb · 2026
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gym Signage Pack · Shake-o-mat</title>
+<meta name="description" content="Print-ready dizajni za partner teretane — A3, A5, A6, Machine Top, Window Cling." />
+
+<!-- Google Fonts: Barlow Condensed 900 + Barlow 400/600 -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet" />
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<style>
+  :root {
+    --bg: #050816;
+    --bg-surface: #0B1230;
+    --blue: #1BA2FF;
+    --cyan: #73EDFF;
+    --green: #7DFF9B;
+    --orange: #FF9B46;
+    --white: #F4F8FF;
+    --muted: #8AA0C8;
+    --max: 1200px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: auto;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { color: var(--white); }
+
+  /* --- NAV --- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(5, 8, 22, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(138, 160, 200, 0.15);
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+  .logo .dot { color: var(--green); }
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  /* --- PAGE HERO --- */
+  .page-hero {
+    padding: 72px 20px 40px;
+    max-width: var(--max);
+    margin: 0 auto;
+    position: relative;
+  }
+  .page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(800px 400px at 10% 0%, rgba(27, 162, 255, 0.15), transparent 60%),
+      radial-gradient(600px 300px at 90% 20%, rgba(125, 255, 155, 0.1), transparent 60%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .page-hero h1 {
+    font-size: clamp(52px, 11vw, 128px);
+    color: var(--white);
+  }
+  .page-hero h1 .accent { color: var(--orange); }
+  .page-hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--muted);
+    margin-top: 20px;
+    max-width: 680px;
+  }
+  .hero-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    border: 0;
+    transition: transform .15s ease;
+    text-decoration: none;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--green); color: var(--bg); }
+  .btn-ghost { background: transparent; border: 1.5px solid var(--muted); color: var(--white); }
+  .note-tip {
+    margin-top: 22px;
+    padding: 14px 18px;
+    border: 1px dashed rgba(115, 237, 255, 0.35);
+    background: rgba(115, 237, 255, 0.06);
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 700px;
+  }
+
+  /* --- DESIGN WRAPPER --- */
+  .design-section {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 32px 20px;
+  }
+  .design-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(138, 160, 200, 0.2);
+  }
+  .design-label .name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .design-label .dims {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  .design-label .dims strong { color: var(--cyan); }
+
+  .preview-frame {
+    background: #f0f2f7;
+    border: 1px solid rgba(138, 160, 200, 0.2);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+  }
+  .preview-frame::after {
+    content: "↓ Right-click → Print Selection";
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 11px;
+    color: #7a89a6;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+    pointer-events: none;
+  }
+  .design-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn-sm {
+    padding: 10px 16px;
+    font-size: 12px;
+    border-radius: 999px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid var(--muted);
+    color: var(--white);
+    background: transparent;
+  }
+  .btn-sm:hover { background: var(--green); color: var(--bg); border-color: var(--green); }
+
+  /* --- DESIGN BASE (actual mm scale) --- */
+  /* 1mm = 3.7795px */
+  .design {
+    background: var(--bg);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    flex: 0 0 auto;
+  }
+  .design * { font-family: 'Barlow Condensed', 'Barlow', sans-serif; }
+  .design .brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .design .brand .dot { color: var(--green); }
+
+  .sku-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+  }
+  .sku-lean { background: var(--cyan); }
+  .sku-build { background: var(--green); }
+  .sku-recover { background: var(--orange); }
+  .sku-boost { background: #C882FF; }
+
+  /* --- QR placeholder --- */
+  .qr {
+    background:
+      linear-gradient(45deg, #000 25%, transparent 25%) 0 0 / 6px 6px,
+      linear-gradient(-45deg, #000 25%, transparent 25%) 0 0 / 6px 6px,
+      linear-gradient(45deg, transparent 75%, #000 75%) 0 0 / 6px 6px,
+      linear-gradient(-45deg, transparent 75%, #000 75%) 0 0 / 6px 6px,
+      #fff;
+    border: 3px solid #fff;
+  }
+
+  /* ============ DESIGN 1: A3 POSTER (297×420mm) ============ */
+  .a3-poster {
+    width: 297mm;
+    height: 420mm;
+    background: var(--bg);
+    padding: 18mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .a3-poster .brand { font-size: 38px; }
+  .a3-poster .headline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 200px;
+    line-height: 0.88;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-top: 40mm;
+  }
+  .a3-poster .arrow-row {
+    display: flex;
+    align-items: center;
+    gap: 18mm;
+    margin-top: 14mm;
+  }
+  .a3-poster .arrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 220px;
+    color: var(--green);
+    line-height: 1;
+  }
+  .a3-poster .arrow-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 0.95;
+  }
+  .a3-poster .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20mm;
+  }
+  .a3-poster .pills {
+    display: flex;
+    gap: 10mm;
+    flex-wrap: wrap;
+  }
+  .a3-poster .sku-pill { font-size: 28px; padding: 14px 28px; }
+  .a3-poster .qr { width: 50mm; height: 50mm; }
+  .a3-poster .tagline-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--green);
+    color: var(--bg);
+    text-align: center;
+    padding: 6mm 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .a3-poster-inner-pad { padding-bottom: 24mm; }
+
+  /* ============ DESIGN 2: A5 FLYER (148×210mm) ============ */
+  .a5-flyer {
+    width: 148mm;
+    height: 210mm;
+    background: var(--bg);
+    padding: 10mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .a5-flyer .brand { font-size: 22px; }
+  .a5-flyer .headline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 54px;
+    color: var(--white);
+    line-height: 0.92;
+    text-transform: uppercase;
+    margin-top: 6mm;
+  }
+  .a5-flyer .headline .accent { color: var(--green); }
+  .a5-flyer .sku-row {
+    display: flex;
+    gap: 4mm;
+    margin-top: 6mm;
+  }
+  .a5-flyer .sku-card {
+    flex: 1;
+    padding: 5mm 3mm;
+    border-radius: 6px;
+    background: var(--bg-surface);
+    text-align: center;
+    border-top: 3px solid var(--cyan);
+  }
+  .a5-flyer .sku-card.b { border-top-color: var(--green); }
+  .a5-flyer .sku-card.r { border-top-color: var(--orange); }
+  .a5-flyer .sku-card.boost { border-top-color: #C882FF; }
+  .a5-flyer .sku-card .name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .a5-flyer .sku-card.l .name { color: var(--cyan); }
+  .a5-flyer .sku-card.b .name { color: var(--green); }
+  .a5-flyer .sku-card.r .name { color: var(--orange); }
+  .a5-flyer .sku-card.boost .name { color: #C882FF; }
+  .a5-flyer .sku-card .price {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--white);
+    margin-top: 3mm;
+    line-height: 1;
+  }
+  .a5-flyer .body-copy {
+    margin-top: 8mm;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .a5-flyer .qr-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3mm;
+    margin-top: 6mm;
+  }
+  .a5-flyer .qr { width: 36mm; height: 36mm; }
+  .a5-flyer .qr-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--cyan);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .a5-flyer .footer-line {
+    margin-top: auto;
+    padding-top: 4mm;
+    border-top: 1px solid rgba(138, 160, 200, 0.3);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ============ DESIGN 3: MACHINE TOP (210×100mm) ============ */
+  .machine-top {
+    width: 210mm;
+    height: 100mm;
+    background: var(--bg);
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  .machine-top .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .machine-top .col {
+    padding: 6mm 5mm 5mm;
+    border-right: 1px solid rgba(138, 160, 200, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+    position: relative;
+  }
+  .machine-top .col:last-child { border-right: none; }
+  .machine-top .col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4mm;
+  }
+  .machine-top .col.l::before { background: var(--cyan); }
+  .machine-top .col.b::before { background: var(--green); }
+  .machine-top .col.r::before { background: var(--orange); }
+  .machine-top .col.boost::before { background: #C882FF; }
+  .machine-top .col .sku-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--white);
+    line-height: 1;
+    margin-top: 4mm;
+    text-transform: uppercase;
+  }
+  .machine-top .col.l .sku-name { color: var(--cyan); }
+  .machine-top .col.b .sku-name { color: var(--green); }
+  .machine-top .col.r .sku-name { color: var(--orange); }
+  .machine-top .col.boost .sku-name { color: #C882FF; }
+  .machine-top .col .macro {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .machine-top .col .price {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--white);
+    line-height: 1;
+    margin-top: auto;
+  }
+  .machine-top .strip {
+    background: var(--white);
+    color: var(--bg);
+    padding: 3mm 0;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ============ DESIGN 4: LOCKER STICKER A6 (105×148mm) ============ */
+  .locker {
+    width: 105mm;
+    height: 148mm;
+    background: var(--bg);
+    padding: 8mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .locker .top-mark {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--cyan);
+    text-transform: uppercase;
+  }
+  .locker .headline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: var(--white);
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-top: 4mm;
+  }
+  .locker .headline .accent { color: var(--orange); }
+  .locker .subline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 3mm;
+  }
+  .locker .arrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 120px;
+    color: var(--green);
+    line-height: 1;
+    text-align: center;
+  }
+  .locker .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .locker .brand { font-size: 18px; }
+  .locker .direction {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--cyan);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ============ DESIGN 5: WINDOW CLING A5 (148×210mm translucent) ============ */
+  .window-cling {
+    width: 148mm;
+    height: 210mm;
+    background: rgba(244, 248, 255, 0.92);
+    color: var(--bg);
+    padding: 12mm;
+    display: flex;
+    flex-direction: column;
+    gap: 6mm;
+    position: relative;
+    border: 1px dashed rgba(27, 162, 255, 0.4);
+  }
+  .window-cling::before {
+    content: "TRANSLUCENT";
+    position: absolute;
+    top: 3mm;
+    right: 4mm;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    color: var(--blue);
+    letter-spacing: 0.3em;
+  }
+  .window-cling .brand {
+    color: var(--bg);
+    font-size: 22px;
+  }
+  .window-cling .brand .dot { color: var(--green); }
+  .window-cling .hero-line {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 0.9;
+    color: var(--bg);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .window-cling .hero-line .accent { color: var(--blue); }
+  .window-cling .sku-strip {
+    display: flex;
+    gap: 3mm;
+    margin-top: 4mm;
+  }
+  .window-cling .sku-chip {
+    flex: 1;
+    padding: 4mm 2mm;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    color: var(--bg);
+    text-transform: uppercase;
+  }
+  .window-cling .sku-chip.l { background: var(--cyan); }
+  .window-cling .sku-chip.b { background: var(--green); }
+  .window-cling .sku-chip.r { background: var(--orange); }
+  .window-cling .sku-chip.boost { background: #C882FF; }
+  .window-cling .qr-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3mm;
+    margin-top: auto;
+  }
+  .window-cling .qr { width: 40mm; height: 40mm; background-color: #fff; }
+  .window-cling .url {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--blue);
+    letter-spacing: 0.1em;
+  }
+
+  /* --- FOOTER --- */
+  footer {
+    border-top: 1px solid rgba(138, 160, 200, 0.15);
+    padding: 26px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+  /* =====================================================
+     PRINT CSS — CRITICAL
+     ===================================================== */
+  @media print {
+    @page { margin: 10mm; }
+    html, body {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    .nav, .page-hero, .note-tip, footer,
+    .design-label, .design-actions, .preview-frame::after {
+      display: none !important;
+    }
+    .design-section {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      page-break-after: always;
+    }
+    .design-section:last-of-type { page-break-after: auto; }
+    .preview-frame {
+      background: #fff !important;
+      border: none !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+      overflow: visible !important;
+      display: block !important;
+    }
+    .design {
+      box-shadow: none !important;
+      margin: 0 auto !important;
+    }
+    /* preserve printed colors */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="b2b.html">B2B</a>
+      <a href="portal.html">Portal</a>
+      <a href="influencer_kit.html">Influencer Kit</a>
+      <a href="gym_signage_pack.html" style="color:var(--white)">Signage</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="eyebrow">Partner teretane · Q2 2026</div>
+  <h1>GYM SIGNAGE<br><span class="accent">PACK</span></h1>
+  <p class="page-hero-sub">Print-ready dizajni za partner teretane. Svaki design renderiran u stvarnoj veličini. Klikni 'Print' za direktan ispis.</p>
+  <div class="hero-actions">
+    <button class="btn btn-primary" onclick="window.print()">↓ Print all designs</button>
+    <a href="mailto:partneri@shakeomat.hr" class="btn btn-ghost">Request custom sizes</a>
+  </div>
+  <div class="note-tip">Tip: Svaki design ima svoj "Print" gumb koji trenutno pokreće ispis cijele stranice (MVP). Za ispis pojedinog dizajna desnim klikom odaberi "Print Selection" na preview okviru.</div>
+</header>
+
+<!-- DESIGN 1: A3 POSTER -->
+<section class="design-section" id="a3-poster">
+  <div class="design-label">
+    <span class="name">01 · A3 Poster</span>
+    <span class="dims"><strong>297 × 420 mm</strong> · actual print size</span>
+  </div>
+  <div class="preview-frame">
+    <div class="design a3-poster">
+      <div class="a3-poster-inner-pad">
+        <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+        <div class="headline">SVJEŽI<br>PROTEIN<br>ZA 30 SEK.</div>
+        <div class="arrow-row">
+          <div class="arrow">→</div>
+          <div class="arrow-text">APARAT<br>JE OVDJE</div>
+        </div>
+        <div class="bottom">
+          <div class="pills">
+            <span class="sku-pill sku-lean">Lean</span>
+            <span class="sku-pill sku-build">Build</span>
+            <span class="sku-pill sku-recover">Recover</span>
+            <span class="sku-pill sku-boost">Boost</span>
+          </div>
+          <div class="qr"></div>
+        </div>
+      </div>
+      <div class="tagline-strip">Recover. Instantly.</div>
+    </div>
+  </div>
+  <div class="design-actions">
+    <button class="btn-sm" onclick="window.print()">↓ Print this design</button>
+  </div>
+</section>
+
+<!-- DESIGN 2: A5 FLYER -->
+<section class="design-section" id="a5-flyer">
+  <div class="design-label">
+    <span class="name">02 · A5 Flyer</span>
+    <span class="dims"><strong>148 × 210 mm</strong> · actual print size</span>
+  </div>
+  <div class="preview-frame">
+    <div class="design a5-flyer">
+      <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+      <div class="headline">SHAKE-O-MAT<br><span class="accent">JE OVDJE</span></div>
+      <div class="sku-row">
+        <div class="sku-card l"><div class="name">LEAN</div><div class="price">€4.50</div></div>
+        <div class="sku-card b"><div class="name">BUILD</div><div class="price">€4.90</div></div>
+        <div class="sku-card r"><div class="name">RECOVER</div><div class="price">€5.20</div></div>
+        <div class="sku-card boost"><div class="name">BOOST</div><div class="price">€4.90</div></div>
+      </div>
+      <div class="body-copy">Svježe miješan shake. 30 sekundi. Bez čekanja. Pronađi aparat u svojoj teretani i recover-iraj dok je trening još u nogama.</div>
+      <div class="qr-wrap">
+        <div class="qr"></div>
+        <div class="qr-label">shakeomat.hr</div>
+      </div>
+      <div class="footer-line">Pronađi sve okuse →</div>
+    </div>
+  </div>
+  <div class="design-actions">
+    <button class="btn-sm" onclick="window.print()">↓ Print this design</button>
+  </div>
+</section>
+
+<!-- DESIGN 3: MACHINE TOP CARD -->
+<section class="design-section" id="machine-top">
+  <div class="design-label">
+    <span class="name">03 · Machine Top Card</span>
+    <span class="dims"><strong>210 × 100 mm</strong> · landscape · actual print size</span>
+  </div>
+  <div class="preview-frame">
+    <div class="design machine-top">
+      <div class="cols">
+        <div class="col l">
+          <div class="sku-name">LEAN</div>
+          <div class="macro">25g protein · 180 kcal<br>Niska mast · Visok kazein<br>Post-cardio recovery</div>
+          <div class="price">€4.50</div>
+        </div>
+        <div class="col b">
+          <div class="sku-name">BUILD</div>
+          <div class="macro">35g protein · 320 kcal<br>Hypertrofija fokus<br>Whey + creatine</div>
+          <div class="price">€4.90</div>
+        </div>
+        <div class="col r">
+          <div class="sku-name">RECOVER</div>
+          <div class="macro">30g protein · 280 kcal<br>Whey + Kolagen<br>Post-leg day</div>
+          <div class="price">€5.20</div>
+        </div>
+        <div class="col boost">
+          <div class="sku-name">BOOST</div>
+          <div class="macro">28g protein · 260 kcal<br>Whey + BCAA<br>Anti-katabolizam</div>
+          <div class="price">€4.90</div>
+        </div>
+      </div>
+      <div class="strip">Tap. Choose. Recover.</div>
+    </div>
+  </div>
+  <div class="design-actions">
+    <button class="btn-sm" onclick="window.print()">↓ Print this design</button>
+  </div>
+</section>
+
+<!-- DESIGN 4: LOCKER ROOM STICKER A6 -->
+<section class="design-section" id="locker-sticker">
+  <div class="design-label">
+    <span class="name">04 · Locker Room Sticker</span>
+    <span class="dims"><strong>105 × 148 mm</strong> (A6) · actual print size</span>
+  </div>
+  <div class="preview-frame">
+    <div class="design locker">
+      <div>
+        <div class="top-mark">Napomena</div>
+        <div class="headline">ZABORAVIO/LA<br><span class="accent">SHAKE?</span></div>
+        <div class="subline">Aparat te čeka.</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="bottom">
+        <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+        <div class="direction">→ kod izlaza</div>
+      </div>
+    </div>
+  </div>
+  <div class="design-actions">
+    <button class="btn-sm" onclick="window.print()">↓ Print this design</button>
+  </div>
+</section>
+
+<!-- DESIGN 5: WINDOW CLING -->
+<section class="design-section" id="window-cling">
+  <div class="design-label">
+    <span class="name">05 · Window Cling</span>
+    <span class="dims"><strong>148 × 210 mm</strong> (A5) · translucent · actual print size</span>
+  </div>
+  <div class="preview-frame">
+    <div class="design window-cling">
+      <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+      <div class="hero-line">OVDJE —<br><span class="accent">SHAKE-O-MAT</span></div>
+      <div class="sku-strip">
+        <div class="sku-chip l">Lean</div>
+        <div class="sku-chip b">Build</div>
+        <div class="sku-chip r">Recover</div>
+        <div class="sku-chip boost">Boost</div>
+      </div>
+      <div class="qr-wrap">
+        <div class="qr"></div>
+        <div class="url">shakeomat.hr</div>
+      </div>
+    </div>
+  </div>
+  <div class="design-actions">
+    <button class="btn-sm" onclick="window.print()">↓ Print this design</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · Zagreb · 2026
+</footer>
+
+</body>
+</html>

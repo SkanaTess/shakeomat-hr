@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shake-o-mat Pitch Sheet — Partner Program Overview</title>
+<meta name="description" content="Shake-o-mat Partner Program: EUR 0 investicija, 20-25% revenue share, 24h SLA. One-pager za vlasnike teretana.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #050816;
+  --bg-surface: #0B1230;
+  --bg-surface-2: #121A36;
+  --blue: #1BA2FF;
+  --cyan: #73EDFF;
+  --green: #7DFF9B;
+  --orange: #FF9B46;
+  --white: #F4F8FF;
+  --muted: #8AA0C8;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { color: var(--white); }
+
+/* ---------- NAV (screen only) ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 8, 22, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(138, 160, 200, 0.12);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo span { color: var(--cyan); }
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover { color: var(--cyan); }
+
+/* ---------- PRINT BUTTON ---------- */
+.print-bar {
+  max-width: 900px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.print-btn {
+  background: var(--cyan);
+  color: var(--bg);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: transform 0.15s;
+}
+
+.print-btn:hover { transform: translateY(-2px); }
+
+/* ---------- PITCH SHEET ---------- */
+.sheet {
+  max-width: 900px;
+  margin: 24px auto 48px;
+  padding: 36px 44px;
+  background: var(--bg-surface);
+  border: 1px solid rgba(138, 160, 200, 0.14);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+/* Header */
+.sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--cyan);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.sheet-header .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sheet-header .tagline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sheet-title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.sheet-title .accent { color: var(--cyan); }
+
+/* ---------- SECTION HEAD ---------- */
+.sec-head {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(138, 160, 200, 0.2);
+}
+
+.sec-block { margin-bottom: 22px; }
+
+/* ---------- CORE NUMBERS ---------- */
+.numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.num-box {
+  background: var(--bg-surface-2);
+  border: 1px solid rgba(138, 160, 200, 0.15);
+  border-radius: var(--radius);
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.num-box .n {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.num-box .l {
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.num-box.blue .n { color: var(--blue); }
+.num-box.green .n { color: var(--green); }
+.num-box.orange .n { color: var(--orange); }
+
+/* ---------- TABLE ---------- */
+.rev-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.92rem;
+}
+
+.rev-table th,
+.rev-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(138, 160, 200, 0.15);
+}
+
+.rev-table th {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--cyan);
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+}
+
+.rev-table td.revenue {
+  font-weight: 600;
+  color: var(--green);
+}
+
+.rev-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ---------- WHAT YOU GET ---------- */
+.wyg {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.wyg-card {
+  background: var(--bg-surface-2);
+  border: 1px solid rgba(138, 160, 200, 0.14);
+  border-radius: var(--radius);
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.wyg-card .icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px;
+  display: grid;
+  place-items: center;
+}
+
+.wyg-card .t {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 0.98rem;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+
+.wyg-card .d {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+/* CSS ICONS */
+.ico {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+/* Machine: tall rectangle with screen + slot */
+.ico-machine {
+  border: 2px solid var(--cyan);
+  border-radius: 5px;
+  background: transparent;
+}
+.ico-machine::before {
+  content: "";
+  position: absolute;
+  top: 5px; left: 5px; right: 5px;
+  height: 11px;
+  background: var(--cyan);
+  opacity: 0.4;
+  border-radius: 2px;
+}
+.ico-machine::after {
+  content: "";
+  position: absolute;
+  bottom: 6px; left: 8px; right: 8px;
+  height: 4px;
+  background: var(--cyan);
+  border-radius: 2px;
+}
+
+/* Cup */
+.ico-cup {
+  width: 28px;
+  height: 38px;
+  margin: 0 auto;
+  background: transparent;
+  border: 2px solid var(--green);
+  border-radius: 4px 4px 16px 16px;
+  position: relative;
+}
+.ico-cup::before {
+  content: "";
+  position: absolute;
+  top: -6px; left: -4px; right: -4px;
+  height: 4px;
+  background: var(--green);
+  border-radius: 2px;
+}
+
+/* Wrap: rectangle with stripes */
+.ico-wrap {
+  width: 42px;
+  height: 32px;
+  margin: 4px auto 0;
+  background: var(--bg);
+  border: 2px solid var(--orange);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.ico-wrap::before, .ico-wrap::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 4px;
+  background: var(--orange);
+}
+.ico-wrap::before { top: 7px; }
+.ico-wrap::after { bottom: 7px; }
+
+/* Clipboard */
+.ico-clip {
+  width: 30px;
+  height: 38px;
+  margin: 0 auto;
+  background: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  position: relative;
+}
+.ico-clip::before {
+  content: "";
+  position: absolute;
+  top: -5px; left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 7px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+.ico-clip::after {
+  content: "";
+  position: absolute;
+  top: 12px; left: 5px; right: 5px;
+  height: 2px;
+  background: var(--blue);
+  box-shadow: 0 6px 0 var(--blue), 0 12px 0 var(--blue);
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline-wrap { margin-top: 6px; }
+
+.timeline-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  gap: 0;
+  padding: 16px 0 4px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--green));
+  border-radius: 2px;
+}
+
+.tl-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.tl-dot {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 10px;
+  background: var(--bg-surface);
+  border: 3px solid var(--cyan);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: var(--cyan);
+}
+
+.tl-step:nth-child(2) .tl-dot { border-color: var(--green); color: var(--green); }
+.tl-step:nth-child(3) .tl-dot { border-color: var(--orange); color: var(--orange); }
+
+.tl-day {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.tl-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ---------- TESTIMONIAL ---------- */
+.testimonial {
+  background: var(--bg-surface-2);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+}
+
+.testimonial .quote {
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.testimonial .attr {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ---------- CONTACT BAR ---------- */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 2px solid var(--cyan);
+  margin-top: 20px;
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  color: var(--white);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.contact-info .c-blue { color: var(--blue); }
+
+.qr-wrap {
+  text-align: center;
+}
+
+.qr {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.qr span {
+  background: #000;
+}
+
+.qr span.off { background: #fff; }
+
+.qr-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 30px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(138, 160, 200, 0.08);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .sheet { padding: 22px 18px; margin: 14px 10px 24px; }
+  .numbers { grid-template-columns: 1fr; }
+  .wyg { grid-template-columns: 1fr 1fr; }
+  .contact { flex-direction: column; text-align: center; }
+  .sheet-header { flex-direction: column; gap: 6px; }
+  .rev-table { font-size: 0.82rem; }
+  .rev-table th, .rev-table td { padding: 8px 6px; }
+}
+
+/* =====================================================
+   PRINT CSS (CRITICAL)
+   ===================================================== */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  .no-print,
+  nav,
+  .nav,
+  footer,
+  .print-bar {
+    display: none !important;
+  }
+
+  .sheet {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    page-break-inside: avoid;
+  }
+
+  .sheet-header {
+    border-bottom: 2px solid #1BA2FF !important;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .sheet-header .tagline { color: #333 !important; }
+
+  .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+  .logo span { color: #1BA2FF !important; }
+
+  .sheet-title {
+    color: #000 !important;
+    font-size: 22pt;
+    margin-bottom: 12px;
+  }
+
+  .sheet-title .accent { color: #1BA2FF !important; }
+
+  .sec-head {
+    color: #000 !important;
+    border-bottom: 1px solid #999 !important;
+    font-size: 11pt;
+    margin-bottom: 6px;
+  }
+
+  .sec-block { margin-bottom: 10px; }
+
+  /* Numbers row */
+  .numbers { gap: 8px; margin-bottom: 12px; }
+
+  .num-box {
+    background: #fff !important;
+    border: 1px solid #999 !important;
+    padding: 8px 6px;
+  }
+
+  .num-box .n { font-size: 24pt; }
+  .num-box .l { color: #444 !important; font-size: 7.5pt; }
+  .num-box.blue .n { color: #1BA2FF !important; }
+  .num-box.green .n { color: #2D9E40 !important; }
+  .num-box.orange .n { color: #C8742F !important; }
+
+  /* Accents preserved */
+  .accent-blue { color: #1BA2FF !important; }
+  .accent-green { color: #2D9E40 !important; }
+  .accent-orange { color: #C8742F !important; }
+
+  /* Table */
+  .rev-table {
+    font-size: 9pt;
+    color: #000;
+  }
+
+  .rev-table th {
+    color: #1BA2FF !important;
+    border-bottom: 1px solid #333 !important;
+  }
+
+  .rev-table td {
+    border-bottom: 1px solid #ccc !important;
+    color: #000 !important;
+  }
+
+  .rev-table td.revenue { color: #2D9E40 !important; }
+
+  .rev-note { color: #555 !important; }
+
+  /* What You Get */
+  .wyg { gap: 8px; grid-template-columns: repeat(4, 1fr); }
+
+  .wyg-card {
+    background: #fff !important;
+    border: 1px solid #999 !important;
+    padding: 8px 6px;
+  }
+
+  .wyg-card .t { color: #000 !important; font-size: 8.5pt; }
+  .wyg-card .d { color: #444 !important; font-size: 7.5pt; }
+
+  /* Icons keep their accent colors */
+  .ico-machine { border-color: #1BA2FF !important; }
+  .ico-machine::before { background: #1BA2FF !important; opacity: 0.5; }
+  .ico-machine::after { background: #1BA2FF !important; }
+  .ico-cup { border-color: #2D9E40 !important; }
+  .ico-cup::before { background: #2D9E40 !important; }
+  .ico-wrap { background: #fff !important; border-color: #C8742F !important; }
+  .ico-wrap::before, .ico-wrap::after { background: #C8742F !important; }
+  .ico-clip { border-color: #1BA2FF !important; }
+  .ico-clip::before { background: #1BA2FF !important; }
+  .ico-clip::after { background: #1BA2FF !important; box-shadow: 0 5px 0 #1BA2FF, 0 10px 0 #1BA2FF; }
+
+  /* Timeline */
+  .timeline::before {
+    background: #1BA2FF !important;
+    height: 2px;
+  }
+
+  .tl-dot {
+    background: #fff !important;
+    border-color: #1BA2FF !important;
+    color: #1BA2FF !important;
+  }
+
+  .tl-step:nth-child(2) .tl-dot { border-color: #2D9E40 !important; color: #2D9E40 !important; }
+  .tl-step:nth-child(3) .tl-dot { border-color: #C8742F !important; color: #C8742F !important; }
+
+  .tl-day { color: #000 !important; font-size: 10pt; }
+  .tl-desc { color: #555 !important; font-size: 8pt; }
+  .timeline-note { color: #333 !important; font-size: 8.5pt; }
+
+  /* Testimonial */
+  .testimonial {
+    background: #f4f4f4 !important;
+    border-left: 4px solid #2D9E40 !important;
+    color: #000 !important;
+  }
+
+  .testimonial .quote { color: #000 !important; }
+  .testimonial .attr { color: #555 !important; }
+
+  /* Contact */
+  .contact {
+    border-top: 2px solid #1BA2FF !important;
+  }
+
+  .contact-info { color: #000 !important; }
+  .contact-info .c-blue { color: #1BA2FF !important; }
+  .qr-label { color: #555 !important; }
+
+  /* QR keeps B/W */
+  .qr { background: #fff !important; border: 1px solid #333 !important; }
+  .qr span { background: #000 !important; }
+  .qr span.off { background: #fff !important; }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV (screen only) -->
+<nav class="nav no-print">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></a>
+    <ul class="nav-links">
+      <li><a href="b2b.html">B2B</a></li>
+      <li><a href="portal.html">Portal</a></li>
+      <li><a href="social_pack.html">Social Pack</a></li>
+      <li><a href="pitch_sheet.html">Pitch Sheet</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PRINT BUTTON -->
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">&#128424; Print / Save as PDF</button>
+</div>
+
+<!-- ======================== PITCH SHEET ======================== -->
+<main class="sheet">
+
+  <!-- HEADER -->
+  <div class="sheet-header">
+    <div class="logo"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+    <div class="tagline">Recover. Instantly.</div>
+  </div>
+
+  <h1 class="sheet-title">Partner Program <span class="accent">Overview</span></h1>
+
+  <!-- 3 CORE NUMBERS -->
+  <div class="numbers sec-block">
+    <div class="num-box blue">
+      <div class="n">&euro;0</div>
+      <div class="l">Investicije</div>
+    </div>
+    <div class="num-box green">
+      <div class="n">20-25%</div>
+      <div class="l">Revenue Share</div>
+    </div>
+    <div class="num-box orange">
+      <div class="n">24h</div>
+      <div class="l">SLA Service</div>
+    </div>
+  </div>
+
+  <!-- REVENUE TABLE -->
+  <div class="sec-block">
+    <h2 class="sec-head">Procjena mjesecnog prihoda</h2>
+    <table class="rev-table">
+      <thead>
+        <tr>
+          <th>Članovi</th>
+          <th>Tjedne posjete</th>
+          <th>Mjesecni shake-ovi</th>
+          <th>Vas mjesecni prihod (25%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>300</td>
+          <td>2</td>
+          <td>168</td>
+          <td class="revenue">&euro;199</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>3</td>
+          <td>420</td>
+          <td class="revenue">&euro;499</td>
+        </tr>
+        <tr>
+          <td>1000</td>
+          <td>4</td>
+          <td>1120</td>
+          <td class="revenue">&euro;1,330</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="rev-note">Konzervativna procjena: 7% conversion @ &euro;4.75 prosječna cijena.</p>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <div class="sec-block">
+    <h2 class="sec-head">Sto dobivate</h2>
+    <div class="wyg">
+      <div class="wyg-card">
+        <div class="icon"><div class="ico ico-machine"></div></div>
+        <div class="t">Instalacija</div>
+        <div class="d">Aparat stize spreman za rad.</div>
+      </div>
+      <div class="wyg-card">
+        <div class="icon"><div class="ico-cup"></div></div>
+        <div class="t">Branded Cups</div>
+        <div class="d">Co-branded case na svakom izlazu.</div>
+      </div>
+      <div class="wyg-card">
+        <div class="icon"><div class="ico-wrap"></div></div>
+        <div class="t">Branded Wrap</div>
+        <div class="d">Custom wrap s vasim brendom.</div>
+      </div>
+      <div class="wyg-card">
+        <div class="icon"><div class="ico-clip"></div></div>
+        <div class="t">Reports + 24h Service</div>
+        <div class="d">Mjesecni izvjestaji i SLA.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="sec-block timeline-wrap">
+    <h2 class="sec-head">Timeline</h2>
+    <p class="timeline-note">Instalacija u roku 2 tjedna od potpisivanja.</p>
+    <div class="timeline">
+      <div class="tl-step">
+        <div class="tl-dot">1</div>
+        <div class="tl-day">Day 0</div>
+        <div class="tl-desc">Sign</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">2</div>
+        <div class="tl-day">Day 7</div>
+        <div class="tl-desc">Install</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">3</div>
+        <div class="tl-day">Day 14</div>
+        <div class="tl-desc">Live</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <div class="sec-block">
+    <div class="testimonial">
+      <p class="quote">&ldquo;Članovi to koriste svakodnevno. Prihod dolazi bez ikakvog angažmana.&rdquo;</p>
+      <p class="attr">&mdash; [Ime Prezime], Gyms4you Tresnjevka</p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <div class="contact-info">
+      <div><span class="c-blue">info@shakeomat.hr</span></div>
+      <div>+385 XX XXX XXXX</div>
+      <div>shakeomat.hr</div>
+    </div>
+    <div class="qr-wrap">
+      <div class="qr" id="qr"></div>
+      <div class="qr-label">&rarr; /b2b</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER (screen only) -->
+<footer class="no-print">
+  <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &middot; Zagreb &middot; 2026
+</footer>
+
+<script>
+// Generate a fake-but-consistent 10x10 QR grid (CSS-rendered).
+// Deterministic pattern so it looks like a QR code but is decorative.
+(function() {
+  const qr = document.getElementById('qr');
+  if (!qr) return;
+  // Deterministic pseudo-random using a seed string
+  const seed = 'shakeomat-b2b-2026';
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) { h = (h * 31 + seed.charCodeAt(i)) | 0; }
+  function next() {
+    h = (h * 1103515245 + 12345) | 0;
+    return ((h >>> 16) & 0x7fff) / 0x7fff;
+  }
+
+  const size = 10;
+  const cells = [];
+  for (let i = 0; i < size * size; i++) {
+    cells.push(next() > 0.5 ? 1 : 0);
+  }
+
+  // Corner finder patterns (top-left, top-right, bottom-left): solid 3x3 with border
+  function setCorner(r, c) {
+    for (let dr = 0; dr < 3; dr++) {
+      for (let dc = 0; dc < 3; dc++) {
+        const idx = (r + dr) * size + (c + dc);
+        // Solid block
+        cells[idx] = 1;
+      }
+    }
+  }
+  setCorner(0, 0);
+  setCorner(0, size - 3);
+  setCorner(size - 3, 0);
+
+  // Render
+  for (let i = 0; i < cells.length; i++) {
+    const s = document.createElement('span');
+    if (!cells[i]) s.classList.add('off');
+    qr.appendChild(s);
+  }
+})();
+</script>
+
+</body>
+</html>

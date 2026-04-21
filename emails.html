@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shake-o-mat — Email Templates</title>
+<meta name="description" content="5 email-safe HTML templates with inline CSS — Shake-o-mat campaigns.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- GA4 (placeholder) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<style>
+  :root {
+    --bg: #050816;
+    --bg-surface: #0B1230;
+    --blue: #1BA2FF;
+    --cyan: #73EDFF;
+    --green: #7DFF9B;
+    --orange: #FF9B46;
+    --white: #F4F8FF;
+    --muted: #8AA0C8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Barlow', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+  a { color: var(--cyan); text-decoration: none; transition: color .2s ease; }
+  a:hover { color: var(--white); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 4px; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(5, 8, 22, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(138, 160, 200, 0.12);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px; max-width: 1180px; margin: 0 auto;
+  }
+  .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+  .logo-dot {
+    width: 10px; height: 10px; background: var(--green);
+    border-radius: 50%; box-shadow: 0 0 12px var(--green);
+  }
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a {
+    color: var(--white); font-weight: 600; font-size: 15px;
+    padding: 8px 14px; border-radius: 8px;
+    transition: background .2s ease, color .2s ease;
+  }
+  .nav-links a:hover, .nav-links a.active { background: rgba(27,162,255,.12); color: var(--cyan); }
+  @media (max-width: 560px) { .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+} .nav-links a { padding: 8px 10px; font-size: 14px; } }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 80px 0 64px;
+    background:
+      radial-gradient(ellipse 60% 70% at 20% 10%, rgba(27,162,255,.22), transparent 60%),
+      radial-gradient(ellipse 50% 55% at 85% 90%, rgba(115,237,255,.12), transparent 60%),
+      linear-gradient(180deg, #050816 0%, #0B1230 100%);
+  }
+  .hero h1 {
+    font-size: clamp(48px, 9vw, 108px);
+    color: var(--white); margin-bottom: 20px;
+  }
+  .hero .subline {
+    font-size: clamp(15px, 2vw, 19px);
+    color: var(--muted); max-width: 680px; line-height: 1.5;
+  }
+  .hero .accent { color: var(--cyan); }
+
+  /* ---------- GALLERY ---------- */
+  .gallery { padding: 60px 0 120px; background: var(--bg); }
+
+  .email-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138,160,200,.14);
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 48px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  }
+
+  .email-meta {
+    display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: baseline;
+    padding-bottom: 14px; margin-bottom: 18px;
+    border-bottom: 1px dashed rgba(138,160,200,.25);
+  }
+  .email-meta .tag {
+    display: inline-block; font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 900; text-transform: uppercase; letter-spacing: .08em;
+    font-size: 12px; color: var(--bg);
+    background: var(--green); padding: 4px 10px; border-radius: 999px;
+  }
+  .email-meta .tag.b2b { background: var(--cyan); }
+  .email-meta .tag.b2c { background: var(--orange); }
+  .email-meta h3 {
+    font-size: clamp(22px, 2.4vw, 30px); color: var(--white);
+    flex: 1 1 100%;
+  }
+
+  .mailbar {
+    background: #0A0F24;
+    border: 1px solid rgba(138,160,200,.18);
+    border-radius: 12px 12px 0 0;
+    padding: 12px 16px;
+    font-size: 13px; color: var(--muted);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .mailbar .subject { color: var(--white); font-weight: 600; font-size: 15px; }
+  .mailbar .from { color: var(--muted); font-size: 13px; }
+
+  /* Device frame — the rendered email sits on WHITE */
+  .device-frame {
+    background: #D8DEE8;
+    padding: 18px;
+    border-radius: 0 0 12px 12px;
+    display: flex; justify-content: center;
+    overflow-x: auto;
+  }
+  .device-frame .email-canvas {
+    width: 100%; max-width: 480px;
+    background: #ffffff; color: #000000;
+    border: 1px solid #bbb;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  }
+
+  .email-actions {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Barlow Condensed',sans-serif; font-weight: 900;
+    text-transform: uppercase; letter-spacing: .06em;
+    font-size: 14px; padding: 10px 18px;
+    border-radius: 10px; cursor: pointer;
+    transition: transform .15s ease, background .2s ease;
+  }
+  .btn-primary { background: var(--green); color: var(--bg); }
+  .btn-primary:hover { background: var(--cyan); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    border: 1px solid rgba(138,160,200,.35);
+  }
+  .btn-secondary:hover { background: rgba(27,162,255,.12); color: var(--cyan); }
+  .btn.copied { background: var(--orange); color: var(--bg); }
+
+  .source-pane {
+    display: none;
+    margin-top: 14px;
+    background: #060A1C;
+    border: 1px solid rgba(138,160,200,.18);
+    border-radius: 10px;
+    padding: 16px;
+    max-height: 420px; overflow: auto;
+  }
+  .source-pane.open { display: block; }
+  .source-pane pre {
+    font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+    font-size: 12px; line-height: 1.5;
+    color: #D8E4FF; white-space: pre-wrap; word-break: break-word;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 30px 0 40px;
+    border-top: 1px solid rgba(138,160,200,.12);
+    color: var(--muted); font-size: 13px; text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============== NAV ============== -->
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Shake-o-mat početna">
+      <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">
+    </a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="emails.html" class="active">Emails</a></li>
+        <li><a href="launch_brief.html">Brief</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="container">
+    <h1>Email<br>Templates</h1>
+    <p class="subline">5 <span class="accent">email-safe</span> HTML templates · inline CSS · ready za copy/paste</p>
+  </div>
+</section>
+
+<!-- ============== GALLERY ============== -->
+<section class="gallery">
+  <div class="container">
+
+    <!-- =========== TEMPLATE 1 =========== -->
+    <article class="email-card" id="tpl-1">
+      <div class="email-meta">
+        <span class="tag b2b">B2B · Cold outreach</span>
+        <h3>Template 1 — Gym Owner Cold Outreach</h3>
+      </div>
+
+      <div class="mailbar">
+        <div class="subject">Subject: Vaša teretana + <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> = pasivni prihod bez investicije</div>
+        <div class="from">From: <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &lt;info@shakeomat.hr&gt;</div>
+      </div>
+
+      <div class="device-frame">
+        <div class="email-canvas" id="render-1">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#000000;">
+  <tr><td align="center" style="padding:0;">
+    <table width="480" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;">
+      <tr><td style="background:#050816;padding:18px 24px;" align="left">
+        <span style="font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:20px;letter-spacing:2px;color:#F4F8FF;">SHAKE-O-MAT</span>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:24px;color:#000000;font-size:15px;line-height:1.55;">
+        <p style="margin:0 0 14px 0;">Pozdrav [Ime],</p>
+        <p style="margin:0 0 14px 0;">55% članova vaše teretane uzima protein nakon treninga. Većina ode bez njega — pa kupi RTD u trgovini. Vi ne dobijete ništa od te kupnje.</p>
+        <p style="margin:0 0 14px 0;"><strong><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> aparat na izlazu</strong> daje članovima svjež shake za 30 sekundi. Vi dobijete <strong>25% od svake transakcije</strong>. €0 investicije s vaše strane.</p>
+        <p style="margin:0 0 14px 0;">U Zagrebu pokrećemo s 3 partnera. Tražimo još 2 lokacije za pilot.</p>
+        <p style="margin:0 0 22px 0;"><strong>15-min poziv ovaj tjedan?</strong></p>
+        <table cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#7DFF9B;">
+          <a href="https://calendly.com/shakeomat/15min" style="display:inline-block;background:#7DFF9B;color:#050816;font-family:Arial Black,Arial,sans-serif;font-weight:900;text-decoration:none;padding:14px 22px;font-size:14px;letter-spacing:1px;">REZERVIRAJ POZIV →</a>
+        </td></tr></table>
+        <p style="margin:22px 0 2px 0;">Saša Kanazir</p>
+        <p style="margin:0;color:#555555;font-size:13px;"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · shakeomat.hr</p>
+      </td></tr>
+      <tr><td style="background:#F2F4F9;padding:16px 24px;color:#777777;font-size:11px;line-height:1.5;">
+        <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">, Zagreb, HR · <a href="https://shakeomat.hr" style="color:#1BA2FF;text-decoration:none;">shakeomat.hr</a> · <a href="#" style="color:#1BA2FF;text-decoration:none;">LinkedIn</a> · <a href="#" style="color:#1BA2FF;text-decoration:none;">Instagram</a><br>
+        Ne želiš više ovakve mailove? <a href="#" style="color:#777777;text-decoration:underline;">Odjavi se</a>.
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+        </div>
+      </div>
+
+      <div class="email-actions">
+        <button class="btn btn-primary" data-copy="render-1">Copy HTML</button>
+        <button class="btn btn-secondary" data-toggle="src-1">View HTML source</button>
+      </div>
+      <div class="source-pane" id="src-1"><pre></pre></div>
+    </article>
+
+    <!-- =========== TEMPLATE 2 =========== -->
+    <article class="email-card" id="tpl-2">
+      <div class="email-meta">
+        <span class="tag b2b">B2B · Follow-up (Day 4)</span>
+        <h3>Template 2 — Pilot Data Tease</h3>
+      </div>
+
+      <div class="mailbar">
+        <div class="subject">Subject: Rezultati iz Gyms4you pilot programa (za tjedan dana)</div>
+        <div class="from">From: <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &lt;info@shakeomat.hr&gt;</div>
+      </div>
+
+      <div class="device-frame">
+        <div class="email-canvas" id="render-2">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#000000;">
+  <tr><td align="center" style="padding:0;">
+    <table width="480" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;">
+      <tr><td style="background:#050816;padding:18px 24px;" align="left">
+        <span style="font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:20px;letter-spacing:2px;color:#F4F8FF;">SHAKE-O-MAT</span>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:24px;color:#000000;font-size:15px;line-height:1.55;">
+        <p style="margin:0 0 14px 0;">Brza poruka: za <strong>4 dana</strong> imamo prve podatke iz Gyms4you Trešnjevka pilota.</p>
+        <p style="margin:0 0 14px 0;">Ranije nego očekivano — članovi koriste aparat <strong>2× češće</strong> nego smo planirali.</p>
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:0 0 18px 0;"><tr>
+          <td style="background:#050816;color:#7DFF9B;font-family:Arial Black,Arial,sans-serif;font-size:22px;padding:14px 18px;letter-spacing:1px;">2× očekivana upotreba</td>
+        </tr></table>
+        <p style="margin:0 0 18px 0;">Imam još <strong>1 spot</strong> za Zagreb ovaj kvartal.</p>
+        <p style="margin:0 0 22px 0;">Mogu poslati podatke direktno — odgovori <strong>"da"</strong> i šaljem.</p>
+        <table cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#1BA2FF;">
+          <a href="mailto:info@shakeomat.hr?subject=Da%2C%20%C5%A1alji%20podatke" style="display:inline-block;background:#1BA2FF;color:#050816;font-family:Arial Black,Arial,sans-serif;font-weight:900;text-decoration:none;padding:14px 22px;font-size:14px;letter-spacing:1px;">DA — ŠALJI PODATKE</a>
+        </td></tr></table>
+        <p style="margin:22px 0 2px 0;">Saša Kanazir</p>
+        <p style="margin:0;color:#555555;font-size:13px;"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · shakeomat.hr</p>
+      </td></tr>
+      <tr><td style="background:#F2F4F9;padding:16px 24px;color:#777777;font-size:11px;line-height:1.5;">
+        <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">, Zagreb, HR · <a href="https://shakeomat.hr" style="color:#1BA2FF;text-decoration:none;">shakeomat.hr</a> · <a href="#" style="color:#1BA2FF;text-decoration:none;">LinkedIn</a><br>
+        Ne želiš više ovakve mailove? <a href="#" style="color:#777777;text-decoration:underline;">Odjavi se</a>.
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+        </div>
+      </div>
+
+      <div class="email-actions">
+        <button class="btn btn-primary" data-copy="render-2">Copy HTML</button>
+        <button class="btn btn-secondary" data-toggle="src-2">View HTML source</button>
+      </div>
+      <div class="source-pane" id="src-2"><pre></pre></div>
+    </article>
+
+    <!-- =========== TEMPLATE 3 =========== -->
+    <article class="email-card" id="tpl-3">
+      <div class="email-meta">
+        <span class="tag b2b">B2B · Breakup (Day 18)</span>
+        <h3>Template 3 — Last Chance / Close the List</h3>
+      </div>
+
+      <div class="mailbar">
+        <div class="subject">Subject: Zadnja poruka — popunjavam Zagreb ovu sezonu</div>
+        <div class="from">From: <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &lt;info@shakeomat.hr&gt;</div>
+      </div>
+
+      <div class="device-frame">
+        <div class="email-canvas" id="render-3">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#000000;">
+  <tr><td align="center" style="padding:0;">
+    <table width="480" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;">
+      <tr><td style="background:#050816;padding:18px 24px;" align="left">
+        <span style="font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:20px;letter-spacing:2px;color:#F4F8FF;">SHAKE-O-MAT</span>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:24px;color:#000000;font-size:15px;line-height:1.55;">
+        <p style="margin:0 0 14px 0;">Pozdrav [Ime],</p>
+        <p style="margin:0 0 14px 0;">Pokušao sam 3 puta — pretpostavljam da nije pravi trenutak.</p>
+        <p style="margin:0 0 14px 0;">Bez problema. Ako se nešto promijeni, javim se sljedeće sezone — ali za sada zatvaram listu za Zagreb.</p>
+        <p style="margin:0 0 22px 0;"><strong>Ako želiš zadržati spot, samo odgovori — bilo što.</strong></p>
+        <table cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#FF9B46;">
+          <a href="mailto:info@shakeomat.hr?subject=Zadr%C5%BEi%20spot" style="display:inline-block;background:#FF9B46;color:#050816;font-family:Arial Black,Arial,sans-serif;font-weight:900;text-decoration:none;padding:14px 22px;font-size:14px;letter-spacing:1px;">ZADRŽI MOJ SPOT</a>
+        </td></tr></table>
+        <p style="margin:22px 0 2px 0;">Sve najbolje,</p>
+        <p style="margin:0 0 2px 0;">Saša Kanazir</p>
+        <p style="margin:0;color:#555555;font-size:13px;"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · shakeomat.hr</p>
+      </td></tr>
+      <tr><td style="background:#F2F4F9;padding:16px 24px;color:#777777;font-size:11px;line-height:1.5;">
+        <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">, Zagreb, HR · <a href="https://shakeomat.hr" style="color:#1BA2FF;text-decoration:none;">shakeomat.hr</a><br>
+        Ne želiš više ovakve mailove? <a href="#" style="color:#777777;text-decoration:underline;">Odjavi se</a>.
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+        </div>
+      </div>
+
+      <div class="email-actions">
+        <button class="btn btn-primary" data-copy="render-3">Copy HTML</button>
+        <button class="btn btn-secondary" data-toggle="src-3">View HTML source</button>
+      </div>
+      <div class="source-pane" id="src-3"><pre></pre></div>
+    </article>
+
+    <!-- =========== TEMPLATE 4 =========== -->
+    <article class="email-card" id="tpl-4">
+      <div class="email-meta">
+        <span class="tag b2c">B2C · Welcome</span>
+        <h3>Template 4 — First Shake Welcome</h3>
+      </div>
+
+      <div class="mailbar">
+        <div class="subject">Subject: Dobrodošao/la u <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> obitelj 💪</div>
+        <div class="from">From: <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &lt;info@shakeomat.hr&gt;</div>
+      </div>
+
+      <div class="device-frame">
+        <div class="email-canvas" id="render-4">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#000000;">
+  <tr><td align="center" style="padding:0;">
+    <table width="480" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;">
+      <tr><td style="background:#050816;padding:18px 24px;" align="left">
+        <span style="font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:20px;letter-spacing:2px;color:#F4F8FF;">SHAKE-O-MAT</span>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:28px 24px 8px 24px;color:#000000;" align="center">
+        <h1 style="font-family:Arial Black,Arial,sans-serif;font-size:30px;line-height:1;margin:0 0 8px 0;color:#050816;text-transform:uppercase;letter-spacing:-1px;">🎉 Hvala za<br>prvi shake!</h1>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:16px 24px 0 24px;color:#000000;font-size:15px;line-height:1.55;">
+        <p style="margin:0 0 14px 0;">Ovo nije RTD s police. Ovo je <strong>svježe miješan, baš za tebe, baš sad</strong>.</p>
+        <p style="margin:0 0 18px 0;">Prati nas: <a href="#" style="color:#1BA2FF;text-decoration:none;"><strong>@shakeomat</strong></a> na Instagramu i TikToku.</p>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:0 24px 8px 24px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td width="25%" style="background:#050816;padding:14px 10px;color:#73EDFF;font-family:Arial Black,Arial,sans-serif;font-size:14px;text-align:center;border-right:2px solid #ffffff;">LEAN<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:11px;">low-cal cut</span></td>
+            <td width="25%" style="background:#050816;padding:14px 10px;color:#7DFF9B;font-family:Arial Black,Arial,sans-serif;font-size:14px;text-align:center;border-right:2px solid #ffffff;">BUILD<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:11px;">mass gainer</span></td>
+            <td width="25%" style="background:#050816;padding:14px 10px;color:#FF9B46;font-family:Arial Black,Arial,sans-serif;font-size:14px;text-align:center;border-right:2px solid #ffffff;">RECOVER<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:11px;">post-workout</span></td>
+            <td width="25%" style="background:#050816;padding:14px 10px;color:#C882FF;font-family:Arial Black,Arial,sans-serif;font-size:14px;text-align:center;">BOOST<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:11px;">anti-katabolizam</span></td>
+          </tr>
+        </table>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:18px 24px 24px 24px;" align="center">
+        <table cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#73EDFF;">
+          <a href="https://shakeomat.hr" style="display:inline-block;background:#73EDFF;color:#050816;font-family:Arial Black,Arial,sans-serif;font-weight:900;text-decoration:none;padding:14px 22px;font-size:14px;letter-spacing:1px;">ISTRAŽI OKUSE</a>
+        </td></tr></table>
+      </td></tr>
+      <tr><td style="background:#F2F4F9;padding:16px 24px;color:#777777;font-size:11px;line-height:1.5;">
+        <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">, Zagreb, HR · <a href="https://shakeomat.hr" style="color:#1BA2FF;text-decoration:none;">shakeomat.hr</a> · <a href="#" style="color:#1BA2FF;text-decoration:none;">Instagram</a> · <a href="#" style="color:#1BA2FF;text-decoration:none;">TikTok</a><br>
+        <a href="#" style="color:#777777;text-decoration:underline;">Odjavi se</a>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+        </div>
+      </div>
+
+      <div class="email-actions">
+        <button class="btn btn-primary" data-copy="render-4">Copy HTML</button>
+        <button class="btn btn-secondary" data-toggle="src-4">View HTML source</button>
+      </div>
+      <div class="source-pane" id="src-4"><pre></pre></div>
+    </article>
+
+    <!-- =========== TEMPLATE 5 =========== -->
+    <article class="email-card" id="tpl-5">
+      <div class="email-meta">
+        <span class="tag b2c">B2C · Re-engagement</span>
+        <h3>Template 5 — Nisi nas posjetio/la</h3>
+      </div>
+
+      <div class="mailbar">
+        <div class="subject">Subject: Aparat te čeka. 30 sekundi do shake-a.</div>
+        <div class="from">From: <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &lt;info@shakeomat.hr&gt;</div>
+      </div>
+
+      <div class="device-frame">
+        <div class="email-canvas" id="render-5">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#000000;">
+  <tr><td align="center" style="padding:0;">
+    <table width="480" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;">
+      <tr><td style="background:#050816;padding:18px 24px;" align="left">
+        <span style="font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:20px;letter-spacing:2px;color:#F4F8FF;">SHAKE-O-MAT</span>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:28px 24px 6px 24px;color:#000000;" align="center">
+        <h1 style="font-family:Arial Black,Arial,sans-serif;font-size:28px;line-height:1;margin:0;color:#050816;text-transform:uppercase;letter-spacing:-1px;">Trening bez<br>shake-a?</h1>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:12px 24px 16px 24px;color:#000000;font-size:15px;line-height:1.55;">
+        <p style="margin:0 0 12px 0;">Znaš onu prvu minutu nakon treninga — mišići traže gorivo, a ti još si u svlačionici.</p>
+        <p style="margin:0;">Aparat je tu. <strong>30 sekundi. Svježe miješan.</strong></p>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:0 24px 8px 24px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td width="25%" style="background:#050816;padding:12px 8px;color:#73EDFF;font-family:Arial Black,Arial,sans-serif;font-size:13px;text-align:center;border-right:2px solid #ffffff;">LEAN<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:10px;">€4.50</span></td>
+            <td width="25%" style="background:#050816;padding:12px 8px;color:#7DFF9B;font-family:Arial Black,Arial,sans-serif;font-size:13px;text-align:center;border-right:2px solid #ffffff;">BUILD<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:10px;">€4.90</span></td>
+            <td width="25%" style="background:#050816;padding:12px 8px;color:#FF9B46;font-family:Arial Black,Arial,sans-serif;font-size:13px;text-align:center;border-right:2px solid #ffffff;">RECOVER<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:10px;">€5.20</span></td>
+            <td width="25%" style="background:#050816;padding:12px 8px;color:#C882FF;font-family:Arial Black,Arial,sans-serif;font-size:13px;text-align:center;">BOOST<br><span style="color:#F4F8FF;font-family:Arial,sans-serif;font-weight:normal;font-size:10px;">€4.90</span></td>
+          </tr>
+        </table>
+      </td></tr>
+      <tr><td style="background:#ffffff;padding:18px 24px 24px 24px;" align="center">
+        <table cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#73EDFF;">
+          <a href="https://shakeomat.hr" style="display:inline-block;background:#73EDFF;color:#050816;font-family:Arial Black,Arial,sans-serif;font-weight:900;text-decoration:none;padding:14px 22px;font-size:14px;letter-spacing:1px;">PRONAĐI APARAT</a>
+        </td></tr></table>
+      </td></tr>
+      <tr><td style="background:#F2F4F9;padding:16px 24px;color:#777777;font-size:11px;line-height:1.5;" align="center">
+        <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">, Zagreb, HR · <a href="https://shakeomat.hr" style="color:#1BA2FF;text-decoration:none;">shakeomat.hr</a> · <a href="#" style="color:#1BA2FF;text-decoration:none;">Instagram</a><br>
+        <a href="#" style="color:#777777;text-decoration:underline;">Odjavi se</a>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+        </div>
+      </div>
+
+      <div class="email-actions">
+        <button class="btn btn-primary" data-copy="render-5">Copy HTML</button>
+        <button class="btn btn-secondary" data-toggle="src-5">View HTML source</button>
+      </div>
+      <div class="source-pane" id="src-5"><pre></pre></div>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · Email Library · 2026 · <a href="index.html">shakeomat.hr</a>
+  </div>
+</footer>
+
+<script>
+  // Populate source panes on load with actual template markup
+  document.querySelectorAll('[data-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-toggle');
+      var pane = document.getElementById(id);
+      var srcId = id.replace('src-', 'render-');
+      var src = document.getElementById(srcId);
+      if (pane.classList.contains('open')) {
+        pane.classList.remove('open');
+        btn.textContent = 'View HTML source';
+      } else {
+        pane.querySelector('pre').textContent = src.innerHTML.trim();
+        pane.classList.add('open');
+        btn.textContent = 'Hide HTML source';
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-copy');
+      var src = document.getElementById(id);
+      var html = src.innerHTML.trim();
+      var done = function () {
+        var original = btn.textContent;
+        btn.textContent = 'Copied ✓';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(html).then(done).catch(function () {
+          fallback(html); done();
+        });
+      } else {
+        fallback(html); done();
+      }
+      function fallback(text) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

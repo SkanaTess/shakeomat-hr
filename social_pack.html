@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shake-o-mat Social Pack — 30 captions za launch</title>
+<meta name="description" content="30 spremnih postova za Instagram, TikTok i LinkedIn — Shake-o-mat launch mjesec. Hrvatski + engleski.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #050816;
+  --bg-surface: #0B1230;
+  --bg-surface-2: #121A36;
+  --blue: #1BA2FF;
+  --cyan: #73EDFF;
+  --green: #7DFF9B;
+  --orange: #FF9B46;
+  --white: #F4F8FF;
+  --muted: #8AA0C8;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { color: var(--white); }
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 8, 22, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(138, 160, 200, 0.12);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo span { color: var(--cyan); }
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover { color: var(--cyan); }
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 64px 0 32px;
+  background: radial-gradient(ellipse at top, rgba(27, 162, 255, 0.12), transparent 60%);
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  color: var(--white);
+}
+
+.hero h1 .accent { color: var(--cyan); }
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-top: 10px;
+  max-width: 760px;
+}
+
+.anchor-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.anchor-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--bg-surface);
+  border: 1px solid rgba(138, 160, 200, 0.2);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.15s;
+}
+
+.anchor-btn:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+.anchor-btn.ig:hover { border-color: var(--orange); color: var(--orange); }
+.anchor-btn.tt:hover { border-color: var(--green); color: var(--green); }
+.anchor-btn.li:hover { border-color: var(--blue); color: var(--blue); }
+
+/* ---------- SECTION ---------- */
+.section {
+  padding: 56px 0;
+  border-top: 1px solid rgba(138, 160, 200, 0.08);
+}
+
+.section-header {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.section-header .count {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.section-ig h2 .accent { color: var(--orange); }
+.section-tt h2 .accent { color: var(--green); }
+.section-li h2 .accent { color: var(--blue); }
+
+/* ---------- CARD GRID ---------- */
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 780px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(138, 160, 200, 0.14);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(115, 237, 255, 0.35);
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--bg);
+  background: var(--cyan);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.section-ig .badge { background: var(--orange); }
+.section-tt .badge { background: var(--green); }
+.section-li .badge { background: var(--blue); color: var(--white); }
+
+.type-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cyan);
+}
+
+.section-ig .type-label { color: var(--orange); }
+.section-tt .type-label { color: var(--green); }
+.section-li .type-label { color: var(--blue); }
+
+.caption-hr {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+.caption-en {
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.tags {
+  font-size: 0.82rem;
+  color: var(--muted);
+  word-break: break-word;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(138, 160, 200, 0.15);
+}
+
+.tags b { color: var(--cyan); font-weight: 600; }
+
+.card-foot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid rgba(138, 160, 200, 0.3);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.copy-btn:hover {
+  background: var(--cyan);
+  color: var(--bg);
+  border-color: var(--cyan);
+}
+
+.copy-btn.copied {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--bg);
+}
+
+/* ---------- TOAST ---------- */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: var(--green);
+  color: var(--bg);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s;
+}
+
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(138, 160, 200, 0.08);
+  margin-top: 40px;
+}
+
+footer a { color: var(--muted); }
+footer a:hover { color: var(--cyan); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></a>
+    <ul class="nav-links">
+      <li><a href="b2b.html">B2B</a></li>
+      <li><a href="portal.html">Portal</a></li>
+      <li><a href="social_pack.html">Social Pack</a></li>
+      <li><a href="pitch_sheet.html">Pitch Sheet</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>SOCIAL <span class="accent">PACK</span></h1>
+    <p class="subtitle">30 captions za launch mjesec — Croatian + English. Kopiraj, prilagodi, objavi.</p>
+    <div class="anchor-bar">
+      <a href="#ig" class="anchor-btn ig">Instagram</a>
+      <a href="#tt" class="anchor-btn tt">TikTok</a>
+      <a href="#li" class="anchor-btn li">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<!-- SECTION 1: INSTAGRAM -->
+<section id="ig" class="section section-ig">
+  <div class="container">
+    <div class="section-header">
+      <h2><span class="accent">Instagram</span> — Feed & Stories</h2>
+      <span class="count">10 captions</span>
+    </div>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">01</div>
+          <div class="type-label">Loss Aversion</div>
+        </div>
+        <p class="caption-hr">Tvoji misici su gladni. Upravo sada. <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> zatvori taj prozor za 30 sekundi.</p>
+        <p class="caption-en">Your muscles are hungry right now. <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> closes the window in 30 seconds.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #AnabolicWindow #ProteinShake #ZagrebFitness</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Tvoji misici su gladni. Upravo sada. Shake-o-mat zatvori taj prozor za 30 sekundi. #ShakeOMat #FreshEveryRep #AnabolicWindow #ProteinShake #ZagrebFitness">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">02</div>
+          <div class="type-label">Ritual</div>
+        </div>
+        <p class="caption-hr">Trening bez shake-a je pola treninga.</p>
+        <p class="caption-en">A workout without a shake is half a workout.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #PostWorkout #GymRitual #Recovery</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Trening bez shake-a je pola treninga. #ShakeOMat #FreshEveryRep #PostWorkout #GymRitual #Recovery">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">03</div>
+          <div class="type-label">Education</div>
+        </div>
+        <p class="caption-hr">Zasto 45 minuta? Thread &#129525;</p>
+        <p class="caption-en">Why 45 minutes? Thread.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #AnabolicWindow #SportsScience #MuscleProteinSynthesis</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Zasto 45 minuta? Thread. #ShakeOMat #FreshEveryRep #AnabolicWindow #SportsScience #MuscleProteinSynthesis">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">04</div>
+          <div class="type-label">Social Proof</div>
+        </div>
+        <p class="caption-hr">500 shake-ova u prvom tjednu. Zagreb, hvala ti.</p>
+        <p class="caption-en">500 shakes in the first week. Thank you, Zagreb.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Zagreb #Milestone #ProteinLife</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="500 shake-ova u prvom tjednu. Zagreb, hvala ti. #ShakeOMat #FreshEveryRep #Zagreb #Milestone #ProteinLife">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">05</div>
+          <div class="type-label">Machine Reveal</div>
+        </div>
+        <p class="caption-hr">Upoznajte novog stanara teretane.</p>
+        <p class="caption-en">Meet the gym's newest tenant.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #NewInTown #GymTech #ProteinVending</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Upoznajte novog stanara teretane. #ShakeOMat #FreshEveryRep #NewInTown #GymTech #ProteinVending">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">06</div>
+          <div class="type-label">SKU Intro</div>
+        </div>
+        <p class="caption-hr">4 shaka. 4 cilja. Koji je tvoj?</p>
+        <p class="caption-en">4 shakes. 4 goals. Which is yours?</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Build #Lean #Recover #Boost</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="4 shaka. 4 cilja. Koji je tvoj? #ShakeOMat #FreshEveryRep #Build #Lean #Recover #Boost">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">07</div>
+          <div class="type-label">B2C CTA</div>
+        </div>
+        <p class="caption-hr">Pronadji <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> u tvojoj teretani &rarr;</p>
+        <p class="caption-en">Find <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> in your gym.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #FindAMachine #LinkInBio #Croatia</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Pronadji Shake-o-mat u tvojoj teretani. #ShakeOMat #FreshEveryRep #FindAMachine #LinkInBio #Croatia">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">08</div>
+          <div class="type-label">Freshness</div>
+        </div>
+        <p class="caption-hr">Sejkano na licu mjesta. Nije s police. Nije od jucer.</p>
+        <p class="caption-en">Shaken on the spot. Not from a shelf. Not from yesterday.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #FreshProtein #NoPreservatives #QualityFirst</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Sejkano na licu mjesta. Nije s police. Nije od jucer. #ShakeOMat #FreshEveryRep #FreshProtein #NoPreservatives #QualityFirst">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">09</div>
+          <div class="type-label">Community</div>
+        </div>
+        <p class="caption-hr">Tag kolegu koji uvijek zaboravi proteinski shake.</p>
+        <p class="caption-en">Tag the friend who always forgets their protein shake.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #TagAFriend #GymBuddies #NoExcuses</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Tag kolegu koji uvijek zaboravi proteinski shake. #ShakeOMat #FreshEveryRep #TagAFriend #GymBuddies #NoExcuses">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">10</div>
+          <div class="type-label">Milestone</div>
+        </div>
+        <p class="caption-hr">1.000 shake-ova. Vidimo se kod sljedeceg tisucice.</p>
+        <p class="caption-en">1,000 shakes. See you at the next thousand.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #1kShakes #Milestone #ThankYou</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="1.000 shake-ova. Vidimo se kod sljedeceg tisucice. #ShakeOMat #FreshEveryRep #1kShakes #Milestone #ThankYou">Copy</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: TIKTOK -->
+<section id="tt" class="section section-tt">
+  <div class="container">
+    <div class="section-header">
+      <h2><span class="accent">TikTok</span> — 3-Second Hooks</h2>
+      <span class="count">10 hooks</span>
+    </div>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">01</div>
+          <div class="type-label">POV Hook</div>
+        </div>
+        <p class="caption-hr">POV: Tvoja teretana konacno ima ovo&hellip;</p>
+        <p class="caption-en">POV: Your gym finally has this.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #POV #GymTok #fyp</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="POV: Tvoja teretana konacno ima ovo... #ShakeOMat #FreshEveryRep #POV #GymTok #fyp">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">02</div>
+          <div class="type-label">Riddle</div>
+        </div>
+        <p class="caption-hr">Reci mi da radis u teretani bez da mi kazes&hellip;</p>
+        <p class="caption-en">Tell me you work out without telling me.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #TellMeWithoutTellingMe #GymLife #fyp</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Reci mi da radis u teretani bez da mi kazes... #ShakeOMat #FreshEveryRep #TellMeWithoutTellingMe #GymLife #fyp">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">03</div>
+          <div class="type-label">Listicle</div>
+        </div>
+        <p class="caption-hr">3 stvari koje svaki ozbiljan sportas radi odmah nakon treninga:</p>
+        <p class="caption-en">3 things every serious athlete does right after training.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #GymTips #PostWorkout #Athlete</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="3 stvari koje svaki ozbiljan sportas radi odmah nakon treninga: #ShakeOMat #FreshEveryRep #GymTips #PostWorkout #Athlete">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">04</div>
+          <div class="type-label">Education</div>
+        </div>
+        <p class="caption-hr">45 minuta. Koliko to zapravo znaci?</p>
+        <p class="caption-en">45 minutes. What does that actually mean?</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #LearnOnTikTok #AnabolicWindow #SportScience</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="45 minuta. Koliko to zapravo znaci? #ShakeOMat #FreshEveryRep #LearnOnTikTok #AnabolicWindow #SportScience">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">05</div>
+          <div class="type-label">Discovery</div>
+        </div>
+        <p class="caption-hr">Ovo je aparat koji nisam mislio da trebam dok ga nisam vidio.</p>
+        <p class="caption-en">This is a machine I didn't know I needed until I saw it.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #TikTokMadeMeTryIt #Discovery #GymGear</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Ovo je aparat koji nisam mislio da trebam dok ga nisam vidio. #ShakeOMat #FreshEveryRep #TikTokMadeMeTryIt #Discovery #GymGear">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">06</div>
+          <div class="type-label">Challenge</div>
+        </div>
+        <p class="caption-hr">Show me your post-workout routine and I'll show you your results.</p>
+        <p class="caption-en">(English challenge format)</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Challenge #ShowMe #Results</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Show me your post-workout routine and I'll show you your results. #ShakeOMat #FreshEveryRep #Challenge #ShowMe #Results">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">07</div>
+          <div class="type-label">Shock</div>
+        </div>
+        <p class="caption-hr">Protein u 30 sekundi. Nisam vjerovao dok nisam probao.</p>
+        <p class="caption-en">Protein in 30 seconds. I didn't believe it until I tried.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #MindBlown #ProteinShake #Instant</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Protein u 30 sekundi. Nisam vjerovao dok nisam probao. #ShakeOMat #FreshEveryRep #MindBlown #ProteinShake #Instant">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">08</div>
+          <div class="type-label">Local</div>
+        </div>
+        <p class="caption-hr">Gyms4you members: ima nesto novo kod izlaza.</p>
+        <p class="caption-en">Gyms4you members: there's something new by the exit.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Gyms4You #Zagreb #LocalLaunch</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Gyms4you members: ima nesto novo kod izlaza. #ShakeOMat #FreshEveryRep #Gyms4You #Zagreb #LocalLaunch">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">09</div>
+          <div class="type-label">Quiz</div>
+        </div>
+        <p class="caption-hr">LEAN. BUILD. RECOVER. BOOST. Koji je tvoj cilj?</p>
+        <p class="caption-en">LEAN. BUILD. RECOVER. BOOST. Which is your goal?</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Quiz #PickYourShake #FitnessGoals</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="LEAN. BUILD. RECOVER. BOOST. Koji je tvoj cilj? #ShakeOMat #FreshEveryRep #Quiz #PickYourShake #FitnessGoals">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">10</div>
+          <div class="type-label">Announcement</div>
+        </div>
+        <p class="caption-hr"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> x [tagiranu teretanu] je stigao. &#10003;</p>
+        <p class="caption-en"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> x [tagged gym] has landed.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Launch #NewLocation #Partners</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Shake-o-mat x [tagiranu teretanu] je stigao. #ShakeOMat #FreshEveryRep #Launch #NewLocation #Partners">Copy</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: LINKEDIN -->
+<section id="li" class="section section-li">
+  <div class="container">
+    <div class="section-header">
+      <h2><span class="accent">LinkedIn</span> — B2B Posts</h2>
+      <span class="count">10 posts</span>
+    </div>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">01</div>
+          <div class="type-label">B2B Pipeline</div>
+        </div>
+        <p class="caption-hr">Zasto svaka teretana s 500+ clanova ostavlja &euro;2,000+ na stolu svaki mjesec.</p>
+        <p class="caption-en">Why every gym with 500+ members leaves EUR 2,000+ on the table each month.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #FitnessBusiness #RevenueShare #GymOwners</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Zasto svaka teretana s 500+ clanova ostavlja EUR 2,000+ na stolu svaki mjesec. #ShakeOMat #FreshEveryRep #FitnessBusiness #RevenueShare #GymOwners">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">02</div>
+          <div class="type-label">Case Study</div>
+        </div>
+        <p class="caption-hr">3 stvari koje smo naucili u prvom tjednu pilot programa s Gyms4You.</p>
+        <p class="caption-en">3 lessons from our first pilot week with Gyms4You.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Pilot #Learnings #Gyms4You</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="3 stvari koje smo naucili u prvom tjednu pilot programa s Gyms4You. #ShakeOMat #FreshEveryRep #Pilot #Learnings #Gyms4You">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">03</div>
+          <div class="type-label">Myth Bust</div>
+        </div>
+        <p class="caption-hr">Pasivni prihod u fitness industriji: mitovi i stvarnost.</p>
+        <p class="caption-en">Passive income in the fitness industry: myths and reality.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #PassiveIncome #FitnessIndustry #Myths</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Pasivni prihod u fitness industriji: mitovi i stvarnost. #ShakeOMat #FreshEveryRep #PassiveIncome #FitnessIndustry #Myths">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">04</div>
+          <div class="type-label">Partner Model</div>
+        </div>
+        <p class="caption-hr">&euro;0 investicije. &euro;1,000+ prihoda. Kako funkcionira <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> partner model.</p>
+        <p class="caption-en">EUR 0 investment. EUR 1,000+ revenue. How the <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> partner model works.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #PartnerModel #ZeroCapex #RevenueShare</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="EUR 0 investicije. EUR 1,000+ prihoda. Kako funkcionira Shake-o-mat partner model. #ShakeOMat #FreshEveryRep #PartnerModel #ZeroCapex #RevenueShare">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">05</div>
+          <div class="type-label">Market Map</div>
+        </div>
+        <p class="caption-hr">Protein vending u Europi: tko je na mapi, tko nije, i zasto je to tvoja prednost.</p>
+        <p class="caption-en">Protein vending in Europe: who's on the map, who isn't, and why that's your edge.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #MarketMap #Europe #FirstMover</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Protein vending u Europi: tko je na mapi, tko nije, i zasto je to tvoja prednost. #ShakeOMat #FreshEveryRep #MarketMap #Europe #FirstMover">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">06</div>
+          <div class="type-label">Case Study</div>
+        </div>
+        <p class="caption-hr">Gyms4You partner case study: brojevi iz prvog mjeseca.</p>
+        <p class="caption-en">Gyms4You partner case study: numbers from month one.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #CaseStudy #Numbers #Gyms4You</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Gyms4You partner case study: brojevi iz prvog mjeseca. #ShakeOMat #FreshEveryRep #CaseStudy #Numbers #Gyms4You">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">07</div>
+          <div class="type-label">Insight</div>
+        </div>
+        <p class="caption-hr">Zasto 55% clanova teretana ne konzumira protein odmah &mdash; i sto to kosta.</p>
+        <p class="caption-en">Why 55% of gym members don't consume protein immediately — and what it costs.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Research #AnabolicWindow #MemberRetention</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Zasto 55% clanova teretana ne konzumira protein odmah - i sto to kosta. #ShakeOMat #FreshEveryRep #Research #AnabolicWindow #MemberRetention">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">08</div>
+          <div class="type-label">Brand Story</div>
+        </div>
+        <p class="caption-hr">Branded vending: ne samo aparat, nego brand u tvojoj teretani.</p>
+        <p class="caption-en">Branded vending: not just a machine, a brand in your gym.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Branding #Vending #GymExperience</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Branded vending: ne samo aparat, nego brand u tvojoj teretani. #ShakeOMat #FreshEveryRep #Branding #Vending #GymExperience">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">09</div>
+          <div class="type-label">Trend</div>
+        </div>
+        <p class="caption-hr">Ingredient transparency: zasto je ovo sljedeca velika stvar u fitnessu.</p>
+        <p class="caption-en">Ingredient transparency: why it's the next big thing in fitness.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Transparency #CleanLabel #Trends</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Ingredient transparency: zasto je ovo sljedeca velika stvar u fitnessu. #ShakeOMat #FreshEveryRep #Transparency #CleanLabel #Trends">Copy</button></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">10</div>
+          <div class="type-label">Expansion</div>
+        </div>
+        <p class="caption-hr"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> trazi partnerske teretane u Splitu i Rijeci za Q3 2026.</p>
+        <p class="caption-en"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> is looking for partner gyms in Split and Rijeka for Q3 2026.</p>
+        <div class="tags"><b>#ShakeOMat #FreshEveryRep</b> #Expansion #Split #Rijeka #Partnership</div>
+        <div class="card-foot"><button class="copy-btn" data-copy="Shake-o-mat trazi partnerske teretane u Splitu i Rijeci za Q3 2026. #ShakeOMat #FreshEveryRep #Expansion #Split #Rijeka #Partnership">Copy</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOAST -->
+<div id="toast" class="toast">Copied &#10003;</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &middot; Zagreb &middot; 2026 &middot; <a href="b2b.html">B2B</a> &middot; <a href="portal.html">Portal</a>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const toast = document.getElementById('toast');
+  let toastTimer = null;
+
+  function showToast() {
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function() {
+      toast.classList.remove('show');
+    }, 1800);
+  }
+
+  document.querySelectorAll('.copy-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const text = btn.getAttribute('data-copy') || '';
+      const original = btn.textContent;
+
+      function flash() {
+        btn.classList.add('copied');
+        btn.textContent = 'Copied \u2713';
+        showToast();
+        setTimeout(function() {
+          btn.classList.remove('copied');
+          btn.textContent = original;
+        }, 1500);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(flash).catch(function() {
+          // Fallback
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          flash();
+        });
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        flash();
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

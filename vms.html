@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shake-o-mat VMS · Internal Dashboard</title>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+:root {
+  --bg:#050816;
+  --bg-surface:#0B1230;
+  --bg-surface-2:#121A36;
+  --blue:#1BA2FF;
+  --cyan:#73EDFF;
+  --green:#7DFF9B;
+  --orange:#FF9B46;
+  --red:#FF4C5C;
+  --white:#F4F8FF;
+  --muted:#8AA0C8;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+a { color: var(--cyan); text-decoration: none; }
+
+button, input, select, textarea {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: var(--white);
+}
+
+/* ---------- LOGIN ---------- */
+.login-wrap {
+  position: fixed; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(ellipse at top, #0B1230 0%, #050816 60%);
+  z-index: 1000;
+  padding: 24px;
+}
+.login-card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(27, 162, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.login-card .logo-mark {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 36px;
+  color: var(--cyan);
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+.login-card .logo-sub {
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 28px;
+}
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg-surface-2);
+  border: 1px solid rgba(138, 160, 200, 0.2);
+  border-radius: var(--radius-sm);
+  outline: none;
+  margin-bottom: 14px;
+  transition: border-color .15s;
+}
+.login-card input[type="password"]:focus { border-color: var(--blue); }
+.login-card button {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--blue);
+  color: #000;
+  font-weight: 600;
+  border: 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.login-card button:hover { background: var(--cyan); }
+.login-error {
+  color: var(--red);
+  margin-top: 12px;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+/* ---------- APP LAYOUT ---------- */
+.app { display: none; }
+.app.authed { display: block; }
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--bg-surface);
+  border-right: 1px solid rgba(138, 160, 200, 0.08);
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.sidebar .brand {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  color: var(--cyan);
+  font-size: 24px;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+.sidebar .brand-sub {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.sidebar nav ul { list-style: none; }
+.sidebar nav a {
+  display: flex; align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background .15s, color .15s;
+}
+.sidebar nav a:hover { background: var(--bg-surface-2); color: var(--cyan); }
+.sidebar nav a.active { background: rgba(27, 162, 255, 0.12); color: var(--cyan); }
+.sidebar nav a .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+
+.main {
+  padding: 24px 32px 64px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(138, 160, 200, 0.08);
+}
+.topbar h1 {
+  font-size: 22px;
+  color: var(--white);
+}
+.topbar .user-chip {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.logout-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 76, 92, 0.3);
+  color: var(--red);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+}
+.logout-btn:hover { background: rgba(255, 76, 92, 0.1); }
+
+section {
+  background: var(--bg-surface);
+  border: 1px solid rgba(138, 160, 200, 0.06);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+  color: var(--white);
+}
+.section-sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* ---------- FLEET OVERVIEW ---------- */
+.city-map {
+  position: relative;
+  background:
+    linear-gradient(rgba(27, 162, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 162, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-color: var(--bg-surface-2);
+  border-radius: var(--radius);
+  height: 260px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 162, 255, 0.1);
+}
+.city-map .district {
+  position: absolute;
+  background: rgba(27, 162, 255, 0.04);
+  border: 1px dashed rgba(115, 237, 255, 0.15);
+  border-radius: 6px;
+  font-size: 10px;
+  color: var(--muted);
+  padding: 4px 6px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+  display: flex; flex-direction: column; align-items: center;
+}
+.map-pin .pin-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(125, 255, 155, 0.2), 0 0 12px var(--green);
+  animation: pulse 2s infinite;
+}
+.map-pin.maintenance .pin-dot {
+  background: var(--orange);
+  box-shadow: 0 0 0 4px rgba(255, 155, 70, 0.2), 0 0 12px var(--orange);
+}
+.map-pin .pin-label {
+  background: var(--bg-surface);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 4px;
+  border: 1px solid rgba(115, 237, 255, 0.2);
+  white-space: nowrap;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.machine-card {
+  background: var(--bg-surface-2);
+  border: 1px solid rgba(138, 160, 200, 0.08);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: transform .15s, border-color .15s;
+}
+.machine-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(115, 237, 255, 0.3);
+}
+.machine-card h3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.status-online { background: rgba(125, 255, 155, 0.15); color: var(--green); }
+.status-maintenance { background: rgba(255, 155, 70, 0.15); color: var(--orange); }
+
+.metric-row {
+  display: flex; justify-content: space-between;
+  font-size: 12px;
+  margin: 4px 0;
+  color: var(--muted);
+}
+.metric-row strong { color: var(--white); font-weight: 600; }
+.metric-row .metric-val.rev { color: var(--green); }
+
+.progress-bar {
+  background: rgba(0,0,0,0.3);
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.progress-bar .fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  border-radius: 3px;
+  transition: width .3s;
+}
+.progress-bar.low .fill { background: linear-gradient(90deg, var(--orange), var(--red)); }
+
+/* ---------- REVENUE ---------- */
+.date-range {
+  display: flex; align-items: center; gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.date-range select, .date-range input[type="date"] {
+  background: var(--bg-surface-2);
+  border: 1px solid rgba(138, 160, 200, 0.2);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+}
+
+.revenue-hero {
+  background: linear-gradient(135deg, rgba(125, 255, 155, 0.08), rgba(27, 162, 255, 0.04));
+  border: 1px solid rgba(125, 255, 155, 0.2);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.revenue-hero .label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.revenue-hero .value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  color: var(--green);
+  line-height: 1;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.chart-card {
+  background: var(--bg-surface-2);
+  border-radius: var(--radius);
+  padding: 16px;
+  min-height: 280px;
+  border: 1px solid rgba(138, 160, 200, 0.06);
+}
+.chart-card h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-family: 'Barlow', sans-serif;
+}
+.chart-card canvas { max-height: 240px; }
+
+/* ---------- TABLES ---------- */
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(138, 160, 200, 0.08);
+}
+th {
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  background: var(--bg-surface-2);
+}
+tbody tr:hover { background: rgba(27, 162, 255, 0.04); }
+tr.low-stock { background: rgba(255, 76, 92, 0.08); }
+tr.low-stock:hover { background: rgba(255, 76, 92, 0.14); }
+
+.badge-low {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+  letter-spacing: 0.1em;
+}
+.badge-open { background: rgba(255, 155, 70, 0.15); color: var(--orange); padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+.badge-resolved { background: rgba(125, 255, 155, 0.15); color: var(--green); padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+
+.btn-small {
+  padding: 6px 10px;
+  background: var(--blue);
+  color: #000;
+  border: 0;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.btn-small:hover { background: var(--cyan); }
+.btn-small.confirmed { background: var(--green); }
+
+.refill-calendar {
+  margin-top: 20px;
+  background: var(--bg-surface-2);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid rgba(138, 160, 200, 0.06);
+}
+.refill-calendar h4 {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.refill-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(138, 160, 200, 0.06);
+  font-size: 13px;
+}
+.refill-item:last-child { border-bottom: 0; }
+.refill-item .date { color: var(--cyan); font-weight: 600; }
+
+/* ---------- MAINTENANCE FORM ---------- */
+.log-form {
+  margin-top: 24px;
+  background: var(--bg-surface-2);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid rgba(138, 160, 200, 0.06);
+}
+.log-form h4 {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.log-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.log-form label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+.log-form select, .log-form textarea, .log-form input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid rgba(138, 160, 200, 0.2);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-size: 13px;
+}
+.log-form textarea { resize: vertical; min-height: 70px; }
+.log-form button {
+  padding: 10px 18px;
+  background: var(--blue);
+  color: #000;
+  font-weight: 600;
+  border: 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+}
+.log-form button:hover { background: var(--cyan); }
+
+/* ---------- PARTNER REPORTS ---------- */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.partner-card {
+  background: var(--bg-surface-2);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid rgba(138, 160, 200, 0.08);
+}
+.partner-card h3 {
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: var(--cyan);
+}
+.partner-period {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+.partner-stat {
+  display: flex; justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(138, 160, 200, 0.08);
+  font-size: 13px;
+}
+.partner-stat:last-of-type { border-bottom: 0; margin-bottom: 14px; }
+.partner-stat .k { color: var(--muted); }
+.partner-stat .v { color: var(--white); font-weight: 600; }
+.partner-stat.commission .v { color: var(--green); font-size: 16px; }
+
+/* ---------- ANALYTICS ---------- */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.insight-card {
+  background: var(--bg-surface-2);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid rgba(138, 160, 200, 0.08);
+  min-height: 220px;
+}
+.insight-card h4 {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.insight-list { list-style: none; font-size: 13px; }
+.insight-list li {
+  display: flex; justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(138, 160, 200, 0.06);
+}
+.insight-list li:last-child { border-bottom: 0; }
+.insight-list .loc { color: var(--white); }
+.insight-list .sku { color: var(--cyan); font-weight: 600; }
+
+.big-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1;
+}
+.big-value.green { color: var(--green); }
+.big-value.cyan { color: var(--cyan); }
+.small-desc { color: var(--muted); font-size: 12px; margin-top: 8px; }
+.trend-arrow { color: var(--green); font-size: 18px; }
+
+/* Heatmap */
+.heatmap {
+  display: grid;
+  grid-template-columns: 30px repeat(24, 1fr);
+  gap: 2px;
+  font-size: 9px;
+}
+.heatmap .hm-label {
+  color: var(--muted);
+  font-size: 9px;
+  text-align: right;
+  padding-right: 4px;
+  line-height: 12px;
+}
+.heatmap .hm-cell {
+  aspect-ratio: 1;
+  background: rgba(27, 162, 255, 0.08);
+  border-radius: 2px;
+  min-height: 10px;
+}
+.heatmap .hm-hour {
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---------- FOOTER ---------- */
+footer.app-footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(138, 160, 200, 0.06);
+}
+
+/* ---------- MOBILE ---------- */
+.mobile-nav-toggle {
+  display: none;
+  background: var(--bg-surface-2);
+  border: 1px solid rgba(138, 160, 200, 0.2);
+  color: var(--white);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 960px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: auto;
+    padding: 16px;
+    z-index: 10;
+  }
+  .sidebar .brand-sub { display: none; }
+  .sidebar nav ul {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    overflow-x: auto;
+  }
+  .sidebar nav a {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  .sidebar nav a .dot { display: none; }
+  .main { padding: 16px; }
+  .fleet-grid { grid-template-columns: repeat(2, 1fr); }
+  .charts-grid { grid-template-columns: 1fr; }
+  .insights-grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-grid { grid-template-columns: 1fr; }
+  .log-form .form-grid { grid-template-columns: 1fr; }
+  .city-map { height: 200px; }
+  .topbar h1 { font-size: 18px; }
+}
+@media (max-width: 480px) {
+  .insights-grid { grid-template-columns: 1fr; }
+  .revenue-hero .value { font-size: 36px; }
+}
+
+/* ---------- PRINT ---------- */
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  .sidebar, .topbar, .logout-btn, .mobile-nav-toggle, .log-form, footer.app-footer,
+  #fleet, #revenue, #ingredients, #maintenance, #analytics,
+  .date-range, #print-hide { display: none !important; }
+  .app-shell { grid-template-columns: 1fr !important; }
+  .main { padding: 0 !important; }
+  section {
+    background: #fff !important;
+    border: 0 !important;
+    color: #000 !important;
+    padding: 10px 0 !important;
+    margin-bottom: 0 !important;
+    page-break-inside: avoid;
+  }
+  section h2, .partner-card h3 { color: #000 !important; }
+  .partner-card {
+    background: #fff !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+  .partner-card:first-of-type { page-break-before: auto; }
+  .partner-stat .k, .partner-stat .v, .partner-period { color: #000 !important; }
+  .partner-stat.commission .v { color: #000 !important; font-weight: 900; }
+  .print-logo {
+    display: block !important;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: #000 !important;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000;
+  }
+  button { display: none !important; }
+}
+.print-logo { display: none; }
+</style>
+</head>
+<body>
+
+<!-- ================= LOGIN SCREEN ================= -->
+<div class="login-wrap" id="loginWrap">
+  <form class="login-card" id="loginForm" autocomplete="off">
+    <div class="logo-mark">SHAKE-O-MAT</div>
+    <div class="logo-sub">VMS · Internal</div>
+    <input type="password" id="pwInput" placeholder="Enter password" autofocus>
+    <button type="submit">Sign In</button>
+    <div class="login-error" id="loginError"></div>
+  </form>
+</div>
+
+<!-- ================= APP ================= -->
+<div class="app" id="app">
+<div class="app-shell">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">SHAKE-O-MAT</div>
+    <div class="brand-sub">VMS Dashboard</div>
+    <nav>
+      <ul>
+        <li><a href="#fleet" class="nav-link active"><span class="dot"></span>Fleet Overview</a></li>
+        <li><a href="#revenue" class="nav-link"><span class="dot"></span>Revenue</a></li>
+        <li><a href="#ingredients" class="nav-link"><span class="dot"></span>Ingredients</a></li>
+        <li><a href="#maintenance" class="nav-link"><span class="dot"></span>Maintenance</a></li>
+        <li><a href="#reports" class="nav-link"><span class="dot"></span>Reports</a></li>
+        <li><a href="#analytics" class="nav-link"><span class="dot"></span>Analytics</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <h1>Operations Dashboard</h1>
+      <div class="user-chip">
+        <span id="userEmail">admin</span>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <!-- Print-only logo -->
+    <div class="print-logo">SHAKE-O-MAT · Partner Revenue Report</div>
+
+    <!-- ========== FLEET ========== -->
+    <section id="fleet">
+      <h2>Fleet Overview</h2>
+      <div class="section-sub">Live status of 5 machines across Zagreb</div>
+
+      <div class="city-map" id="cityMap">
+        <div class="district" style="left:10%;top:15%;width:22%;height:30%;">Trešnjevka</div>
+        <div class="district" style="left:35%;top:10%;width:25%;height:35%;">Centar</div>
+        <div class="district" style="left:62%;top:12%;width:22%;height:30%;">Maksimir</div>
+        <div class="district" style="left:15%;top:55%;width:28%;height:35%;">Arena/Lanište</div>
+        <div class="district" style="left:48%;top:58%;width:30%;height:30%;">Novi Zagreb</div>
+
+        <div class="map-pin" style="left:20%;top:32%;" title="Gyms4you Trešnjevka">
+          <div class="pin-dot"></div>
+          <div class="pin-label">Trešnjevka</div>
+        </div>
+        <div class="map-pin" style="left:28%;top:78%;" title="Gyms4you Arena">
+          <div class="pin-dot"></div>
+          <div class="pin-label">Arena</div>
+        </div>
+        <div class="map-pin" style="left:45%;top:28%;" title="HOB Ilica">
+          <div class="pin-dot"></div>
+          <div class="pin-label">Ilica</div>
+        </div>
+        <div class="map-pin" style="left:60%;top:75%;" title="THE Fitness City">
+          <div class="pin-dot"></div>
+          <div class="pin-label">City</div>
+        </div>
+        <div class="map-pin maintenance" style="left:72%;top:28%;" title="Gyms4you Maksimir">
+          <div class="pin-dot"></div>
+          <div class="pin-label">Maksimir</div>
+        </div>
+      </div>
+
+      <div class="fleet-grid">
+        <!-- cards injected by JS below; also rendered inline for SEO/no-JS -->
+        <div class="machine-card">
+          <h3>Gyms4you Trešnjevka</h3>
+          <span class="status-badge status-online">Online</span>
+          <div class="metric-row"><span>Today</span><strong class="metric-val rev">€124</strong></div>
+          <div class="metric-row"><span>Shakes</span><strong>28</strong></div>
+          <div class="metric-row"><span>Stock</span><strong>78%</strong></div>
+          <div class="progress-bar"><div class="fill" style="width:78%"></div></div>
+        </div>
+        <div class="machine-card">
+          <h3>Gyms4you Arena</h3>
+          <span class="status-badge status-online">Online</span>
+          <div class="metric-row"><span>Today</span><strong class="metric-val rev">€156</strong></div>
+          <div class="metric-row"><span>Shakes</span><strong>34</strong></div>
+          <div class="metric-row"><span>Stock</span><strong>65%</strong></div>
+          <div class="progress-bar"><div class="fill" style="width:65%"></div></div>
+        </div>
+        <div class="machine-card">
+          <h3>HOB Ilica</h3>
+          <span class="status-badge status-online">Online</span>
+          <div class="metric-row"><span>Today</span><strong class="metric-val rev">€89</strong></div>
+          <div class="metric-row"><span>Shakes</span><strong>19</strong></div>
+          <div class="metric-row"><span>Stock</span><strong>84%</strong></div>
+          <div class="progress-bar"><div class="fill" style="width:84%"></div></div>
+        </div>
+        <div class="machine-card">
+          <h3>THE Fitness City</h3>
+          <span class="status-badge status-online">Online</span>
+          <div class="metric-row"><span>Today</span><strong class="metric-val rev">€201</strong></div>
+          <div class="metric-row"><span>Shakes</span><strong>44</strong></div>
+          <div class="metric-row"><span>Stock</span><strong>71%</strong></div>
+          <div class="progress-bar"><div class="fill" style="width:71%"></div></div>
+        </div>
+        <div class="machine-card">
+          <h3>Gyms4you Maksimir</h3>
+          <span class="status-badge status-maintenance">Maintenance</span>
+          <div class="metric-row"><span>Today</span><strong class="metric-val rev">€0</strong></div>
+          <div class="metric-row"><span>Shakes</span><strong>0</strong></div>
+          <div class="metric-row"><span>Stock</span><strong>12%</strong></div>
+          <div class="progress-bar low"><div class="fill" style="width:12%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== REVENUE ========== -->
+    <section id="revenue">
+      <h2>Revenue Dashboard</h2>
+      <div class="section-sub">Aggregated revenue across all units</div>
+
+      <div class="date-range">
+        <label style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:0.1em;">Range:</label>
+        <select id="rangeSelect">
+          <option value="7">Last 7d</option>
+          <option value="30">Last 30d</option>
+          <option value="custom">Custom</option>
+        </select>
+        <span id="customRange" style="display:none;">
+          <input type="date" id="dateFrom" value="2026-04-01">
+          <input type="date" id="dateTo" value="2026-04-18">
+        </span>
+      </div>
+
+      <div class="revenue-hero">
+        <div class="label">Total revenue this period</div>
+        <div class="value" id="totalRevenue">€18.247</div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h4>Revenue by Machine</h4>
+          <canvas id="chartMachines"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Revenue by SKU</h4>
+          <canvas id="chartSku"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Daily Trend · Last 7d</h4>
+          <canvas id="chartDaily"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INGREDIENTS ========== -->
+    <section id="ingredients">
+      <h2>Ingredient Management</h2>
+      <div class="section-sub">Stock levels per machine per SKU</div>
+
+      <div class="table-wrap">
+        <table id="ingredientsTable">
+          <thead>
+            <tr>
+              <th>Machine</th>
+              <th>LEAN %</th>
+              <th>BUILD %</th>
+              <th>RECOVER %</th>
+              <th>BOOST %</th>
+              <th>Cups</th>
+              <th>Last Refill</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gyms4you Trešnjevka</td>
+              <td>72%</td><td>84%</td><td>78%</td><td>65%</td>
+              <td>140</td><td>2026-04-14</td>
+              <td><button class="btn-small refill-btn" data-machine="Gyms4you Trešnjevka">Schedule Refill</button></td>
+            </tr>
+            <tr>
+              <td>Gyms4you Arena</td>
+              <td>61%</td><td>70%</td><td>64%</td><td>58%</td>
+              <td>98</td><td>2026-04-12</td>
+              <td><button class="btn-small refill-btn" data-machine="Gyms4you Arena">Schedule Refill</button></td>
+            </tr>
+            <tr>
+              <td>HOB Ilica</td>
+              <td>85%</td><td>82%</td><td>86%</td><td>79%</td>
+              <td>160</td><td>2026-04-15</td>
+              <td><button class="btn-small refill-btn" data-machine="HOB Ilica">Schedule Refill</button></td>
+            </tr>
+            <tr>
+              <td>THE Fitness City</td>
+              <td>68%</td><td>74%</td><td>71%</td><td>63%</td>
+              <td>120</td><td>2026-04-13</td>
+              <td><button class="btn-small refill-btn" data-machine="THE Fitness City">Schedule Refill</button></td>
+            </tr>
+            <tr class="low-stock">
+              <td>Gyms4you Maksimir <span class="badge-low">⚠ LOW</span></td>
+              <td>14%</td><td>10%</td><td>12%</td><td>9%</td>
+              <td>18</td><td>2026-04-02</td>
+              <td><button class="btn-small refill-btn" data-machine="Gyms4you Maksimir">Schedule Refill</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="refill-calendar">
+        <h4>Refill Calendar · Next 3 Scheduled</h4>
+        <div id="refillList">
+          <div class="refill-item"><span class="date">2026-04-19</span><span>Gyms4you Maksimir</span><span style="color:var(--muted);">Technician: M. Horvat</span></div>
+          <div class="refill-item"><span class="date">2026-04-21</span><span>Gyms4you Arena</span><span style="color:var(--muted);">Technician: A. Kovač</span></div>
+          <div class="refill-item"><span class="date">2026-04-23</span><span>THE Fitness City</span><span style="color:var(--muted);">Technician: M. Horvat</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MAINTENANCE ========== -->
+    <section id="maintenance">
+      <h2>Maintenance Log</h2>
+      <div class="section-sub">Recent service tickets across the fleet</div>
+
+      <div class="table-wrap">
+        <table id="maintenanceTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Machine</th>
+              <th>Issue</th>
+              <th>Status</th>
+              <th>Technician</th>
+            </tr>
+          </thead>
+          <tbody id="maintenanceTbody">
+            <tr>
+              <td>2026-04-17</td><td>Gyms4you Maksimir</td>
+              <td>Chiller sensor fault, SKU dispense locked</td>
+              <td><span class="badge-open">OPEN</span></td>
+              <td>M. Horvat</td>
+            </tr>
+            <tr>
+              <td>2026-04-15</td><td>THE Fitness City</td>
+              <td>Cup dispenser jammed</td>
+              <td><span class="badge-resolved">RESOLVED</span></td>
+              <td>A. Kovač</td>
+            </tr>
+            <tr>
+              <td>2026-04-13</td><td>HOB Ilica</td>
+              <td>Touchscreen calibration drift</td>
+              <td><span class="badge-resolved">RESOLVED</span></td>
+              <td>M. Horvat</td>
+            </tr>
+            <tr>
+              <td>2026-04-11</td><td>Gyms4you Arena</td>
+              <td>Card reader intermittent</td>
+              <td><span class="badge-open">OPEN</span></td>
+              <td>I. Novak</td>
+            </tr>
+            <tr>
+              <td>2026-04-08</td><td>Gyms4you Trešnjevka</td>
+              <td>Mixing blade wear replaced</td>
+              <td><span class="badge-resolved">RESOLVED</span></td>
+              <td>A. Kovač</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="log-form">
+        <h4>Log New Issue</h4>
+        <form id="issueForm">
+          <div class="form-grid">
+            <div>
+              <label>Machine</label>
+              <select id="issueMachine" required>
+                <option>Gyms4you Trešnjevka</option>
+                <option>Gyms4you Arena</option>
+                <option>HOB Ilica</option>
+                <option>THE Fitness City</option>
+                <option>Gyms4you Maksimir</option>
+              </select>
+            </div>
+            <div>
+              <label>Priority</label>
+              <select id="issuePriority" required>
+                <option>Low</option>
+                <option selected>Med</option>
+                <option>High</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom:12px;">
+            <label>Issue description</label>
+            <textarea id="issueDesc" placeholder="Describe the problem..." required></textarea>
+          </div>
+          <button type="submit">Submit Issue</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== REPORTS ========== -->
+    <section id="reports">
+      <h2>Partner Monthly Reports</h2>
+      <div class="section-sub">April 2026 · commission breakdown per partner</div>
+
+      <div class="partner-grid">
+        <div class="partner-card" id="pc-gyms4you">
+          <h3>Gyms4you</h3>
+          <div class="partner-period">April 2026 · 3 locations</div>
+          <div class="partner-stat"><span class="k">Transactions</span><span class="v">1.842</span></div>
+          <div class="partner-stat"><span class="k">Gross revenue</span><span class="v">€8.947</span></div>
+          <div class="partner-stat"><span class="k">Partner share</span><span class="v">25%</span></div>
+          <div class="partner-stat commission"><span class="k">Commission owed</span><span class="v">€2.236</span></div>
+          <button class="btn-small" onclick="printReport('pc-gyms4you')">Export PDF</button>
+        </div>
+        <div class="partner-card" id="pc-the">
+          <h3>THE Fitness</h3>
+          <div class="partner-period">April 2026 · 1 location</div>
+          <div class="partner-stat"><span class="k">Transactions</span><span class="v">1.207</span></div>
+          <div class="partner-stat"><span class="k">Gross revenue</span><span class="v">€5.632</span></div>
+          <div class="partner-stat"><span class="k">Partner share</span><span class="v">20%</span></div>
+          <div class="partner-stat commission"><span class="k">Commission owed</span><span class="v">€1.126</span></div>
+          <button class="btn-small" onclick="printReport('pc-the')">Export PDF</button>
+        </div>
+        <div class="partner-card" id="pc-hob">
+          <h3>HOB</h3>
+          <div class="partner-period">April 2026 · 1 location</div>
+          <div class="partner-stat"><span class="k">Transactions</span><span class="v">812</span></div>
+          <div class="partner-stat"><span class="k">Gross revenue</span><span class="v">€3.668</span></div>
+          <div class="partner-stat"><span class="k">Partner share</span><span class="v">25%</span></div>
+          <div class="partner-stat commission"><span class="k">Commission owed</span><span class="v">€917</span></div>
+          <button class="btn-small" onclick="printReport('pc-hob')">Export PDF</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ANALYTICS ========== -->
+    <section id="analytics">
+      <h2>Analytics & Insights</h2>
+      <div class="section-sub">Operational trends and KPIs</div>
+
+      <div class="insights-grid">
+        <div class="insight-card">
+          <h4>Top SKU by Location</h4>
+          <ul class="insight-list">
+            <li><span class="loc">Trešnjevka</span><span class="sku">BUILD</span></li>
+            <li><span class="loc">Arena</span><span class="sku">LEAN</span></li>
+            <li><span class="loc">Ilica</span><span class="sku">RECOVER</span></li>
+            <li><span class="loc">City</span><span class="sku">BOOST</span></li>
+            <li><span class="loc">Maksimir</span><span class="sku" style="color:var(--muted);">—</span></li>
+          </ul>
+        </div>
+
+        <div class="insight-card">
+          <h4>Peak Hour · THE Fitness City</h4>
+          <div class="heatmap" id="heatmap"></div>
+        </div>
+
+        <div class="insight-card">
+          <h4>Revenue per Member</h4>
+          <div class="big-value cyan">€5.40</div>
+          <div class="small-desc">per member / month (est.)</div>
+          <div class="small-desc" style="margin-top:12px;">Across ~3.380 active members in partnered gyms.</div>
+        </div>
+
+        <div class="insight-card">
+          <h4>MoM Growth</h4>
+          <div class="big-value green">+18% <span class="trend-arrow">▲</span></div>
+          <div class="small-desc">vs. March 2026</div>
+          <div class="small-desc" style="margin-top:12px;">Driven by Arena and City uplift post-Q1 promos.</div>
+        </div>
+      </div>
+
+      <div class="chart-card" style="margin-top:20px;">
+        <h4>30-Day Cumulative Revenue Trend</h4>
+        <canvas id="chartCumulative"></canvas>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> VMS · v1.0 · Internal Use Only
+    </footer>
+  </main>
+</div>
+</div>
+
+<script>
+/* ============================================================
+   AUTH
+   ============================================================ */
+const SESSION_KEY = 'som_admin_2026';
+const CORRECT_PASSWORD = 'admin2026';
+
+function isAuthed() {
+  return sessionStorage.getItem(SESSION_KEY) === 'true';
+}
+
+function showApp() {
+  document.getElementById('loginWrap').style.display = 'none';
+  document.getElementById('app').classList.add('authed');
+  initDashboard();
+}
+
+function showLogin() {
+  document.getElementById('loginWrap').style.display = 'flex';
+  document.getElementById('app').classList.remove('authed');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (isAuthed()) {
+    showApp();
+  } else {
+    showLogin();
+  }
+
+  document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const pw = (document.getElementById('pwInput').value || '').trim().toLowerCase();
+    const errEl = document.getElementById('loginError');
+    if (pw === CORRECT_PASSWORD) {
+      sessionStorage.setItem(SESSION_KEY, 'true');
+      location.reload();
+    } else {
+      errEl.textContent = 'Incorrect password. Please try again.';
+      document.getElementById('pwInput').value = '';
+    }
+  });
+
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    sessionStorage.removeItem(SESSION_KEY);
+    location.reload();
+  });
+});
+
+/* ============================================================
+   DASHBOARD INIT (after auth)
+   ============================================================ */
+function initDashboard() {
+  initCharts();
+  bindRangeSelect();
+  bindRefillButtons();
+  bindIssueForm();
+  buildHeatmap();
+  highlightActiveNav();
+  restorePersistedIssues();
+}
+
+/* ---------- CHART DARK THEME DEFAULTS ---------- */
+function setChartDefaults() {
+  if (typeof Chart === 'undefined') return;
+  Chart.defaults.color = '#F4F8FF';
+  Chart.defaults.font.family = "'Barlow', sans-serif";
+  Chart.defaults.borderColor = 'rgba(138, 160, 200, 0.1)';
+}
+
+function initCharts() {
+  setChartDefaults();
+
+  // Revenue by machine
+  new Chart(document.getElementById('chartMachines'), {
+    type: 'bar',
+    data: {
+      labels: ['Trešnjevka', 'Arena', 'Ilica', 'City', 'Maksimir'],
+      datasets: [{
+        label: 'Revenue (€)',
+        data: [3124, 4256, 2489, 5201, 1177],
+        backgroundColor: ['#1BA2FF', '#73EDFF', '#7DFF9B', '#FF9B46', '#FF4C5C'],
+        borderRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: 'rgba(138, 160, 200, 0.05)' }, ticks: { color: '#8AA0C8' } },
+        y: { grid: { color: 'rgba(138, 160, 200, 0.05)' }, ticks: { color: '#8AA0C8' } }
+      }
+    }
+  });
+
+  // Revenue by SKU
+  new Chart(document.getElementById('chartSku'), {
+    type: 'doughnut',
+    data: {
+      labels: ['LEAN', 'BUILD', 'RECOVER', 'BOOST'],
+      datasets: [{
+        data: [30, 40, 18, 12],
+        backgroundColor: ['#73EDFF', '#7DFF9B', '#FF9B46', '#C882FF'],
+        borderColor: '#0B1230',
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '62%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { color: '#F4F8FF', font: { size: 12 }, padding: 10 }
+        }
+      }
+    }
+  });
+
+  // Daily trend
+  new Chart(document.getElementById('chartDaily'), {
+    type: 'line',
+    data: {
+      labels: ['Apr 12', 'Apr 13', 'Apr 14', 'Apr 15', 'Apr 16', 'Apr 17', 'Apr 18'],
+      datasets: [{
+        label: 'Daily Revenue (€)',
+        data: [2310, 2489, 2601, 2743, 2512, 2688, 2904],
+        borderColor: '#73EDFF',
+        backgroundColor: 'rgba(115, 237, 255, 0.12)',
+        fill: true,
+        tension: 0.35,
+        pointBackgroundColor: '#73EDFF',
+        pointRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: 'rgba(138, 160, 200, 0.05)' }, ticks: { color: '#8AA0C8' } },
+        y: { grid: { color: 'rgba(138, 160, 200, 0.05)' }, ticks: { color: '#8AA0C8' } }
+      }
+    }
+  });
+
+  // Cumulative trend (analytics)
+  const cumLabels = [];
+  const cumData = [];
+  let acc = 0;
+  for (let i = 1; i <= 30; i++) {
+    cumLabels.push(`Apr ${i}`);
+    acc += 520 + Math.round(Math.sin(i/3)*180 + Math.random()*140);
+    cumData.push(acc);
+  }
+  new Chart(document.getElementById('chartCumulative'), {
+    type: 'line',
+    data: {
+      labels: cumLabels,
+      datasets: [{
+        label: 'Cumulative Revenue (€)',
+        data: cumData,
+        borderColor: '#7DFF9B',
+        backgroundColor: 'rgba(125, 255, 155, 0.08)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 0,
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: 'rgba(138, 160, 200, 0.05)' }, ticks: { color: '#8AA0C8', maxTicksLimit: 8 } },
+        y: { grid: { color: 'rgba(138, 160, 200, 0.05)' }, ticks: { color: '#8AA0C8' } }
+      }
+    }
+  });
+}
+
+/* ---------- RANGE SELECT ---------- */
+function bindRangeSelect() {
+  const sel = document.getElementById('rangeSelect');
+  const custom = document.getElementById('customRange');
+  const total = document.getElementById('totalRevenue');
+  const totals = { '7': '€18.247', '30': '€76.492', 'custom': '€42.118' };
+  sel.addEventListener('change', () => {
+    custom.style.display = sel.value === 'custom' ? 'inline-flex' : 'none';
+    total.textContent = totals[sel.value] || '€18.247';
+  });
+}
+
+/* ---------- REFILL BUTTONS ---------- */
+function bindRefillButtons() {
+  document.querySelectorAll('.refill-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const machine = btn.dataset.machine;
+      alert('Refill scheduled for ' + machine);
+      btn.textContent = '✓ Scheduled';
+      btn.classList.add('confirmed');
+      btn.disabled = true;
+
+      // Persist to localStorage refill list
+      const refills = JSON.parse(localStorage.getItem('som_refills') || '[]');
+      const today = new Date();
+      const dt = new Date(today.getTime() + 3*86400000).toISOString().slice(0,10);
+      refills.push({ date: dt, machine, tech: 'M. Horvat' });
+      localStorage.setItem('som_refills', JSON.stringify(refills));
+
+      // Prepend into calendar
+      const list = document.getElementById('refillList');
+      const item = document.createElement('div');
+      item.className = 'refill-item';
+      item.innerHTML = `<span class="date">${dt}</span><span>${machine}</span><span style="color:var(--muted);">Technician: M. Horvat</span>`;
+      list.insertBefore(item, list.firstChild);
+    });
+  });
+}
+
+/* ---------- ISSUE FORM ---------- */
+function bindIssueForm() {
+  const form = document.getElementById('issueForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const machine = document.getElementById('issueMachine').value;
+    const desc = document.getElementById('issueDesc').value.trim();
+    const priority = document.getElementById('issuePriority').value;
+    if (!desc) return;
+
+    const today = new Date().toISOString().slice(0,10);
+    const row = buildIssueRow(today, machine, desc, priority);
+    const tbody = document.getElementById('maintenanceTbody');
+    tbody.insertBefore(row, tbody.firstChild);
+
+    // Persist
+    const issues = JSON.parse(localStorage.getItem('som_issues') || '[]');
+    issues.unshift({ date: today, machine, desc, priority });
+    localStorage.setItem('som_issues', JSON.stringify(issues));
+
+    form.reset();
+    document.getElementById('issuePriority').value = 'Med';
+  });
+}
+
+function buildIssueRow(date, machine, desc, priority) {
+  const tr = document.createElement('tr');
+  const prioTag = priority === 'High' ? '<span class="badge-low" style="margin-left:6px;">HIGH</span>' : '';
+  tr.innerHTML = `
+    <td>${date}</td>
+    <td>${machine}</td>
+    <td>${escapeHtml(desc)} ${prioTag}</td>
+    <td><span class="badge-open">OPEN</span></td>
+    <td>Unassigned</td>
+  `;
+  return tr;
+}
+
+function restorePersistedIssues() {
+  const issues = JSON.parse(localStorage.getItem('som_issues') || '[]');
+  const tbody = document.getElementById('maintenanceTbody');
+  // Insert in original order (unshift preserves most-recent-first)
+  [...issues].reverse().forEach(i => {
+    const row = buildIssueRow(i.date, i.machine, i.desc, i.priority);
+    tbody.insertBefore(row, tbody.firstChild);
+  });
+
+  // Restore persisted refills
+  const refills = JSON.parse(localStorage.getItem('som_refills') || '[]');
+  const list = document.getElementById('refillList');
+  refills.slice(-5).reverse().forEach(r => {
+    const item = document.createElement('div');
+    item.className = 'refill-item';
+    item.innerHTML = `<span class="date">${r.date}</span><span>${r.machine}</span><span style="color:var(--muted);">Technician: ${r.tech}</span>`;
+    list.insertBefore(item, list.firstChild);
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* ---------- HEATMAP ---------- */
+function buildHeatmap() {
+  const hm = document.getElementById('heatmap');
+  if (!hm) return;
+  const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const frag = document.createDocumentFragment();
+
+  // Header row: blank + 24 hours (show every 4)
+  const blank = document.createElement('div');
+  blank.className = 'hm-label';
+  frag.appendChild(blank);
+  for (let h = 0; h < 24; h++) {
+    const el = document.createElement('div');
+    el.className = 'hm-hour';
+    el.textContent = (h % 4 === 0) ? h : '';
+    frag.appendChild(el);
+  }
+
+  // Data rows
+  days.forEach((d, di) => {
+    const lab = document.createElement('div');
+    lab.className = 'hm-label';
+    lab.textContent = d;
+    frag.appendChild(lab);
+    for (let h = 0; h < 24; h++) {
+      const cell = document.createElement('div');
+      cell.className = 'hm-cell';
+      // Fake data — peaks at 7-9am and 17-20h
+      let intensity = 0;
+      if (h >= 6 && h <= 9) intensity = 0.4 + Math.random()*0.5;
+      else if (h >= 17 && h <= 20) intensity = 0.6 + Math.random()*0.4;
+      else if (h >= 11 && h <= 14) intensity = 0.3 + Math.random()*0.3;
+      else intensity = Math.random()*0.15;
+      if (di >= 5) intensity *= 0.7; // weekends slower
+      const alpha = Math.min(1, intensity);
+      cell.style.background = `rgba(27, 162, 255, ${0.08 + alpha*0.8})`;
+      frag.appendChild(cell);
+    }
+  });
+  hm.appendChild(frag);
+}
+
+/* ---------- NAV ACTIVE STATE ---------- */
+function highlightActiveNav() {
+  const links = document.querySelectorAll('.nav-link');
+  links.forEach(l => {
+    l.addEventListener('click', () => {
+      links.forEach(x => x.classList.remove('active'));
+      l.classList.add('active');
+    });
+  });
+
+  // Scroll spy
+  const sections = ['fleet','revenue','ingredients','maintenance','reports','analytics'];
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + 120;
+    let current = 'fleet';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) current = id;
+    });
+    links.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  });
+}
+
+/* ---------- PRINT ---------- */
+function printReport(cardId) {
+  // Mark other partner cards to hide via class
+  document.querySelectorAll('.partner-card').forEach(pc => {
+    pc.style.display = (pc.id === cardId) ? '' : 'none';
+  });
+  window.addEventListener('afterprint', function onAfter() {
+    document.querySelectorAll('.partner-card').forEach(pc => pc.style.display = '');
+    window.removeEventListener('afterprint', onAfter);
+  });
+  window.print();
+}
+</script>
+
+</body>
+</html>

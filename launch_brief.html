@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shake-o-mat — Launch Campaign Brief · Fresh Every Rep</title>
+<meta name="description" content="Fresh Every Rep launch campaign brief — May 10 to June 10, 2026. Shake-o-mat Zagreb phase 1.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- GA4 (placeholder) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<style>
+  :root {
+    --bg: #050816;
+    --bg-surface: #0B1230;
+    --blue: #1BA2FF;
+    --cyan: #73EDFF;
+    --green: #7DFF9B;
+    --orange: #FF9B46;
+    --white: #F4F8FF;
+    --muted: #8AA0C8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Barlow', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: .95;
+    letter-spacing: -.01em;
+  }
+  a { color: var(--cyan); text-decoration: none; transition: color .2s ease; }
+  a:hover { color: var(--white); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 4px; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(5,8,22,.88); backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(138,160,200,.12);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px; max-width: 1180px; margin: 0 auto;
+  }
+  .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+  .logo-dot { width: 10px; height: 10px; background: var(--green); border-radius: 50%; box-shadow: 0 0 12px var(--green); }
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a {
+    color: var(--white); font-weight: 600; font-size: 15px;
+    padding: 8px 14px; border-radius: 8px;
+    transition: background .2s ease, color .2s ease;
+  }
+  .nav-links a:hover, .nav-links a.active { background: rgba(27,162,255,.12); color: var(--cyan); }
+  @media (max-width: 560px) { .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+} .nav-links a { padding: 8px 10px; font-size: 14px; } }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 84px 0 72px;
+    background:
+      radial-gradient(ellipse 60% 70% at 18% 10%, rgba(27,162,255,.22), transparent 60%),
+      radial-gradient(ellipse 50% 55% at 85% 90%, rgba(115,237,255,.12), transparent 60%),
+      linear-gradient(180deg, #050816 0%, #0B1230 100%);
+  }
+  .hero h1 {
+    font-size: clamp(54px, 11vw, 144px);
+    color: var(--white); margin-bottom: 20px;
+  }
+  .hero h1 .reps { color: var(--cyan); }
+  .hero .subline {
+    font-size: clamp(15px, 2vw, 20px);
+    color: var(--muted); max-width: 680px; line-height: 1.5;
+    margin-bottom: 26px;
+  }
+  .print-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green); color: var(--bg);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; text-transform: uppercase; letter-spacing: .08em;
+    font-size: 15px; padding: 12px 22px; border-radius: 10px;
+    transition: transform .15s ease, background .2s ease;
+  }
+  .print-btn:hover { background: var(--cyan); transform: translateY(-1px); }
+
+  /* ---------- SECTIONS ---------- */
+  main { padding: 20px 0 40px; }
+
+  section.block {
+    padding: 48px 0;
+    border-top: 1px solid rgba(138,160,200,.12);
+  }
+  section.block:first-of-type { border-top: 0; }
+
+  .section-tag {
+    display: inline-block;
+    font-family: 'Barlow Condensed',sans-serif; font-weight: 900;
+    text-transform: uppercase; letter-spacing: .14em;
+    font-size: 12px; color: var(--cyan);
+    padding: 4px 10px; border: 1px solid rgba(115,237,255,.35);
+    border-radius: 999px; margin-bottom: 14px;
+  }
+  h2.title {
+    font-size: clamp(28px, 4.2vw, 48px);
+    color: var(--white); margin-bottom: 22px;
+  }
+
+  .card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138,160,200,.14);
+    border-radius: 16px;
+    padding: 26px;
+  }
+
+  /* ---------- KEY FACTS ---------- */
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  .facts dt {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; text-transform: uppercase; letter-spacing: .1em;
+    font-size: 12px; color: var(--muted);
+  }
+  .facts dd { color: var(--white); font-size: 17px; margin: 2px 0 10px 0; }
+  @media (max-width: 560px) { .facts { grid-template-columns: 1fr; } }
+
+  /* ---------- BUDGET TABLE ---------- */
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-surface);
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(138,160,200,.14);
+  }
+  table.data th, table.data td {
+    padding: 14px 16px; text-align: left;
+    border-bottom: 1px solid rgba(138,160,200,.12);
+    font-size: 15px;
+  }
+  table.data th {
+    background: rgba(27,162,255,.08);
+    font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 900; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--cyan); font-size: 13px;
+  }
+  table.data tr:last-child td { border-bottom: 0; }
+  table.data td.num { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--white); }
+  table.data tr.total td { background: rgba(125,255,155,.08); color: var(--green); font-weight: 700; }
+
+  /* ---------- KPI STATS ---------- */
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138,160,200,.14);
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align: left;
+  }
+  .kpi .num {
+    font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 900; font-size: clamp(36px, 5vw, 56px);
+    line-height: 1; margin-bottom: 8px;
+  }
+  .kpi:nth-child(1) .num { color: var(--green); }
+  .kpi:nth-child(2) .num { color: var(--cyan); }
+  .kpi:nth-child(3) .num { color: var(--blue); }
+  .kpi:nth-child(4) .num { color: var(--orange); }
+  .kpi .label {
+    font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 900; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--white); font-size: 15px;
+  }
+  .kpi .sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  @media (max-width: 860px) { .kpis { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 420px) { .kpis { grid-template-columns: 1fr; } }
+
+  /* ---------- CREATIVE TWO COL ---------- */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+  .sub-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138,160,200,.14);
+    border-radius: 14px; padding: 22px;
+  }
+  .sub-card h3 {
+    color: var(--cyan); font-size: 22px; margin-bottom: 12px;
+    letter-spacing: .02em;
+  }
+  .sub-card ul { list-style: none; }
+  .sub-card ul li {
+    position: relative; padding-left: 18px;
+    color: var(--white); margin-bottom: 8px; font-size: 15px;
+  }
+  .sub-card ul li::before {
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 6px; height: 6px; background: var(--green); border-radius: 50%;
+  }
+
+  /* ---------- CHANNEL COLS ---------- */
+  .channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 720px) { .channels { grid-template-columns: 1fr; } }
+  .channel {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138,160,200,.14);
+    border-radius: 14px; padding: 22px; position: relative;
+  }
+  .channel .role {
+    font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 900; text-transform: uppercase; letter-spacing: .08em;
+    font-size: 13px; margin-bottom: 6px;
+  }
+  .channel.tt .role { color: var(--orange); }
+  .channel.ig .role { color: var(--cyan); }
+  .channel.li .role { color: var(--green); }
+  .channel h3 { color: var(--white); font-size: 26px; margin-bottom: 10px; }
+  .channel p { color: var(--muted); font-size: 14px; }
+
+  /* ---------- INFLUENCER ---------- */
+  .inf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  @media (max-width: 560px) { .inf-grid { grid-template-columns: 1fr; } }
+  .inf-grid dt {
+    font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 900; text-transform: uppercase; letter-spacing: .1em;
+    font-size: 12px; color: var(--orange);
+  }
+  .inf-grid dd { color: var(--white); font-size: 16px; margin: 2px 0 10px 0; }
+
+  /* ---------- RISKS ---------- */
+  .risks { list-style: none; }
+  .risks li {
+    background: var(--bg-surface);
+    border: 1px solid rgba(138,160,200,.14);
+    border-radius: 12px;
+    padding: 16px 18px; margin-bottom: 12px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px;
+  }
+  @media (max-width: 560px) { .risks li { grid-template-columns: 1fr; } }
+  .risks li strong.r {
+    color: var(--orange);
+    font-family: 'Barlow Condensed',sans-serif;
+    text-transform: uppercase; letter-spacing: .1em; font-size: 12px;
+    display: block; margin-bottom: 4px;
+  }
+  .risks li strong.m {
+    color: var(--green);
+    font-family: 'Barlow Condensed',sans-serif;
+    text-transform: uppercase; letter-spacing: .1em; font-size: 12px;
+    display: block; margin-bottom: 4px;
+  }
+  .risks li p { color: var(--white); font-size: 15px; }
+
+  /* ---------- SIGNOFF ---------- */
+  .signoff {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    padding: 26px;
+    background: var(--bg-surface);
+    border: 1px dashed rgba(138,160,200,.3);
+    border-radius: 14px;
+  }
+  @media (max-width: 640px) { .signoff { grid-template-columns: 1fr; } }
+  .sig-line .line {
+    border-bottom: 1px solid rgba(138,160,200,.45);
+    height: 42px;
+  }
+  .sig-line .cap {
+    font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 900; text-transform: uppercase; letter-spacing: .1em;
+    font-size: 12px; color: var(--muted); margin-top: 6px;
+  }
+
+  /* ---------- FOOTER (screen) ---------- */
+  footer.screen-only {
+    padding: 30px 0 48px;
+    border-top: 1px solid rgba(138,160,200,.12);
+    color: var(--muted); font-size: 13px; text-align: center;
+  }
+
+  /* =====================================
+     PRINT
+     ===================================== */
+  @page { size: A4; margin: 15mm; }
+
+  @media print {
+    html, body {
+      background: #ffffff !important;
+      color: #111 !important;
+    }
+    body { font-size: 11pt; line-height: 1.4; }
+
+    .nav, .print-btn, footer.screen-only { display: none !important; }
+
+    .hero {
+      background: #ffffff !important;
+      padding: 0 0 10mm 0 !important;
+      border-bottom: 2px solid #0B1230;
+    }
+    .hero h1 {
+      color: #0B1230 !important;
+      font-size: 44pt !important;
+      line-height: .95 !important;
+    }
+    .hero h1 .reps { color: #0A6FB4 !important; }
+    .hero .subline { color: #333 !important; font-size: 11pt !important; }
+
+    /* Print logo mark at top */
+    .print-logo {
+      display: flex !important;
+      align-items: center; gap: 8px;
+      padding: 0 0 10mm 0;
+      font-family: 'Barlow Condensed',sans-serif;
+      font-weight: 900; letter-spacing: .08em;
+      font-size: 13pt; color: #0B1230;
+      text-transform: uppercase;
+    }
+    .print-logo span.dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #0B1230; display: inline-block;
+    }
+
+    .container { max-width: 100%; padding: 0; }
+
+    section.block {
+      border-top: 1px solid #bbb !important;
+      padding: 8mm 0 !important;
+      page-break-before: always;
+      break-before: page;
+    }
+    section.block:first-of-type { page-break-before: auto; break-before: auto; }
+
+    .section-tag {
+      color: #0A6FB4 !important;
+      border-color: #0A6FB4 !important;
+    }
+    h2.title { color: #0B1230 !important; font-size: 22pt !important; }
+
+    .card, .sub-card, .kpi, .channel, .signoff,
+    .risks li, table.data {
+      background: #ffffff !important;
+      border-color: #888 !important;
+      color: #111 !important;
+      box-shadow: none !important;
+    }
+    .facts dt, .inf-grid dt { color: #555 !important; }
+    .facts dd, .inf-grid dd { color: #111 !important; }
+    .sub-card h3 { color: #0A6FB4 !important; }
+    .sub-card ul li { color: #111 !important; }
+    .sub-card ul li::before { background: #0A6FB4 !important; }
+
+    table.data th { background: #eef3fa !important; color: #0A6FB4 !important; }
+    table.data td { color: #111 !important; border-bottom-color: #ccc !important; }
+    table.data tr.total td { background: #EAF9EE !important; color: #1E7A3E !important; }
+
+    .kpi .num { color: #0A6FB4 !important; }
+    .kpi:nth-child(1) .num { color: #1E7A3E !important; }
+    .kpi:nth-child(2) .num { color: #0A6FB4 !important; }
+    .kpi:nth-child(3) .num { color: #095C99 !important; }
+    .kpi:nth-child(4) .num { color: #B5601E !important; }
+    .kpi .label { color: #111 !important; }
+    .kpi .sub { color: #555 !important; }
+
+    .channel h3 { color: #0B1230 !important; }
+    .channel p { color: #333 !important; }
+    .channel.tt .role { color: #B5601E !important; }
+    .channel.ig .role { color: #0A6FB4 !important; }
+    .channel.li .role { color: #1E7A3E !important; }
+
+    .risks li strong.r { color: #B5601E !important; }
+    .risks li strong.m { color: #1E7A3E !important; }
+    .risks li p { color: #111 !important; }
+
+    .sig-line .line { border-bottom: 1px solid #333 !important; }
+    .sig-line .cap { color: #555 !important; }
+
+    a { color: #0A6FB4 !important; text-decoration: none !important; }
+
+    /* keep color accents on print */
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+
+  .print-logo { display: none; }
+</style>
+</head>
+
+<body>
+
+<!-- ============== NAV (screen only) ============== -->
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Shake-o-mat početna">
+      <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">
+    </a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="b2b.html">B2B</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="emails.html">Emails</a></li>
+        <li><a href="launch_brief.html" class="active">Brief</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="container">
+    <div class="print-logo"><span class="dot"></span> <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+    <h1>Fresh<br>Every <span class="reps">Rep</span></h1>
+    <p class="subline">Launch Campaign Brief · May 10 – June 10, 2026</p>
+    <button class="print-btn" type="button" onclick="window.print()" aria-label="Print this brief">🖨 Print brief</button>
+  </div>
+</section>
+
+<!-- ============== 1 · OVERVIEW ============== -->
+<section class="block" id="overview">
+  <div class="container">
+    <span class="section-tag">01 · Overview</span>
+    <h2 class="title">Campaign overview</h2>
+    <div class="card">
+      <dl class="facts">
+        <div><dt>Campaign name</dt><dd>"Fresh Every Rep" Launch Campaign</dd></div>
+        <div><dt>Period</dt><dd>May 10 – June 10, 2026</dd></div>
+        <div><dt>Owner</dt><dd>Saša Kanazir</dd></div>
+        <div><dt>Market</dt><dd>Zagreb (Croatia · Phase 1)</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 2 · BUDGET ============== -->
+<section class="block" id="budget">
+  <div class="container">
+    <span class="section-tag">02 · Budget</span>
+    <h2 class="title">Budget breakdown</h2>
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Window</th>
+          <th>Focus</th>
+          <th>Spend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Phase 1</strong></td>
+          <td>May 10 – May 25</td>
+          <td>Organic only (IG / TikTok / LinkedIn)</td>
+          <td class="num">€0</td>
+        </tr>
+        <tr>
+          <td><strong>Phase 2</strong></td>
+          <td>May 25 – Jun 10</td>
+          <td>Paid boost on top 3 organic winners</td>
+          <td class="num">€500</td>
+        </tr>
+        <tr class="total">
+          <td colspan="3"><strong>Total campaign spend</strong></td>
+          <td class="num">€500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============== 3 · KPIs ============== -->
+<section class="block" id="kpis">
+  <div class="container">
+    <span class="section-tag">03 · KPIs</span>
+    <h2 class="title">KPIs — month 1</h2>
+    <div class="kpis">
+      <div class="kpi">
+        <div class="num">500</div>
+        <div class="label">Shakes — week 1</div>
+        <div class="sub">First-week velocity benchmark.</div>
+      </div>
+      <div class="kpi">
+        <div class="num">1,000</div>
+        <div class="label">Instagram followers — month 1</div>
+        <div class="sub">Credibility & social proof.</div>
+      </div>
+      <div class="kpi">
+        <div class="num">3</div>
+        <div class="label">Gym partnerships — live</div>
+        <div class="sub">Zagreb pilot locations signed.</div>
+      </div>
+      <div class="kpi">
+        <div class="num">5%</div>
+        <div class="label">CTR — B2B email</div>
+        <div class="sub">Outbound pipeline health.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 4 · CREATIVE ============== -->
+<section class="block" id="creative">
+  <div class="container">
+    <span class="section-tag">04 · Creative Brief</span>
+    <h2 class="title">Aesthetic & voice</h2>
+    <div class="two-col">
+      <div class="sub-card">
+        <h3>Aesthetic</h3>
+        <ul>
+          <li>Dark brand feel (navy + electric blue)</li>
+          <li>Real gym footage — <strong>no stock photos</strong></li>
+          <li>Real sweat, real members, natural light</li>
+          <li>Brand colors visible in every frame (cup, machine wrap, signage)</li>
+        </ul>
+      </div>
+      <div class="sub-card">
+        <h3>Voice</h3>
+        <ul>
+          <li>Direct, energetic, Croatian gym slang</li>
+          <li>Loss aversion &gt; aspiration</li>
+          <li>Numbers ground every claim</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 5 · CHANNELS ============== -->
+<section class="block" id="channels">
+  <div class="container">
+    <span class="section-tag">05 · Channel roles</span>
+    <h2 class="title">Channel roles</h2>
+    <div class="channels">
+      <div class="channel tt">
+        <div class="role">TikTok</div>
+        <h3>Virality</h3>
+        <p>POV &amp; discovery hooks · 15s format · <strong>daily cadence</strong>.</p>
+      </div>
+      <div class="channel ig">
+        <div class="role">Instagram</div>
+        <h3>Credibility</h3>
+        <p>Reels + carousels 4×/week · IG Stories daily · polished look.</p>
+      </div>
+      <div class="channel li">
+        <div class="role">LinkedIn</div>
+        <h3>B2B pipeline</h3>
+        <p>Longer thought-leadership posts · <strong>2×/week</strong> · owner voice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 6 · INFLUENCER ============== -->
+<section class="block" id="influencer">
+  <div class="container">
+    <span class="section-tag">06 · Influencer brief</span>
+    <h2 class="title">Influencer brief</h2>
+    <div class="card">
+      <dl class="inf-grid">
+        <div><dt>Who</dt><dd>Nano (5K–20K followers) who <strong>already train</strong> at Gyms4you / HOB / THE Fitness Zagreb.</dd></div>
+        <div><dt>Compensation</dt><dd>Free shakes for 1 month + feature on official <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> account.</dd></div>
+        <div><dt>Volume</dt><dd>10–15 nano partnerships in month 1.</dd></div>
+        <div><dt>Authenticity rule</dt><dd>Must be <strong>real members</strong>. No sponsored-post labels — if they aren't truly members, we don't post.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 7 · CALENDAR ============== -->
+<section class="block" id="calendar">
+  <div class="container">
+    <span class="section-tag">07 · Content calendar</span>
+    <h2 class="title">Content calendar — weeks 1 to 4</h2>
+    <table class="data">
+      <thead>
+        <tr>
+          <th style="width:90px">Week</th>
+          <th>Hero moment</th>
+          <th>Supporting content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Week 1</strong></td>
+          <td>Machine reveal posts</td>
+          <td>First 100 customer milestone + POV unboxing Reels</td>
+        </tr>
+        <tr>
+          <td><strong>Week 2</strong></td>
+          <td>Member testimonials</td>
+          <td>Behind-the-scenes operator content (B2B angle)</td>
+        </tr>
+        <tr>
+          <td><strong>Week 3</strong></td>
+          <td>500 shakes milestone</td>
+          <td>Influencer takeovers (3 nano creators / week)</td>
+        </tr>
+        <tr>
+          <td><strong>Week 4</strong></td>
+          <td>1,000 follower celebration</td>
+          <td>B2B pipeline announcement + owner LinkedIn post</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============== 8 · RISKS ============== -->
+<section class="block" id="risks">
+  <div class="container">
+    <span class="section-tag">08 · Risks &amp; mitigations</span>
+    <h2 class="title">Risks &amp; mitigations</h2>
+    <ul class="risks">
+      <li>
+        <div><strong class="r">Risk</strong><p>Machine downtime in week 1 kills launch momentum.</p></div>
+        <div><strong class="m">Mitigation</strong><p>24h SLA with operator + backup CO<sub>2</sub> and water lines on site.</p></div>
+      </li>
+      <li>
+        <div><strong class="r">Risk</strong><p>Low organic reach on new channels.</p></div>
+        <div><strong class="m">Mitigation</strong><p>Paid boost in Phase 2 on top 3 organic performers (€500).</p></div>
+      </li>
+      <li>
+        <div><strong class="r">Risk</strong><p>Negative review goes viral before traction is built.</p></div>
+        <div><strong class="m">Mitigation</strong><p>Direct response within 1 hour · free replacement · public resolution.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== 9 · SIGN-OFF ============== -->
+<section class="block" id="signoff">
+  <div class="container">
+    <span class="section-tag">09 · Approval</span>
+    <h2 class="title">Approval &amp; sign-off</h2>
+    <div class="signoff">
+      <div class="sig-line">
+        <div class="line" aria-hidden="true"></div>
+        <div class="cap">Owner</div>
+      </div>
+      <div class="sig-line">
+        <div class="line" aria-hidden="true"></div>
+        <div class="cap">Marketing Lead</div>
+      </div>
+      <div class="sig-line">
+        <div class="line" aria-hidden="true"></div>
+        <div class="cap">Date</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="screen-only">
+  <div class="container">
+    <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · Internal Document · 2026
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,1684 +1,1279 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Shake-o-mat | Recover. Instantly.</title>
-  <meta name="description" content="Shake-o-mat stavlja premium protein shake automate u teretane diljem Hrvatske. Svježe miješano za 30 sekundi — točno kad tijelo to treba.">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="canonical" href="https://shakeomat.hr/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://shakeomat.hr/">
-  <meta property="og:title" content="Shake-o-mat | Recover. Instantly.">
-  <meta property="og:description" content="Shake-o-mat postavlja premium automate za proteinske shakeove u teretane diljem Hrvatske. Prijavite svoju teretanu ili zatražite lokaciju u svom gradu.">
-  <meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
-  <link rel="alternate" hreflang="hr" href="https://shakeomat.hr/">
-  <link rel="alternate" hreflang="en" href="https://shakeomat.hr/en/">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-65B9W6C4GY');
-  </script>
-  <link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #050816;
-      --bg-soft: #0b1230;
-      --panel: rgba(11, 18, 42, 0.9);
-      --panel-strong: rgba(15, 24, 56, 0.96);
-      --line: rgba(122, 177, 255, 0.18);
-      --line-strong: rgba(122, 177, 255, 0.32);
-      --text: #f4f8ff;
-      --muted: #9aadd6;
-      --blue: #1ba2ff;
-      --blue-strong: #0c73ff;
-      --cyan: #73edff;
-      --green: #7dff9b;
-      --orange: #ff9b46;
-      --shadow: 0 28px 72px rgba(0, 0, 0, 0.42);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --container: min(1180px, calc(100vw - 2rem));
-      --display: "Barlow Condensed", "Franklin Gothic Demi Cond", "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
-      --body: "Barlow", "Segoe UI", "Helvetica Neue", sans-serif;
-      --ease: 220ms ease;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shake-o-mat — Protein. Ovdje. Odmah.</title>
+<meta name="description" content="Shake-o-mat: Hrvatski prvi aparat za svježe miješani protein shake. 30 sekundi, na izlazu tvoje teretane.">
+<meta name="google-site-verification" content="FhYDbURUXeowL0KOpaK8KxMs4kHs7YGy6vmt2mUPt38">
+<link rel="canonical" href="https://shakeomat.hr/">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shakeomat.hr/">
+<meta property="og:title" content="Shake-o-mat — Protein. Ovdje. Odmah.">
+<meta property="og:description" content="Shake-o-mat postavlja premium automate za svježe miješane proteinske shakeove u teretane diljem Hrvatske.">
+<meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="hr" href="https://shakeomat.hr/">
+<link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/">
 
-    * {
-      box-sizing: border-box;
-    }
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<!-- Google Analytics 4 (placeholder) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
 
-    body {
-      margin: 0;
-      color: var(--text);
-      font-family: var(--body);
-      background:
-        radial-gradient(circle at 0 0, rgba(27, 162, 255, 0.2), transparent 26%),
-        radial-gradient(circle at 100% 10%, rgba(115, 237, 255, 0.14), transparent 20%),
-        radial-gradient(circle at 50% 120%, rgba(12, 115, 255, 0.22), transparent 30%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 42%, var(--bg) 100%);
-      overflow-x: hidden;
-    }
+<style>
+  :root {
+    --bg: #050816;
+    --bg-surface: #0B1230;
+    --blue: #1BA2FF;
+    --cyan: #73EDFF;
+    --green: #7DFF9B;
+    --orange: #FF9B46;
+    --white: #F4F8FF;
+    --muted: #8AA0C8;
+  }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
+  body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Barlow', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    .skip-link {
-      position: absolute;
-      top: 1rem;
-      left: -999px;
-      padding: 0.8rem 1rem;
-      border-radius: 999px;
-      background: #fff;
-      color: #000;
-      z-index: 100;
-    }
+  h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
 
-    .skip-link:focus {
-      left: 1rem;
-    }
+  a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
 
-    .top-bar {
-      padding: 0.8rem 1rem;
-      border-bottom: 1px solid var(--line);
-      background: rgba(5, 8, 22, 0.88);
-      text-align: center;
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-    }
+  a:hover {
+    color: var(--white);
+  }
 
-    .top-bar strong {
-      color: var(--cyan);
-    }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(5, 8, 22, 0.72);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid transparent;
-      transition: border-color var(--ease), box-shadow var(--ease);
-    }
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+  }
 
-    .site-header.is-scrolled {
-      border-color: var(--line);
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
-    }
+  img {
+    max-width: 100%;
+    display: block;
+  }
 
-    .shell,
-    .container {
-      width: var(--container);
-      margin: 0 auto;
-    }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
 
-    .shell {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
+  .section-tag {
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--cyan);
+    margin-bottom: 20px;
+  }
 
-    .header-side {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    border-radius: 999px;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.85rem;
-      min-width: 0;
-    }
+  .btn-primary {
+    background: var(--green);
+    color: var(--bg);
+    box-shadow: 0 6px 24px rgba(125, 255, 155, 0.25);
+  }
 
-    .brand-mark,
-    .footer-logo {
-      width: 54px;
-      height: 54px;
-      flex: 0 0 auto;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(122, 177, 255, 0.28);
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
-      background: rgba(9, 15, 36, 0.85);
-    }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    color: var(--bg);
+    box-shadow: 0 10px 32px rgba(125, 255, 155, 0.4);
+  }
 
-    .brand-mark img,
-    .footer-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  .btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: transparent;
+  }
 
-    .brand-copy strong,
-    .footer-brand strong {
-      display: block;
-      font-family: var(--display);
-      font-size: 1.28rem;
-      line-height: 1;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
+  .btn-outline:hover {
+    background: var(--white);
+    color: var(--bg);
+    transform: translateY(-2px);
+  }
 
-    .brand-copy span,
-    .footer-brand span {
-      display: block;
-      margin-top: 0.15rem;
-      color: var(--muted);
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 0 80px;
+    background:
+      radial-gradient(ellipse at top left, rgba(27, 162, 255, 0.12) 0%, rgba(5, 8, 22, 0) 60%),
+      var(--bg);
+    overflow: hidden;
+  }
 
-    .nav-toggle {
-      display: inline-grid;
-      place-items: center;
-      width: 48px;
-      height: 48px;
-      border: 1px solid var(--line-strong);
-      border-radius: 14px;
-      background: rgba(10, 16, 39, 0.72);
-      color: var(--text);
-    }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
 
-    .nav-toggle svg {
-      width: 22px;
-      height: 22px;
-    }
+  .hero-headline {
+    font-size: clamp(3.5rem, 13vw, 7.5rem);
+    letter-spacing: -0.02em;
+    line-height: 0.92;
+    margin-bottom: 24px;
+  }
 
-    .nav {
-      position: absolute;
-      top: calc(100% + 0.75rem);
-      left: 1rem;
-      right: 1rem;
-      display: none;
-      flex-direction: column;
-      gap: 0.45rem;
-      padding: 1rem;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background: rgba(8, 13, 31, 0.97);
-      box-shadow: var(--shadow);
-    }
+  .hero-headline span.accent {
+    color: var(--green);
+  }
 
-    .nav.is-open {
-      display: flex;
-    }
+  .hero-subline {
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    color: var(--muted);
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
 
-    .lang-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.3rem;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 177, 255, 0.2);
-      background: rgba(10, 16, 39, 0.72);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-    }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
-    .lang-btn {
-      min-width: 52px;
-      min-height: 38px;
-      padding: 0.55rem 0.8rem;
-      border: 0;
-      border-radius: 999px;
-      background: transparent;
-      color: #dce8ff;
-      font-weight: 800;
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background var(--ease), color var(--ease), transform var(--ease), box-shadow var(--ease);
-      cursor: pointer;
-    }
+  /* Machine silhouette (CSS) */
+  .machine-mockup {
+    position: relative;
+    width: 240px;
+    height: 420px;
+    margin: 40px auto 0;
+    background: linear-gradient(180deg, #141B40 0%, #0B1230 100%);
+    border-radius: 24px 24px 18px 18px;
+    border: 2px solid rgba(115, 237, 255, 0.2);
+    box-shadow:
+      0 40px 80px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
 
-    .lang-btn:hover,
-    .lang-btn:focus-visible {
-      outline: none;
-      transform: translateY(-1px);
-      color: var(--cyan);
-    }
+  .machine-mockup::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 6px;
+    background: linear-gradient(90deg, var(--cyan), var(--blue));
+    border-radius: 3px;
+  }
 
-    .lang-btn.is-active {
-      color: #04101a;
-      background: linear-gradient(135deg, var(--cyan), #58b7ff 60%, #2c7dff);
-      box-shadow: 0 10px 22px rgba(27, 162, 255, 0.28);
-    }
+  .machine-screen {
+    position: absolute;
+    top: 44px;
+    left: 24px;
+    right: 24px;
+    height: 120px;
+    background: #020410;
+    border: 1px solid rgba(115, 237, 255, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+  }
 
-    .nav a {
-      padding: 0.85rem 1rem;
-      border-radius: 14px;
-      transition: background var(--ease), color var(--ease);
-    }
+  .machine-screen-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    color: var(--cyan);
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+  }
 
-    .nav a:hover,
-    .nav a:focus-visible {
-      background: rgba(115, 237, 255, 0.08);
-      color: var(--cyan);
-      outline: none;
-    }
+  .machine-screen-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--green);
+    line-height: 1;
+  }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
+  .machine-buttons {
+    position: absolute;
+    top: 184px;
+    left: 24px;
+    right: 24px;
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+  }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0.95rem 1.35rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 800;
-      transition: transform var(--ease), border-color var(--ease), background var(--ease), box-shadow var(--ease);
-      cursor: pointer;
-    }
+  .machine-buttons span {
+    flex: 1;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .machine-buttons span:nth-child(1) { border-color: var(--cyan); }
+  .machine-buttons span:nth-child(2) { border-color: var(--green); }
+  .machine-buttons span:nth-child(3) { border-color: var(--orange); }
 
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-2px);
-      outline: none;
-    }
+  .machine-window {
+    position: absolute;
+    bottom: 40px;
+    left: 24px;
+    right: 24px;
+    height: 120px;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(27, 162, 255, 0.25), transparent 70%),
+      #020410;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 12px;
+  }
 
-    .btn-primary {
-      color: #04101a;
-      background: linear-gradient(135deg, var(--cyan), #58b7ff 60%, #2c7dff);
-      box-shadow: 0 14px 34px rgba(27, 162, 255, 0.34);
-    }
+  .machine-cup {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(244, 248, 255, 0.08), rgba(125, 255, 155, 0.3));
+    border: 1.5px solid var(--green);
+    border-radius: 6px 6px 10px 10px;
+    position: relative;
+  }
 
-    .btn-secondary {
-      border-color: rgba(122, 177, 255, 0.3);
-      background: rgba(11, 18, 42, 0.58);
-    }
+  .machine-cup::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    right: 6px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 2px;
+    opacity: 0.5;
+  }
 
-    .nav-cta {
-      display: none;
-    }
+  .machine-base {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: #030718;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
 
-    main section {
-      padding: 4.5rem 0;
-    }
+  /* Stat bar */
+  .stat-bar {
+    margin-top: 60px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(115, 237, 255, 0.15);
+    border-bottom: 1px solid rgba(115, 237, 255, 0.15);
+    overflow: hidden;
+    position: relative;
+    background: rgba(11, 18, 48, 0.4);
+  }
 
-    .hero {
-      padding-top: 3.4rem;
-    }
+  .stat-bar-track {
+    display: inline-flex;
+    gap: 48px;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-left: 48px;
+  }
 
-    .hero-grid,
-    .section-head,
+  .stat-bar-track span {
+    display: inline-flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .stat-bar-track em {
+    font-style: normal;
+    color: var(--cyan);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+
+  /* ============ SECTIONS SHARED ============ */
+  section.content-section {
+    padding: 100px 0;
+  }
+
+  .section-heading {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    margin-bottom: 48px;
+    max-width: 820px;
+  }
+
+  /* ============ HOW IT WORKS ============ */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .step-card {
+    background: var(--bg-surface);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(115, 237, 255, 0.08);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(115, 237, 255, 0.2);
+  }
+
+  .step-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+  }
+
+  .step-icon {
+    width: 100%;
+    min-height: 80px;
+    height: auto;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Step 1 machine mini icon */
+  .icon-machine {
+    width: 48px;
+    height: 72px;
+    background: var(--bg);
+    border: 2px solid var(--cyan);
+    border-radius: 6px;
+    position: relative;
+  }
+  .icon-machine::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    height: 16px;
+    background: var(--cyan);
+    border-radius: 2px;
+    opacity: 0.4;
+  }
+  .icon-machine::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    height: 18px;
+    background: var(--bg);
+    border: 1px solid var(--green);
+    border-radius: 2px;
+  }
+
+  /* Step 2 pill group */
+  .goal-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .goal-pill {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    border: 1.5px solid;
+  }
+  .goal-pill.lean { color: var(--cyan); border-color: var(--cyan); }
+  .goal-pill.build { color: var(--green); border-color: var(--green); }
+  .goal-pill.recover { color: var(--orange); border-color: var(--orange); }
+  .goal-pill.boost { color: #C882FF; border-color: #C882FF; }
+
+  /* Step 3 stopwatch */
+  .icon-stopwatch {
+    width: 64px;
+    height: 64px;
+    border: 3px solid var(--orange);
+    border-radius: 50%;
+    position: relative;
+  }
+  .icon-stopwatch::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 2px;
+  }
+  .icon-stopwatch::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: var(--orange);
+    transform-origin: top center;
+    transform: translate(-50%, 0) rotate(45deg);
+    animation: tick 2s steps(12) infinite;
+  }
+
+  @keyframes tick {
+    from { transform: translate(-50%, 0) rotate(0deg); }
+    to { transform: translate(-50%, 0) rotate(360deg); }
+  }
+
+  .step-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .step-body {
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  /* ============ SKU CARDS ============ */
+  .sku-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sku-card {
+    background: var(--bg-surface);
+    border-radius: 20px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.25s ease;
+  }
+
+  .sku-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .sku-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+  }
+
+  .sku-card.lean::before { background: var(--cyan); }
+  .sku-card.build::before { background: var(--green); }
+  .sku-card.recover::before { background: var(--orange); }
+  .sku-card.boost::before { background: #C882FF; }
+
+  .sku-name {
+    font-size: 3rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+
+  .sku-card.lean .sku-name { color: var(--cyan); }
+  .sku-card.build .sku-name { color: var(--green); }
+  .sku-card.recover .sku-name { color: var(--orange); }
+  .sku-card.boost .sku-name { color: #C882FF; }
+
+  .sku-macro {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .sku-ingredient {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  .sku-price {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(5, 8, 22, 0.6);
+    border: 1.5px solid;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .sku-card.lean .sku-price { color: var(--cyan); border-color: var(--cyan); }
+  .sku-card.build .sku-price { color: var(--green); border-color: var(--green); }
+  .sku-card.recover .sku-price { color: var(--orange); border-color: var(--orange); }
+  .sku-card.boost .sku-price { color: #C882FF; border-color: #C882FF; }
+
+  /* ============ STATS / PROOF ============ */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .stat-card {
+    background: var(--bg-surface);
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    border: 1px solid rgba(115, 237, 255, 0.08);
+  }
+
+  .stat-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  .callout {
+    background: rgba(27, 162, 255, 0.08);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 12px 12px 0;
+    padding: 28px 32px;
+    font-size: 1.15rem;
+    color: var(--white);
+    max-width: 780px;
+  }
+
+  .callout strong {
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  /* ============ LOCATIONS ============ */
+  .locations-heading {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 40px;
+    color: var(--white);
+  }
+
+  .locations-heading span {
+    color: var(--green);
+  }
+
+  .gym-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .gym-logo {
+    background: var(--bg-surface);
+    border: 1px solid rgba(115, 237, 255, 0.15);
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .gym-logo:hover {
+    border-color: var(--green);
+    transform: translateY(-3px);
+  }
+
+  .locations-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* ============ CUSTOMIZATION ============ */
+  .custom-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .custom-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .custom-layer {
+    padding: 22px 24px;
+    border-radius: 12px;
+    background: var(--bg-surface);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    position: relative;
+    padding-left: 52px;
+    transition: transform 0.2s ease;
+  }
+
+  .custom-layer:hover {
+    transform: translateX(6px);
+  }
+
+  .custom-layer::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+
+  .custom-layer.l1::before { background: var(--cyan); }
+  .custom-layer.l2::before { background: var(--green); }
+  .custom-layer.l3::before { background: var(--orange); }
+  .custom-layer.l4::before { background: var(--blue); }
+
+  .custom-heading {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 20px;
+  }
+
+  .custom-body {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+
+  .custom-list {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  .custom-list li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    color: var(--white);
+    border-bottom: 1px solid rgba(115, 237, 255, 0.08);
+  }
+
+  .custom-list li:last-child {
+    border-bottom: none;
+  }
+
+  .custom-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 2px;
+    background: var(--green);
+  }
+
+  /* ============ LOYALTY ============ */
+  .loyalty {
+    text-align: center;
+  }
+
+  .loyalty .section-tag {
+    display: block;
+  }
+
+  .loyalty-heading {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    margin-bottom: 20px;
+  }
+
+  .loyalty-body {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 560px;
+    margin: 0 auto 48px;
+  }
+
+  .stamps {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .stamp {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2.5px dashed var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+
+  .stamp.filled {
+    background: var(--green);
+    border: 2.5px solid var(--green);
+    color: var(--bg);
+    box-shadow: 0 0 24px rgba(125, 255, 155, 0.4);
+  }
+
+  /* ============ FOOTER ============ */
+  footer.site-footer {
+    padding: 64px 0 32px;
+    border-top: 1px solid rgba(115, 237, 255, 0.1);
+    background: var(--bg-surface);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .footer-brand-name span {
+    color: var(--green);
+  }
+
+  .footer-tagline {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-nav a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.95rem;
+    color: var(--white);
+  }
+
+  .footer-nav a:hover {
+    color: var(--cyan);
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid rgba(115, 237, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .social-icon:hover {
+    border-color: var(--cyan);
+    transform: translateY(-2px);
+  }
+
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--white);
+  }
+
+  .footer-legal {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 24px;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (min-width: 640px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .sku-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-headline {
+      font-size: clamp(4rem, 11vw, 8rem);
+    }
+  }
+
+  @media (min-width: 900px) {
+    section.content-section {
+      padding: 140px 0;
+    }
+    .hero-inner {
+      grid-template-columns: 1.3fr 1fr;
+      gap: 60px;
+    }
+    .machine-mockup {
+      margin: 0 0 0 auto;
+    }
+    .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .sku-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .custom-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
     .footer-grid {
-      display: grid;
-      gap: 2rem;
+      grid-template-columns: 1.2fr 1fr auto;
+      align-items: start;
     }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.45rem 0.85rem;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 177, 255, 0.28);
-      background: rgba(12, 24, 60, 0.68);
-      color: var(--cyan);
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 0.55rem;
-      height: 0.55rem;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--cyan));
-      box-shadow: 0 0 0 0.35rem rgba(115, 237, 255, 0.1);
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      font-family: var(--display);
-      line-height: 0.95;
-      letter-spacing: 0.01em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin-top: 1.1rem;
-      font-size: clamp(3.4rem, 8vw, 6.5rem);
-      max-width: 11ch;
-    }
-
-    h2 {
-      font-size: clamp(2.3rem, 5vw, 4rem);
-    }
-
-    .hero-copy p,
-    .section-head p,
-    .card p,
-    .faq p,
-    .footer-card p {
-      color: #c7d6f4;
-      line-height: 1.74;
-    }
-
-    .hero-copy p {
-      max-width: 60ch;
-      margin: 1rem 0 0;
-      font-size: 1.04rem;
-    }
-
-    .hero-copy .cta-row {
-      margin-top: 1.6rem;
-    }
-
-    .proof-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-top: 1.45rem;
-    }
-
-    .proof-tags span,
-    .macro-list span {
-      padding: 0.65rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 177, 255, 0.16);
-      background: rgba(255, 255, 255, 0.03);
-      color: #dce8ff;
-      font-size: 0.9rem;
-    }
-
-    .hero-card,
-    .card,
-    .faq,
-    .footer-card,
-    .form-card {
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(12, 18, 43, 0.96), rgba(8, 13, 31, 0.9));
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      position: relative;
-      padding: 1.1rem;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      top: -8rem;
-      right: -4rem;
-      width: 16rem;
-      height: 16rem;
-      border-radius: 50%;
-      background: rgba(27, 162, 255, 0.26);
-      filter: blur(12px);
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 320px;
-      padding: 1rem;
-      display: grid;
-      place-items: center;
-      border-radius: 24px;
-      border: 1px solid rgba(122, 177, 255, 0.14);
-      background: linear-gradient(180deg, rgba(10, 18, 42, 0.96), rgba(5, 10, 24, 0.92));
-    }
-
-    .hero-visual img {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 16px;
-    }
-
-    .launch-note {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      max-width: 14rem;
-      padding: 0.75rem 0.9rem;
-      border-radius: 18px;
-      border: 1px solid rgba(122, 177, 255, 0.22);
-      background: rgba(4, 12, 34, 0.78);
-      backdrop-filter: blur(8px);
-    }
-
-    .launch-note strong,
-    .mini-card strong,
-    .card strong,
-    .city-card strong,
-    .proof-card strong,
-    .faq summary strong {
-      display: block;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .launch-note span,
-    .mini-card span,
-    .city-card .small,
-    .proof-card .small {
-      display: block;
-      margin-top: 0.35rem;
-      color: #c7d6f4;
-      line-height: 1.58;
-    }
-
-    .hero-mini-grid,
-    .stats-grid,
-    .steps-grid,
-    .flavors-grid,
-    .roi-grid,
-    .proof-grid,
-    .cities-grid {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .hero-mini-grid {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      margin-top: 1rem;
-    }
-
-    .mini-card,
-    .card,
-    .faq,
-    .footer-card,
-    .form-card,
-    .proof-card {
-      padding: 1.25rem;
-      transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease);
-    }
-
-    .mini-card,
-    .card,
-    .proof-card,
-    .city-card {
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(13, 20, 47, 0.96), rgba(9, 14, 34, 0.88));
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
-    }
-
-    .mini-card:hover,
-    .card:hover,
-    .proof-card:hover,
-    .city-card:hover,
-    .footer-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(122, 177, 255, 0.36);
-    }
-
-    .machine-card {
-      display: grid;
-      grid-template-columns: 92px 1fr;
-      gap: 1rem;
-      align-items: center;
-      margin-top: 1rem;
-    }
-
-    .machine-icon {
-      position: relative;
-      width: 92px;
-      height: 128px;
-      border-radius: 22px;
-      border: 1px solid rgba(122, 177, 255, 0.16);
-      background: linear-gradient(180deg, rgba(18, 30, 74, 0.9), rgba(7, 12, 29, 0.92));
-      overflow: hidden;
-    }
-
-    .machine-icon::before {
-      content: "";
-      position: absolute;
-      inset: 0.7rem;
-      border-radius: 16px;
-      border: 1px solid rgba(122, 177, 255, 0.08);
-      background: linear-gradient(180deg, rgba(44, 125, 255, 0.18), rgba(5, 8, 22, 0.14));
-    }
-
-    .screen,
-    .slots,
-    .base {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 10px;
-    }
-
-    .screen {
-      top: 1.2rem;
-      width: 46px;
-      height: 26px;
-      background: linear-gradient(135deg, var(--blue), var(--cyan));
-    }
-
-    .slots {
-      top: 4.1rem;
-      width: 16px;
-      height: 44px;
-      background: linear-gradient(180deg, rgba(12, 115, 255, 0.88), rgba(115, 237, 255, 0.28));
-      box-shadow: -20px 0 0 rgba(255, 155, 70, 0.5), 20px 0 0 rgba(125, 255, 155, 0.42);
-    }
-
-    .base {
-      bottom: 1.15rem;
-      width: 40px;
-      height: 12px;
-      background: rgba(122, 177, 255, 0.2);
-    }
-
-    .stats-grid,
-    .steps-grid,
-    .flavors-grid,
-    .roi-grid,
-    .proof-grid,
-    .cities-grid {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .stats-grid .card strong {
-      font-family: var(--display);
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--cyan);
-    }
-
-    .section-head {
-      margin-bottom: 1.8rem;
-      align-items: end;
-    }
-
-    .section-head p {
-      margin: 0;
-      max-width: 64ch;
-    }
-
-    .pill,
-    .status-pill,
-    .flavor-tag {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 34px;
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .pill {
-      margin-bottom: 1rem;
-      background: rgba(27, 162, 255, 0.14);
-      color: var(--cyan);
-    }
-
-    .flavor-tag {
-      color: #06111d;
-      background: linear-gradient(135deg, var(--green), #c4ffd4);
-    }
-
-    .flavors-grid article:nth-child(2) .flavor-tag,
-    .flavors-grid article:nth-child(5) .flavor-tag {
-      background: linear-gradient(135deg, var(--orange), #ffd7ad);
-    }
-
-    .flavors-grid article:nth-child(3) .flavor-tag,
-    .flavors-grid article:nth-child(6) .flavor-tag {
-      background: linear-gradient(135deg, var(--cyan), #d6fcff);
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 0.8rem;
-    }
-
-    .macro-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 0.9rem;
-    }
-
-    .featured-card {
-      background: linear-gradient(180deg, rgba(12, 28, 70, 0.96), rgba(11, 18, 48, 0.92));
-      border-color: rgba(115, 237, 255, 0.28);
-    }
-
-    .list,
-    .contact-list {
-      display: grid;
-      gap: 0.7rem;
-      margin: 0.95rem 0 0;
-      padding: 0;
-      list-style: none;
-      color: #d6e3fb;
-    }
-
-    .list li,
-    .contact-list li {
-      position: relative;
-      padding-left: 1.15rem;
-      line-height: 1.6;
-    }
-
-    .list li::before,
-    .contact-list li::before {
-      content: "";
-      position: absolute;
-      top: 0.62rem;
-      left: 0;
-      width: 0.42rem;
-      height: 0.42rem;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--cyan));
-    }
-
-    .proof-card {
-      min-height: 100%;
-    }
-
-    .proof-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 1rem;
-    }
-
-    .proof-links a {
-      padding: 0.6rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 177, 255, 0.18);
-      background: rgba(255, 255, 255, 0.03);
-      color: #dce8ff;
-      font-size: 0.88rem;
-      transition: transform var(--ease), background var(--ease), border-color var(--ease);
-    }
-
-    .proof-links a:hover,
-    .proof-links a:focus-visible,
-    .socials a:hover,
-    .socials a:focus-visible {
-      transform: translateY(-2px);
-      background: rgba(115, 237, 255, 0.08);
-      border-color: rgba(122, 177, 255, 0.34);
-      outline: none;
-    }
-
-    .proof-disclaimer,
-    .micro-note,
-    .field-note,
-    .footer-note {
-      margin-top: 1rem;
-      color: #95a8d1;
-      font-size: 0.88rem;
-      line-height: 1.68;
-    }
-
-    .city-card {
-      position: relative;
-      padding: 1.25rem;
-      border-radius: var(--radius-lg);
-    }
-
-    .city-card::after {
-      content: "";
-      position: absolute;
-      top: 1.3rem;
-      right: 1.3rem;
-      width: 0.9rem;
-      height: 0.9rem;
-      border-radius: 50%;
-      background: rgba(115, 237, 255, 0.92);
-      box-shadow: 0 0 0 0 rgba(115, 237, 255, 0.42);
-      animation: pulse 2.4s infinite;
-    }
-
-    .status-pill {
-      color: #05111d;
-      background: linear-gradient(135deg, var(--cyan), #efffff);
-    }
-
-    .city-card.pending .status-pill {
-      background: linear-gradient(135deg, #ffe29f, #ffb84c);
-    }
-
-    .city-card.waitlist .status-pill {
-      background: linear-gradient(135deg, var(--green), #e0ffe7);
-    }
-
-    .city-card.pending::after {
-      background: rgba(255, 184, 76, 0.96);
-      box-shadow: 0 0 0 0 rgba(255, 184, 76, 0.42);
-    }
-
-    .city-card.waitlist::after {
-      background: rgba(125, 255, 155, 0.96);
-      box-shadow: 0 0 0 0 rgba(125, 255, 155, 0.42);
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 0.85rem;
-    }
-
-    .faq {
-      overflow: hidden;
-    }
-
-    .faq summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      list-style: none;
-      cursor: pointer;
-    }
-
-    .faq summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq summary span {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid rgba(122, 177, 255, 0.18);
-      background: rgba(255, 255, 255, 0.04);
-      font-size: 1.2rem;
-      transition: transform var(--ease), background var(--ease);
-      flex: 0 0 auto;
-    }
-
-    .faq[open] summary span {
-      transform: rotate(45deg);
-      background: rgba(27, 162, 255, 0.12);
-    }
-
-    .faq p {
-      margin: 0.9rem 0 0;
-      padding-top: 0.85rem;
-      border-top: 1px solid rgba(122, 177, 255, 0.12);
-    }
-
-    footer {
-      padding: 0 0 2.4rem;
-    }
-
-    .footer-card,
-    .form-card {
-      padding: 1.5rem;
-    }
-
-    .footer-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.85rem;
-      margin-bottom: 1rem;
-    }
-
-    .socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-top: 1rem;
-    }
-
-    .socials a {
-      padding: 0.7rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(122, 177, 255, 0.18);
-      background: rgba(255, 255, 255, 0.03);
-      color: #dce8ff;
-      font-size: 0.92rem;
-      transition: transform var(--ease), background var(--ease), border-color var(--ease);
-    }
-
-    form,
-    .field-grid {
-      display: grid;
-      gap: 0.95rem;
-    }
-
-    .field-grid {
-      grid-template-columns: 1fr;
-    }
-
-    label {
-      display: grid;
-      gap: 0.45rem;
-      color: #deebff;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 0.95rem 1rem;
-      border-radius: 16px;
-      border: 1px solid rgba(122, 177, 255, 0.16);
-      background: rgba(3, 8, 20, 0.58);
-      color: var(--text);
-      transition: border-color var(--ease), box-shadow var(--ease), background var(--ease);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #8394bb;
+    .hero-headline {
+      font-size: clamp(5rem, 9vw, 7.5rem);
     }
+  }
 
-    input:focus,
-    select:focus,
-    textarea:focus {
-      outline: none;
-      border-color: rgba(115, 237, 255, 0.46);
-      box-shadow: 0 0 0 4px rgba(27, 162, 255, 0.1);
-      background: rgba(5, 11, 28, 0.76);
+  @media (min-width: 1200px) {
+    .hero-headline {
+      font-size: 7.5rem;
     }
+  }
 
-    textarea {
-      min-height: 150px;
-      resize: vertical;
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 700ms ease, transform 700ms ease;
-    }
-
-    .reveal.is-visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    .delay-1 { transition-delay: 80ms; }
-    .delay-2 { transition-delay: 160ms; }
-    .delay-3 { transition-delay: 240ms; }
-
-    @media (min-width: 760px) {
-      .hero-grid,
-      .section-head,
-      .footer-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .field-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (min-width: 980px) {
-      .nav-toggle {
-        display: none;
-      }
-
-      .nav {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.15rem;
-        padding: 0;
-        border: 0;
-        background: transparent;
-        box-shadow: none;
-      }
-
-      .nav-cta {
-        display: inline-flex;
-      }
-
-      .header-side {
-        gap: 1rem;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1.05fr 0.95fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 0.92fr 1.08fr;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-        transition-duration: 1ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(115, 237, 255, 0.42); }
-      70% { box-shadow: 0 0 0 14px rgba(115, 237, 255, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(115, 237, 255, 0); }
-    }
-
-    .routing-section { padding: 0 0 3rem; }
-    .routing-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .routing-label { margin: 0 0 1rem; text-align: center; color: var(--muted); font-size: 0.88rem; letter-spacing: 0.1em; text-transform: uppercase; }
-    .routing-card { display: flex; align-items: center; gap: 1.2rem; padding: 1.4rem 1.6rem; border-radius: var(--radius-lg); border: 2px solid var(--line); background: linear-gradient(135deg, rgba(15,24,56,0.96), rgba(9,14,34,0.88)); transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease); color: var(--text); text-decoration: none; }
-    .routing-card:hover, .routing-card:focus-visible { transform: translateY(-3px); outline: none; }
-    .routing-b2b { border-color: rgba(115,237,255,0.32); }
-    .routing-b2b:hover, .routing-b2b:focus-visible { border-color: rgba(115,237,255,0.7); box-shadow: 0 18px 40px rgba(115,237,255,0.1); }
-    .routing-b2c { border-color: rgba(255,155,70,0.32); }
-    .routing-b2c:hover, .routing-b2c:focus-visible { border-color: rgba(255,155,70,0.7); box-shadow: 0 18px 40px rgba(255,155,70,0.12); }
-    .routing-track { flex: 1; }
-    .routing-card strong { display: block; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.3rem; }
-    .routing-card p { margin: 0; color: #b0c4e8; font-size: 0.9rem; line-height: 1.5; }
-    .routing-arrow { font-size: 1.5rem; color: var(--cyan); flex: 0 0 auto; font-weight: 800; }
-    .routing-b2c .routing-arrow { color: var(--orange); }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Preskoči na sadržaj</a>
 
-  <div class="top-bar">
-    <strong>Otvoren je upis za osnivačke gym partnere.</strong> <span class="top-bar-copy">Zagreb je prioritet za prvi val, a mjesta su ograničena.</span>
+<!-- ============ HERO ============ -->
+<header class="hero" role="banner">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-headline">
+          Protein.<br>
+          <span class="accent">Ovdje.</span><br>
+          Odmah.
+        </h1>
+        <p class="hero-subline">Svježe miješan shake za 30 sekundi. Na izlazu tvoje teretane.</p>
+        <div class="hero-ctas">
+          <a href="#locations" class="btn btn-primary">Nađi svoju teretanu &rarr;</a>
+          <a href="b2b.html" class="btn btn-outline">Za vlasnike teretana</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="machine-mockup" role="img" aria-label="Ilustracija Shake-o-mat aparata">
+          <div class="machine-screen">
+            <span class="machine-screen-label">BUILD · 35G</span>
+            <span class="machine-screen-value">30s</span>
+          </div>
+          <div class="machine-buttons">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="machine-window">
+            <div class="machine-cup"></div>
+          </div>
+          <div class="machine-base"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <header class="site-header" id="top">
-    <div class="shell">
-      <a class="brand" href="#top" aria-label="Shake-o-mat početna">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="./som-logo.png" alt="">
-        </span>
-        <span class="brand-copy">
-          <strong>Shake-o-mat</strong>
-          <span>Recover. Instantly.</span>
-        </span>
-      </a>
+  <!-- Animated stat bar -->
+  <div class="stat-bar" aria-label="Ključne brojke">
+    <div class="stat-bar-track" id="statBarTrack">
+      <span>190.000 <em>aktivnih članova teretana u HR</em></span>
+      <span>·</span>
+      <span>€24M <em>tržište proteina</em></span>
+      <span>·</span>
+      <span>0 <em>sekundi čekanja</em></span>
+      <span>·</span>
+      <span>190.000 <em>aktivnih članova teretana u HR</em></span>
+      <span>·</span>
+      <span>€24M <em>tržište proteina</em></span>
+      <span>·</span>
+      <span>0 <em>sekundi čekanja</em></span>
+      <span>·</span>
+    </div>
+  </div>
+</header>
 
-      <div class="header-side">
-        <div class="lang-switch" aria-label="Odabir jezika">
-          <button class="lang-btn is-active" type="button" data-lang-switch="hr" aria-pressed="true">HR</button>
-          <button class="lang-btn" type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+<main>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="content-section" aria-labelledby="how-heading">
+  <div class="container">
+    <span class="section-tag">Kako radi</span>
+    <h2 class="section-heading" id="how-heading">Tri koraka do shake-a.</h2>
+
+    <div class="steps-grid">
+      <article class="step-card">
+        <div class="step-num">Korak 01</div>
+        <div class="step-icon"><div class="icon-machine" aria-hidden="true"></div></div>
+        <h3 class="step-title">Priđi aparatu</h3>
+        <p class="step-body">Na izlazu iz teretane. Bez reda, bez aplikacija. Samo dodirni ekran.</p>
+      </article>
+
+      <article class="step-card">
+        <div class="step-num">Korak 02</div>
+        <div class="step-icon">
+          <div class="goal-pills" aria-hidden="true">
+            <span class="goal-pill lean">LEAN</span>
+            <span class="goal-pill build">BUILD</span>
+            <span class="goal-pill recover">RECOVER</span>
+            <span class="goal-pill boost">BOOST</span>
+          </div>
         </div>
+        <h3 class="step-title">Odaberi cilj</h3>
+        <p class="step-body">Svaki tip nosi drugačiji nutritivni profil. LEAN za definiciju. BUILD za masu. RECOVER za oporavak. BOOST za snagu.</p>
+      </article>
 
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otvori izbornik">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-        </button>
+      <article class="step-card">
+        <div class="step-num">Korak 03</div>
+        <div class="step-icon"><div class="icon-stopwatch" aria-hidden="true"></div></div>
+        <h3 class="step-title">Uzmi shake za 30 sec</h3>
+        <p class="step-body">Miješa se svježe, po narudžbi. Uzmi čašu i nastavi dan. Gotovo.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-        <nav class="nav" id="main-nav" aria-label="Glavna navigacija">
-          <a href="#kako-radi">Kako radi</a>
-          <a href="#okusi">Okusi</a>
-          <a href="#partneri">Za partnere</a>
-          <a href="#lokacije">Lokacije</a>
-          <a href="#faq">FAQ</a>
-          <a class="btn btn-primary nav-cta" href="#kontakt-forma">Postani partner</a>
-        </nav>
+<!-- ============ SKU CARDS ============ -->
+<section class="content-section" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="sku-heading">
+  <div class="container">
+    <span class="section-tag">Tvoj cilj. Tvoj shake.</span>
+    <h2 class="section-heading" id="sku-heading">Četiri formule. Bez kompromisa.</h2>
+
+    <div class="sku-grid">
+      <article class="sku-card lean">
+        <h3 class="sku-name">Lean</h3>
+        <p class="sku-macro">25g proteina · 16 oz · min kalorija</p>
+        <p class="sku-ingredient">Whey isolat. Čisti profil za definiciju i lagane treninge.</p>
+        <span class="sku-price">€4.50</span>
+      </article>
+
+      <article class="sku-card build">
+        <h3 class="sku-name">Build</h3>
+        <p class="sku-macro">35g proteina · kreatin · 16 oz · masa</p>
+        <p class="sku-ingredient">Whey + kreatin u jednoj čaši. Za dane kad gradiš mišić.</p>
+        <span class="sku-price">€4.90</span>
+      </article>
+
+      <article class="sku-card recover">
+        <h3 class="sku-name">Recover</h3>
+        <p class="sku-macro">Whey + kolagen · 16 oz · regeneracija</p>
+        <p class="sku-ingredient">Oporavak i regeneracija odmah nakon teškog treninga. Za dane kad si dao sve.</p>
+        <span class="sku-price">€5.20</span>
+      </article>
+
+      <article class="sku-card boost">
+        <h3 class="sku-name">Boost</h3>
+        <p class="sku-macro">Whey + BCAA · 16 oz · za učinak</p>
+        <p class="sku-ingredient">Aminokiseline koje mišić traži upravo sada. Za duge treninge i teške serije.</p>
+        <span class="sku-price">€4.90</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL PROOF ============ -->
+<section class="content-section" aria-labelledby="proof-heading">
+  <div class="container">
+    <span class="section-tag">Zašto Shake-o-mat</span>
+    <h2 class="section-heading" id="proof-heading">Shake koji te dočeka na izlazu.</h2>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">30<span style="color: var(--muted); font-size: 0.55em;">sec</span></div>
+        <div class="stat-label">do ruke</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">20<span style="color:var(--muted);font-size:0.5em;">+</span></div>
+        <div class="stat-label">kombinacija</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0g</div>
+        <div class="stat-label">dodanog šećera</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">svježe miješano</div>
       </div>
     </div>
-  </header>
 
-  <main id="main-content">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">Dostupno u teretanama diljem Hrvatske</span>
-          <h1>Zaradio si u teretani. Oporavak počinje za 30 sekundi.</h1>
-          <p>
-            Shake-o-mat donosi premium automate za proteinske shakeove u teretane, fitness centre i sportske objekte. Vlasnici dobivaju novi prihod bez dodatnog osoblja, a članovi ledeni post-workout shake točno u trenutku kada ga najviše žele.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#kontakt-forma">Postani partner</a>
-            <a class="btn btn-secondary" href="#lokacije">Pronađi lokaciju</a>
-          </div>
-          <div class="proof-tags">
-            <span>24/7 samoposlužna prodaja</span>
-            <span>Kontaktno i beskontaktno plaćanje</span>
-            <span>Prilagodljivi slotovi okusa</span>
-            <span>Bez dodatnog rada recepcije</span>
-          </div>
-        </div>
+    <div class="callout">
+      <strong>55% članova teretana</strong> koristi proteine. Svi traže shake &mdash; odmah, bez planiranja.
+    </div>
+  </div>
+</section>
 
-        <div class="reveal delay-1">
-          <div class="hero-card">
-            <div class="hero-visual">
-              <div class="launch-note">
-                <strong>Prvi val partnera</strong>
-                <span>Otvaramo razgovore prije dolaska prve pošiljke strojeva. Zagreb je prioritetni grad za start.</span>
-              </div>
-              <img src="./ivan-m.png" alt="Shake-O-Mat u teretani — Ivan M., gym partner">
-            </div>
+<!-- ============ LOCATIONS ============ -->
+<section class="content-section" id="locations" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="loc-heading">
+  <div class="container">
+    <span class="section-tag">Nađi aparat</span>
+    <h2 class="locations-heading" id="loc-heading">Lansiranje: <span>Zagreb, lipanj 2026</span></h2>
 
-            <div class="hero-mini-grid">
-              <article class="mini-card">
-                <strong>Spremno za gužvu</strong>
-                <span>Kompaktan footprint i brza kupnja za peak sate nakon posla, treninga i grupnih termina.</span>
-              </article>
-              <article class="mini-card">
-                <strong>Prodaja bez trenja</strong>
-                <span>Makroi, okusi i premium izgled pretvaraju post-workout namjeru u realnu kupnju.</span>
-              </article>
-            </div>
+    <div class="gym-logos">
+      <div class="gym-logo">Gyms4you</div>
+      <div class="gym-logo">THE Fitness</div>
+      <div class="gym-logo">HOB</div>
+    </div>
 
-            <article class="mini-card machine-card" aria-label="Pregled stroja">
-              <div class="machine-icon" aria-hidden="true">
-                <span class="screen"></span>
-                <span class="slots"></span>
-                <span class="base"></span>
-              </div>
-              <div>
-                <strong>Fleksibilan mix proizvoda</strong>
-                <span>Whey, recovery, low-sugar i plant-based opcije mogu se složiti prema profilu članova tvoje teretane.</span>
-              </div>
-            </article>
-          </div>
+    <div class="locations-ctas">
+      <a href="mailto:info@shakeomat.hr?subject=Predlo%C5%BEi%20teretanu" class="btn btn-primary">Predloži svoju teretanu &rarr;</a>
+      <a href="b2b.html" class="btn btn-outline">Vlasnici teretana &mdash; partner program &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOMIZATION ============ -->
+<section class="content-section" aria-labelledby="custom-heading">
+  <div class="container">
+    <span class="section-tag">Od čaše do aparata</span>
+
+    <div class="custom-grid">
+      <div class="custom-visual" aria-hidden="true">
+        <div class="custom-stack">
+          <div class="custom-layer l1">Dizajn čaše</div>
+          <div class="custom-layer l2">Boja shake-a</div>
+          <div class="custom-layer l3">Skin wrap aparata</div>
+          <div class="custom-layer l4">Brendiranje lokacije</div>
         </div>
       </div>
-    </section>
-    <!-- SOCIAL PROOF / HUMAN SIGNAL — mirror neuron activation -->
-    <section style="padding:0 0 2rem;">
-      <div style="max-width:var(--container);margin:0 auto;display:flex;gap:32px;flex-wrap:wrap;justify-content:center;align-items:stretch;">
-        <div style="display:flex;align-items:center;gap:16px;background:rgba(11,18,42,0.7);border:1px solid rgba(122,177,255,0.15);border-radius:16px;padding:20px 24px;flex:1;min-width:260px;max-width:360px;">
-          <img src="./face-ivan.png" alt="Ivan M." style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(115,237,255,0.3);">
-          <div>
-            <p style="margin:0 0 6px;font-size:14px;line-height:1.55;color:#c4d4f2;">"Automat radi i kad mi je prepuno na recepciji. Prihod dolazi sam."</p>
-            <p style="margin:0;font-size:12px;color:var(--cyan);font-weight:700;letter-spacing:0.5px;">Ivan M. · Gym partner, Zagreb</p>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:16px;background:rgba(11,18,42,0.7);border:1px solid rgba(122,177,255,0.15);border-radius:16px;padding:20px 24px;flex:1;min-width:260px;max-width:360px;">
-          <img src="./face-petra.png" alt="Petra L." style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(115,237,255,0.3);">
-          <div>
-            <p style="margin:0 0 6px;font-size:14px;line-height:1.55;color:#c4d4f2;">"Konačno ne moram nositi shaker i prašak — shake je već u teretani."</p>
-            <p style="margin:0;font-size:12px;color:var(--cyan);font-weight:700;letter-spacing:0.5px;">Petra L. · Članica, Split</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- LIFESTYLE GALLERY — machine in real gym context -->
-    <section style="padding:0 0 2.5rem;">
-      <div style="max-width:var(--container);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <img src="./petra-l.png" alt="Shake-O-Mat u teretani — Petra L." style="width:100%;height:340px;object-fit:cover;object-position:center 45%;border-radius:16px;border:1px solid rgba(122,177,255,0.14);">
-        <img src="./ivan-m.png" alt="Shake-O-Mat u teretani — Ivan M." style="width:100%;height:340px;object-fit:cover;object-position:center top;border-radius:16px;border:1px solid rgba(122,177,255,0.14);">
-      </div>
-    </section>
-
-    <section class="routing-section">
-      <div class="container">
-        <p class="routing-label reveal" id="routing-label">Odaberite svoju ulogu</p>
-        <div class="routing-grid">
-          <a class="routing-card routing-b2b reveal" href="./gym_landing_page.html">
-            <div class="routing-track">
-              <strong id="routing-b2b-title">Vlasnik sam teretane — gledam koliko mogu zaraditi ovaj tjedan</strong>
-              <p id="routing-b2b-body">Izracunaj koliko €/mj moze generirati tvoj fitness centar bez ijednog novog zaposlenika.</p>
-            </div>
-            <span class="routing-arrow">&#8594;</span>
-          </a>
-          <a class="routing-card routing-b2c reveal delay-1" href="./b2c_landing_page.html">
-            <div class="routing-track">
-              <strong id="routing-b2c-title">Treniram sutra — ima li Shake-O-Mat u mojoj teretani?</strong>
-              <p id="routing-b2c-body">Provjeri lokacije ili predlozi svoju teretanu kako bi automat stigao u tvoj grad.</p>
-            </div>
-            <span class="routing-arrow">&#8594;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container stats-grid">
-        <article class="card reveal">
-          <strong data-count="30">0</strong>
-          <p>grama proteina u flagship recepturama za pravi post-workout recovery moment.</p>
-        </article>
-        <article class="card reveal delay-1">
-          <strong data-count="3">0</strong>
-          <p>koraka od ekrana do shakea, tako da kupnja ostaje brza i bez trenja.</p>
-        </article>
-        <article class="card reveal delay-2">
-          <strong data-count="45">0</strong>
-          <p>minuta — vaš post-workout prozor za oporavak. Shake-o-mat je tu prije nego on prođe.</p>
-        </article>
-        <article class="card reveal delay-3">
-          <strong>€4,50</strong>
-          <p>po shaku. Manje od jutarnje kave, više od prosječnog oporavka koji se nikad ne dogodi.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="kako-radi">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>Kako radi</h2>
-          <p>Iskustvo je dizajnirano da bude dovoljno brzo za clanove koji zure, a dovoljno premium da djeluje kao ozbiljna nadogradnja prostora, ne kao usputni dodatak.</p>
-        </div>
-        <div class="steps-grid">
-          <article class="card reveal">
-            <span class="pill">Korak 1</span>
-            <h3>Odaberi formulu</h3>
-            <p>Odaberi okus. Vidiš makroe odmah — znaš točno što uzimaš.</p>
-          </article>
-          <article class="card reveal delay-1">
-            <span class="pill">Korak 2</span>
-            <h3>Plati u par sekundi</h3>
-            <p>Brzo karticno i beskontaktno placanje drzi promet glatkim i nakon grupnih treninga.</p>
-          </article>
-          <article class="card reveal delay-2">
-            <span class="pill">Korak 3</span>
-            <h3>Uzmi i oporavi se</h3>
-            <p>Uzmi. Oporavak počinje dok još mirišiš na trening.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="okusi">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>Okusi koji se prodaju</h2>
-          <p>Startamo s fokusiranim premium izborom, a dodatne slotove prilagodavamo profilu clanstva: whey, recovery, lean, vegan ili low-sugar.</p>
-        </div>
-        <div class="flavors-grid">
-          <article class="card reveal">
-            <div class="card-header">
-              <h3>Blue Charge Vanilla</h3>
-              <span class="flavor-tag">Best seller</span>
-            </div>
-            <p>Čist, fin okus vanilije koji ne siše energiju poslije treninga. Svaki put pravi izbor.</p>
-            <div class="macro-list"><span>30g protein</span><span>Low sugar</span><span>Cold serve</span></div>
-          </article>
-          <article class="card reveal delay-1">
-            <div class="card-header">
-              <h3>Choco Power</h3>
-              <span class="flavor-tag">Classic</span>
-            </div>
-            <p>Bogat čokoladni okus koji pogađa točno onu glad nakon heavy sessiona. Klasik s razlogom.</p>
-            <div class="macro-list"><span>32g protein</span><span>Recovery blend</span><span>Creamy finish</span></div>
-          </article>
-          <article class="card reveal delay-2">
-            <div class="card-header">
-              <h3>Berry Sprint</h3>
-              <span class="flavor-tag">Fresh</span>
-            </div>
-            <p>Svježiji okus za dane kad ne tražiš težinu — savršen za cardio, HIIT i jutarnje treninge.</p>
-            <div class="macro-list"><span>28g protein</span><span>Fruit-forward</span><span>High refresh</span></div>
-          </article>
-          <article class="card reveal">
-            <div class="card-header">
-              <h3>Mocha Grind</h3>
-              <span class="flavor-tag">Performance</span>
-            </div>
-            <p>Bolder profil za jutarnje treninge i clanove koji traze okus s vise stava.</p>
-            <div class="macro-list"><span>30g protein</span><span>Coffee kick</span><span>Premium taste</span></div>
-          </article>
-          <article class="card reveal delay-1">
-            <div class="card-header">
-              <h3>Peanut Fuel</h3>
-              <span class="flavor-tag">Gain</span>
-            </div>
-            <p>Kaloricnija opcija za strength publiku koja zeli zasitniji post-workout izbor.</p>
-            <div class="macro-list"><span>35g protein</span><span>Higher calories</span><span>Satiety boost</span></div>
-          </article>
-          <article class="card reveal delay-2">
-            <div class="card-header">
-              <h3>Green Reset</h3>
-              <span class="flavor-tag">Vegan</span>
-            </div>
-            <p>Plant-based opcija za sire potrebe clanstva bez kompromisa na premium dojmu.</p>
-            <div class="macro-list"><span>26g protein</span><span>Dairy free</span><span>Light finish</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="partneri">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>Zasto partnerstvo ima smisla</h2>
-          <p>Shake-o-mat nije jos jedan poster na zidu. To je novi revenue layer za gym, premium usluga za clanove i bolji razlog da potrosnja ostane unutar kluba.</p>
-        </div>
-        <div class="roi-grid">
-          <article class="card reveal">
-            <strong>Pasivan prihod, jaci premium dojam</strong>
-            <p>Pretvori neiskoristen prostor u nutrition point koji prodaje i kada recepcija ne prodaje nista.</p>
-            <ul class="list">
-              <li>Nema dodatnog staffinga po svakoj prodaji.</li>
-              <li>Kapitalizira post-workout intent postojeceg prometa.</li>
-              <li>Premium izgled koji vizualno dize cijeli klub.</li>
-            </ul>
-          </article>
-          <article class="card featured-card reveal delay-1">
-            <strong>Launch economics snapshot</strong>
-            <p>Ilustrativni pre-launch okvir. Konacni rezultat ovisi o prometu, cijenama i miksu proizvoda.</p>
-            <ul class="list">
-              <li>15–30 shakea/dan × €4,50 = €67–135/dan pasivnog prihoda bez jednog zaposlenika.</li>
-              <li>Kompaktan footprint monetizira prostor bez rezanja trening kapaciteta.</li>
-              <li>Slotovi se mogu podesiti za komercijalne gymove, boutique studije ili strength klubove.</li>
-            </ul>
-            <p class="micro-note">Najbolji fit: klubovi koji zele premium uslugu bez pokretanja staffed shake bara.</p>
-          </article>
-          <article class="card reveal delay-2">
-            <strong>Mi nosimo operativni teret</strong>
-            <p>Model je zamisljen da gym zadrzi fokus na clanstvu, trenerima i rastu, dok Shake-o-mat nosi launch momentum.</p>
-            <ul class="list">
-              <li>Menu planning prema profilu clanova.</li>
-              <li>Brand i launch materijali za gym i social objave.</li>
-              <li>Prioritet grada i lokacije za osnivacke partnere.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="dokaz">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>Dokaz da model vec postoji</h2>
-          <p>Ovo nisu Shake-o-mat rezultati nego iskreni signal da automatizirana prodaja proteinskih napitaka vec ima svoje mjesto na fitness trzistu i u drugim zemljama.</p>
-        </div>
-        <div class="proof-grid">
-          <article class="proof-card reveal">
-            <strong>Globalni category proof</strong>
-            <p>Slicni koncepti vec postoje na vise trzista, sto smanjuje edukacijski teret i potvrduje da je format razumljiv gym publici.</p>
-            <div class="proof-links">
-              <a href="https://www.muscleboxpro.com/" target="_blank" rel="noreferrer">MuscleBoxPro</a>
-              <a href="https://strengthinprogress.ie/" target="_blank" rel="noreferrer">SIP</a>
-              <a href="https://www.proteinomat.pt/" target="_blank" rel="noreferrer">Proteinomat</a>
-            </div>
-            <p class="proof-disclaimer">Reference sluze samo kao dokaz da kategorija postoji globalno, ne kao tvrdnja o Shake-o-mat instalacijama.</p>
-          </article>
-          <article class="proof-card reveal delay-1">
-            <strong>Zasto timing pobjeđuje</strong>
-            <p>Najjaci trenutak kupnje dolazi odmah nakon treninga: clan je vec na lokaciji, recovery je mentalno aktivan i dodatni odlazak do ducana djeluje kao nepotrebno trenje.</p>
-            <ul class="list">
-              <li>Moment after-workout ima najjaci intent za oporavak.</li>
-              <li>Brza kupnja smanjuje odustajanje i odgodu.</li>
-              <li>Vidljiva makro ponuda gradi povjerenje i ponovnu kupnju.</li>
-            </ul>
-          </article>
-          <article class="proof-card reveal delay-2">
-            <strong>Rani interes u Hrvatskoj</strong>
-            <p>Shake-o-mat gradi mrežu gym partnera u Zagrebu i ključnim gradovima. Osnivački partneri dobivaju prioritet pri postavljanju i utjecaj na miks okusa.</p>
-            <ul class="list">
-              <li>Zagreb je prvi prioritet za placement razgovore.</li>
-              <li>Split, Rijeka, Osijek i Zadar ulaze kroz phased waitlist.</li>
-              <li>Osnivacki partneri dobivaju raniji city priority i veci utjecaj na miks proizvoda.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="lokacije">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>Gradovi za prvi rollout</h2>
-          <p>Zagreb je glavni launch fokus. Ostali gradovi se otvaraju kroz kontrolirani rollout i waitlist logiku, kako bi prvi val bio izveden brzo i kvalitetno.</p>
-        </div>
-        <div class="cities-grid">
-          <article class="city-card reveal">
-            <span class="status-pill">Aktivno</span>
-            <strong>Zagreb</strong>
-            <span class="small">Primarni grad za prve gym razgovore, founding partner slotove i najbrzu validaciju potraznje.</span>
-          </article>
-          <article class="city-card pending reveal delay-1">
-            <span class="status-pill">Sljedece</span>
-            <strong>Split</strong>
-            <span class="small">Otvoren za prijave interesa i shortlist partnera nakon zagrebackog starta.</span>
-          </article>
-          <article class="city-card pending reveal delay-2">
-            <span class="status-pill">Sljedece</span>
-            <strong>Rijeka</strong>
-            <span class="small">Waitlist se gradi sada, a prioritet ide gymovima koji zele brzu odluku i jaci traffic fit.</span>
-          </article>
-          <article class="city-card waitlist reveal">
-            <span class="status-pill">Waitlist</span>
-            <strong>Osijek</strong>
-            <span class="small">Prikupljamo interes gym ownera, trenera i clanova za drugi rollout val.</span>
-          </article>
-          <article class="city-card waitlist reveal delay-1">
-            <span class="status-pill">Waitlist</span>
-            <strong>Zadar</strong>
-            <span class="small">Otvorena prijava za grad i klubove koji zele uci prije sirenja na ostale lokacije.</span>
-          </article>
-          <article class="city-card waitlist reveal delay-2">
-            <span class="status-pill">Predlozi gym</span>
-            <strong>Tvoja teretana</strong>
-            <span class="small">Ako tvoj grad nije jos aktivan, posalji prijavu i reci gdje postoji najjaci demand.</span>
-          </article>
-        </div>
-        <div class="cta-row" style="margin-top: 1.5rem;">
-          <a class="btn btn-primary" href="#kontakt-forma">Zatrazi svoj gym</a>
-          <a class="btn btn-secondary" href="#kontakt-forma">Pridruzi se waitlisti</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>FAQ</h2>
-          <p>Pitanja dolaze s obje strane odluke: gym owneri zele jasan business case, a clanovi jednostavan razlog zasto bi kupili upravo ovdje.</p>
-        </div>
-        <div class="faq-list">
-          <details class="faq reveal">
-            <summary>
-              <strong>Za koga je Shake-o-mat?</strong>
-              <span>+</span>
-            </summary>
-            <p>Za teretane, fitness centre, sportske objekte i wellness klubove koji zele premium recovery opciju bez otvaranja staffed shake bara.</p>
-          </details>
-          <details class="faq reveal delay-1">
-            <summary>
-              <strong>Mora li gym upravljati dnevnom prodajom?</strong>
-              <span>+</span>
-            </summary>
-            <p>Cilj je minimalan operativni teret za partnera. U launch fazi Shake-o-mat vodi onboarding, positioning i dogovor oko ponude.</p>
-          </details>
-          <details class="faq reveal delay-2">
-            <summary>
-              <strong>Zasto bi clanovi kupovali na automatu?</strong>
-              <span>+</span>
-            </summary>
-            <p>Zato sto je trenutak pravi. Nakon treninga recovery intent je najjaci, a automat uklanja potrebu za cekanjem, nosenjem praha ili dodatnom stanicom na putu kuci.</p>
-          </details>
-          <details class="faq reveal">
-            <summary>
-              <strong>Moze li se ponuda okusa prilagoditi gymu?</strong>
-              <span>+</span>
-            </summary>
-            <p>Da. Slotovi i miks proizvoda planiraju se prema publici kluba: strength, komercijalni fitness, boutique studio ili wellness segment.</p>
-          </details>
-          <details class="faq reveal delay-1">
-            <summary>
-              <strong>Je li ovo vec dostupno sirom Hrvatske?</strong>
-              <span>+</span>
-            </summary>
-            <p>Shake-o-mat je aktivan u prvim teretanama u Zagrebu. Broj mjesta za osnivačke gym partnere u ovom valu je ograničen — prijavite se da rezervirate svoje mjesto.</p>
-          </details>
-          <details class="faq reveal delay-2">
-            <summary>
-              <strong>Sto founding gym treba uciniti sada?</strong>
-              <span>+</span>
-            </summary>
-            <p>Ispuni formu s gradom, tipom kluba i prometom. Founding slotovi su ograniceni kako bi se prvi rollout odradio fokusirano i brzo.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <section class="footer-card reveal">
-        <div class="footer-brand">
-          <span class="footer-logo" aria-hidden="true">
-            <img src="./som-logo.png" alt="">
-          </span>
-          <span>
-            <strong>Shake-o-mat</strong>
-            <span>Recover. Instantly.</span>
-          </span>
-        </div>
-        <p>Shake-o-mat gradi prvu mrežu svježe miješanih protein shake automata u teretanama diljem Hrvatske. Prijavite svoju teretanu i budite dio prvog vala.</p>
-        <ul class="contact-list">
-          <li>Email: hello@shakeomat.hr</li>
-          <li>Telefon: +385 95 874 1708</li>
-          <li>Fokus rollouta: Zagreb, Split, Rijeka, Osijek, Zadar</li>
+      <div class="custom-text">
+        <h2 class="custom-heading" id="custom-heading">Svaki element prilagođen tvojoj teretani.</h2>
+        <p class="custom-body">Čaša nosi tvoj brand. Aparat nosi tvoje boje. Shake nosi tvoj cilj. To nije vending stroj &mdash; to je tvoj gym, u tekućem obliku.</p>
+        <ul class="custom-list">
+          <li>Custom tisak na čaši (gym logo)</li>
+          <li>Vinyl wrap aparata u tvojim bojama</li>
+          <li>Brendirani natpisi i oznake u objektu</li>
+          <li>Sezonski okusi po dogovoru</li>
+          <li>Motivacijska poruka na svakoj čaši</li>
         </ul>
-        <div class="socials" aria-label="Drustvene mreze">
-          <a href="https://www.instagram.com/shakeomat.hr/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">TikTok</a>
-          <a href="https://www.linkedin.com/company/shake-o-mat/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-        <p class="footer-note">Raniji partneri dobivaju vecu sansu za city priority, launch support i utjecaj na pocetni miks okusa.</p>
-      </section>
-
-      <section class="form-card reveal delay-1" id="kontakt-forma">
-        <h3>Pokreni razgovor</h3>
-        <p style="margin: 0.75rem 0 1.1rem; color: #c4d4f2; line-height: 1.7;">Gym owneri mogu zatraziti partner call, a clanovi i treneri mogu predloziti svoju teretanu. Forma je spremna za stvarni endpoint i nije demo-only.</p>
-        <form action="https://formsubmit.co/hello@shakeomat.hr" method="POST">
-          <input type="hidden" name="_subject" value="Novi Shake-o-mat partner lead">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <div class="field-grid">
-            <label>
-              Ja sam
-              <select name="role" required>
-                <option value="">Odaberi</option>
-                <option value="gym-owner">Vlasnik / operator gyma</option>
-                <option value="gym-manager">Manager gyma</option>
-                <option value="member">Clan / sportas</option>
-                <option value="coach">Trener</option>
-              </select>
-            </label>
-            <label>
-              Grad
-              <input type="text" name="city" placeholder="Zagreb" required>
-            </label>
-            <label>
-              Ime i prezime
-              <input type="text" name="name" placeholder="Vase ime" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="vi@example.com" required>
-            </label>
-            <label>
-              Teretana / objekt
-              <input type="text" name="facility" placeholder="Naziv lokacije">
-            </label>
-            <label>
-              Procjena mjesecnog footfalla
-              <select name="traffic">
-                <option value="">Odaberi raspon</option>
-                <option value="under-1000">Ispod 1.000</option>
-                <option value="1000-2500">1.000 do 2.500</option>
-                <option value="2500-5000">2.500 do 5.000</option>
-                <option value="5000-plus">5.000+</option>
-              </select>
-            </label>
-          </div>
-          <label>
-            Sto vam je najvaznije?
-            <textarea name="message" placeholder="Zelite automat u svom gymu, trazite lokaciju u svom gradu ili zelite launch detalje?"></textarea>
-          </label>
-          <button class="btn btn-primary" type="submit">Zatrazi launch detalje</button>
-          <p class="field-note">Forma je aktivna. Odgovaramo u roku 24 sata.</p>
-        </form>
-      </section>
+        <a href="b2b.html" class="btn btn-primary">Saznaj više &rarr;</a>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    window.shakeTranslations = {};
-    window.shakeTranslations.hr = {
-      htmlLang:"hr",metaDescription:"Shake-o-mat postavlja premium automate za proteinske shakeove u teretane diljem Hrvatske. Prijavite svoju teretanu ili zatražite lokaciju u svom gradu.",skipLink:"Preskoči na sadržaj",topBarStrong:"Otvoren je upis za osnivačke gym partnere.",topBarCopy:"Zagreb je prioritet za prvi val, a mjesta su ograničena.",brandAria:"Shake-o-mat početna",languageSwitchAria:"Odabir jezika",navOpen:"Otvori izbornik",navClose:"Zatvori izbornik",navLabel:"Glavna navigacija",
-      navLinks:["Kako radi","Okusi","Za partnere","Lokacije","FAQ","Postani partner"],eyebrow:"Dostupno u teretanama diljem Hrvatske",heroTitle:"Zaradio si u teretani. Oporavak počinje za 30 sekundi.",heroBody:"Shake-o-mat donosi premium automate za svježe miješane proteinske shakeove u teretane, fitness centre i sportske objekte. Vlasnici dobivaju novi prihod bez dodatnog osoblja, a članovi premium post-workout shake točno u trenutku kada ga tijelo najviše treba.",heroCtas:["Postani partner","Pronađi lokaciju"],heroTags:["24/7 samoposlužna prodaja","Kontaktno i beskontaktno plaćanje","Prilagodljivi slotovi okusa","Bez dodatnog rada recepcije"],
-      launchTitle:"Prvi val partnera",launchText:"Otvaramo razgovore prije dolaska prve pošiljke strojeva. Zagreb je prioritetni grad za start.",heroMini:[["Spremno za gužvu","Kompaktan footprint i brza kupnja za peak sate nakon posla, treninga i grupnih termina."],["Prodaja bez trenja","Makroi, okusi i premium izgled pretvaraju post-workout namjeru u realnu kupnju."],["Fleksibilan mix proizvoda","Whey, recovery, low-sugar i plant-based opcije mogu se složiti prema profilu članova tvoje teretane."]],machineAria:"Pregled stroja",
-      stats:["grama proteina u flagship recepturama za pravi post-workout recovery moment.","koraka od ekrana do shakea, tako da kupnja ostaje brza i bez trenja.","minuta — vaš post-workout prozor za oporavak. Shake-o-mat je tu prije nego on prođe.","po shaku. Manje od jutarnje kave, više od prosječnog oporavka koji se nikad ne dogodi."],
-      howTitle:"Kako radi",howBody:"Iskustvo je dizajnirano da bude dovoljno brzo za članove koji žure, a dovoljno premium da djeluje kao ozbiljna nadogradnja prostora, ne kao usputni dodatak.",steps:[["Korak 1","Odaberi formulu","Odaberi okus. Vidiš makroe odmah — znaš točno što uzimaš."],["Korak 2","Plati u par sekundi","Kartica ili mobitel. Tri sekunde i gotovo."],["Korak 3","Uzmi i oporavi se","Uzmi. Oporavak počinje dok još mirišiš na trening."]],
-      flavorsTitle:"Okusi koji se prodaju",flavorsBody:"Startamo s fokusiranim premium izborom, a dodatne slotove prilagođavamo profilu članstva: whey, recovery, lean, vegan ili low-sugar.",flavors:[["Blue Charge Vanilla","Best seller","Čist, fin okus vanilije koji ne siše energiju poslije treninga. Svaki put pravi izbor.",["30g protein","Low sugar","Cold serve"]],["Choco Power","Classic","Bogat čokoladni okus koji pogađa točno onu glad nakon heavy sessiona. Klasik s razlogom.",["32g protein","Recovery blend","Creamy finish"]],["Berry Sprint","Fresh","Svježiji okus za dane kad ne tražiš težinu — savršen za cardio, HIIT i jutarnje treninge.",["28g protein","Fruit-forward","High refresh"]],["Mocha Grind","Performance","Bolder profil za jutarnje treninge i članove koji traže okus s više stava.",["30g protein","Coffee kick","Premium taste"]],["Peanut Fuel","Gain","Kaloričnija opcija za strength publiku koja želi zasitniji post-workout izbor.",["35g protein","Higher calories","Satiety boost"]],["Green Reset","Vegan","Plant-based opcija za šire potrebe članstva bez kompromisa na premium dojmu.",["26g protein","Dairy free","Light finish"]]],
-      partnerTitle:"Zašto partnerstvo ima smisla",partnerBody:"Shake-o-mat nije još jedan poster na zidu. To je novi revenue layer za gym, premium usluga za članove i bolji razlog da potrošnja ostane unutar kluba.",roiCards:[["Pasivan prihod, jači premium dojam","Pretvori neiskorišten prostor u nutrition point koji prodaje i kada recepcija ne prodaje ništa.",["Nema dodatnog staffinga po svakoj prodaji.","Kapitalizira post-workout intent postojećeg prometa.","Premium izgled koji vizualno diže cijeli klub."]],["Launch economics snapshot","Ilustrativni pre-launch okvir. Konačni rezultat ovisi o prometu, cijenama i miksu proizvoda.",["15–30 shakea/dan × €4,50 = €67–135/dan pasivnog prihoda bez jednog zaposlenika.","Kompaktan footprint monetizira prostor bez rezanja trening kapaciteta.","Slotovi se mogu podesiti za komercijalne gymove, boutique studije ili strength klubove."],"Najbolji fit: klubovi koji žele premium uslugu bez pokretanja staffed shake bara."],["Mi nosimo operativni teret","Model je zamišljen da gym zadrži fokus na članstvu, trenerima i rastu, dok Shake-o-mat nosi launch momentum.",["Menu planning prema profilu članova.","Brand i launch materijali za gym i social objave.","Prioritet grada i lokacije za osnivačke partnere."]]]
-    };
-  </script>
 
-  <script>
-    Object.assign(window.shakeTranslations.hr,{
-      proofTitle:"Dokaz da model već postoji",proofBody:"Ovo nisu Shake-o-mat rezultati nego iskreni signal da automatizirana prodaja proteinskih napitaka već ima svoje mjesto na fitness tržištu i u drugim zemljama.",proofCards:[["Globalni category proof","Slični koncepti već postoje na više tržišta, što smanjuje edukacijski teret i potvrđuje da je format razumljiv gym publici.","Reference služe samo kao dokaz da kategorija postoji globalno, ne kao tvrdnja o Shake-o-mat instalacijama."],["Zašto timing pobjeđuje","Najjači trenutak kupnje dolazi odmah nakon treninga: član je već na lokaciji, recovery je mentalno aktivan i dodatni odlazak do dućana djeluje kao nepotrebno trenje.",["Moment after-workout ima najjači intent za oporavak.","Brza kupnja smanjuje odustajanje i odgodu.","Vidljiva makro ponuda gradi povjerenje i ponovnu kupnju."]],["Rani interes u Hrvatskoj","Ova stranica je namjerno postavljena kao pre-launch funnel: skuplja gym partnere, gradove i potražnju članova prije prve instalacije.",["Zagreb je prvi prioritet za placement razgovore.","Split, Rijeka, Osijek i Zadar ulaze kroz phased waitlist.","Osnivački partneri dobivaju raniji city priority i veći utjecaj na miks proizvoda."]]],
-      locationsTitle:"Gradovi za prvi rollout",locationsBody:"Zagreb je glavni launch fokus. Ostali gradovi se otvaraju kroz kontrolirani rollout i waitlist logiku, kako bi prvi val bio izveden brzo i kvalitetno.",cities:[["Aktivno","Zagreb","Primarni grad za prve gym razgovore, founding partner slotove i najbržu validaciju potražnje."],["Sljedeće","Split","Otvoren za prijave interesa i shortlist partnera nakon zagrebačkog starta."],["Sljedeće","Rijeka","Waitlist se gradi sada, a prioritet ide gymovima koji žele brzu odluku i jači traffic fit."],["Waitlist","Osijek","Prikupljamo interes gym ownera, trenera i članova za drugi rollout val."],["Waitlist","Zadar","Otvorena prijava za grad i klubove koji žele ući prije širenja na ostale lokacije."],["Predloži gym","Tvoja teretana","Ako tvoj grad nije još aktivan, pošalji prijavu i reci gdje postoji najjači demand."]],locationCtas:["Zatraži svoj gym","Pridruži se waitlisti"],
-      faqTitle:"FAQ",faqBody:"Pitanja dolaze s obje strane odluke: gym owneri žele jasan business case, a članovi jednostavan razlog zašto bi kupili upravo ovdje.",faqs:[["Za koga je Shake-o-mat?","Za teretane, fitness centre, sportske objekte i wellness klubove koji žele premium recovery opciju bez otvaranja staffed shake bara."],["Mora li gym upravljati dnevnom prodajom?","Cilj je minimalan operativni teret za partnera. U launch fazi Shake-o-mat vodi onboarding, positioning i dogovor oko ponude."],["Zašto bi članovi kupovali na automatu?","Zato što je trenutak pravi. Nakon treninga recovery intent je najjači, a automat uklanja potrebu za čekanjem, nošenjem praha ili dodatnom stanicom na putu kući."],["Može li se ponuda okusa prilagoditi gymu?","Da. Slotovi i miks proizvoda planiraju se prema publici kluba: strength, komercijalni fitness, boutique studio ili wellness segment."],["Je li ovo već dostupno širom Hrvatske?","Shake-o-mat je aktivan u prvim teretanama u Zagrebu. Broj mjesta za osnivačke gym partnere u ovom valu je ograničen — prijavi se da rezerviraš svoje."],["Što founding gym treba učiniti sada?","Ispuni formu s gradom, tipom kluba i prometom. Founding slotovi su ograničeni kako bi se prvi rollout odradio fokusirano i brzo."]],
-      footerBody:"Shake-o-mat gradi prvu mrežu svježe miješanih protein shake automata u teretanama diljem Hrvatske. Prijavite svoju teretanu i budite dio prvog vala.",contactList:["Email: hello@shakeomat.hr","Telefon: +385 95 874 1708","Fokus rollouta: Zagreb, Split, Rijeka, Osijek, Zadar"],socialsAria:"Društvene mreže",footerNote:"Raniji partneri dobivaju veću šansu za city priority, launch support i utjecaj na početni miks okusa.",
-      formTitle:"Pokreni razgovor",formIntro:"Gym owneri mogu zatražiti partner call, a članovi i treneri mogu predložiti svoju teretanu. Forma je spremna za stvarni endpoint i nije demo-only.",formSubject:"Novi Shake-o-mat partner lead",labels:["Ja sam","Grad","Ime i prezime","Email","Teretana / objekt","Procjena mjesečnog footfalla","Što vam je najvažnije?"],selectOptions:{role:["Odaberi","Vlasnik / operator gyma","Manager gyma","Član / sportaš","Trener"],traffic:["Odaberi raspon","Ispod 1.000","1.000 do 2.500","2.500 do 5.000","5.000+"]},placeholders:{city:"Zagreb",name:"Vaše ime",email:"vi@example.com",facility:"Naziv lokacije",message:"Želite automat u svom gymu, tražite lokaciju u svom gradu ili želite launch detalje?"},formButton:"Zatraži launch detalje",fieldNote:"Forma je aktivna. Odgovaramo u roku 24 sata.",routingLabel:"Odaberite svoju ulogu",routingB2BTitle:"Vlasnik sam teretane — gledam koliko mogu zaraditi ovaj tjedan",routingB2BBody:"Izracunaj koliko €/mj može generirati tvoj fitness centar bez ijednog novog zaposlenika.",routingB2CTitle:"Upravo sam završio trening — gdje je Shake-O-Mat?",routingB2CBody:"Provjeri lokacije ili predloži svoju teretanu kako bi automat stigao u tvoj grad."
-    });
-  </script>
+</main>
 
-  <script>
-    window.shakeTranslations.en = {
-      htmlLang:"en",metaDescription:"Shake-o-mat installs premium protein shake vending machines inside gyms across Croatia. Partner with us or request a machine in your city.",skipLink:"Skip to content",topBarStrong:"Founding gym partner intake is open.",topBarCopy:"Zagreb is the priority for the first rollout wave, and slots are limited.",brandAria:"Shake-o-mat home",languageSwitchAria:"Language selection",navOpen:"Open menu",navClose:"Close menu",navLabel:"Primary navigation",
-      navLinks:["How it works","Flavors","For partners","Locations","FAQ","Partner with us"],eyebrow:"Live in gyms across Croatia",heroTitle:"You earned it in the gym. Recovery starts in 30 seconds.",heroBody:"Shake-o-mat brings premium freshly-mixed protein shake vending machines into gyms, fitness clubs, and sports facilities. Owners unlock a new revenue stream without extra staff, while members get a premium post-workout shake exactly when the body needs it most.",heroCtas:["Partner with us","Find a location"],heroTags:["24/7 self-serve sales","Card and contactless payment","Custom flavor slots","No extra front-desk workload"],
-      launchTitle:"Founding partner wave",launchText:"We are opening conversations before the first machine shipment lands. Zagreb is the priority city for launch.",heroMini:[["Built for peak hours","Compact footprint and fast checkout for busy after-work, training, and class traffic."],["Low-friction conversion","Macros, flavors, and premium presentation turn post-workout intent into real purchases."],["Flexible product mix","Whey, recovery, low-sugar, and plant-based options can be configured to match your gym member profile."]],machineAria:"Machine overview",
-      stats:["grams of protein in flagship recipes built for a real post-workout recovery moment.","steps from screen to shake, so the purchase stays fast and frictionless.","minutes — your post-workout recovery window. Shake-o-mat is there before it closes.","per shake. Less than your morning coffee. More than the average recovery that never happens."],
-      howTitle:"How it works",howBody:"The experience is designed to be fast enough for members on the move and premium enough to feel like a serious upgrade to the gym floor, not an afterthought.",steps:[["Step 1","Choose your formula","Pick your flavor. Macros on screen — you know exactly what you are getting."],["Step 2","Pay in seconds","Card or phone. Three seconds and done."],["Step 3","Grab and recover","Take it. Recovery starts while you can still smell the training."]],
-      flavorsTitle:"Flavors that actually move",flavorsBody:"We launch with a focused premium lineup, then adapt extra slots to your member profile: whey, recovery, lean, vegan, or low-sugar.",flavors:[["Blue Charge Vanilla","Best seller","Clean, smooth vanilla that does not weigh you down after training. The right choice every time.",["30g protein","Low sugar","Cold serve"]],["Choco Power","Classic","Rich chocolate that hits exactly the hunger after a heavy session. A classic for a reason.",["32g protein","Recovery blend","Creamy finish"]],["Berry Sprint","Fresh","A fresher taste for days when you are not looking for weight — perfect for cardio, HIIT and morning sessions.",["28g protein","Fruit-forward","High refresh"]],["Mocha Grind","Performance","A bolder profile for morning training and members who want more attitude in the flavor.",["30g protein","Coffee kick","Premium taste"]],["Peanut Fuel","Gain","A higher-calorie option for strength-focused customers who want a more filling post-workout choice.",["35g protein","Higher calories","Satiety boost"]],["Green Reset","Vegan","A plant-based option for broader member needs without losing the premium feel.",["26g protein","Dairy free","Light finish"]]],
-      partnerTitle:"Why the partnership works",partnerBody:"Shake-o-mat is not just another poster on the wall. It is a new revenue layer for the gym, a premium service for members, and a stronger reason for spending to stay inside the club.",roiCards:[["Passive income, stronger premium positioning","Turn underused space into a nutrition point that keeps selling even when reception is not actively selling anything.",["No extra staffing required for every sale.","Captures post-workout buying intent from existing traffic.","Premium machine presence upgrades the whole club visually."]],["Launch economics snapshot","An illustrative pre-launch frame. Final performance depends on traffic, pricing, and product mix.",["15–30 shakes/day × €4.50 = €67–135/day in passive revenue with zero extra staff.","A compact footprint monetizes space without cutting training capacity.","Slots can be configured for commercial gyms, boutique studios, or strength-focused clubs."],"Best fit: clubs that want a premium service without opening a staffed shake bar."],["We carry the operational load","The model is designed so the gym keeps its focus on members, coaches, and growth while Shake-o-mat drives launch momentum.",["Menu planning based on your member profile.","Brand and launch materials for the gym and social promotion.","City and location priority for founding partners."]]]
-    };
-  </script>
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Shake<span>-</span>o-mat</div>
+        <p class="footer-tagline">Svježe miješano. Odmah.</p>
+      </div>
 
-  <script>
-    Object.assign(window.shakeTranslations.en,{
-      proofTitle:"Proof that the model already exists",proofBody:"These are not Shake-o-mat results. They are an honest signal that automated protein shake retail already has a place in the fitness market across other countries.",proofCards:[["Global category proof","Comparable concepts already operate in multiple markets, which lowers the education burden and confirms that the format is understandable to gym audiences.","These references are included only to show that the category exists globally, not to imply Shake-o-mat installations."],["Why timing wins","The strongest buying moment comes right after training: the member is already on-site, recovery is top of mind, and an extra stop at a store feels like unnecessary friction.",["The post-workout moment has the strongest recovery intent.","Fast purchase reduces drop-off and delay.","Visible macros build trust and repeat buying."]],["Early demand in Croatia","This page is intentionally built as a pre-launch funnel: it collects gym partner interest, city demand, and member demand before the first live installation.",["Zagreb is the first priority for placement conversations.","Split, Rijeka, Osijek, and Zadar enter through a phased waitlist.","Founding partners get earlier city priority and more influence over the product mix."]]],
-      locationsTitle:"Cities in the first rollout",locationsBody:"Zagreb is the main launch focus. Other cities open through a controlled rollout and waitlist logic so the first wave can move quickly and cleanly.",cities:[["Active","Zagreb","Primary city for first gym conversations, founding partner slots, and the fastest demand validation."],["Next","Split","Open for interest and shortlist partners after the Zagreb launch begins."],["Next","Rijeka","The waitlist is building now, and priority goes to gyms ready to move quickly with strong traffic fit."],["Waitlist","Osijek","We are collecting interest from gym owners, coaches, and members for the second rollout wave."],["Waitlist","Zadar","Open for city and club submissions before expansion moves to additional locations."],["Suggest a gym","Your gym","If your city is not active yet, submit it and tell us where demand is strongest."]],locationCtas:["Request your gym","Join the waitlist"],
-      faqTitle:"FAQ",faqBody:"Questions come from both sides of the decision: gym owners want a clear business case, and members want a simple reason to buy here instead of somewhere else.",faqs:[["Who is Shake-o-mat for?","It is built for gyms, fitness clubs, sports facilities, and wellness venues that want a premium recovery option without opening a staffed shake bar."],["Does the gym need to manage daily sales?","The goal is minimal operational drag for the partner. In launch mode, Shake-o-mat leads onboarding, positioning, and offer alignment."],["Why would members buy from a machine?","Because the timing is right. After training, recovery intent is strongest, and the machine removes waiting, carrying powder, or making another stop on the way home."],["Can the flavor lineup be customized for each gym?","Yes. Slot allocation and product mix are planned around the club audience: strength, commercial fitness, boutique studio, or wellness segment."],["Is this already available across Croatia?","Shake-o-mat is active in the first gyms in Zagreb. Founding partner slots in this wave are limited — submit now to secure your place."],["What should a founding gym do now?","Fill out the form with your city, club type, and traffic estimate. Founding slots are limited so the first rollout can stay focused and fast."]],
-      footerBody:"Shake-o-mat is building Croatia's first network of premium protein vending machines inside gyms. Join the founding wave and help shape the rollout.",contactList:["Email: hello@shakeomat.hr","Phone: +385 95 874 1708","Rollout focus: Zagreb, Split, Rijeka, Osijek, Zadar"],socialsAria:"Social links",footerNote:"Earlier partners get a stronger chance at city priority, launch support, and influence over the opening flavor mix.",
-      formTitle:"Start the conversation",formIntro:"Gym owners can request a partner call, while members and coaches can suggest their gym. The form is ready for a real endpoint and is not demo-only behavior.",formSubject:"New Shake-o-mat partner lead",labels:["I am","City","Full name","Email","Gym / facility","Estimated monthly footfall","What matters most to you?"],selectOptions:{role:["Select one","Gym owner / operator","Gym manager","Member / athlete","Coach"],traffic:["Choose range","Under 1,000","1,000 to 2,500","2,500 to 5,000","5,000+"]},placeholders:{city:"Zagreb",name:"Your name",email:"you@example.com",facility:"Facility name",message:"Do you want a machine in your gym, a machine in your city, or launch details?"},formButton:"Request launch details",fieldNote:"This form is live. We respond within 24 hours.",routingLabel:"Choose your path",routingB2BTitle:"I own a gym — I want to see this week's earning potential",routingB2BBody:"Calculate how much €/month your fitness club can generate without a single new hire.",routingB2CTitle:"I train tomorrow — is Shake-O-Mat in my gym?",routingB2CBody:"Check locations or suggest your gym so the machine comes to your city."
-    });
-  </script>
+      <nav class="footer-nav" aria-label="Glavna navigacija">
+        <a href="b2b.html">B2B</a>
+        <a href="brand.html">Brand</a>
+        <a href="mailto:info@shakeomat.hr">Kontakt</a>
+      </nav>
 
-  <script>
-    const header=document.querySelector(".site-header");
-    const navToggle=document.querySelector(".nav-toggle");
-    const nav=document.querySelector(".nav");
-    const revealTargets=document.querySelectorAll(".reveal");
-    const counters=document.querySelectorAll("[data-count]");
-    const langButtons=[...document.querySelectorAll("[data-lang-switch]")];
-    const metaDescription=document.querySelector('meta[name="description"]');
-    const translations=window.shakeTranslations;
-    const requiredArrayKeys=["navLinks","heroTags","stats","steps","flavors","roiCards","proofCards","cities","faqs","contactList","labels"];
+      <div class="footer-social" aria-label="Društvene mreže">
+        <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.26.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.42 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.17-1.06.37-2.23.42-1.26.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52 0-4.76.07-.94.04-1.45.2-1.79.33-.45.17-.77.38-1.1.72-.34.33-.55.65-.72 1.1-.13.34-.29.85-.33 1.79C3.03 8.48 3.02 8.85 3.02 12s0 3.52.07 4.76c.04.94.2 1.45.33 1.79.17.45.38.77.72 1.1.33.34.65.55 1.1.72.34.13.85.29 1.79.33 1.24.07 1.61.07 4.76.07s3.52 0 4.76-.07c.94-.04 1.45-.2 1.79-.33.45-.17.77-.38 1.1-.72.34-.33.55-.65.72-1.1.13-.34.29-.85.33-1.79.07-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.04-.94-.2-1.45-.33-1.79a2.95 2.95 0 0 0-.72-1.1 2.95 2.95 0 0 0-1.1-.72c-.34-.13-.85-.29-1.79-.33C15.52 4 15.15 4 12 4Zm0 3.04a4.96 4.96 0 1 1 0 9.92 4.96 4.96 0 0 1 0-9.92Zm0 1.8a3.16 3.16 0 1 0 0 6.32 3.16 3.16 0 0 0 0-6.32Zm5.2-2.16a1.16 1.16 0 1 1 0 2.32 1.16 1.16 0 0 1 0-2.32Z"/></svg>
+        </a>
+        <a href="https://tiktok.com" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 7.9a6.7 6.7 0 0 1-3.9-1.25v8.1a5.6 5.6 0 1 1-5.6-5.6c.27 0 .53.02.79.06v2.47a3.14 3.14 0 1 0 2.19 2.99V3h2.43a4.2 4.2 0 0 0 4.09 3.47V7.9Z"/></svg>
+        </a>
+        <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
+        </a>
+      </div>
+    </div>
 
-    const setText=(selector,text)=>{const node=document.querySelector(selector);if(node)node.textContent=text;};
-    const setAttr=(selector,attr,value)=>{const node=document.querySelector(selector);if(node)node.setAttribute(attr,value);};
-    const setListTexts=(selector,values)=>{document.querySelectorAll(selector).forEach((node,index)=>{if(values[index]!==undefined)node.textContent=values[index];});};
+    <div class="footer-legal">
+      &copy; 2026 Shake-o-mat &middot; Zagreb &middot; <a href="mailto:info@shakeomat.hr">info@shakeomat.hr</a>
+    </div>
+  </div>
+</footer>
 
-    const validateTranslations=()=>{
-      const baseKeys=Object.keys(translations.hr);
-      Object.entries(translations).forEach(([lang,value])=>{
-        baseKeys.forEach((key)=>{if(!(key in value))throw new Error("Missing translation key '"+key+"' in '"+lang+"'.");});
-        requiredArrayKeys.forEach((key)=>{if(!Array.isArray(value[key])||value[key].length!==translations.hr[key].length)throw new Error("Translation array '"+key+"' must match hr length in '"+lang+"'.");});
+<script>
+  // Pause stat bar animation when out of view (perf nicety)
+  (function() {
+    const track = document.getElementById('statBarTrack');
+    if (!track || !('IntersectionObserver' in window)) return;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        track.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
       });
-    };
+    }, { threshold: 0 });
 
-    const applyLanguage=(lang)=>{
-      const copy=translations[lang];
-      document.documentElement.lang=copy.htmlLang;
-      if(metaDescription)metaDescription.setAttribute("content",copy.metaDescription);
-      setText(".skip-link",copy.skipLink);
-      setText(".top-bar strong",copy.topBarStrong);
-      setText(".top-bar-copy",copy.topBarCopy);
-      setAttr(".brand","aria-label",copy.brandAria);
-      setAttr(".lang-switch","aria-label",copy.languageSwitchAria);
-      setAttr(".nav","aria-label",copy.navLabel);
-      setAttr(".nav-toggle","aria-label",copy.navOpen);
-      setListTexts(".nav a",copy.navLinks);
-      setText(".eyebrow",copy.eyebrow);
-      setText(".hero-copy h1",copy.heroTitle);
-      setText(".hero-copy p",copy.heroBody);
-      setListTexts(".hero-copy .cta-row a",copy.heroCtas);
-      setListTexts(".proof-tags span",copy.heroTags);
-      setText(".launch-note strong",copy.launchTitle);
-      setText(".launch-note span",copy.launchText);
-      setAttr(".machine-card","aria-label",copy.machineAria);
-      document.querySelectorAll(".hero-mini-grid .mini-card, .machine-card").forEach((card,index)=>{const item=copy.heroMini[index];if(!item)return;card.querySelector("strong").textContent=item[0];const spans=card.querySelectorAll("span");spans[spans.length-1].textContent=item[1];});
-      setListTexts(".stats-grid .card p",copy.stats);
-      setText("#kako-radi .section-head h2",copy.howTitle);setText("#kako-radi .section-head p",copy.howBody);
-      document.querySelectorAll(".steps-grid .card").forEach((card,index)=>{const item=copy.steps[index];card.querySelector(".pill").textContent=item[0];card.querySelector("h3").textContent=item[1];card.querySelector("p").textContent=item[2];});
-      setText("#okusi .section-head h2",copy.flavorsTitle);setText("#okusi .section-head p",copy.flavorsBody);
-      document.querySelectorAll(".flavors-grid .card").forEach((card,index)=>{const item=copy.flavors[index];card.querySelector("h3").textContent=item[0];card.querySelector(".flavor-tag").textContent=item[1];card.querySelector("p").textContent=item[2];card.querySelectorAll(".macro-list span").forEach((node,i)=>node.textContent=item[3][i]);});
-      setText("#partneri .section-head h2",copy.partnerTitle);setText("#partneri .section-head p",copy.partnerBody);
-      document.querySelectorAll("#partneri .roi-grid .card").forEach((card,index)=>{const item=copy.roiCards[index];card.querySelector("strong").textContent=item[0];card.querySelector("p").textContent=item[1];card.querySelectorAll("li").forEach((li,i)=>li.textContent=item[2][i]);const note=card.querySelector(".micro-note");if(note)note.textContent=item[3]||"";});
-      setText("#dokaz .section-head h2",copy.proofTitle);setText("#dokaz .section-head p",copy.proofBody);
-      document.querySelectorAll("#dokaz .proof-card").forEach((card,index)=>{const item=copy.proofCards[index];card.querySelector("strong").textContent=item[0];card.querySelector("p").textContent=item[1];const disclaimer=card.querySelector(".proof-disclaimer");if(disclaimer){disclaimer.textContent=item[2];}else{card.querySelectorAll("li").forEach((li,i)=>li.textContent=item[2][i]);}});
-      setText("#lokacije .section-head h2",copy.locationsTitle);setText("#lokacije .section-head p",copy.locationsBody);
-      document.querySelectorAll(".cities-grid .city-card").forEach((card,index)=>{const item=copy.cities[index];card.querySelector(".status-pill").textContent=item[0];card.querySelector("strong").textContent=item[1];card.querySelector(".small").textContent=item[2];});
-      setListTexts("#lokacije .cta-row a",copy.locationCtas);
-      setText("#faq .section-head h2",copy.faqTitle);setText("#faq .section-head p",copy.faqBody);
-      document.querySelectorAll(".faq-list .faq").forEach((faq,index)=>{const item=copy.faqs[index];faq.querySelector("summary strong").textContent=item[0];faq.querySelector("p").textContent=item[1];});
-      setText(".footer-card > p",copy.footerBody);setListTexts(".contact-list li",copy.contactList);setAttr(".socials","aria-label",copy.socialsAria);setText(".footer-note",copy.footerNote);
-      setText(".form-card h3",copy.formTitle);setText(".form-card > p",copy.formIntro);setAttr('input[name="_subject"]',"value",copy.formSubject);
-      const labels=document.querySelectorAll(".field-grid label, .form-card > form > label");labels.forEach((label,index)=>{if(copy.labels[index])label.childNodes[0].nodeValue=copy.labels[index];});
-      document.querySelectorAll('select[name="role"] option').forEach((node,index)=>node.textContent=copy.selectOptions.role[index]);
-      document.querySelectorAll('select[name="traffic"] option').forEach((node,index)=>node.textContent=copy.selectOptions.traffic[index]);
-      setAttr('input[name="city"]',"placeholder",copy.placeholders.city);setAttr('input[name="name"]',"placeholder",copy.placeholders.name);setAttr('input[name="email"]',"placeholder",copy.placeholders.email);setAttr('input[name="facility"]',"placeholder",copy.placeholders.facility);setAttr('textarea[name="message"]',"placeholder",copy.placeholders.message);setText('.form-card button[type="submit"]',copy.formButton);setText(".field-note",copy.fieldNote);
-      setText("#routing-label",copy.routingLabel);setText("#routing-b2b-title",copy.routingB2BTitle);setText("#routing-b2b-body",copy.routingB2BBody);setText("#routing-b2c-title",copy.routingB2CTitle);setText("#routing-b2c-body",copy.routingB2CBody);
-      langButtons.forEach((button)=>{const active=button.dataset.langSwitch===lang;button.classList.toggle("is-active",active);button.setAttribute("aria-pressed",String(active));});
-      localStorage.setItem("shake-o-mat-lang",lang);
-    };
+    io.observe(track);
+  })();
 
-    const syncHeader=()=>header.classList.toggle("is-scrolled",window.scrollY>12);
-    const preferredLanguage=()=>{const saved=localStorage.getItem("shake-o-mat-lang");if(saved&&translations[saved])return saved;const browser=(navigator.language||"").toLowerCase();return browser.startsWith("en")?"en":"hr";};
+  // Smooth scroll fallback for older browsers (enhance native smooth-scroll)
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const id = this.getAttribute('href');
+      if (id.length <= 1) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
 
-    validateTranslations();
-    applyLanguage(preferredLanguage());
-    syncHeader();
-    window.addEventListener("scroll",syncHeader,{passive:true});
-    langButtons.forEach((button)=>button.addEventListener("click",()=>applyLanguage(button.dataset.langSwitch)));
-
-    if(navToggle&&nav){
-      navToggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");const current=localStorage.getItem("shake-o-mat-lang")||"hr";navToggle.setAttribute("aria-expanded",String(open));navToggle.setAttribute("aria-label",open?translations[current].navClose:translations[current].navOpen);});
-      nav.querySelectorAll("a").forEach((link)=>link.addEventListener("click",()=>{const current=localStorage.getItem("shake-o-mat-lang")||"hr";nav.classList.remove("is-open");navToggle.setAttribute("aria-expanded","false");navToggle.setAttribute("aria-label",translations[current].navOpen);}));
-    }
-
-    if("IntersectionObserver" in window){
-      const revealObserver=new IntersectionObserver((entries,observer)=>{entries.forEach((entry)=>{if(!entry.isIntersecting)return;entry.target.classList.add("is-visible");observer.unobserve(entry.target);});},{threshold:0.18,rootMargin:"0px 0px -40px 0px"});
-      revealTargets.forEach((target)=>revealObserver.observe(target));
-      const counterObserver=new IntersectionObserver((entries,observer)=>{entries.forEach((entry)=>{if(!entry.isIntersecting)return;const target=entry.target;const goal=Number(target.dataset.count);const decimals=Number.isInteger(goal)?0:1;const prefix=goal===1.5?"< ":"";const suffix=goal===30?"g":goal===1.5?"m2":"";const start=performance.now();const duration=1300;const tick=(now)=>{const progress=Math.min((now-start)/duration,1);const eased=1-Math.pow(1-progress,3);const value=goal*eased;target.textContent=prefix+value.toFixed(decimals)+suffix;if(progress<1){requestAnimationFrame(tick);}else{target.textContent=prefix+goal.toFixed(decimals)+suffix;}};requestAnimationFrame(tick);observer.unobserve(target);});},{threshold:0.6});
-      counters.forEach((counter)=>counterObserver.observe(counter));
-    }else{
-      revealTargets.forEach((target)=>target.classList.add("is-visible"));
-      counters.forEach((counter)=>{const goal=Number(counter.dataset.count);counter.textContent=goal===30?"30g":goal===1.5?"< 1.5m2":String(goal);});
-    }
-  </script>
 </body>
 </html>

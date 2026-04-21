@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shake-o-mat B2B — Pretvori izlaz iz teretane u prihod</title>
+<meta name="description" content="Shake-o-mat B2B za teretane u Hrvatskoj: bez investicije, 20–25% revenue share, branded experience, pasivni prihod.">
+<link rel="canonical" href="https://shakeomat.hr/b2b.html">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shakeomat.hr/b2b.html">
+<meta property="og:title" content="Shake-o-mat B2B — Pasivni prihod za teretane">
+<meta property="og:description" content="Bez investicije. 20–25% revenue share. Shake-o-mat partner program za gym vlasnike u Hrvatskoj.">
+<meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #050816;
+  --bg-surface: #0B1230;
+  --blue: #1BA2FF;
+  --cyan: #73EDFF;
+  --green: #7DFF9B;
+  --orange: #FF9B46;
+  --white: #F4F8FF;
+  --muted: #8AA0C8;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { color: var(--white); }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 8, 22, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(138, 160, 200, 0.12);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover { background: rgba(27, 162, 255, 0.12); color: var(--cyan); }
+
+@media (max-width: 560px) {
+  .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+  .nav-links a { padding: 8px 10px; font-size: 14px; }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  padding: 80px 0 90px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 70% at 15% 15%, rgba(27, 162, 255, 0.22), transparent 60%),
+    radial-gradient(ellipse 55% 55% at 90% 85%, rgba(115, 237, 255, 0.12), transparent 60%),
+    linear-gradient(180deg, #050816 0%, #0B1230 100%);
+}
+
+.hero h1 {
+  font-size: clamp(44px, 8vw, 96px);
+  color: var(--white);
+  margin-bottom: 24px;
+  max-width: 14ch;
+}
+
+.hero .subline {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--muted);
+  max-width: 640px;
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--bg);
+  box-shadow: 0 8px 30px rgba(125, 255, 155, 0.28);
+}
+.btn-primary:hover { transform: translateY(-2px); filter: brightness(1.05); color: var(--bg); }
+.btn-primary:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+
+/* ---------- SECTIONS ---------- */
+section { padding: 72px 0; }
+
+.section-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-head h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+/* ---------- VALUE CARDS ---------- */
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 720px) {
+  .value-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+
+.value-card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(138, 160, 200, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(27, 162, 255, 0.35);
+}
+
+.value-card .icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(27, 162, 255, 0.14);
+  color: var(--cyan);
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.value-card h3 {
+  font-size: 26px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* ---------- CALCULATOR ---------- */
+.calc-wrap {
+  background: var(--bg-surface);
+  border: 1px solid rgba(27, 162, 255, 0.22);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 720px) {
+  .calc-wrap { padding: 48px; }
+}
+
+.calc-wrap h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.calc-sub {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 36px;
+}
+
+.calc-inputs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+@media (min-width: 860px) {
+  .calc-inputs { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.input-block label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.input-block .value-pill {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  color: var(--cyan);
+  font-size: 22px;
+  background: rgba(27, 162, 255, 0.14);
+  padding: 2px 12px;
+  border-radius: 999px;
+  min-width: 52px;
+  text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  border-radius: 999px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 3px solid var(--bg);
+  box-shadow: 0 4px 14px rgba(125, 255, 155, 0.5);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 3px solid var(--bg);
+  box-shadow: 0 4px 14px rgba(125, 255, 155, 0.5);
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  color: var(--white);
+  background: rgba(5, 8, 22, 0.65);
+  border: 1px solid rgba(138, 160, 200, 0.3);
+  border-radius: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%2373EDFF' d='M7 8 0 0h14z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+
+select:focus, input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(115, 237, 255, 0.22);
+}
+
+.calc-output {
+  background: linear-gradient(135deg, rgba(125, 255, 155, 0.1), rgba(27, 162, 255, 0.08));
+  border: 1px solid rgba(125, 255, 155, 0.35);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+}
+
+.calc-output .headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 7vw, 64px);
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.calc-output .sub {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.calc-output .breakdown {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.calc-foot {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.tier-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(27,162,255,0.12);
+  border: 1px solid rgba(27,162,255,0.3);
+  color: var(--cyan);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.tier-badge.tier-10 { background: rgba(138,160,200,0.1); border-color: rgba(138,160,200,0.3); color: var(--muted); }
+.tier-badge.tier-20 { background: rgba(27,162,255,0.15); border-color: rgba(27,162,255,0.4); color: var(--blue); }
+.tier-badge.tier-25 { background: rgba(125,255,155,0.12); border-color: rgba(125,255,155,0.4); color: var(--green); }
+
+.calc-tier-explain {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ---------- SOCIAL PROOF ---------- */
+.proof {
+  padding: 48px 0;
+  text-align: center;
+  background: var(--bg-surface);
+}
+
+.proof .tag {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  padding: 16px 24px;
+  background: rgba(5, 8, 22, 0.7);
+  border: 1px solid rgba(138, 160, 200, 0.18);
+  border-radius: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/* ---------- FORM ---------- */
+.form-wrap {
+  background: var(--bg-surface);
+  border: 1px solid rgba(138, 160, 200, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (min-width: 720px) {
+  .form-wrap { padding: 44px; }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 620px) {
+  .form-grid { grid-template-columns: 1fr 1fr; }
+  .form-grid .full { grid-column: 1 / -1; }
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.field input, .field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  color: var(--white);
+  background: rgba(5, 8, 22, 0.65);
+  border: 1px solid rgba(138, 160, 200, 0.3);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.form-submit {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-foot {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-surface);
+  border: 1px solid rgba(138, 160, 200, 0.1);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.faq-toggle {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  padding: 20px 22px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-toggle:hover { color: var(--cyan); }
+
+.faq-toggle .icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(27, 162, 255, 0.15);
+  color: var(--cyan);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  transition: transform 0.25s ease, background 0.2s ease;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.faq-item[aria-expanded="true"] .icon {
+  background: var(--green);
+  color: var(--bg);
+  transform: rotate(180deg);
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.faq-item[aria-expanded="true"] .faq-body {
+  max-height: 300px;
+  padding: 0 22px 20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #03050E;
+  border-top: 1px solid rgba(138, 160, 200, 0.1);
+  padding: 48px 0 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 720px) {
+  .footer-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+}
+
+.footer-grid h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+
+.footer-grid p, .footer-grid a {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  display: block;
+}
+
+.footer-grid a:hover { color: var(--cyan); }
+
+.footer-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--green);
+  font-size: 18px;
+  margin-top: 8px;
+  letter-spacing: 0.04em;
+}
+
+.footer-legal {
+  border-top: 1px solid rgba(138, 160, 200, 0.08);
+  padding-top: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============== NAV ============== -->
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Shake-o-mat početna">
+      <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">
+    </a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="brand.html">Brand</a></li>
+        <li><a href="portal.html">Portal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="container">
+    <h1>Pretvori izlaz<br>iz teretane u<br>prihod.</h1>
+    <p class="subline">Bez investicije. Bez osoblja. Bez inventara. Samo pasivni prihod na svakom treningu.</p>
+    <a href="#calculator" class="btn btn-primary">Izračunaj prihod &darr;</a>
+  </div>
+</section>
+
+<!-- ============== VALUE PROPS ============== -->
+<section aria-labelledby="value-head">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="value-head">Zašto <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">?</h2>
+      <p>Sve je dizajnirano tako da teretana samo zaradi — bez dodatnog posla.</p>
+    </div>
+
+    <div class="value-grid">
+      <article class="value-card">
+        <span class="icon" aria-hidden="true">&euro;0</span>
+        <h3>&euro;0 investicije</h3>
+        <p><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> plaća sve troškove instalacije i opreme.</p>
+      </article>
+
+      <article class="value-card">
+        <span class="icon" aria-hidden="true">%</span>
+        <h3>10&ndash;30% revenue share</h3>
+        <p>Vi&scaron;e shake-ova = vi&scaron;i postotak. Automatski, bez pregovaranja.</p>
+      </article>
+
+      <article class="value-card">
+        <span class="icon" aria-hidden="true">B</span>
+        <h3>Branded experience</h3>
+        <p>Aparat i &ccaron;a&scaron;e nose branding tvoje teretane.</p>
+      </article>
+
+      <article class="value-card">
+        <span class="icon" aria-hidden="true">&diams;</span>
+        <h3>Podaci u&zcaron;ivo</h3>
+        <p>Pristup dashboardu s transakcijama, prihod, ukusima.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CALCULATOR ============== -->
+<section id="calculator" aria-labelledby="calc-head">
+  <div class="container">
+    <div class="calc-wrap">
+      <h2 id="calc-head">Izra&ccaron;unaj svoj potencijal</h2>
+      <p class="calc-sub">Pomakni klizače i vidi procjenu prihoda u realnom vremenu.</p>
+
+      <div class="calc-inputs">
+        <div class="input-block">
+          <label for="members">
+            Broj &ccaron;lanova teretane
+            <span class="value-pill" id="membersOut">500</span>
+          </label>
+          <input type="range" id="members" name="members" min="100" max="5000" step="50" value="500">
+        </div>
+
+        <div class="input-block">
+          <label for="visits">
+            Prosje&ccaron;na posjeta tjedno po &ccaron;lanu
+            <span class="value-pill" id="visitsOut">3</span>
+          </label>
+          <input type="range" id="visits" name="visits" min="2" max="5" step="1" value="3">
+        </div>
+
+        <div class="input-block" style="display:flex;flex-direction:column;justify-content:flex-end;">
+          <label style="margin-bottom:16px;cursor:pointer;gap:12px;align-items:center;" for="maintains">
+            <input type="checkbox" id="maintains" name="maintains" style="width:20px;height:20px;accent-color:var(--green);cursor:pointer;flex-shrink:0;">
+            Teretana sama puni i &ccaron;isti aparat (+5%)
+          </label>
+          <div class="tier-badge" id="tierBadge">—</div>
+        </div>
+      </div>
+
+      <div class="calc-output" role="status" aria-live="polite">
+        <div class="headline">
+          Va&scaron;a procjena: &euro;<span id="monthly">0</span>/mj
+        </div>
+        <div class="breakdown" id="calcBreakdown">
+          &euro;<span id="weekly">0</span>/tjedno &middot; &euro;<span id="yearly">0</span>/godi&scaron;nje
+        </div>
+        <div class="calc-tier-explain" id="tierExplain"></div>
+      </div>
+      <p class="calc-foot">Revenue share se odre&dj;uje automatski prema volumenu prodaje — vi&scaron;e shake-ova = vi&scaron;i postotak.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SOCIAL PROOF ============== -->
+<section class="proof" aria-label="Pilot partneri">
+  <div class="container">
+    <p class="tag">Pilot partneri od lipnja 2026</p>
+    <div class="logo-row">
+      <div class="logo-box">Gyms4you</div>
+      <div class="logo-box">THE Fitness</div>
+      <div class="logo-box">HOB</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== APPLICATION FORM ============== -->
+<section aria-labelledby="form-head">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="form-head">Prijavi svoju teretanu</h2>
+      <p>Kratka prijava &mdash; javimo se s konkretnim brojkama za tvoju lokaciju.</p>
+    </div>
+
+    <div class="form-wrap">
+      <form action="https://formsubmit.co/info@shakeomat.hr" method="POST" novalidate>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nova B2B prijava — Shake-o-mat">
+        <input type="hidden" name="_autoresponse" value="Hvala na prijavi! Javimo se u roku 24 sata. — Shake-o-mat tim">
+        <input type="hidden" name="_next" value="https://shakeomat.hr/b2b.html#thanks">
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="gym-name">Naziv teretane</label>
+            <input type="text" id="gym-name" name="Naziv teretane" required autocomplete="organization">
+          </div>
+
+          <div class="field">
+            <label for="contact-name">Ime kontakta</label>
+            <input type="text" id="contact-name" name="Ime kontakta" required autocomplete="name">
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="members-count">Broj &ccaron;lanova</label>
+            <input type="number" id="members-count" name="Broj članova" min="0" required>
+          </div>
+
+          <div class="field full">
+            <label for="locations">Broj lokacija</label>
+            <input type="number" id="locations" name="Broj lokacija" min="1" required>
+          </div>
+
+          <div class="field full">
+            <label for="message">Poruka</label>
+            <textarea id="message" name="Poruka" required placeholder="Recite nam ne&scaron;to o svojoj teretani..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Po&scaron;alji prijavu</button>
+        </div>
+        <p class="form-foot">Javimo se u roku 24 sata.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section aria-labelledby="faq-head">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="faq-head">&Ccaron;esta pitanja</h2>
+      <p>Sve &scaron;to vlasnici teretana pitaju prije nego krenemo.</p>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-toggle" aria-expanded="false" aria-controls="faq-1">
+          <span>Tko pla&cacute;a instalaciju?</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-1" role="region">
+          <p><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">. Bez tro&scaron;kova za teretanu.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-toggle" aria-expanded="false" aria-controls="faq-2">
+          <span>Koliko prostora treba aparat?</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-2" role="region">
+          <p>60&times;80cm tlocrt, 190cm visine, struja 220V.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-toggle" aria-expanded="false" aria-controls="faq-3">
+          <span>Kako se aparat puni?</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-3" role="region">
+          <p>Servis od strane <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> tima. Bez anga&zcaron;mana teretane.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-toggle" aria-expanded="false" aria-controls="faq-4">
+          <span>Mo&zcaron;e li biti brandiran brendom moje teretane?</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-4" role="region">
+          <p>Da, potpuno. Custom &ccaron;a&scaron;e, vinyl wrap aparata, co-branded signage.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-toggle" aria-expanded="false" aria-controls="faq-5">
+          <span>&Scaron;to ako aparat ne radi?</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-5" role="region">
+          <p>SLA 24h servis. Garantirani odgovor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">
+          <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">
+        </a>
+        <p class="footer-tag">Recover. Instantly.</p>
+      </div>
+
+      <div>
+        <h4>Navigacija</h4>
+        <a href="index.html">Po&ccaron;etna</a>
+        <a href="brand.html">Brand</a>
+        <a href="b2b.html">B2B</a>
+        <a href="portal.html">Portal</a>
+      </div>
+
+      <div>
+        <h4>Dru&scaron;tveno</h4>
+        <a href="https://instagram.com/shakeomat" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@shakeomat" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://linkedin.com/company/shakeomat" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:info@shakeomat.hr">info@shakeomat.hr</a>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      &copy; 2026 <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &middot; Zagreb &middot; info@shakeomat.hr
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ---------- REVENUE CALCULATOR ----------
+  var membersEl   = document.getElementById('members');
+  var visitsEl    = document.getElementById('visits');
+  var maintainsEl = document.getElementById('maintains');
+  var membersOut  = document.getElementById('membersOut');
+  var visitsOut   = document.getElementById('visitsOut');
+  var monthlyOut  = document.getElementById('monthly');
+  var weeklyOut   = document.getElementById('weekly');
+  var yearlyOut   = document.getElementById('yearly');
+  var tierBadge   = document.getElementById('tierBadge');
+  var tierExplain = document.getElementById('tierExplain');
+
+  var AVG_PRICE = 4.75;
+  var CONVERSION = 0.07;
+
+  // Tier thresholds (shakes/day average)
+  // 0-29 → 10%, 30-89 → 20%, 90+ → 25%, +5% if maintains
+  function getTier(shakesPerDay, maintains) {
+    var base = shakesPerDay < 30 ? 10 : (shakesPerDay < 90 ? 20 : 25);
+    return maintains ? base + 5 : base;
+  }
+
+  function fmt(n) { return Math.round(n).toLocaleString('hr-HR'); }
+
+  function recalc() {
+    var members   = parseInt(membersEl.value, 10) || 0;
+    var visits    = parseInt(visitsEl.value, 10) || 0;
+    var maintains = maintainsEl ? maintainsEl.checked : false;
+
+    membersOut.textContent = members.toLocaleString('hr-HR');
+    visitsOut.textContent  = visits;
+
+    // Shakes per day = members * weekly_visits * conversion / 7 days
+    var shakesPerDay = members * visits * CONVERSION / 7;
+    var tier = getTier(shakesPerDay, maintains);
+
+    // Revenue for gym
+    var weeklyGym  = members * visits * CONVERSION * AVG_PRICE * (tier / 100);
+    var monthlyGym = weeklyGym * 4.33;
+    var yearlyGym  = weeklyGym * 52;
+
+    weeklyOut.textContent  = fmt(weeklyGym);
+    monthlyOut.textContent = fmt(monthlyGym);
+    yearlyOut.textContent  = fmt(yearlyGym);
+
+    // Tier badge
+    var tierClass = tier <= 15 ? 'tier-10' : (tier <= 25 ? 'tier-20' : 'tier-25');
+    tierBadge.className = 'tier-badge ' + tierClass;
+    tierBadge.textContent = 'Va&scaron; udio: ' + tier + '%';
+    tierBadge.innerHTML = 'Va&scaron; udio: <strong>' + tier + '%</strong>';
+
+    // Explain text
+    var shakesRound = Math.round(shakesPerDay);
+    var nextTier = '';
+    if (shakesPerDay < 30) {
+      nextTier = ' Za 20% trebate prosje&ccaron;no 30+ shake-ova/dan.';
+    } else if (shakesPerDay < 90) {
+      nextTier = ' Za 25% trebate prosje&ccaron;no 90+ shake-ova/dan.';
+    }
+    tierExplain.innerHTML = 'Procjena: ~' + shakesRound + ' shake-ova/dan.' + nextTier;
+  }
+
+  if (membersEl && visitsEl) {
+    membersEl.addEventListener('input', recalc);
+    visitsEl.addEventListener('input', recalc);
+    if (maintainsEl) maintainsEl.addEventListener('change', recalc);
+    shareEl.addEventListener('change', recalc);
+    recalc();
+  }
+
+  // ---------- FAQ ACCORDION ----------
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item) {
+    var btn = item.querySelector('.faq-toggle');
+    var icon = btn.querySelector('.icon');
+    btn.addEventListener('click', function() {
+      var expanded = item.getAttribute('aria-expanded') === 'true';
+      // Close others (single-open behavior)
+      faqItems.forEach(function(other) {
+        if (other !== item) {
+          other.setAttribute('aria-expanded', 'false');
+          var b = other.querySelector('.faq-toggle');
+          var i = b.querySelector('.icon');
+          if (b) b.setAttribute('aria-expanded', 'false');
+          if (i) i.textContent = '+';
+        }
+      });
+      var next = !expanded;
+      item.setAttribute('aria-expanded', next ? 'true' : 'false');
+      btn.setAttribute('aria-expanded', next ? 'true' : 'false');
+      if (icon) icon.textContent = next ? '\u2212' : '+';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
