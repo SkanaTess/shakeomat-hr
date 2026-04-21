@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shake-o-mat B2B — Pretvori izlaz iz teretane u prihod</title>
-<meta name="description" content="Shake-o-mat B2B za teretane u Hrvatskoj: bez investicije, 20–25% revenue share, branded experience, pasivni prihod.">
+<meta name="description" content="Shake-o-mat B2B za teretane u Hrvatskoj: bez investicije, 20–25% revenue share, pasivni prihod bez angažmana osoblja.">
 <link rel="canonical" href="https://shakeomat.hr/b2b.html">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <meta property="og:type" content="website">
@@ -716,8 +716,8 @@ footer {
 
       <article class="value-card">
         <span class="icon" aria-hidden="true">B</span>
-        <h3>Branded experience</h3>
-        <p>Aparat i &ccaron;a&scaron;e nose branding tvoje teretane.</p>
+        <h3>Pristup podacima uživo</h3>
+        <p>Dashboard s prihodom, transakcijama i najpopularnijim okusima &mdash; uvijek dostupan.</p>
       </article>
 
       <article class="value-card">
@@ -885,11 +885,11 @@ footer {
 
       <div class="faq-item" aria-expanded="false">
         <button class="faq-toggle" aria-expanded="false" aria-controls="faq-4">
-          <span>Mo&zcaron;e li biti brandiran brendom moje teretane?</span>
+          <span>&Ccaron;ime su brendirani aparat i &ccaron;a&scaron;e?</span>
           <span class="icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-body" id="faq-4" role="region">
-          <p>Da, potpuno. Custom &ccaron;a&scaron;e, vinyl wrap aparata, co-branded signage.</p>
+          <p>Shake-o-mat brendom. Mi gradimo prepoznatljiv brand koji podiže vrijednost tvog objekta &mdash; ne obrnuto. Tvoji članovi prepoznaju brand i vraćaju se zbog njega.</p>
         </div>
       </div>
 
@@ -958,7 +958,7 @@ footer {
   var tierBadge   = document.getElementById('tierBadge');
   var tierExplain = document.getElementById('tierExplain');
 
-  var AVG_PRICE = 4.75;
+  var AVG_PRICE = 4.00;
   var CONVERSION = 0.07;
 
   // Tier thresholds (shakes/day average)
@@ -1012,7 +1012,6 @@ footer {
     membersEl.addEventListener('input', recalc);
     visitsEl.addEventListener('input', recalc);
     if (maintainsEl) maintainsEl.addEventListener('change', recalc);
-    shareEl.addEventListener('change', recalc);
     recalc();
   }
 

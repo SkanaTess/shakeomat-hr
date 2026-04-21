@@ -931,28 +931,28 @@
           <div class="sku-title">LEAN</div>
           <div>
             <div class="sku-desc">Whey isolat · 25g proteina · 16 oz · manje kalorija</div>
-            <div class="sku-price">od €4.50</div>
+            <div class="sku-price">od €3.50</div>
           </div>
         </div>
         <div class="sku-card build" data-goal="BUILD" onclick="selectGoal('BUILD')">
           <div class="sku-title">BUILD</div>
           <div>
             <div class="sku-desc">Whey + kreatin · 35g proteina · 16 oz · masa</div>
-            <div class="sku-price">od €4.90</div>
+            <div class="sku-price">od €4.00</div>
           </div>
         </div>
         <div class="sku-card recover" data-goal="RECOVER" onclick="selectGoal('RECOVER')">
           <div class="sku-title">RECOVER</div>
           <div>
             <div class="sku-desc">Whey + kolagen · oporavak · 16 oz · regeneracija</div>
-            <div class="sku-price">od €5.20</div>
+            <div class="sku-price">od €4.50</div>
           </div>
         </div>
         <div class="sku-card boost" data-goal="BOOST" onclick="selectGoal('BOOST')">
           <div class="sku-title">BOOST</div>
           <div>
             <div class="sku-desc">Whey + BCAA · za učinak · 16 oz · anti-katabolizam</div>
-            <div class="sku-price">od €4.90</div>
+            <div class="sku-price">od €4.00</div>
           </div>
         </div>
       </div>
@@ -1023,7 +1023,7 @@
     <section class="screen" id="screen-3">
       <div class="pay-header">
         <h2 class="screen-headline">Plaćanje</h2>
-        <span class="pay-sku">BUILD · €4.90</span>
+        <span class="pay-sku">BUILD · €4.00</span>
       </div>
       <div class="pay-body">
         <div class="tap-zone">Prisloni karticu<br>/ mobitel</div>
@@ -1085,7 +1085,7 @@
   // ---------- Order state ----------
   const order = { goal: 'BUILD', flavor: 'Čokolada', boost: null };
 
-  const BASE_PRICES = { LEAN: 4.50, BUILD: 4.90, RECOVER: 5.20, BOOST: 4.90 };
+  const BASE_PRICES = { LEAN: 3.50, BUILD: 4.00, RECOVER: 4.50, BOOST: 4.00 };
 
   function orderPrice() {
     return (BASE_PRICES[order.goal] + (order.boost ? 0.50 : 0)).toFixed(2);
