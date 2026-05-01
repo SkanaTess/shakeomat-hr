@@ -39,6 +39,7 @@
     --cyan: #73EDFF;
     --green: #7DFF9B;
     --orange: #FF9B46;
+    --pink: #FF6FB5;
     --white: #F4F8FF;
     --muted: #8AA0C8;
   }
@@ -481,7 +482,7 @@
   }
   .goal-pill.lean { color: var(--cyan); border-color: var(--cyan); }
   .goal-pill.build { color: var(--green); border-color: var(--green); }
-  .goal-pill.recover { color: var(--orange); border-color: var(--orange); }
+  .goal-pill.recover { color: var(--pink); border-color: var(--pink); }
   .goal-pill.boost { color: #C882FF; border-color: #C882FF; }
 
   /* Step 3 stopwatch */
@@ -563,7 +564,7 @@
 
   .sku-card.lean::before { background: var(--cyan); }
   .sku-card.build::before { background: var(--green); }
-  .sku-card.recover::before { background: var(--orange); }
+  .sku-card.recover::before { background: var(--pink); }
   .sku-card.boost::before { background: #C882FF; }
 
   .sku-name {
@@ -574,7 +575,7 @@
 
   .sku-card.lean .sku-name { color: var(--cyan); }
   .sku-card.build .sku-name { color: var(--green); }
-  .sku-card.recover .sku-name { color: var(--orange); }
+  .sku-card.recover .sku-name { color: var(--pink); }
   .sku-card.boost .sku-name { color: #C882FF; }
 
   .sku-macro {
@@ -608,7 +609,7 @@
 
   .sku-card.lean .sku-price { color: var(--cyan); border-color: var(--cyan); }
   .sku-card.build .sku-price { color: var(--green); border-color: var(--green); }
-  .sku-card.recover .sku-price { color: var(--orange); border-color: var(--orange); }
+  .sku-card.recover .sku-price { color: var(--pink); border-color: var(--pink); }
   .sku-card.boost .sku-price { color: #C882FF; border-color: #C882FF; }
 
   /* ============ STATS / PROOF ============ */
@@ -1073,8 +1074,8 @@
           <div class="goal-pills" aria-hidden="true">
             <span class="goal-pill lean">LEAN</span>
             <span class="goal-pill build">BUILD</span>
-            <span class="goal-pill recover">RECOVER</span>
             <span class="goal-pill boost">BOOST</span>
+            <span class="goal-pill recover">RECOVER</span>
           </div>
         </div>
         <h3 class="step-title">Odaberi cilj</h3>
@@ -1112,18 +1113,18 @@
         <span class="sku-price">€4.00</span>
       </article>
 
-      <article class="sku-card recover">
-        <h3 class="sku-name">Recover</h3>
-        <p class="sku-macro">Whey + kolagen · 16 oz · regeneracija</p>
-        <p class="sku-ingredient">Oporavak i regeneracija odmah nakon teškog treninga. Za dane kad si dao sve.</p>
-        <span class="sku-price">€4.50</span>
-      </article>
-
       <article class="sku-card boost">
         <h3 class="sku-name">Boost</h3>
         <p class="sku-macro">Whey + BCAA · 16 oz · za učinak</p>
         <p class="sku-ingredient">Aminokiseline koje mišić traži upravo sada. Za duge treninge i teške serije.</p>
         <span class="sku-price">€4.00</span>
+      </article>
+
+      <article class="sku-card recover">
+        <h3 class="sku-name">Recover</h3>
+        <p class="sku-macro">Whey + kolagen · 16 oz · regeneracija</p>
+        <p class="sku-ingredient">Oporavak i regeneracija odmah nakon teškog treninga. Za dane kad si dao sve.</p>
+        <span class="sku-price">€4.50</span>
       </article>
     </div>
   </div>
