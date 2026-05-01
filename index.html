@@ -924,30 +924,44 @@
     line-height: 1.5;
   }
 
-  /* ============ CUP GALLERY ============ */
-  .cup-gallery {
+  /* ============ CUP GALLERY (2 variants) ============ */
+  .cup-gallery-2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  @media (min-width: 760px) {
-    .cup-gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (min-width: 540px) {
+    .cup-gallery-2 { grid-template-columns: 1fr 1fr; gap: 20px; }
   }
-  @media (min-width: 1100px) {
-    .cup-gallery { grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .cup-gallery-2 figure {
+    margin: 0;
+    background: var(--bg-surface);
+    border: 1px solid rgba(115, 237, 255, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
   }
-  .cup-gallery img {
+  .cup-gallery-2 figure:hover {
+    transform: translateY(-4px);
+    border-color: rgba(125, 255, 155, 0.4);
+  }
+  .cup-gallery-2 img {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid rgba(115, 237, 255, 0.1);
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: block;
   }
-  .cup-gallery img:hover {
-    transform: scale(1.04);
-    border-color: rgba(125, 255, 155, 0.4);
+  .cup-gallery-2 figcaption {
+    padding: 12px 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 0.95rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: center;
+    border-top: 1px solid rgba(115, 237, 255, 0.08);
   }
 
   /* ============ WAITLIST ============ */
@@ -1346,12 +1360,12 @@
 
     <div class="machine-grid">
       <figure class="machine-card">
-        <img src="machine-real.jpg" alt="JK91 — pravi protein vending aparat, već testiran na sajmu" loading="lazy" width="624" height="1600">
-        <figcaption>JK91 — pravi aparat, već testiran u Kini.<br><span>9 spremnika · auto cup · auto lid · independent blending · high-pressure heat clean</span></figcaption>
+        <img src="machine-detail.jpg" alt="Shake-o-mat aparat — detalj touchscreena i cyan LED accenta" loading="lazy" width="1000" height="666">
+        <figcaption>Touchscreen + auto-dispenser.<br><span>9 spremnika · auto cup · auto lid · independent blending · high-pressure heat clean</span></figcaption>
       </figure>
       <figure class="machine-card">
         <img src="machine-product.jpg" alt="Shake-o-mat aparat u premium teretani" loading="lazy" width="1000" height="666">
-        <figcaption>Stiže u Zagreb · lipanj 2026.<br><span>Cyan LED accent · touchscreen ekran · ugradnja bez investicije teretane</span></figcaption>
+        <figcaption>Stiže u Zagreb · lipanj 2026.<br><span>Cyan LED accent · ugradnja bez investicije teretane · 60×80 cm tlocrt, 190 cm visina</span></figcaption>
       </figure>
     </div>
   </div>
@@ -1407,11 +1421,11 @@
 
     <div class="custom-grid">
       <div class="custom-text">
-        <h2 class="custom-heading" id="cup-heading">10 različitih poruka. Uvijek iznenađenje.</h2>
-        <p class="custom-body">Svaka čaša nosi drugu motivacijsku poruku &mdash; nikad ne znaš koju ćeš dobiti. To je mali razlog više da se vratiš.</p>
+        <h2 class="custom-heading" id="cup-heading">Dvije poruke. Svaki shake je odluka.</h2>
+        <p class="custom-body">Za prvi val biramo dvije čaše &mdash; jedna za <strong>oporavak</strong>, jedna za <strong>identitet</strong>. Više verzija stiže s rastom.</p>
         <ul class="custom-list">
-          <li>10 rotacijskih poruka na čašama</li>
-          <li>Svaka ciljana na različiti emocionalni okidač</li>
+          <li>RECOVER — &laquo;Tijelo pamti svaki trening. I svaki oporavak.&raquo;</li>
+          <li>BRAND — &laquo;Zaslužio/la si. Zna se.&raquo;</li>
           <li>Shake-o-mat brand na svakom koraku</li>
           <li>Svježe miješano — nije s police, nije od jučer</li>
           <li>Spreman za 30 sekundi, na izlazu tvoje teretane</li>
@@ -1420,17 +1434,15 @@
       </div>
 
       <div class="custom-visual">
-        <div class="cup-gallery" aria-label="10 motivacijskih čaša">
-          <img src="cup_01.jpg" alt="RECOVER — Upravo si dao sve. Sad daj tijelu što treba." loading="lazy">
-          <img src="cup_02.jpg" alt="BUILD — Svaki gram se zbraja. Svaki rep. Svaki shake." loading="lazy">
-          <img src="cup_03.jpg" alt="LEAN — Definicija nije sport. Odluka je." loading="lazy">
-          <img src="cup_04.jpg" alt="BUILD — Mišić se gradi 24 sata. Ti si počeo sat 1." loading="lazy">
-          <img src="cup_05.jpg" alt="RECOVER — Tijelo pamti svaki trening. I svaki oporavak." loading="lazy">
-          <img src="cup_06.jpg" alt="BRAND — 30 sekundi. Toliko treba tvom tijelu da te čuje." loading="lazy">
-          <img src="cup_07.jpg" alt="BOOST — Aminokiseline koje mišić traži upravo sada." loading="lazy">
-          <img src="cup_08.jpg" alt="BRAND — Sad je sljedeći put." loading="lazy">
-          <img src="cup_09.jpg" alt="BRAND — Svježe miješano. Kao i ti — svaki dan iznova." loading="lazy">
-          <img src="cup_10.jpg" alt="BRAND — Zaslužio/la si. Zna se." loading="lazy">
+        <div class="cup-gallery cup-gallery-2" aria-label="2 verzije čaše za prvi val">
+          <figure>
+            <img src="cup_05.jpg" alt="RECOVER — Tijelo pamti svaki trening. I svaki oporavak." loading="lazy">
+            <figcaption>RECOVER &middot; nakon teškog treninga</figcaption>
+          </figure>
+          <figure>
+            <img src="cup_10.jpg" alt="BRAND — Zaslužio/la si. Zna se." loading="lazy">
+            <figcaption>BRAND &middot; svaki dan, svaki cilj</figcaption>
+          </figure>
         </div>
       </div>
     </div>
