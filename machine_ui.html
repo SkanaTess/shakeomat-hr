@@ -27,6 +27,7 @@
     --cyan: #73EDFF;
     --green: #7DFF9B;
     --orange: #FF9B46;
+    --pink: #FF6FB5;
     --white: #F4F8FF;
     --muted: #8AA0C8;
   }
@@ -417,7 +418,7 @@
     color: var(--white);
   }
 
-  .boost-card.collagen .boost-name { color: var(--orange); }
+  .boost-card.collagen .boost-name { color: var(--pink); }
   .boost-card.bcaa .boost-name     { color: var(--cyan); }
   .boost-card.none .boost-name     { color: var(--muted); font-size: clamp(20px, 2.5vw, 40px); }
 
@@ -474,7 +475,7 @@
   }
 
   .sku-card.recover {
-    background: linear-gradient(160deg, rgba(255, 155, 70, 0.3), rgba(11, 18, 48, 0.9));
+    background: linear-gradient(160deg, rgba(255, 111, 181, 0.3), rgba(11, 18, 48, 0.9));
   }
 
   .sku-card.boost {
@@ -491,7 +492,7 @@
 
   .sku-card.lean .sku-title { color: var(--cyan); }
   .sku-card.build .sku-title { color: var(--green); }
-  .sku-card.recover .sku-title { color: var(--orange); }
+  .sku-card.recover .sku-title { color: var(--pink); }
   .sku-card.boost .sku-title { color: #C882FF; }
 
   .sku-desc {
@@ -893,7 +894,7 @@
 <body>
 
   <header class="page-header">
-    <h1 class="page-title"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> <span>—</span> Machine UI Simulation</h1>
+    <h1 class="page-title">Shake-o-mat <span>—</span> Machine UI Simulation</h1>
     <div class="explain-note">Klikni tabove za navigaciju. Auto-cycle omogućen.</div>
     <nav class="nav-bar" id="navBar">
       <button class="tab-btn active" data-screen="1">Screen 1 · Attract</button>
@@ -941,18 +942,18 @@
             <div class="sku-price">od €4.00</div>
           </div>
         </div>
-        <div class="sku-card recover" data-goal="RECOVER" onclick="selectGoal('RECOVER')">
-          <div class="sku-title">RECOVER</div>
-          <div>
-            <div class="sku-desc">Whey + kolagen · oporavak · 16 oz · regeneracija</div>
-            <div class="sku-price">od €4.50</div>
-          </div>
-        </div>
         <div class="sku-card boost" data-goal="BOOST" onclick="selectGoal('BOOST')">
           <div class="sku-title">BOOST</div>
           <div>
             <div class="sku-desc">Whey + BCAA · za učinak · 16 oz · anti-katabolizam</div>
             <div class="sku-price">od €4.00</div>
+          </div>
+        </div>
+        <div class="sku-card recover" data-goal="RECOVER" onclick="selectGoal('RECOVER')">
+          <div class="sku-title">RECOVER</div>
+          <div>
+            <div class="sku-desc">Whey + kolagen · oporavak · 16 oz · regeneracija</div>
+            <div class="sku-price">od €4.50</div>
           </div>
         </div>
       </div>

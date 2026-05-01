@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shake-o-mat B2B — Pretvori izlaz iz teretane u prihod</title>
-<meta name="description" content="Shake-o-mat B2B za teretane u Hrvatskoj: bez investicije, 20–25% revenue share, pasivni prihod bez angažmana osoblja.">
+<meta name="description" content="Shake-o-mat B2B za teretane u Hrvatskoj: bez investicije, do 30% revenue share na neto cijenu, pasivni prihod bez angažmana osoblja.">
 <link rel="canonical" href="https://shakeomat.hr/b2b.html">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shakeomat.hr/b2b.html">
 <meta property="og:title" content="Shake-o-mat B2B — Pasivni prihod za teretane">
-<meta property="og:description" content="Bez investicije. 20–25% revenue share. Shake-o-mat partner program za gym vlasnike u Hrvatskoj.">
+<meta property="og:description" content="Bez investicije. Do 30% revenue share na neto cijenu. Shake-o-mat partner program za gym vlasnike u Hrvatskoj.">
 <meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
 
 <!-- Google Analytics 4 -->
@@ -696,7 +696,7 @@ footer {
 <section aria-labelledby="value-head">
   <div class="container">
     <div class="section-head">
-      <h2 id="value-head">Zašto <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">?</h2>
+      <h2 id="value-head">Zašto Shake-o-mat?</h2>
       <p>Sve je dizajnirano tako da teretana samo zaradi — bez dodatnog posla.</p>
     </div>
 
@@ -704,25 +704,25 @@ footer {
       <article class="value-card">
         <span class="icon" aria-hidden="true">&euro;0</span>
         <h3>&euro;0 investicije</h3>
-        <p><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> plaća sve troškove instalacije i opreme.</p>
+        <p>Shake-o-mat plaća sve troškove instalacije i opreme.</p>
       </article>
 
       <article class="value-card">
         <span class="icon" aria-hidden="true">%</span>
-        <h3>10&ndash;30% revenue share</h3>
-        <p>Vi&scaron;e shake-ova = vi&scaron;i postotak. Automatski, bez pregovaranja.</p>
+        <h3>20&ndash;30% revenue share</h3>
+        <p>Postotak na neto cijenu (MPC bez PDV-a). 20% do 50 shake-ova/dan, 25% iznad. +5% ako vi sami punite aparat.</p>
       </article>
 
       <article class="value-card">
-        <span class="icon" aria-hidden="true">B</span>
-        <h3>Pristup podacima uživo</h3>
+        <span class="icon" aria-hidden="true">&#9881;</span>
+        <h3>Bez angažmana osoblja</h3>
+        <p>Naš tim puni i čisti aparat. Vaše osoblje ne dira ništa &mdash; osim ako ne želite +5% udjela.</p>
+      </article>
+
+      <article class="value-card">
+        <span class="icon" aria-hidden="true">&#9201;</span>
+        <h3>Podaci uživo</h3>
         <p>Dashboard s prihodom, transakcijama i najpopularnijim okusima &mdash; uvijek dostupan.</p>
-      </article>
-
-      <article class="value-card">
-        <span class="icon" aria-hidden="true">&diams;</span>
-        <h3>Podaci u&zcaron;ivo</h3>
-        <p>Pristup dashboardu s transakcijama, prihod, ukusima.</p>
       </article>
     </div>
   </div>
@@ -770,7 +770,7 @@ footer {
         </div>
         <div class="calc-tier-explain" id="tierExplain"></div>
       </div>
-      <p class="calc-foot">Revenue share se odre&dj;uje automatski prema volumenu prodaje — vi&scaron;e shake-ova = vi&scaron;i postotak.</p>
+      <p class="calc-foot">Revenue share se obra&ccaron;unava na neto cijenu shake-a (MPC bez PDV-a). 20% do 50 shake-ova dnevno, 25% iznad. Dodatnih +5% ako vi sami punite i &ccaron;istite aparat.</p>
     </div>
   </div>
 </section>
@@ -858,7 +858,7 @@ footer {
           <span class="icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-body" id="faq-1" role="region">
-          <p><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;">. Bez tro&scaron;kova za teretanu.</p>
+          <p>Shake-o-mat. Bez tro&scaron;kova za teretanu.</p>
         </div>
       </div>
 
@@ -878,7 +878,7 @@ footer {
           <span class="icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-body" id="faq-3" role="region">
-          <p>Servis od strane <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> tima. Bez anga&zcaron;mana teretane.</p>
+          <p>Servis od strane Shake-o-mat tima. Bez anga&zcaron;mana teretane.</p>
         </div>
       </div>
 
@@ -935,7 +935,7 @@ footer {
     </div>
 
     <div class="footer-legal">
-      &copy; 2026 <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> &middot; Zagreb &middot; info@shakeomat.hr
+      &copy; 2026 Shake-o-mat &middot; Zagreb &middot; info@shakeomat.hr
     </div>
   </div>
 </footer>
@@ -957,12 +957,14 @@ footer {
   var tierExplain = document.getElementById('tierExplain');
 
   var AVG_PRICE = 4.00;
+  var VAT_RATE = 0.25; // PDV 25%
+  var NET_PRICE = AVG_PRICE / (1 + VAT_RATE); // neto cijena (MPC - PDV)
   var CONVERSION = 0.07;
 
-  // Tier thresholds (shakes/day average)
-  // 0-29 → 10%, 30-89 → 20%, 90+ → 25%, +5% if maintains
+  // Tier thresholds (shakes/day average) — NEW MODEL (2026-04-28)
+  // ≤50/dan → 20% NA NETO, >50/dan → 25% NA NETO, +5% ako gym sam puni
   function getTier(shakesPerDay, maintains) {
-    var base = shakesPerDay < 30 ? 10 : (shakesPerDay < 90 ? 20 : 25);
+    var base = shakesPerDay <= 50 ? 20 : 25;
     return maintains ? base + 5 : base;
   }
 
@@ -980,8 +982,8 @@ footer {
     var shakesPerDay = members * visits * CONVERSION / 7;
     var tier = getTier(shakesPerDay, maintains);
 
-    // Revenue for gym
-    var weeklyGym  = members * visits * CONVERSION * AVG_PRICE * (tier / 100);
+    // Revenue for gym — postotak NA NETO (MPC bez PDV-a)
+    var weeklyGym  = members * visits * CONVERSION * NET_PRICE * (tier / 100);
     var monthlyGym = weeklyGym * 4.33;
     var yearlyGym  = weeklyGym * 52;
 
@@ -990,20 +992,17 @@ footer {
     yearlyOut.textContent  = fmt(yearlyGym);
 
     // Tier badge
-    var tierClass = tier <= 15 ? 'tier-10' : (tier <= 25 ? 'tier-20' : 'tier-25');
+    var tierClass = tier <= 20 ? 'tier-20' : 'tier-25';
     tierBadge.className = 'tier-badge ' + tierClass;
-    tierBadge.textContent = 'Va&scaron; udio: ' + tier + '%';
-    tierBadge.innerHTML = 'Va&scaron; udio: <strong>' + tier + '%</strong>';
+    tierBadge.innerHTML = 'Vaš udio: <strong>' + tier + '%</strong> na neto cijenu';
 
     // Explain text
     var shakesRound = Math.round(shakesPerDay);
     var nextTier = '';
-    if (shakesPerDay < 30) {
-      nextTier = ' Za 20% trebate prosje&ccaron;no 30+ shake-ova/dan.';
-    } else if (shakesPerDay < 90) {
-      nextTier = ' Za 25% trebate prosje&ccaron;no 90+ shake-ova/dan.';
+    if (shakesPerDay <= 50) {
+      nextTier = ' Za 25% udio trebate prosječno 50+ shake-ova/dan.';
     }
-    tierExplain.innerHTML = 'Procjena: ~' + shakesRound + ' shake-ova/dan.' + nextTier;
+    tierExplain.innerHTML = 'Procjena: ~' + shakesRound + ' shake-ova/dan. (Postotak ide na neto cijenu = MPC bez PDV-a.)' + nextTier;
   }
 
   if (membersEl && visitsEl) {

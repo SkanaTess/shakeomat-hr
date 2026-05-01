@@ -28,6 +28,7 @@
     --cyan: #73EDFF;
     --green: #7DFF9B;
     --orange: #FF9B46;
+    --pink: #FF6FB5;
     --white: #F4F8FF;
     --muted: #8AA0C8;
     --max: 1200px;
@@ -270,7 +271,7 @@
   }
   .sku-lean { background: var(--cyan); }
   .sku-build { background: var(--green); }
-  .sku-recover { background: var(--orange); }
+  .sku-recover { background: var(--pink); }
   .sku-boost { background: #C882FF; }
 
   /* --- QR placeholder --- */
@@ -393,7 +394,7 @@
     border-top: 3px solid var(--cyan);
   }
   .a5-flyer .sku-card.b { border-top-color: var(--green); }
-  .a5-flyer .sku-card.r { border-top-color: var(--orange); }
+  .a5-flyer .sku-card.r { border-top-color: var(--pink); }
   .a5-flyer .sku-card.boost { border-top-color: #C882FF; }
   .a5-flyer .sku-card .name {
     font-family: 'Barlow Condensed', sans-serif;
@@ -405,7 +406,7 @@
   }
   .a5-flyer .sku-card.l .name { color: var(--cyan); }
   .a5-flyer .sku-card.b .name { color: var(--green); }
-  .a5-flyer .sku-card.r .name { color: var(--orange); }
+  .a5-flyer .sku-card.r .name { color: var(--pink); }
   .a5-flyer .sku-card.boost .name { color: #C882FF; }
   .a5-flyer .sku-card .price {
     font-family: 'Barlow Condensed', sans-serif;
@@ -483,7 +484,7 @@
   }
   .machine-top .col.l::before { background: var(--cyan); }
   .machine-top .col.b::before { background: var(--green); }
-  .machine-top .col.r::before { background: var(--orange); }
+  .machine-top .col.r::before { background: var(--pink); }
   .machine-top .col.boost::before { background: #C882FF; }
   .machine-top .col .sku-name {
     font-family: 'Barlow Condensed', sans-serif;
@@ -496,7 +497,7 @@
   }
   .machine-top .col.l .sku-name { color: var(--cyan); }
   .machine-top .col.b .sku-name { color: var(--green); }
-  .machine-top .col.r .sku-name { color: var(--orange); }
+  .machine-top .col.r .sku-name { color: var(--pink); }
   .machine-top .col.boost .sku-name { color: #C882FF; }
   .machine-top .col .macro {
     font-size: 11px;
@@ -646,7 +647,7 @@
   }
   .window-cling .sku-chip.l { background: var(--cyan); }
   .window-cling .sku-chip.b { background: var(--green); }
-  .window-cling .sku-chip.r { background: var(--orange); }
+  .window-cling .sku-chip.r { background: var(--pink); }
   .window-cling .sku-chip.boost { background: #C882FF; }
   .window-cling .qr-wrap {
     display: flex;
@@ -753,7 +754,7 @@
   <div class="preview-frame">
     <div class="design a3-poster">
       <div class="a3-poster-inner-pad">
-        <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+        <div class="brand">Shake-o-mat</div>
         <div class="headline">SVJEŽI<br>PROTEIN<br>ZA 30 SEK.</div>
         <div class="arrow-row">
           <div class="arrow">→</div>
@@ -785,13 +786,13 @@
   </div>
   <div class="preview-frame">
     <div class="design a5-flyer">
-      <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+      <div class="brand">Shake-o-mat</div>
       <div class="headline">SHAKE-O-MAT<br><span class="accent">JE OVDJE</span></div>
       <div class="sku-row">
         <div class="sku-card l"><div class="name">LEAN</div><div class="price">€3.50</div></div>
         <div class="sku-card b"><div class="name">BUILD</div><div class="price">€4.00</div></div>
-        <div class="sku-card r"><div class="name">RECOVER</div><div class="price">€4.50</div></div>
         <div class="sku-card boost"><div class="name">BOOST</div><div class="price">€4.00</div></div>
+        <div class="sku-card r"><div class="name">RECOVER</div><div class="price">€4.50</div></div>
       </div>
       <div class="body-copy">Svježe miješan shake. 30 sekundi. Bez čekanja. Pronađi aparat u svojoj teretani i recover-iraj dok je trening još u nogama.</div>
       <div class="qr-wrap">
@@ -825,15 +826,15 @@
           <div class="macro">35g protein · 320 kcal<br>Hypertrofija fokus<br>Whey + creatine</div>
           <div class="price">€4.00</div>
         </div>
-        <div class="col r">
-          <div class="sku-name">RECOVER</div>
-          <div class="macro">30g protein · 280 kcal<br>Whey + Kolagen<br>Post-leg day</div>
-          <div class="price">€4.50</div>
-        </div>
         <div class="col boost">
           <div class="sku-name">BOOST</div>
           <div class="macro">28g protein · 260 kcal<br>Whey + BCAA<br>Anti-katabolizam</div>
           <div class="price">€4.00</div>
+        </div>
+        <div class="col r">
+          <div class="sku-name">RECOVER</div>
+          <div class="macro">30g protein · 280 kcal<br>Whey + Kolagen<br>Post-leg day</div>
+          <div class="price">€4.50</div>
         </div>
       </div>
       <div class="strip">Tap. Choose. Recover.</div>
@@ -859,7 +860,7 @@
       </div>
       <div class="arrow">→</div>
       <div class="bottom">
-        <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+        <div class="brand">Shake-o-mat</div>
         <div class="direction">→ kod izlaza</div>
       </div>
     </div>
@@ -877,7 +878,7 @@
   </div>
   <div class="preview-frame">
     <div class="design window-cling">
-      <div class="brand"><img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"></div>
+      <div class="brand">Shake-o-mat</div>
       <div class="hero-line">OVDJE —<br><span class="accent">SHAKE-O-MAT</span></div>
       <div class="sku-strip">
         <div class="sku-chip l">Lean</div>
@@ -898,7 +899,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <img src="assets/som-logo.png" alt="Shake-o-mat" style="height:36px;width:auto;display:block;"> · Zagreb · 2026
+  Shake-o-mat · Zagreb · 2026
 </footer>
 
 </body>
