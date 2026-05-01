@@ -207,7 +207,32 @@
     gap: 16px;
   }
 
-  /* Machine silhouette (CSS) */
+  /* Hero lifestyle photo */
+  .hero-visual {
+    position: relative;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    border-radius: 18px;
+    border: 1px solid rgba(115, 237, 255, 0.25);
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.5),
+      0 0 60px rgba(27, 162, 255, 0.18);
+    display: block;
+    margin: 40px auto 0;
+  }
+
+  @media (min-width: 900px) {
+    .hero-photo {
+      margin: 0 0 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  /* Machine silhouette (CSS) — kept as fallback/utility */
   .machine-mockup {
     position: relative;
     width: 240px;
@@ -1098,20 +1123,8 @@
           <a href="b2b.html" class="btn btn-outline">Za vlasnike teretana</a>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="machine-mockup" role="img" aria-label="Ilustracija Shake-o-mat aparata">
-          <div class="machine-screen">
-            <span class="machine-screen-label">BUILD · 35G</span>
-            <span class="machine-screen-value">30s</span>
-          </div>
-          <div class="machine-buttons">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="machine-window">
-            <div class="machine-cup"></div>
-          </div>
-          <div class="machine-base"></div>
-        </div>
+      <div class="hero-visual">
+        <img src="hero-lifestyle.jpg" alt="Sportaš izlazi iz teretane s Shake-o-mat shake-om" class="hero-photo" loading="eager" width="800" height="533">
       </div>
     </div>
   </div>
