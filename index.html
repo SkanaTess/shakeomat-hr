@@ -564,8 +564,8 @@
 
   .sku-card.lean::before { background: var(--cyan); }
   .sku-card.build::before { background: var(--green); }
-  .sku-card.recover::before { background: var(--pink); }
   .sku-card.boost::before { background: #C882FF; }
+  .sku-card.recover::before { background: var(--pink); }
 
   .sku-name {
     font-size: 3rem;
@@ -575,8 +575,8 @@
 
   .sku-card.lean .sku-name { color: var(--cyan); }
   .sku-card.build .sku-name { color: var(--green); }
-  .sku-card.recover .sku-name { color: var(--pink); }
   .sku-card.boost .sku-name { color: #C882FF; }
+  .sku-card.recover .sku-name { color: var(--pink); }
 
   .sku-macro {
     font-family: 'Barlow Condensed', sans-serif;
@@ -609,8 +609,8 @@
 
   .sku-card.lean .sku-price { color: var(--cyan); border-color: var(--cyan); }
   .sku-card.build .sku-price { color: var(--green); border-color: var(--green); }
-  .sku-card.recover .sku-price { color: var(--pink); border-color: var(--pink); }
   .sku-card.boost .sku-price { color: #C882FF; border-color: #C882FF; }
+  .sku-card.recover .sku-price { color: var(--pink); border-color: var(--pink); }
 
   /* ============ STATS / PROOF ============ */
   .stats-grid {
@@ -844,6 +844,89 @@
     box-shadow: 0 0 24px rgba(125, 255, 155, 0.4);
   }
 
+  /* ============ WAITLIST ============ */
+  .waitlist {
+    background: linear-gradient(180deg, rgba(125, 255, 155, 0.05) 0%, rgba(11, 18, 48, 0.4) 100%);
+    border-top: 1px solid rgba(125, 255, 155, 0.15);
+    border-bottom: 1px solid rgba(125, 255, 155, 0.15);
+  }
+
+  .waitlist-lead {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 36px;
+    line-height: 1.55;
+  }
+
+  .waitlist-lead strong {
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  .waitlist-form {
+    background: var(--bg-surface);
+    border: 1px solid rgba(125, 255, 155, 0.2);
+    border-radius: 16px;
+    padding: 28px 24px;
+    max-width: 760px;
+  }
+
+  .waitlist-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: 760px) {
+    .waitlist-row {
+      grid-template-columns: 1.4fr 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+  }
+
+  .waitlist-form input[type="email"],
+  .waitlist-form input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    color: var(--white);
+    background: rgba(5, 8, 22, 0.7);
+    border: 1px solid rgba(138, 160, 200, 0.3);
+    border-radius: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .waitlist-form input:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(125, 255, 155, 0.18);
+  }
+
+  .waitlist-form .btn {
+    width: 100%;
+  }
+
+  @media (min-width: 760px) {
+    .waitlist-form .btn {
+      width: auto;
+    }
+  }
+
+  .waitlist-foot {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .waitlist-foot.success {
+    color: var(--green);
+    font-weight: 600;
+  }
+
   /* ============ FOOTER ============ */
   footer.site-footer {
     padding: 64px 0 32px;
@@ -1011,7 +1094,7 @@
         </h1>
         <p class="hero-subline">Svježe miješan shake za 30 sekundi. Na izlazu tvoje teretane.</p>
         <div class="hero-ctas">
-          <a href="#locations" class="btn btn-primary">Nađi svoju teretanu &rarr;</a>
+          <a href="#waitlist" class="btn btn-primary">Javi mi prvi &rarr;</a>
           <a href="b2b.html" class="btn btn-outline">Za vlasnike teretana</a>
         </div>
       </div>
@@ -1174,9 +1257,33 @@
     </div>
 
     <div class="locations-ctas">
-      <a href="mailto:info@shakeomat.hr?subject=Predlo%C5%BEi%20teretanu" class="btn btn-primary">Predloži svoju teretanu &rarr;</a>
+      <a href="#waitlist" class="btn btn-primary">Javi mi kad stigne u moj grad &rarr;</a>
       <a href="b2b.html" class="btn btn-outline">Vlasnici teretana &mdash; partner program &rarr;</a>
     </div>
+  </div>
+</section>
+
+<!-- ============ WAITLIST ============ -->
+<section class="content-section waitlist" id="waitlist" aria-labelledby="waitlist-heading">
+  <div class="container">
+    <span class="section-tag">Lipanj 2026 — uskoro</span>
+    <h2 class="section-heading" id="waitlist-heading">Budi prvi u redu.</h2>
+    <p class="waitlist-lead">Javljamo ti čim Shake-o-mat aparat dođe u teretanu blizu tebe. Bez spama. Bez paljenja oglasa. Samo mail koji kaže: <strong>stigao je</strong>.</p>
+
+    <form id="waitlistForm" class="waitlist-form" action="https://formsubmit.co/info@shakeomat.hr" method="POST" novalidate>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nova waitlist prijava — Shakeomat B2C">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Hvala! Javljamo ti čim aparat stigne u teretanu blizu tebe. — Shake-o-mat tim">
+      <input type="hidden" name="_next" value="https://shakeomat.hr/?signup=ok#waitlist">
+      <input type="hidden" name="izvor" value="index waitlist">
+      <div class="waitlist-row">
+        <input type="email" name="email" required placeholder="tvoj@email.hr" autocomplete="email" aria-label="Email">
+        <input type="text" name="grad_teretana" placeholder="Grad ili teretana (opcionalno)" autocomplete="off" aria-label="Grad ili teretana">
+        <button type="submit" class="btn btn-primary">Pridruži se &rarr;</button>
+      </div>
+      <p class="waitlist-foot" id="waitlistFoot">Tvoj email koristimo isključivo za obavijest o lansiranju.</p>
+    </form>
   </div>
 </section>
 
@@ -1273,6 +1380,37 @@
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // Waitlist form — GA4 conversion event + post-submit success state
+  (function() {
+    var form = document.getElementById('waitlistForm');
+    var foot = document.getElementById('waitlistFoot');
+    if (form) {
+      form.addEventListener('submit', function() {
+        try {
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              event_category: 'waitlist',
+              event_label: 'b2c_index_waitlist',
+              value: 1
+            });
+          }
+        } catch (err) {}
+      });
+    }
+    if (foot && /[?&]signup=ok/.test(window.location.search)) {
+      foot.textContent = '✓ Hvala! Provjeri inbox za potvrdu — javljamo ti čim aparat stigne.';
+      foot.classList.add('success');
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', 'sign_up', {
+            event_category: 'waitlist',
+            event_label: 'b2c_index_confirm'
+          });
+        }
+      } catch (err) {}
+    }
+  })();
 </script>
 
 </body>

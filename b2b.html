@@ -732,13 +732,13 @@ footer {
 <section id="calculator" aria-labelledby="calc-head">
   <div class="container">
     <div class="calc-wrap">
-      <h2 id="calc-head">Izra&ccaron;unaj svoj potencijal</h2>
+      <h2 id="calc-head">Izračunaj svoj potencijal</h2>
       <p class="calc-sub">Pomakni klizače i vidi procjenu prihoda u realnom vremenu.</p>
 
       <div class="calc-inputs">
         <div class="input-block">
           <label for="members">
-            Broj &ccaron;lanova teretane
+            Broj članova teretane
             <span class="value-pill" id="membersOut">500</span>
           </label>
           <input type="range" id="members" name="members" min="100" max="5000" step="50" value="500">
@@ -746,7 +746,7 @@ footer {
 
         <div class="input-block">
           <label for="visits">
-            Prosje&ccaron;na posjeta tjedno po &ccaron;lanu
+            Prosječna posjeta tjedno po članu
             <span class="value-pill" id="visitsOut">3</span>
           </label>
           <input type="range" id="visits" name="visits" min="2" max="5" step="1" value="3">
@@ -755,7 +755,7 @@ footer {
         <div class="input-block" style="display:flex;flex-direction:column;justify-content:flex-end;">
           <label style="margin-bottom:16px;cursor:pointer;gap:12px;align-items:center;" for="maintains">
             <input type="checkbox" id="maintains" name="maintains" style="width:20px;height:20px;accent-color:var(--green);cursor:pointer;flex-shrink:0;">
-            Teretana sama puni i &ccaron;isti aparat (+5%)
+            Teretana sama puni i čisti aparat (+5%)
           </label>
           <div class="tier-badge" id="tierBadge">—</div>
         </div>
@@ -763,14 +763,14 @@ footer {
 
       <div class="calc-output" role="status" aria-live="polite">
         <div class="headline">
-          Va&scaron;a procjena: &euro;<span id="monthly">0</span>/mj
+          Vaša procjena: &euro;<span id="monthly">0</span>/mj
         </div>
         <div class="breakdown" id="calcBreakdown">
-          &euro;<span id="weekly">0</span>/tjedno &middot; &euro;<span id="yearly">0</span>/godi&scaron;nje
+          &euro;<span id="weekly">0</span>/tjedno &middot; &euro;<span id="yearly">0</span>/godišnje
         </div>
         <div class="calc-tier-explain" id="tierExplain"></div>
       </div>
-      <p class="calc-foot">Revenue share se obra&ccaron;unava na neto cijenu shake-a (MPC bez PDV-a). 20% do 50 shake-ova dnevno, 25% iznad. Dodatnih +5% ako vi sami punite i &ccaron;istite aparat.</p>
+      <p class="calc-foot">Revenue share se obračunava na neto cijenu shake-a (MPC bez PDV-a). 20% do 50 shake-ova dnevno, 25% iznad. Dodatnih +5% ako vi sami punite i čistite aparat.</p>
     </div>
   </div>
 </section>
@@ -796,11 +796,12 @@ footer {
     </div>
 
     <div class="form-wrap">
-      <form action="https://formsubmit.co/info@shakeomat.hr" method="POST" novalidate>
+      <form id="b2bForm" action="https://formsubmit.co/info@shakeomat.hr" method="POST" novalidate>
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="Nova B2B prijava — Shake-o-mat">
         <input type="hidden" name="_autoresponse" value="Hvala na prijavi! Javimo se u roku 24 sata. — Shake-o-mat tim">
-        <input type="hidden" name="_next" value="https://shakeomat.hr/b2b.html#thanks">
+        <input type="hidden" name="_next" value="https://shakeomat.hr/b2b.html?signup=ok#thanks">
+        <input type="hidden" name="izvor" value="b2b form">
 
         <div class="form-grid">
           <div class="field">
@@ -819,7 +820,7 @@ footer {
           </div>
 
           <div class="field">
-            <label for="members-count">Broj &ccaron;lanova</label>
+            <label for="members-count">Broj članova</label>
             <input type="number" id="members-count" name="Broj članova" min="0" required>
           </div>
 
@@ -830,12 +831,12 @@ footer {
 
           <div class="field full">
             <label for="message">Poruka</label>
-            <textarea id="message" name="Poruka" required placeholder="Recite nam ne&scaron;to o svojoj teretani..."></textarea>
+            <textarea id="message" name="Poruka" required placeholder="Recite nam nešto o svojoj teretani..."></textarea>
           </div>
         </div>
 
         <div class="form-submit">
-          <button type="submit" class="btn btn-primary">Po&scaron;alji prijavu</button>
+          <button type="submit" class="btn btn-primary">Pošalji prijavu</button>
         </div>
         <p class="form-foot">Javimo se u roku 24 sata.</p>
       </form>
@@ -847,18 +848,18 @@ footer {
 <section aria-labelledby="faq-head">
   <div class="container">
     <div class="section-head">
-      <h2 id="faq-head">&Ccaron;esta pitanja</h2>
-      <p>Sve &scaron;to vlasnici teretana pitaju prije nego krenemo.</p>
+      <h2 id="faq-head">Česta pitanja</h2>
+      <p>Sve što vlasnici teretana pitaju prije nego krenemo.</p>
     </div>
 
     <div class="faq">
       <div class="faq-item" aria-expanded="false">
         <button class="faq-toggle" aria-expanded="false" aria-controls="faq-1">
-          <span>Tko pla&cacute;a instalaciju?</span>
+          <span>Tko plaća instalaciju?</span>
           <span class="icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-body" id="faq-1" role="region">
-          <p>Shake-o-mat. Bez tro&scaron;kova za teretanu.</p>
+          <p>Shake-o-mat. Bez troškova za teretanu.</p>
         </div>
       </div>
 
@@ -878,13 +879,13 @@ footer {
           <span class="icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-body" id="faq-3" role="region">
-          <p>Servis od strane Shake-o-mat tima. Bez anga&zcaron;mana teretane.</p>
+          <p>Servis od strane Shake-o-mat tima. Bez angažmana teretane.</p>
         </div>
       </div>
 
       <div class="faq-item" aria-expanded="false">
         <button class="faq-toggle" aria-expanded="false" aria-controls="faq-4">
-          <span>&Ccaron;ime su brendirani aparat i &ccaron;a&scaron;e?</span>
+          <span>Čime su brendirani aparat i čaše?</span>
           <span class="icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-body" id="faq-4" role="region">
@@ -894,7 +895,7 @@ footer {
 
       <div class="faq-item" aria-expanded="false">
         <button class="faq-toggle" aria-expanded="false" aria-controls="faq-5">
-          <span>&Scaron;to ako aparat ne radi?</span>
+          <span>Što ako aparat ne radi?</span>
           <span class="icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-body" id="faq-5" role="region">
@@ -920,13 +921,13 @@ footer {
 
       <div>
         <h4>Navigacija</h4>
-        <a href="index.html">Po&ccaron;etna</a>
+        <a href="index.html">Početna</a>
         <a href="b2b.html">Za teretane</a>
         <a href="mailto:info@shakeomat.hr">Kontakt</a>
       </div>
 
       <div>
-        <h4>Dru&scaron;tveno</h4>
+        <h4>Društveno</h4>
         <a href="https://instagram.com/shakeomat" target="_blank" rel="noopener">Instagram</a>
         <a href="https://tiktok.com/@shakeomat" target="_blank" rel="noopener">TikTok</a>
         <a href="https://linkedin.com/company/shakeomat" target="_blank" rel="noopener">LinkedIn</a>
@@ -1035,6 +1036,43 @@ footer {
       if (icon) icon.textContent = next ? '\u2212' : '+';
     });
   });
+
+  // ---------- GA4 LEAD EVENT ON B2B FORM SUBMIT ----------
+  var b2bForm = document.getElementById('b2bForm');
+  if (b2bForm) {
+    b2bForm.addEventListener('submit', function() {
+      try {
+        if (typeof gtag === 'function') {
+          var membersInput = document.getElementById('members-count');
+          var locInput = document.getElementById('locations');
+          var members = membersInput ? parseInt(membersInput.value, 10) || 0 : 0;
+          var locs = locInput ? parseInt(locInput.value, 10) || 1 : 1;
+          gtag('event', 'generate_lead', {
+            event_category: 'b2b',
+            event_label: 'b2b_partner_form',
+            value: members,
+            broj_lokacija: locs
+          });
+        }
+      } catch (err) {}
+    });
+  }
+
+  // ---------- POST-SUBMIT THANK YOU STATE ----------
+  if (/[?&]signup=ok/.test(window.location.search)) {
+    var formFoot = document.querySelector('.form-foot');
+    if (formFoot) {
+      formFoot.innerHTML = '<strong style="color:var(--green)">\u2713 Hvala!</strong> Tvoja prijava je zaprimljena \u2014 javimo se u roku 24 sata.';
+    }
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'sign_up', {
+          event_category: 'b2b',
+          event_label: 'b2b_partner_confirm'
+        });
+      }
+    } catch (err) {}
+  }
 })();
 </script>
 
