@@ -869,6 +869,87 @@
     box-shadow: 0 0 24px rgba(125, 255, 155, 0.4);
   }
 
+  /* ============ MACHINE SHOWCASE ============ */
+  .machine-showcase {
+    background: linear-gradient(180deg, rgba(11, 18, 48, 0.4) 0%, rgba(5, 8, 22, 0) 100%);
+  }
+  .machine-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  @media (min-width: 760px) {
+    .machine-grid {
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+      gap: 36px;
+      align-items: stretch;
+    }
+  }
+  .machine-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(115, 237, 255, 0.18);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .machine-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    flex: 1 1 auto;
+  }
+  .machine-card figcaption {
+    padding: 20px 24px;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.15rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    border-top: 1px solid rgba(115, 237, 255, 0.1);
+  }
+  .machine-card figcaption span {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+  /* ============ CUP GALLERY ============ */
+  .cup-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  @media (min-width: 760px) {
+    .cup-gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  }
+  @media (min-width: 1100px) {
+    .cup-gallery { grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  }
+  .cup-gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(115, 237, 255, 0.1);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .cup-gallery img:hover {
+    transform: scale(1.04);
+    border-color: rgba(125, 255, 155, 0.4);
+  }
+
   /* ============ WAITLIST ============ */
   .waitlist {
     background: linear-gradient(180deg, rgba(125, 255, 155, 0.05) 0%, rgba(11, 18, 48, 0.4) 100%);
@@ -1257,6 +1338,25 @@
   </div>
 </section>
 
+<!-- ============ THE MACHINE ============ -->
+<section class="content-section machine-showcase" aria-labelledby="machine-heading">
+  <div class="container">
+    <span class="section-tag">Pravi aparat. Pravi gym.</span>
+    <h2 class="section-heading" id="machine-heading">Aparat koji stiže.</h2>
+
+    <div class="machine-grid">
+      <figure class="machine-card">
+        <img src="machine-real.jpg" alt="JK91 — pravi protein vending aparat, već testiran na sajmu" loading="lazy" width="624" height="1600">
+        <figcaption>JK91 — pravi aparat, već testiran u Kini.<br><span>9 spremnika · auto cup · auto lid · independent blending · high-pressure heat clean</span></figcaption>
+      </figure>
+      <figure class="machine-card">
+        <img src="machine-product.jpg" alt="Shake-o-mat aparat u premium teretani" loading="lazy" width="1000" height="666">
+        <figcaption>Stiže u Zagreb · lipanj 2026.<br><span>Cyan LED accent · touchscreen ekran · ugradnja bez investicije teretane</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ============ LOCATIONS ============ -->
 <section class="content-section" id="locations" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="loc-heading">
   <div class="container">
@@ -1306,15 +1406,6 @@
     <span class="section-tag">Svaki shake je drugačiji</span>
 
     <div class="custom-grid">
-      <div class="custom-visual" aria-hidden="true">
-        <div class="custom-stack">
-          <div class="custom-layer l1">"Upravo si dao sve. Sad daj tijelu što treba."</div>
-          <div class="custom-layer l2">"Definicija nije sport. Odluka je."</div>
-          <div class="custom-layer l3">"Koliko si puta rekao 'sljedeći put'?"</div>
-          <div class="custom-layer l4">"Zaslužio/la si. Zna se."</div>
-        </div>
-      </div>
-
       <div class="custom-text">
         <h2 class="custom-heading" id="cup-heading">10 različitih poruka. Uvijek iznenađenje.</h2>
         <p class="custom-body">Svaka čaša nosi drugu motivacijsku poruku &mdash; nikad ne znaš koju ćeš dobiti. To je mali razlog više da se vratiš.</p>
@@ -1326,6 +1417,21 @@
           <li>Spreman za 30 sekundi, na izlazu tvoje teretane</li>
         </ul>
         <a href="b2b.html" class="btn btn-primary">Za vlasnike teretana &rarr;</a>
+      </div>
+
+      <div class="custom-visual">
+        <div class="cup-gallery" aria-label="10 motivacijskih čaša">
+          <img src="cup_01.jpg" alt="RECOVER — Upravo si dao sve. Sad daj tijelu što treba." loading="lazy">
+          <img src="cup_02.jpg" alt="BUILD — Svaki gram se zbraja. Svaki rep. Svaki shake." loading="lazy">
+          <img src="cup_03.jpg" alt="LEAN — Definicija nije sport. Odluka je." loading="lazy">
+          <img src="cup_04.jpg" alt="BUILD — Mišić se gradi 24 sata. Ti si počeo sat 1." loading="lazy">
+          <img src="cup_05.jpg" alt="RECOVER — Tijelo pamti svaki trening. I svaki oporavak." loading="lazy">
+          <img src="cup_06.jpg" alt="BRAND — 30 sekundi. Toliko treba tvom tijelu da te čuje." loading="lazy">
+          <img src="cup_07.jpg" alt="BOOST — Aminokiseline koje mišić traži upravo sada." loading="lazy">
+          <img src="cup_08.jpg" alt="BRAND — Sad je sljedeći put." loading="lazy">
+          <img src="cup_09.jpg" alt="BRAND — Svježe miješano. Kao i ti — svaki dan iznova." loading="lazy">
+          <img src="cup_10.jpg" alt="BRAND — Zaslužio/la si. Zna se." loading="lazy">
+        </div>
       </div>
     </div>
   </div>

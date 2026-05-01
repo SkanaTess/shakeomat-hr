@@ -140,8 +140,30 @@ img { max-width: 100%; display: block; }
     linear-gradient(180deg, #050816 0%, #0B1230 100%);
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 56px;
+  }
+}
+.hero-photo-b2b {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(115, 237, 255, 0.25);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(27, 162, 255, 0.18);
+}
+
 .hero h1 {
-  font-size: clamp(44px, 8vw, 96px);
+  font-size: clamp(40px, 7vw, 84px);
   color: var(--white);
   margin-bottom: 24px;
   max-width: 14ch;
@@ -685,10 +707,15 @@ footer {
 
 <!-- ============== HERO ============== -->
 <section class="hero">
-  <div class="container">
-    <h1>Pretvori izlaz<br>iz teretane u<br>prihod.</h1>
-    <p class="subline">Bez investicije. Bez osoblja. Bez inventara. Samo pasivni prihod na svakom treningu.</p>
-    <a href="#calculator" class="btn btn-primary">Izračunaj prihod &darr;</a>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Pretvori izlaz<br>iz teretane u<br>prihod.</h1>
+      <p class="subline">Bez investicije. Bez osoblja. Bez inventara. Samo pasivni prihod na svakom treningu.</p>
+      <a href="#calculator" class="btn btn-primary">Izračunaj prihod &darr;</a>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="b2b-owner.jpg" alt="Vlasnik teretane uz Shake-o-mat aparat" class="hero-photo-b2b" loading="eager" width="1000" height="666">
+    </div>
   </div>
 </section>
 
