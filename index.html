@@ -160,6 +160,53 @@
     transform: translateY(-2px);
   }
 
+  /* ============ NAV ============ */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5, 8, 22, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(115, 237, 255, 0.12);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+  }
+  .nav-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  .nav-brand span { color: var(--green); }
+  .nav-links {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-links a:hover { background: rgba(115, 237, 255, 0.12); color: var(--cyan); }
+
   /* ============ HERO ============ */
   .hero {
     position: relative;
@@ -1202,6 +1249,17 @@
 </head>
 <body>
 
+<!-- ============ NAV ============ -->
+<nav class="site-nav" role="navigation" aria-label="Glavna navigacija">
+  <div class="container nav-inner">
+    <a href="#" class="nav-brand">Shake<span>-</span>o-mat</a>
+    <ul class="nav-links">
+      <li><a href="#waitlist">Pridruži se</a></li>
+      <li><a href="b2b.html">Za teretane</a></li>
+    </ul>
+  </div>
+</nav>
+
 <!-- ============ HERO ============ -->
 <header class="hero" role="banner">
   <div class="container">
@@ -1209,8 +1267,8 @@
       <div class="hero-text">
         <h1 class="hero-headline">
           Protein.<br>
-          <span class="accent">Ovdje.</span><br>
-          Odmah.
+          Ovdje.<br>
+          <span class="accent">Odmah.</span>
         </h1>
         <p class="hero-subline">Svježe miješan shake za 30 sekundi. Na izlazu tvoje teretane.</p>
         <div class="hero-ctas">
@@ -1395,7 +1453,7 @@
   <div class="container">
     <span class="section-tag">Srpanj 2026 — uskoro</span>
     <h2 class="section-heading" id="waitlist-heading">Budi prvi u redu.</h2>
-    <p class="waitlist-lead">Javljamo ti čim Shake-o-mat aparat dođe u teretanu blizu tebe. Bez spama. Bez paljenja oglasa. Samo mail koji kaže: <strong>stigao je</strong>.</p>
+    <p class="waitlist-lead">Javljamo ti čim aparat stigne u teretanu blizu tebe. <strong>Prvih 100 s waitliste dobije besplatni shake</strong> na otvaranju u svojoj teretani. Bez spama, bez paljenja oglasa.</p>
 
     <form id="waitlistForm" class="waitlist-form" action="https://formsubmit.co/info@shakeomat.hr" method="POST" novalidate>
       <input type="hidden" name="_captcha" value="false">
@@ -1480,7 +1538,7 @@
     </div>
 
     <div class="footer-legal">
-      &copy; 2026 Shake-o-mat &middot; Zagreb &middot; <a href="mailto:info@shakeomat.hr">info@shakeomat.hr</a>
+      &copy; 2026 Shake-o-mat &middot; Zagreb &middot; <a href="mailto:info@shakeomat.hr">info@shakeomat.hr</a> &middot; <a href="privacy.html">Politika privatnosti</a>
     </div>
   </div>
 </footer>
@@ -1512,12 +1570,22 @@
     });
   });
 
-  // Waitlist form — GA4 conversion event + post-submit success state
+  // Waitlist form — inline validation + GA4 conversion event + post-submit success state
   (function() {
     var form = document.getElementById('waitlistForm');
     var foot = document.getElementById('waitlistFoot');
     if (form) {
-      form.addEventListener('submit', function() {
+      var emailInput = form.querySelector('input[name="email"]');
+      form.addEventListener('submit', function(e) {
+        if (!emailInput || !emailInput.value || !emailInput.validity.valid) {
+          e.preventDefault();
+          if (foot) {
+            foot.textContent = '⚠ Upiši ispravnu email adresu da te možemo obavijestiti.';
+            foot.style.color = 'var(--orange)';
+          }
+          if (emailInput) emailInput.focus();
+          return false;
+        }
         try {
           if (typeof gtag === 'function') {
             gtag('event', 'generate_lead', {
@@ -1530,7 +1598,7 @@
       });
     }
     if (foot && /[?&]signup=ok/.test(window.location.search)) {
-      foot.textContent = '✓ Hvala! Provjeri inbox za potvrdu — javljamo ti čim aparat stigne.';
+      foot.textContent = '✓ Upravo si rezervirao prvi shake. Tijelo će ti zahvaliti u srpnju.';
       foot.classList.add('success');
       try {
         if (typeof gtag === 'function') {

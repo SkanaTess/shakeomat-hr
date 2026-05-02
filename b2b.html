@@ -737,7 +737,7 @@ footer {
       <article class="value-card">
         <span class="icon" aria-hidden="true">%</span>
         <h3>20&ndash;30% revenue share</h3>
-        <p>Postotak na neto cijenu (MPC bez PDV-a). 20% do 50 shake-ova/dan, 25% iznad. +5% ako vi sami punite aparat.</p>
+        <p>Postotak na neto cijenu (cijena bez PDV-a). 20% do 50 shake-ova/dan, 25% iznad. +5% ako vi sami punite aparat.</p>
       </article>
 
       <article class="value-card">
@@ -768,7 +768,7 @@ footer {
             Broj članova teretane
             <span class="value-pill" id="membersOut">500</span>
           </label>
-          <input type="range" id="members" name="members" min="100" max="5000" step="50" value="500">
+          <input type="range" id="members" name="members" min="100" max="5000" step="50" value="1500">
         </div>
 
         <div class="input-block">
@@ -776,7 +776,7 @@ footer {
             Prosječna posjeta tjedno po članu
             <span class="value-pill" id="visitsOut">3</span>
           </label>
-          <input type="range" id="visits" name="visits" min="2" max="5" step="1" value="3">
+          <input type="range" id="visits" name="visits" min="2" max="5" step="1" value="4">
         </div>
 
         <div class="input-block" style="display:flex;flex-direction:column;justify-content:flex-end;">
@@ -797,7 +797,7 @@ footer {
         </div>
         <div class="calc-tier-explain" id="tierExplain"></div>
       </div>
-      <p class="calc-foot">Revenue share se obračunava na neto cijenu shake-a (MPC bez PDV-a). 20% do 50 shake-ova dnevno, 25% iznad. Dodatnih +5% ako vi sami punite i čistite aparat.</p>
+      <p class="calc-foot">Revenue share se obračunava na neto cijenu shake-a (cijena bez PDV-a). 20% do 50 shake-ova dnevno, 25% iznad. Dodatnih +5% ako vi sami punite i čistite aparat.</p>
     </div>
   </div>
 </section>
@@ -805,7 +805,7 @@ footer {
 <!-- ============== SOCIAL PROOF ============== -->
 <section class="proof" aria-label="Pilot partneri">
   <div class="container">
-    <p class="tag">Pilot partneri od srpnja 2026</p>
+    <p class="tag">Lansirne lokacije — srpanj 2026 · ugovori u pregovoru</p>
     <div class="logo-row">
       <div class="logo-box">Gyms4you</div>
       <div class="logo-box">THE Fitness</div>
@@ -929,6 +929,16 @@ footer {
           <p>SLA 24h servis. Garantirani odgovor.</p>
         </div>
       </div>
+
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-toggle" aria-expanded="false" aria-controls="faq-6">
+          <span>Kakav je ugovor i koliko traje?</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-6" role="region">
+          <p>12 mjeseci s 30-dnevnim raskidom obostrano. Bez exclusivity klauzule osim ako ti to želiš (tada bonus na rev share). Aparat ostaje vlasništvo Shake-o-mata cijelo vrijeme.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1010,7 +1020,7 @@ footer {
     var shakesPerDay = members * visits * CONVERSION / 7;
     var tier = getTier(shakesPerDay, maintains);
 
-    // Revenue for gym — postotak NA NETO (MPC bez PDV-a)
+    // Revenue for gym — postotak NA NETO (cijena bez PDV-a)
     var weeklyGym  = members * visits * CONVERSION * NET_PRICE * (tier / 100);
     var monthlyGym = weeklyGym * 4.33;
     var yearlyGym  = weeklyGym * 52;
@@ -1030,7 +1040,7 @@ footer {
     if (shakesPerDay <= 50) {
       nextTier = ' Za 25% udio trebate prosječno 50+ shake-ova/dan.';
     }
-    tierExplain.innerHTML = 'Procjena: ~' + shakesRound + ' shake-ova/dan. (Postotak ide na neto cijenu = MPC bez PDV-a.)' + nextTier;
+    tierExplain.innerHTML = 'Procjena: ~' + shakesRound + ' shake-ova/dan. (Postotak ide na neto cijenu = cijena bez PDV-a.)' + nextTier;
   }
 
   if (membersEl && visitsEl) {
