@@ -17,6 +17,74 @@
 <link rel="alternate" hreflang="hr" href="https://shakeomat.hr/">
 <link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/">
 
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://shakeomat.hr/#org",
+      "name": "Shake-o-mat",
+      "legalName": "SHAKEOMAT d.o.o.",
+      "url": "https://shakeomat.hr/",
+      "logo": "https://shakeomat.hr/og-image.jpg",
+      "email": "info@shakeomat.hr",
+      "address": {"@type": "PostalAddress", "addressLocality": "Zagreb", "addressCountry": "HR"},
+      "sameAs": ["https://instagram.com/shakeomat", "https://tiktok.com/@shakeomat"],
+      "description": "Premium vending automati za svježe miješane protein shakeove u teretanama. DIAAS-optimizirane formule, evidence-based pristup."
+    },
+    {
+      "@type": "Product",
+      "name": "Shake-o-mat Lean",
+      "description": "25g whey isolate (DIAAS 1.09) za niskokaloričnu post-trening varijantu. Manje od 1g laktoze.",
+      "brand": {"@id": "https://shakeomat.hr/#org"},
+      "category": "Sport Nutrition / Protein Shake",
+      "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"}
+    },
+    {
+      "@type": "Product",
+      "name": "Shake-o-mat Build",
+      "description": "30g whey concentrate + 20g maltodekstrin + 3g Creapure® kreatin monohidrat za hipertrofiju.",
+      "brand": {"@id": "https://shakeomat.hr/#org"},
+      "category": "Sport Nutrition / Mass Gainer",
+      "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"}
+    },
+    {
+      "@type": "Product",
+      "name": "Shake-o-mat Boost",
+      "description": "20g whey isolate + 1g L-leucin spike za mTOR aktivaciju. Lagana opcija bez kofeina (Faza 1).",
+      "brand": {"@id": "https://shakeomat.hr/#org"},
+      "category": "Sport Nutrition / Energy",
+      "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"}
+    },
+    {
+      "@type": "Product",
+      "name": "Shake-o-mat Recover",
+      "description": "20g micelarni kazein (6-8h slow release) + 10g hidrolizirani kolagen + vitamin C za noćni oporavak i vezivno tkivo.",
+      "brand": {"@id": "https://shakeomat.hr/#org"},
+      "category": "Sport Nutrition / Recovery",
+      "offers": {"@type": "Offer", "price": "4.50", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Zašto kazein u Recover, a ne whey?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Whey se metabolizira u 90 minuta. Ako ga uzmeš navečer, ostavlja 6 sati katabolički prazno tijekom sna. Micelarni kazein se sporo otpušta 6–8 sati i pokriva tu rupu. Res 2012 + Snijders 2015 + Trommelen 2023 to potvrđuju."}},
+        {"@type": "Question", "name": "Što je DIAAS?",
+         "acceptedAnswer": {"@type": "Answer", "text": "DIAAS (Digestible Indispensable Amino Acid Score) je FAO/WHO 2013 standard za proteinsku kvalitetu. Whey isolate ima score 1.09 — najviše među komercijalnim proteinima. Mi koristimo proteine s DIAAS ≥ 1.0."}},
+        {"@type": "Question", "name": "Zašto 3g kreatina ako ISSN preporučuje 5g/dan?",
+         "acceptedAnswer": {"@type": "Answer", "text": "3g po porciji je tjedni doprinos saturaciji mišića. Za punu saturaciju (ergogenic effect na snagu) treba 5g/dan kontinuirano 28 dana — što obično znači dodatnu home suplementaciju. Mi koristimo Creapure® njemački 99,9% pure monohidrat."}},
+        {"@type": "Question", "name": "Mogu li koristiti ako sam laktozno intolerantan?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Lean ima manje od 1g laktoze po porciji (whey isolate WPI 90). To ga čini sigurnim za većinu osoba s laktoznom intolerancijom. Vegan SKU dolazi u Fazi 3."}},
+        {"@type": "Question", "name": "Što s veganima?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Plant SKU dolazi u Fazi 3 (2027). Pea+rice 70:30 blend doseže DIAAS ≥ 1.0 s L-leucin spikeom i algal omega-3."}}
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1350,32 +1418,36 @@
     <div class="sku-grid">
       <article class="sku-card lean">
         <h3 class="sku-name">Lean</h3>
-        <p class="sku-macro">25g proteina · 16 oz · min kalorija</p>
-        <p class="sku-ingredient">Whey isolat. Čisti profil za definiciju i lagane treninge.</p>
+        <p class="sku-macro">25g whey isolat · 16 oz · &lt;1g laktoze</p>
+        <p class="sku-ingredient">Whey isolat (DIAAS 1.09 — najviša proteinska kvaliteta). Niskokalorična varijanta za definiciju, lagane treninge i osjetljive na laktozu.</p>
         <span class="sku-price">€3.50</span>
       </article>
 
       <article class="sku-card build">
         <h3 class="sku-name">Build</h3>
-        <p class="sku-macro">35g proteina · kreatin · 16 oz · masa</p>
-        <p class="sku-ingredient">Whey + kreatin u jednoj čaši. Za dane kad gradiš mišić.</p>
+        <p class="sku-macro">30g whey + 20g malto + 3g Creapure®</p>
+        <p class="sku-ingredient">Whey concentrate s maltodekstrinom (insulin spike za glikogen) i njemačkim Creapure® kreatin monohidratom — 99,9% čistoće, bez kontaminata.</p>
         <span class="sku-price">€4.00</span>
       </article>
 
       <article class="sku-card boost">
         <h3 class="sku-name">Boost</h3>
-        <p class="sku-macro">Whey + BCAA · 16 oz · za učinak</p>
-        <p class="sku-ingredient">Aminokiseline koje mišić traži upravo sada. Za duge treninge i teške serije.</p>
+        <p class="sku-macro">20g whey isolat + 1g L-leucin</p>
+        <p class="sku-ingredient">Leucin spike preko mTOR thresholda — defensible aktivacija sinteze mišića. Lagana opcija za dnevni boost bez kofeina.</p>
         <span class="sku-price">€4.00</span>
       </article>
 
       <article class="sku-card recover">
         <h3 class="sku-name">Recover</h3>
-        <p class="sku-macro">Whey + kolagen · 16 oz · regeneracija</p>
-        <p class="sku-ingredient">Oporavak i regeneracija odmah nakon teškog treninga. Za dane kad si dao sve.</p>
+        <p class="sku-macro">20g micelarni kazein + 10g kolagen</p>
+        <p class="sku-ingredient">Kazein 6–8h slow release (NE whey 90 min) — pokriva katabolički gap noću. Hidrolizirani kolagen + vitamin C za vezivno tkivo (Shaw 2017 protokol).</p>
         <span class="sku-price">€4.50</span>
       </article>
     </div>
+
+    <p style="text-align: center; margin-top: 32px; font-size: 0.85rem; color: var(--muted); max-width: 720px; margin-left: auto; margin-right: auto;">
+      <strong style="color: var(--cyan);">Faza 1 formule (lansiranje 2026).</strong> Phase 2 reformulation u 2027 dodaje L-teanin za fokus, glicin + magnezij za san i dodatne dokazane ergogene sastojke. Više u <a href="#roadmap" style="color: var(--cyan);">Roadmap sekciji</a>.
+    </p>
   </div>
 </section>
 
@@ -1507,6 +1579,113 @@
   </div>
 </section>
 
+<!-- ============ ROADMAP ============ -->
+<section class="content-section" id="roadmap" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="roadmap-heading">
+  <div class="container">
+    <span class="section-tag">Roadmap formula</span>
+    <h2 class="section-heading" id="roadmap-heading">Trenutna formula. Što dolazi.</h2>
+    <p style="max-width: 720px; margin: 0 auto 40px; text-align: center; color: var(--muted);">
+      Ne lansiramo eksperimente. Lansiramo dokazano — i nadograđujemo na temelju nove znanosti i feedbacka korisnika.
+    </p>
+
+    <div class="sku-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+      <article class="sku-card" style="border-left: 4px solid var(--cyan);">
+        <h3 class="sku-name" style="color: var(--cyan); font-size: 2rem;">Faza 1</h3>
+        <p class="sku-macro">2026 · Lansiranje</p>
+        <p class="sku-ingredient">
+          4 SKU s ispravljenim mehanizmima:<br>
+          • Lean: 25g whey isolate<br>
+          • Build: whey + malto + Creapure®<br>
+          • Boost: whey + L-leucin<br>
+          • Recover: micelarni kazein + kolagen<br><br>
+          DIAAS-optimizirano. Bez kofeina (Faza 2 dodaje).
+        </p>
+      </article>
+
+      <article class="sku-card" style="border-left: 4px solid var(--green);">
+        <h3 class="sku-name" style="color: var(--green); font-size: 2rem;">Faza 2</h3>
+        <p class="sku-macro">2027 · Scientific upgrade</p>
+        <p class="sku-ingredient">
+          Dodaci s meta-analitičkim dokazom:<br>
+          • L-teanin + 150mg kofein u Boost (1:2 ratio za fokus)<br>
+          • Glicin + Mg bisglycinate u Recover (sleep onset)<br>
+          • 15g malto u Recover (Trommelen 2023)<br>
+          • L-leucin spike u Lean i Build (mTOR push)
+        </p>
+      </article>
+
+      <article class="sku-card" style="border-left: 4px solid var(--orange);">
+        <h3 class="sku-name" style="color: var(--orange); font-size: 2rem;">Faza 3</h3>
+        <p class="sku-macro">2027/28 · Line extension</p>
+        <p class="sku-ingredient">
+          Novi SKU za sve segmente:<br>
+          • Plant — vegan pea+rice 70:30 + algal omega-3 + leucin spike (DIAAS ≥1.0)<br>
+          • Elite — premium MPC (DIAAS 1.14) za peri-trening<br>
+          • Multi-tržište: Slovenija, BiH, Srbija
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="content-section" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <span class="section-tag">Pitanja korisnika</span>
+    <h2 class="section-heading" id="faq-heading">Što ljudi najčešće pitaju.</h2>
+
+    <div style="max-width: 820px; margin: 0 auto;">
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Zašto kazein u Recover, a ne whey?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Whey se metabolizira u 90 minuta. Ako ga uzmeš navečer, ostavlja 6 sati katabolički prazno tijekom sna. Micelarni kazein se sporo otpušta 6–8 sati i pokriva tu rupu. Res 2012 + Snijders 2015 + Trommelen 2023 to potvrđuju.</p>
+      </details>
+
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Što je DIAAS i zašto vam je važno?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">DIAAS (Digestible Indispensable Amino Acid Score) je FAO/WHO 2013 standard za proteinsku kvalitetu. Whey isolate ima score 1.09 — najviše među komercijalnim proteinima. Sojini i pea blendovi imaju niže DIAAS, što znači da tijelo manje iskorištava njihov amino profil. Mi koristimo proteine s DIAAS ≥ 1.0.</p>
+      </details>
+
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Zašto 3g kreatina ako ISSN preporučuje 5g/dan?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;"><strong>Transparentno:</strong> 3g po porciji je tjedni doprinos saturaciji mišića. Za punu saturaciju (ergogenic effect na snagu) treba 5g/dan kontinuirano 28 dana — što obično znači dodatnu home suplementaciju. Mi koristimo Creapure® (njemački 99,9% pure monohidrat), bez kontaminata iz jeftinijih izvora.</p>
+      </details>
+
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Mogu li koristiti ako sam laktozno intolerantan?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Lean ima manje od 1g laktoze po porciji (whey isolate WPI 90). To ga čini sigurnim za većinu osoba s laktoznom intolerancijom — ali NE smatrati ga "bez laktoze". Build, Boost i Recover imaju više laktoze. Vegan i no-laktoza varijanta dolazi u Fazi 3 (Plant SKU).</p>
+      </details>
+
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Tko stoji iza formule?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Formule pregleda registrirani sportski nutricionist. Svaka tvrdnja na ovoj stranici se temelji na meta-analizama 2020–2026 (Morton 2018, Trommelen 2023, ISSN Position Stands, FAO/WHO DIAAS 2013, IOC REDs 2023). Ime nutricionista i CV ide live s Phase 1 launchom.</p>
+      </details>
+
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Što s veganima?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Plant SKU dolazi u Fazi 3 (2027). Pea+rice 70:30 blend doseže DIAAS ≥ 1.0 (Lim 2025 meta-analiza), s dodatnim L-leucin spikeom za mTOR i algal omega-3 kao vegan-specific differencom. Ne radimo "imitaciju whey-a" — radimo legitimno biokemijski potpunu vegansku formulu.</p>
+      </details>
+
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Mogu li ovo koristiti za mršavljenje?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Lean je niskokalorična varijanta i odlično se uklapa u kalorijski deficit. ALI Shake-o-mat NE zamjenjuje potpuni obrok — nadopunjuje. Ako trenutno primjećuješ stalan umor, gubitak menstruacije ili pad performansa, savjetuj se sa sportskim liječnikom (REDs / Relative Energy Deficiency in Sport, IOC 2023).</p>
+      </details>
+
+      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
+        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Koji je izvor podatka „55% članova teretana koristi proteine"?</summary>
+        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Mintel Sport Nutrition Report 2024 + IHRSA Global Health &amp; Fitness Report 2024. Hrvatska je u rasponu 48–62% ovisno o gradskom centru, sa Zagrebačkom regijom u gornjem rasponu.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DISCLAIMER ============ -->
+<section style="background: rgba(255, 155, 70, 0.06); padding: 24px 0; border-top: 1px solid rgba(255, 155, 70, 0.2); border-bottom: 1px solid rgba(255, 155, 70, 0.2);">
+  <div class="container">
+    <p style="text-align: center; font-size: 0.85rem; color: var(--muted); max-width: 820px; margin: 0 auto; line-height: 1.6;">
+      <strong style="color: var(--orange);">Važno:</strong> Shake-o-mat shake-ovi su dodatak prehrani, ne zamjena za potpuni obrok. Ako primjećuješ nedostatak menstruacije, opadanje performansa, kronični umor ili gubitak apetita — savjetuj se sa sportskim liječnikom prije podizanja treninga (Relative Energy Deficiency in Sport, IOC 2023). Boost (Faza 2) sadrži kofein i nije preporučljiv djeci, trudnicama i dojiljama.
+    </p>
+  </div>
+</section>
 
 </main>
 
