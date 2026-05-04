@@ -697,7 +697,15 @@ footer {
     <nav aria-label="Glavna navigacija">
       <ul class="nav-links">
         <li><a href="index.html">Početna</a></li>
-        <li><a href="mailto:info@shakeomat.hr">Kontakt</a></li>
+        <li><a href="#form-head">Kontakt</a></li>
+        <li>
+          <select id="langSwitch" aria-label="Jezik / Language" style="background: rgba(115, 237, 255, 0.08); border: 1px solid rgba(115, 237, 255, 0.3); color: var(--white); padding: 6px 10px; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; cursor: pointer;">
+            <option value="hr" selected>HR</option>
+            <option value="en" disabled>EN — uskoro</option>
+            <option value="sl" disabled>SL — uskoro</option>
+            <option value="bs" disabled>BS — uskoro</option>
+          </select>
+        </li>
       </ul>
     </nav>
   </div>
@@ -755,6 +763,22 @@ footer {
   </div>
 </section>
 
+<!-- ============== APARAT U PROSTORU ============== -->
+<section aria-labelledby="machine-head" style="background: rgba(11, 18, 48, 0.35);">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="machine-head">Aparat koji se uklapa u tvoj prostor.</h2>
+      <p>60 × 80 cm tlocrta, 190 cm visine. Standardna utičnica 220 V. Bez plinskih ili vodovodnih instalacija — samo struja i ulaz vode iz mreže.</p>
+    </div>
+    <figure style="max-width: 720px; margin: 0 auto; padding: 24px 0;">
+      <img src="machine-context.jpg" alt="Shake-o-mat aparat u modernoj teretani — 60×80 cm tlocrt, 190 cm visine" loading="lazy" width="700" height="1254" style="width: 100%; height: auto; border-radius: 12px;">
+      <figcaption style="margin-top: 16px; text-align: center; color: var(--muted); font-size: 0.95rem;">
+        Postavlja se u 2 sata · samočišćenje toplinom · daljinski monitoring (Nayax)
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 <!-- ============== CALCULATOR ============== -->
 <section id="calculator" aria-labelledby="calc-head">
   <div class="container">
@@ -805,12 +829,10 @@ footer {
 <!-- ============== SOCIAL PROOF ============== -->
 <section class="proof" aria-label="Pilot partneri">
   <div class="container">
-    <p class="tag">Lansirne lokacije — srpanj 2026 · ugovori u pregovoru</p>
-    <div class="logo-row">
-      <div class="logo-box">Gyms4you</div>
-      <div class="logo-box">THE Fitness</div>
-      <div class="logo-box">HOB</div>
-    </div>
+    <p class="tag">Lansiranje 2026 · 10 teretana u Zagrebu i okolici</p>
+    <p style="text-align: center; max-width: 640px; margin: 16px auto 0; color: var(--muted); font-size: 0.95rem;">
+      Razgovori u tijeku. Konkretne lokacije objavljujemo nakon potpisa ugovora — ako te zanima da tvoja teretana bude među prvima, prijavi se ispod.
+    </p>
   </div>
 </section>
 
@@ -823,7 +845,7 @@ footer {
     </div>
 
     <div class="form-wrap">
-      <form id="b2bForm" action="https://formsubmit.co/info@shakeomat.hr" method="POST" novalidate>
+      <form id="b2bForm" action="https://formsubmit.co/d13b794a8bfa6dc60fb1818902d2fb9b" method="POST" novalidate>
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="Nova B2B prijava — Shake-o-mat">
         <input type="hidden" name="_autoresponse" value="Hvala na prijavi! Javimo se u roku 24 sata. — Shake-o-mat tim">
@@ -960,13 +982,13 @@ footer {
         <h4>Navigacija</h4>
         <a href="index.html">Početna</a>
         <a href="b2b.html">Za teretane</a>
-        <a href="mailto:info@shakeomat.hr">Kontakt</a>
+        <a href="#form-head">Kontakt</a>
       </div>
 
       <div>
         <h4>Društveno</h4>
-        <a href="https://instagram.com/shakeomat" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://tiktok.com/@shakeomat" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/shakeomat" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@shakeomat" target="_blank" rel="noopener">TikTok</a>
         <a href="https://linkedin.com/company/shakeomat" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:info@shakeomat.hr">info@shakeomat.hr</a>
       </div>
