@@ -942,8 +942,8 @@
             <div class="sku-price">od €4.00</div>
           </div>
         </div>
-        <div class="sku-card boost" data-goal="BOOST" onclick="selectGoal('BOOST')">
-          <div class="sku-title">BOOST</div>
+        <div class="sku-card boost" data-goal="LIFT" onclick="selectGoal('LIFT')">
+          <div class="sku-title">LIFT</div>
           <div>
             <div class="sku-desc">Whey + BCAA · za učinak · 16 oz · anti-katabolizam</div>
             <div class="sku-price">od €4.00</div>
@@ -993,11 +993,11 @@
       <button class="cancel-btn">Odustani</button>
     </section>
 
-    <!-- SCREEN 2c: Boost Selection -->
+    <!-- SCREEN 2c: Add-on Selection -->
     <section class="screen" id="screen-2c">
       <div class="top-bar">
         <button class="back-arrow" title="Natrag" onclick="showScreen('2b')">&larr;</button>
-        <h2 class="screen-headline">Dodaj boost?</h2>
+        <h2 class="screen-headline">Dodaj nadogradnju?</h2>
         <div class="step-indicator">Korak 3/3</div>
       </div>
       <div class="selected-goal-bar" id="selectedComboBar">LEAN · Čokolada</div>
@@ -1013,7 +1013,7 @@
           <div class="boost-price">+€0.50</div>
         </div>
         <div class="boost-card none" onclick="selectBoost(null)">
-          <div class="boost-name">BEZ BOOSTA</div>
+          <div class="boost-name">BEZ LIFTA</div>
           <div class="boost-desc">Osnovna formula</div>
           <div class="boost-price">→</div>
         </div>
@@ -1086,7 +1086,7 @@
   // ---------- Order state ----------
   const order = { goal: 'BUILD', flavor: 'Čokolada', boost: null };
 
-  const BASE_PRICES = { LEAN: 3.50, BUILD: 4.00, RECOVER: 4.50, BOOST: 4.00 };
+  const BASE_PRICES = { LEAN: 3.50, BUILD: 4.00, RECOVER: 4.50, LIFT: 4.00 };
 
   function orderPrice() {
     return (BASE_PRICES[order.goal] + (order.boost ? 0.50 : 0)).toFixed(2);

@@ -926,7 +926,7 @@ footer.app-footer {
               <th>LEAN %</th>
               <th>BUILD %</th>
               <th>RECOVER %</th>
-              <th>BOOST %</th>
+              <th>LIFT %</th>
               <th>Cups</th>
               <th>Last Refill</th>
               <th>Action</th>
@@ -1108,7 +1108,7 @@ footer.app-footer {
             <li><span class="loc">Trešnjevka</span><span class="sku">BUILD</span></li>
             <li><span class="loc">Arena</span><span class="sku">LEAN</span></li>
             <li><span class="loc">Ilica</span><span class="sku">RECOVER</span></li>
-            <li><span class="loc">City</span><span class="sku">BOOST</span></li>
+            <li><span class="loc">City</span><span class="sku">LIFT</span></li>
             <li><span class="loc">Maksimir</span><span class="sku" style="color:var(--muted);">—</span></li>
           </ul>
         </div>
@@ -1245,7 +1245,7 @@ function initCharts() {
   new Chart(document.getElementById('chartSku'), {
     type: 'doughnut',
     data: {
-      labels: ['LEAN', 'BUILD', 'RECOVER', 'BOOST'],
+      labels: ['LEAN', 'BUILD', 'RECOVER', 'LIFT'],
       datasets: [{
         data: [30, 40, 18, 12],
         backgroundColor: ['#73EDFF', '#7DFF9B', '#FF9B46', '#C882FF'],

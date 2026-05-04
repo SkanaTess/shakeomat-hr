@@ -484,7 +484,7 @@
       <div class="status-lines">
         <div><strong style="color:var(--white);">Zadnji servis:</strong> 2026-04-10</div>
         <div><strong style="color:var(--white);">Sljedeći servis:</strong> 2026-05-10</div>
-        <div><strong style="color:var(--white);">Razine sirovina:</strong> LEAN 78% · BUILD 65% · RECOVER 82% · BOOST 71% · Čaše 412</div>
+        <div><strong style="color:var(--white);">Razine sirovina:</strong> LEAN 78% · BUILD 65% · RECOVER 82% · LIFT 71% · Čaše 412</div>
       </div>
     </section>
 
@@ -604,7 +604,7 @@
       { name:'LEAN',    cls:'lean',    price:'€3.50' },
       { name:'BUILD',   cls:'build',   price:'€4.00' },
       { name:'RECOVER', cls:'recover', price:'€4.50' },
-      { name:'BOOST',   cls:'boost',   price:'€4.00' }
+      { name:'LIFT',   cls:'boost',   price:'€4.00' }
     ];
     const out = [];
     const now = new Date();
@@ -646,7 +646,7 @@
     new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['LEAN', 'BUILD', 'RECOVER', 'BOOST'],
+        labels: ['LEAN', 'BUILD', 'RECOVER', 'LIFT'],
         datasets: [{
           label: 'Udio prodaje (%)',
           data: [30, 40, 18, 12],
@@ -776,7 +776,7 @@
  <tr><td>LEAN</td><td>30%</td><td>184</td></tr>
  <tr><td>BUILD</td><td>40%</td><td>245</td></tr>
  <tr><td>RECOVER</td><td>18%</td><td>110</td></tr>
- <tr><td>BOOST</td><td>12%</td><td>74</td></tr>
+ <tr><td>LIFT</td><td>12%</td><td>74</td></tr>
 </table>
 <h2>Status aparata</h2>
 <p>ONLINE · Zadnji servis: 2026-04-10 · Sljedeći servis: 2026-05-10</p>
