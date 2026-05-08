@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shake-o-mat — Protein. Ovdje. Odmah.</title>
-<meta name="description" content="Shake-o-mat: aparat koji ti daje pravi obrok poslije treninga. Bez planiranja, bez čekanja. Na izlazu tvoje teretane.">
+<title>Shake-o-mat — Besramno dobri shakeovi. 60 sek u tvojoj teretani.</title>
+<meta name="description" content="Shake-o-mat: aparat koji miješa svjež shake u tvojoj teretani u 60 sekundi. Bez praha u torbi, bez čekanja u baru, bez priča.">
 <meta name="google-site-verification" content="FhYDbURUXeowL0KOpaK8KxMs4kHs7YGy6vmt2mUPt38">
 <link rel="canonical" href="https://shakeomat.hr/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shakeomat.hr/">
-<meta property="og:title" content="Shake-o-mat — Protein. Ovdje. Odmah.">
-<meta property="og:description" content="Shake-o-mat postavlja premium automate za svježe miješane proteinske shakeove u teretane diljem Hrvatske.">
+<meta property="og:title" content="Shake-o-mat — Besramno dobri shakeovi.">
+<meta property="og:description" content="Premium automati za svježe miješane shakeove u teretanama diljem Hrvatske. 60 sekundi od dodira do gutljaja. Bez praha. Bez priča.">
 <meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="hr" href="https://shakeomat.hr/">
@@ -94,6 +94,65 @@
   gtag('js', new Date());
   gtag('config', 'G-65B9W6C4GY');
 </script>
+
+<!-- ============ HERO A/B/C TEST (Sprint A · 08.05.2026.) ============ -->
+<!-- Spec: ad_creatives.md §12 · 3 cella · €100 / 7 dana · Meta Traffic objective -->
+<!-- URL params: ?h=a (Mentor sober kontrola) · ?h=b (Jester primary, default) · ?h=c (Dual EN tagline stack) -->
+<script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var heroCell = params.get('h');
+    if (heroCell && ['a','b','c'].indexOf(heroCell.toLowerCase()) >= 0) {
+      heroCell = heroCell.toLowerCase();
+      sessionStorage.setItem('shakeomat_hero_variant', heroCell);
+    } else {
+      heroCell = sessionStorage.getItem('shakeomat_hero_variant') || 'b';
+    }
+    window.__shakeomatHeroVariant = heroCell;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'hero_variant_view', {
+          'hero_variant': heroCell,
+          'page_path': window.location.pathname
+        });
+      }
+
+      var heroH1 = document.querySelector('.hero-headline');
+      var heroSub = document.querySelector('.hero-subline');
+      if (!heroH1 || !heroSub) return;
+
+      var variants = {
+        'a': {
+          h1: 'Tvoja teretana.<br>Tvoj shake.<br><span class="accent">Bez planiranja.</span>',
+          sub: 'Aparat na izlazu iz tvoje teretane miješa svjež shake u 60 sekundi. Bez aplikacije, bez čekanja.'
+        },
+        'c': {
+          h1: 'DAMN GOOD<br>SHAKES.<br><span class="accent">U 60 sekundi.</span>',
+          sub: 'Bez praha u torbi, bez čekanja u baru, bez aplikacija. Tap → 60 sekundi → papirnata čaša u ruci.'
+        }
+      };
+
+      if (variants[heroCell]) {
+        heroH1.innerHTML = variants[heroCell].h1;
+        heroSub.textContent = variants[heroCell].sub;
+      }
+
+      var ctaButtons = document.querySelectorAll('.hero-ctas a.btn-primary');
+      ctaButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'hero_variant_cta_click', {
+              'hero_variant': heroCell,
+              'cta_label': btn.textContent.trim()
+            });
+          }
+        });
+      });
+    });
+  })();
+</script>
+<!-- ============ /HERO A/B/C TEST ============ -->
 
 <style>
   :root {
@@ -1358,11 +1417,11 @@
     <div class="hero-inner">
       <div class="hero-text">
         <h1 class="hero-headline">
-          Pravi obrok<br>
-          poslije treninga.<br>
-          <span class="accent">Bez planiranja.</span>
+          Besramno dobri<br>
+          shakeovi.<br>
+          <span class="accent">Bez praha. Bez priča.</span>
         </h1>
-        <p class="hero-subline">Aparat na izlazu iz tvoje teretane miješa svjež shake u 60 sekundi. Bez aplikacije, bez čekanja.</p>
+        <p class="hero-subline">Aparat u tvojoj teretani miješa svjež shake u 60 sekundi. Provjereni sastojci, papir za svaku seriju, papirnata čaša u ruci. Bez aplikacije, bez čekanja u baru, bez praha u torbi.</p>
         <div class="hero-ctas">
           <a href="#waitlist" class="btn btn-primary">Javi mi kad stigne &rarr;</a>
           <a href="b2b.html" class="btn btn-outline">Za vlasnike teretana</a>
@@ -1535,6 +1594,48 @@
       <a href="#waitlist" class="btn btn-primary">Javi mi kad stigne u moju teretanu &rarr;</a>
       <a href="b2b.html" class="btn btn-outline">Vlasnici teretana &mdash; partner program &rarr;</a>
     </div>
+  </div>
+</section>
+
+<!-- ============ ANTI-CLAIM (ŠTO NE OBEĆAVAMO / ŠTO OBEĆAVAMO) ============ -->
+<section class="content-section anti-claim" id="anti-claim" aria-labelledby="anti-claim-heading" style="background: linear-gradient(180deg, rgba(11, 18, 48, 0.55) 0%, rgba(5, 8, 22, 0.85) 100%); border-top: 1px solid rgba(115, 237, 255, 0.15); border-bottom: 1px solid rgba(115, 237, 255, 0.15);">
+  <div class="container">
+    <span class="section-tag" style="color: var(--cyan);">Iskreno o tome što jesmo i što nismo</span>
+    <h2 class="section-heading" id="anti-claim-heading" style="margin-bottom: 16px;">Ne obećavamo press na 120 kg.<br><span class="accent">Obećavamo besramno dobar shake.</span></h2>
+    <p style="text-align: center; color: var(--muted); max-width: 720px; margin: 0 auto 48px; font-size: 1.1rem; line-height: 1.55;">
+      Tržište je puno marketinga koji ti obećava transformaciju za mjesec dana, magic formule i pet kila mišića. Mi nećemo. Mi imamo aparat, papirnatu čašu, provjerene sastojke s papirima u biou, te dvadeset kombinacija. Ostatak je na tebi i tvom treningu.
+    </p>
+
+    <div style="max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid rgba(115, 237, 255, 0.2); border-radius: 12px; overflow: hidden;">
+      <div style="background: rgba(255, 155, 70, 0.08); padding: 24px; border-right: 1px solid rgba(115, 237, 255, 0.15);">
+        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.4rem; color: var(--orange); margin-bottom: 16px; letter-spacing: 0.04em;">Što NE obećavamo</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; color: var(--white); line-height: 1.9;">
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Transformaciju za mjesec dana</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>„+5 kg mišića" za 30 dana</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Magic formulu ili tajni sastojak</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Eksplozivni rast bez treninga</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Zamjenu za pravu hranu</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Prah u torbi koji smrdi</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Aplikaciju, narudžbu, čekanje</li>
+        </ul>
+      </div>
+      <div style="background: rgba(115, 237, 255, 0.05); padding: 24px;">
+        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.4rem; color: var(--cyan); margin-bottom: 16px; letter-spacing: 0.04em;">Što obećavamo</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; color: var(--white); line-height: 1.9;">
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Besramno dobar okus</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Šezdeset sekundi do shake-a</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Provjerene sastojke koje već poznaješ</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Papir za svaku seriju (transparentnost)</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Svjež — miješa se kad ga uzmeš</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Papirnatu čašu u ruci</li>
+          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Tap → 60 sek → gotovo</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="text-align: center; color: var(--muted); max-width: 720px; margin: 40px auto 0; font-size: 0.95rem; font-style: italic; line-height: 1.55;">
+      Imamo brojke. Dok ih nutricionist ne potpiše, ne smijemo ti ih reći. Ali okus smijemo — i besramno je dobar.
+    </p>
   </div>
 </section>
 
