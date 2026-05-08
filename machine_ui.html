@@ -935,35 +935,35 @@
           <div class="sku-title">LEAN</div>
           <div>
             <div class="sku-desc">Whey isolat · 25g proteina · 16 oz · manje kalorija</div>
-            <div class="sku-price">od €3.50</div>
+            <div class="sku-price">od €3,00</div>
           </div>
         </div>
         <div class="sku-card build" data-goal="BUILD" onclick="selectGoal('BUILD')">
           <div class="sku-title">BUILD</div>
           <div>
             <div class="sku-desc">Whey + kreatin · 35g proteina · 16 oz · masa</div>
-            <div class="sku-price">od €4.00</div>
+            <div class="sku-price">od €3,50</div>
           </div>
         </div>
         <div class="sku-card boost" data-goal="LIFT" onclick="selectGoal('LIFT')">
           <div class="sku-title">LIFT</div>
           <div>
-            <div class="sku-desc">Whey + BCAA · za učinak · 16 oz · anti-katabolizam</div>
-            <div class="sku-price">od €4.00</div>
+            <div class="sku-desc">Whey + L-leucin · lagana opcija · 16 oz · pred trening</div>
+            <div class="sku-price">od €3,50</div>
           </div>
         </div>
         <div class="sku-card recover" data-goal="RECOVER" onclick="selectGoal('RECOVER')">
           <div class="sku-title">RECOVER</div>
           <div>
             <div class="sku-desc">Kazein + kolagen · oporavak · 16 oz · regeneracija</div>
-            <div class="sku-price">od €4,50</div>
+            <div class="sku-price">od €4,00</div>
           </div>
         </div>
         <div class="sku-card vegan" data-goal="VEGAN" onclick="selectGoal('VEGAN')">
           <div class="sku-title">VEGAN</div>
           <div>
             <div class="sku-desc">Grašak + riža · 25g proteina · 16 oz · B12 fortified · bez mlijeka</div>
-            <div class="sku-price">od €4,50</div>
+            <div class="sku-price">od €3,00</div>
           </div>
         </div>
       </div>
@@ -1034,7 +1034,7 @@
     <section class="screen" id="screen-3">
       <div class="pay-header">
         <h2 class="screen-headline">Plaćanje</h2>
-        <span class="pay-sku">BUILD · €4.00</span>
+        <span class="pay-sku">BUILD · €3,50</span>
       </div>
       <div class="pay-body">
         <div class="tap-zone">Prisloni karticu<br>/ mobitel</div>
@@ -1096,7 +1096,7 @@
   // ---------- Order state ----------
   const order = { goal: 'BUILD', flavor: 'Čokolada', boost: null };
 
-  const BASE_PRICES = { LEAN: 3.50, BUILD: 4.00, RECOVER: 4.50, LIFT: 4.00, VEGAN: 4.50 };
+  const BASE_PRICES = { LEAN: 3.00, BUILD: 3.50, RECOVER: 4.00, LIFT: 3.50, VEGAN: 3.00 };
 
   function orderPrice() {
     return (BASE_PRICES[order.goal] + (order.boost ? 0.50 : 0)).toFixed(2);
