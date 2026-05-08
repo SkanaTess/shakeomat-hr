@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shake-o-mat — Besramno dobri shakeovi. 60 sek u tvojoj teretani.</title>
-<meta name="description" content="Shake-o-mat: aparat koji miješa svjež shake u tvojoj teretani u 60 sekundi. Bez praha u torbi, bez čekanja u baru, bez priča.">
+<meta name="description" content="Shake-o-mat: aparat koji miješa svjež shake u tvojoj teretani u 60 sekundi. Bez praha u torbi, bez čekanja u baru, bez foliranja.">
 <meta name="google-site-verification" content="FhYDbURUXeowL0KOpaK8KxMs4kHs7YGy6vmt2mUPt38">
 <link rel="canonical" href="https://shakeomat.hr/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shakeomat.hr/">
 <meta property="og:title" content="Shake-o-mat — Besramno dobri shakeovi.">
-<meta property="og:description" content="Premium automati za svježe miješane shakeove u teretanama diljem Hrvatske. 60 sekundi od dodira do gutljaja. Bez praha. Bez priča.">
+<meta property="og:description" content="Premium automati za svježe miješane shakeove u teretanama diljem Hrvatske. 60 sekundi od dodira do gutljaja. Bez praha. Bez foliranja.">
 <meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="hr" href="https://shakeomat.hr/">
@@ -63,6 +63,13 @@
       "category": "Sport Nutrition / Recovery"
     },
     {
+      "@type": "Product",
+      "name": "Shake-o-mat Vegan",
+      "description": "Biljni protein blend (grašak + riža) s vitaminom B12 — bez mlijeka, bez laktoze, 25 g proteina po porciji. DIAAS ≥ 1,0.",
+      "brand": {"@id": "https://shakeomat.hr/#org"},
+      "category": "Sport Nutrition / Vegan Protein"
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": [
         {"@type": "Question", "name": "Zašto kazein u Recover, a ne whey?",
@@ -72,9 +79,9 @@
         {"@type": "Question", "name": "Zašto 3g kreatina ako ISSN preporučuje 5g/dan?",
          "acceptedAnswer": {"@type": "Answer", "text": "3g po porciji je dovoljna doza za saturaciju ako se uzima kontinuirano svaki dan (≥6×/tjedno) — dosegneš pun ergogenic efekt za 30–40 dana (Candow-Antonio 2025 + ISSN Position Stand). Ako kupuješ Build 2–4× tjedno, saturacija je djelomična, pa preporučamo 2–3g/dan dodatne home suplementacije onih dana kad ne treniraš."}},
         {"@type": "Question", "name": "Mogu li koristiti ako sam laktozno intolerantan?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Lean ima manje od 1g laktoze po porciji (whey isolate WPI 90). To ga čini sigurnim za većinu osoba s laktoznom intolerancijom. Vegan SKU dolazi u Fazi 3."}},
+         "acceptedAnswer": {"@type": "Answer", "text": "Lean ima manje od 1g laktoze po porciji (whey isolate WPI 90). Sigurno za većinu osoba s laktoznom intolerancijom. Za potpuno bezmliječnu opciju — uzmi Vegan (grašak + riža blend, 25g proteina, B12 fortified)."}},
         {"@type": "Question", "name": "Što s veganima?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Trenutni početni asortiman temelji se na proteinu iz mlijeka. Razmatramo i vegansku opciju za sljedeći krug — javi se preko forme ako te zanima."}}
+         "acceptedAnswer": {"@type": "Answer", "text": "Vegan SKU dostupan u svim aparatima od starta — biljni protein blend (grašak + riža), 25g proteina po porciji, fortificiran s B12 (kritični nutrient za vegansku prehranu), bez laktoze, bez glutena. DIAAS ≥ 1,0."}}
       ]
     }
   ]
@@ -161,6 +168,7 @@
     --blue: #1BA2FF;
     --cyan: #73EDFF;
     --green: #7DFF9B;
+    --vegan: #4ADE80;
     --orange: #FF9B46;
     --pink: #FF6FB5;
     --white: #F4F8FF;
@@ -697,6 +705,7 @@
   .goal-pill.build { color: var(--green); border-color: var(--green); }
   .goal-pill.recover { color: var(--pink); border-color: var(--pink); }
   .goal-pill.boost { color: #C882FF; border-color: #C882FF; }
+  .goal-pill.vegan { color: var(--vegan); border-color: var(--vegan); }
 
   /* Step 3 stopwatch */
   .icon-stopwatch {
@@ -779,6 +788,7 @@
   .sku-card.build::before { background: var(--green); }
   .sku-card.boost::before { background: #C882FF; }
   .sku-card.recover::before { background: var(--pink); }
+  .sku-card.vegan::before { background: var(--vegan); }
 
   .sku-name {
     font-size: 3rem;
@@ -790,6 +800,7 @@
   .sku-card.build .sku-name { color: var(--green); }
   .sku-card.boost .sku-name { color: #C882FF; }
   .sku-card.recover .sku-name { color: var(--pink); }
+  .sku-card.vegan .sku-name { color: var(--vegan); }
 
   .sku-macro {
     font-family: 'Barlow Condensed', sans-serif;
@@ -824,6 +835,7 @@
   .sku-card.build .sku-price { color: var(--green); border-color: var(--green); }
   .sku-card.boost .sku-price { color: #C882FF; border-color: #C882FF; }
   .sku-card.recover .sku-price { color: var(--pink); border-color: var(--pink); }
+  .sku-card.vegan .sku-price { color: var(--vegan); border-color: var(--vegan); }
   .sku-price { display: none; } /* cijene skrivene dok nisu finalne */
 
   /* ============ STATS / PROOF ============ */
@@ -1419,7 +1431,7 @@
         <h1 class="hero-headline">
           Besramno dobri<br>
           shakeovi.<br>
-          <span class="accent">Bez praha. Bez priča.</span>
+          <span class="accent">Bez praha. Bez foliranja.</span>
         </h1>
         <p class="hero-subline">Aparat u tvojoj teretani miješa svjež shake u 60 sekundi. Provjereni sastojci, papir za svaku seriju, papirnata čaša u ruci. Bez aplikacije, bez čekanja u baru, bez praha u torbi.</p>
         <div class="hero-ctas">
@@ -1480,6 +1492,7 @@
             <span class="goal-pill build">BUILD</span>
             <span class="goal-pill boost">LIFT</span>
             <span class="goal-pill recover">RECOVER</span>
+            <span class="goal-pill vegan">VEGAN</span>
           </div>
         </div>
         <h3 class="step-title">Odaberi cilj</h3>
@@ -1500,7 +1513,7 @@
 <section class="content-section" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="sku-heading">
   <div class="container">
     <span class="section-tag">Tvoj cilj. Tvoj shake.</span>
-    <h2 class="section-heading" id="sku-heading">Četiri formule. Bez kompromisa.</h2>
+    <h2 class="section-heading" id="sku-heading">Pet formula. Bez kompromisa.</h2>
 
     <div class="sku-grid">
       <article class="sku-card lean">
@@ -1518,13 +1531,19 @@
       <article class="sku-card boost">
         <h3 class="sku-name">Lift</h3>
         <p class="sku-macro">Za dnevnu energiju i fokus</p>
-        <p class="sku-ingredient">Lagana opcija za sredinu dana ili pred trening — kvalitetan protein bez tezine, bez popodnevnog pada energije.</p>
+        <p class="sku-ingredient">Lagana opcija za sredinu dana ili pred trening — kvalitetan protein bez težine, bez popodnevnog pada energije.</p>
       </article>
 
       <article class="sku-card recover">
         <h3 class="sku-name">Recover</h3>
         <p class="sku-macro">Za noćni oporavak</p>
         <p class="sku-ingredient">Sporo otpuštajući protein s kolagenom — radi cijelu noć, dok ti spavaš. Za zglobove, vezivno tkivo i jutro bez upale.</p>
+      </article>
+
+      <article class="sku-card vegan">
+        <h3 class="sku-name">Vegan</h3>
+        <p class="sku-macro">Biljni protein, bez kompromisa</p>
+        <p class="sku-ingredient">Grašak i riža u optimalnom omjeru — DIAAS ≥ 1,0, 25 g proteina, B12 fortified. Bez mlijeka, bez laktoze, bez glutena. Za biljnu prehranu i sve koji preferiraju shake bez životinjskog porijekla.</p>
       </article>
     </div>
 

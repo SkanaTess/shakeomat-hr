@@ -494,6 +494,9 @@
   .sku-card.build .sku-title { color: var(--green); }
   .sku-card.recover .sku-title { color: var(--pink); }
   .sku-card.boost .sku-title { color: #C882FF; }
+  .sku-card.vegan .sku-title { color: #4ADE80; }
+  .sku-card.vegan { border-color: rgba(74, 222, 128, 0.3); }
+  .sku-card.vegan:hover { border-color: #4ADE80; }
 
   .sku-desc {
     font-family: 'Barlow', sans-serif;
@@ -952,8 +955,15 @@
         <div class="sku-card recover" data-goal="RECOVER" onclick="selectGoal('RECOVER')">
           <div class="sku-title">RECOVER</div>
           <div>
-            <div class="sku-desc">Whey + kolagen · oporavak · 16 oz · regeneracija</div>
-            <div class="sku-price">od €4.50</div>
+            <div class="sku-desc">Kazein + kolagen · oporavak · 16 oz · regeneracija</div>
+            <div class="sku-price">od €4,50</div>
+          </div>
+        </div>
+        <div class="sku-card vegan" data-goal="VEGAN" onclick="selectGoal('VEGAN')">
+          <div class="sku-title">VEGAN</div>
+          <div>
+            <div class="sku-desc">Grašak + riža · 25g proteina · 16 oz · B12 fortified · bez mlijeka</div>
+            <div class="sku-price">od €4,50</div>
           </div>
         </div>
       </div>
@@ -1086,7 +1096,7 @@
   // ---------- Order state ----------
   const order = { goal: 'BUILD', flavor: 'Čokolada', boost: null };
 
-  const BASE_PRICES = { LEAN: 3.50, BUILD: 4.00, RECOVER: 4.50, LIFT: 4.00 };
+  const BASE_PRICES = { LEAN: 3.50, BUILD: 4.00, RECOVER: 4.50, LIFT: 4.00, VEGAN: 4.50 };
 
   function orderPrice() {
     return (BASE_PRICES[order.goal] + (order.boost ? 0.50 : 0)).toFixed(2);
