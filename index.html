@@ -32,42 +32,130 @@
       "email": "info@shakeomat.hr",
       "address": {"@type": "PostalAddress", "addressLocality": "Zagreb", "addressCountry": "HR"},
       "sameAs": ["https://instagram.com/shakeomat", "https://tiktok.com/@shakeomat"],
-      "description": "Premium vending automati za svježe miješane protein shakeove u teretanama. DIAAS-optimizirane formule, evidence-based pristup."
+      "description": "Prvi protein vending automat u Hrvatskoj. Svjež protein shake u 60 sekundi u teretanama, 5 formula s DIAAS-optimiziranim sastavom (≥1,0), verificirane od sportskog nutricionista.",
+      "slogan": "Besramno dobri shakeovi. Bez praha u torbi. Bez foliranja.",
+      "foundingDate": "2026",
+      "foundingLocation": {"@type": "Place", "name": "Zagreb, Hrvatska"},
+      "areaServed": {"@type": "Country", "name": "Hrvatska"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://shakeomat.hr/#website",
+      "url": "https://shakeomat.hr/",
+      "name": "Shake-o-mat",
+      "description": "Prvi protein vending automat u Hrvatskoj.",
+      "publisher": {"@id": "https://shakeomat.hr/#org"},
+      "inLanguage": "hr-HR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {"@type": "EntryPoint", "urlTemplate": "https://shakeomat.hr/?q={search_term_string}"},
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://shakeomat.hr/#localbusiness",
+      "name": "Shake-o-mat",
+      "image": "https://shakeomat.hr/og-image.jpg",
+      "url": "https://shakeomat.hr/",
+      "email": "info@shakeomat.hr",
+      "address": {"@type": "PostalAddress", "addressLocality": "Zagreb", "addressRegion": "Grad Zagreb", "addressCountry": "HR"},
+      "priceRange": "€€",
+      "areaServed": {"@type": "Country", "name": "Hrvatska"},
+      "additionalType": "https://schema.org/FoodEstablishment",
+      "description": "Prvi protein vending automat u Hrvatskoj. Svjež protein shake u 60 sekundi u tvojoj teretani."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://shakeomat.hr/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://shakeomat.hr/"}
+      ]
     },
     {
       "@type": "Product",
       "name": "Shake-o-mat Lean",
       "description": "Lagani protein nakon treninga za one koji paze na liniju. Verificiran od sportskog nutricionista.",
+      "image": "https://shakeomat.hr/og-image.jpg",
       "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Protein Shake"
+      "category": "Sport Nutrition / Protein Shake",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shakeomat.hr/#sku",
+        "priceCurrency": "EUR",
+        "price": "3.00",
+        "availability": "https://schema.org/PreOrder",
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://shakeomat.hr/#org"}
+      }
     },
     {
       "@type": "Product",
       "name": "Shake-o-mat Build",
       "description": "Pun protein s ugljikohidratima i kreatinom za izgradnju snage i mase.",
+      "image": "https://shakeomat.hr/og-image.jpg",
       "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Mass Gainer"
+      "category": "Sport Nutrition / Mass Gainer",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shakeomat.hr/#sku",
+        "priceCurrency": "EUR",
+        "price": "3.50",
+        "availability": "https://schema.org/PreOrder",
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://shakeomat.hr/#org"}
+      }
     },
     {
       "@type": "Product",
       "name": "Shake-o-mat Lift",
       "description": "Lagana opcija za sredinu dana ili pred trening — kvalitetan protein bez težine.",
+      "image": "https://shakeomat.hr/og-image.jpg",
       "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Energy"
+      "category": "Sport Nutrition / Energy",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shakeomat.hr/#sku",
+        "priceCurrency": "EUR",
+        "price": "3.50",
+        "availability": "https://schema.org/PreOrder",
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://shakeomat.hr/#org"}
+      }
     },
     {
       "@type": "Product",
       "name": "Shake-o-mat Recover",
       "description": "Sporo otpuštajući protein s kolagenom za noćni oporavak i vezivno tkivo.",
+      "image": "https://shakeomat.hr/og-image.jpg",
       "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Recovery"
+      "category": "Sport Nutrition / Recovery",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shakeomat.hr/#sku",
+        "priceCurrency": "EUR",
+        "price": "4.00",
+        "availability": "https://schema.org/PreOrder",
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://shakeomat.hr/#org"}
+      }
     },
     {
       "@type": "Product",
       "name": "Shake-o-mat Vegan",
-      "description": "Biljni protein blend (grašak + riža) s vitaminom B12 — bez mlijeka, bez laktoze, 25 g proteina po porciji. DIAAS ≥ 1,0.",
+      "description": "Pun protein bez mlijeka i glutena za biljnu prehranu. B12 fortified.",
+      "image": "https://shakeomat.hr/og-image.jpg",
       "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Vegan Protein"
+      "category": "Sport Nutrition / Vegan Protein",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shakeomat.hr/#sku",
+        "priceCurrency": "EUR",
+        "price": "3.00",
+        "availability": "https://schema.org/PreOrder",
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://shakeomat.hr/#org"}
+      }
     },
     {
       "@type": "FAQPage",
@@ -1412,12 +1500,7 @@
       <li><a href="b2b.html">Za teretane</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
       <li>
-        <select id="langSwitch" aria-label="Jezik / Language" style="background: rgba(115, 237, 255, 0.08); border: 1px solid rgba(115, 237, 255, 0.3); color: var(--white); padding: 6px 10px; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; cursor: pointer;">
-          <option value="hr" selected>HR</option>
-          <option value="en" disabled>EN — uskoro</option>
-          <option value="sl" disabled>SL — uskoro</option>
-          <option value="bs" disabled>BS — uskoro</option>
-        </select>
+        <span aria-label="Jezik" style="display:inline-block; background: rgba(115, 237, 255, 0.08); border: 1px solid rgba(115, 237, 255, 0.3); color: var(--cyan); padding: 6px 10px; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.06em;">HR</span>
       </li>
     </ul>
   </div>
@@ -1521,31 +1604,41 @@
 
     <div class="sku-grid">
       <article class="sku-card lean">
+        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cyan); background:rgba(115,237,255,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(115,237,255,0.2);">Entry</span>
         <h3 class="sku-name">Lean</h3>
+        <span class="sku-price">€3,00</span>
         <p class="sku-macro">Za one koji paze na liniju</p>
         <p class="sku-ingredient">Lagani protein nakon treninga — bez nepotrebnih kalorija. Za dane kada radiš na definiciji ili imaš lagani trening.</p>
       </article>
 
       <article class="sku-card build">
+        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green); background:rgba(125,255,155,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(125,255,155,0.2);">Mid</span>
         <h3 class="sku-name">Build</h3>
+        <span class="sku-price">€3,50</span>
         <p class="sku-macro">Za izgradnju snage i mase</p>
         <p class="sku-ingredient">Pun protein s ugljikohidratima i kreatinom — kombinacija koja podupire teške treninge i rast mišića.</p>
       </article>
 
       <article class="sku-card boost">
+        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C882FF; background:rgba(200,130,255,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(200,130,255,0.2);">Mid</span>
         <h3 class="sku-name">Lift</h3>
+        <span class="sku-price">€3,50</span>
         <p class="sku-macro">Za dnevnu energiju i fokus</p>
         <p class="sku-ingredient">Lagana opcija za sredinu dana ili pred trening — kvalitetan protein bez težine, bez popodnevnog pada energije.</p>
       </article>
 
       <article class="sku-card recover">
+        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--pink); background:rgba(255,111,181,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(255,111,181,0.2);">Premium</span>
         <h3 class="sku-name">Recover</h3>
+        <span class="sku-price">€4,00</span>
         <p class="sku-macro">Za noćni oporavak</p>
         <p class="sku-ingredient">Micelarni kazein s kolagenom — sporo se otpušta cijelu noć dok spavaš. Za zglobove, vezivno tkivo i jutro bez upale.</p>
       </article>
 
       <article class="sku-card vegan">
+        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--vegan); background:rgba(74,222,128,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(74,222,128,0.25);">Entry</span>
         <h3 class="sku-name">Vegan</h3>
+        <span class="sku-price">€3,00</span>
         <p class="sku-macro">Za biljnu prehranu, bez kompromisa</p>
         <p class="sku-ingredient">Pun protein bez mlijeka i glutena — za biljnu rutinu i sve koji su odustali od mliječnog. Isti učinak, drugačiji izvor.</p>
       </article>
@@ -1906,7 +1999,17 @@
         } catch (err) {}
       });
     }
-    if (foot && /[?&]signup=ok/.test(window.location.search)) {
+    if (form && foot && /[?&]signup=ok/.test(window.location.search)) {
+      // Replace whole form with success card — UX: form je više ne distrahira
+      var successCard = document.createElement('div');
+      successCard.className = 'waitlist-success';
+      successCard.style.cssText = 'background: linear-gradient(135deg, rgba(115, 237, 255, 0.08), rgba(125, 255, 155, 0.08)); border: 1.5px solid var(--cyan); border-radius: 14px; padding: 32px 28px; text-align: center; max-width: 560px; margin: 0 auto;';
+      successCard.innerHTML = '<div style="font-size: 2.4rem; margin-bottom: 12px;">✓</div>' +
+        '<h3 style="font-family: \'Barlow Condensed\', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.6rem; color: var(--cyan); margin-bottom: 14px; letter-spacing: 0.04em;">Spreman si.</h3>' +
+        '<p style="color: var(--white); font-size: 1.05rem; line-height: 1.6; margin-bottom: 8px;">Šaljemo ti email čim aparat stigne u tvoju teretanu.<br>Procjena: srpanj 2026.</p>' +
+        '<p style="color: var(--muted); font-size: 0.9rem; line-height: 1.5;">Jedna poruka. Nema spama, nema progoniteljskih oglasa. Možeš odjaviti jednim klikom.</p>';
+      form.parentNode.replaceChild(successCard, form);
+      // Backup za stari foot (ako forma već obrisana)
       foot.textContent = '✓ Upravo si rezervirao prvi shake. Tijelo će ti zahvaliti u srpnju.';
       foot.classList.add('success');
       try {
