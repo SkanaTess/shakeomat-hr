@@ -917,9 +917,9 @@
       <div class="brand-logo">SHAKE<span class="accent">-O-</span>MAT</div>
       <button class="tap-button">TAP TO<br>START</button>
       <div class="tagline-wrap">
-        <div class="tagline">Fresh Every Rep.</div>
-        <div class="tagline">Protein. Ovdje. Odmah.</div>
-        <div class="tagline">Recover. Instantly.</div>
+        <div class="tagline">Besramno dobri shakeovi.</div>
+        <div class="tagline">Bez praha u torbi. Bez foliranja.</div>
+        <div class="tagline">Tap. Choose. Recover.</div>
       </div>
     </section>
 
@@ -1154,9 +1154,9 @@
     stopScreen4();
     const fill = document.getElementById('progressFill');
     const cnt  = document.getElementById('countdown');
-    let remaining = 30;
+    let remaining = 60;
     if (cnt) cnt.textContent = remaining;
-    if (fill) requestAnimationFrame(() => { fill.style.width = '100%'; fill.style.transition = 'width 30s linear'; });
+    if (fill) requestAnimationFrame(() => { fill.style.width = '100%'; fill.style.transition = 'width 60s linear'; });
     countdownTimer = setInterval(() => {
       remaining--;
       if (remaining <= 0) { if (cnt) cnt.textContent = '0'; clearInterval(countdownTimer); countdownTimer = null; return; }

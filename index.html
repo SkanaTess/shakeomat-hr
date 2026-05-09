@@ -1645,7 +1645,7 @@
     </div>
 
     <p style="text-align: center; margin-top: 32px; font-size: 0.9rem; color: var(--muted); max-width: 760px; margin-left: auto; margin-right: auto;">
-      Sastav verificiran od sportskog nutricionista. Pridruži se redu i javljamo ti čim aparat stigne u tvoju teretanu.
+      Sastav verificira sportski nutricionist. Stavi se na listu i javljamo ti čim aparat stigne u tvoju teretanu — bez foliranja.
     </p>
   </div>
 </section>
@@ -1768,7 +1768,6 @@
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_autoresponse" value="Hvala! Javljamo ti čim aparat stigne u teretanu blizu tebe. — Shake-o-mat tim">
       <input type="hidden" name="_next" value="https://shakeomat.hr/?signup=ok#waitlist">
-      <input type="hidden" name="_captcha" value="true">
       <input type="hidden" name="izvor" value="index waitlist">
       <div class="waitlist-row">
         <input type="email" name="email" required placeholder="tvoj@email.hr" autocomplete="email" aria-label="Email">
@@ -2007,7 +2006,15 @@
       successCard.innerHTML = '<div style="font-size: 2.4rem; margin-bottom: 12px;">✓</div>' +
         '<h3 style="font-family: \'Barlow Condensed\', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.6rem; color: var(--cyan); margin-bottom: 14px; letter-spacing: 0.04em;">Spreman si.</h3>' +
         '<p style="color: var(--white); font-size: 1.05rem; line-height: 1.6; margin-bottom: 8px;">Šaljemo ti email čim aparat stigne u tvoju teretanu.<br>Procjena: srpanj 2026.</p>' +
-        '<p style="color: var(--muted); font-size: 0.9rem; line-height: 1.5;">Jedna poruka. Nema spama, nema progoniteljskih oglasa. Možeš odjaviti jednim klikom.</p>';
+        '<p style="color: var(--muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 24px;">Jedna poruka. Nema spama, nema progoniteljskih oglasa. Možeš odjaviti jednim klikom.</p>' +
+        '<div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(115,237,255,0.18);">' +
+          '<p style="color: var(--white); font-size: 0.95rem; margin-bottom: 14px; font-weight: 600;">Pošalji prijatelju — oboje preskačete red:</p>' +
+          '<div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">' +
+            '<a href="https://wa.me/?text=Upravo%20sam%20se%20upisao%20na%20waitlist%20za%20Shake-o-mat%20%E2%80%94%20protein%20vending%20automat%20za%20teretane.%20Prvih%20100%20dobiva%20besplatan%20shake.%20https%3A%2F%2Fshakeomat.hr" target="_blank" rel="noopener" style="display:inline-block; padding:10px 18px; background:#25D366; color:#fff; border-radius:8px; font-weight:600; text-decoration:none; font-size:0.95rem;">📲 WhatsApp</a>' +
+            '<a href="https://www.instagram.com/shakeomat" target="_blank" rel="noopener" style="display:inline-block; padding:10px 18px; background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; border-radius:8px; font-weight:600; text-decoration:none; font-size:0.95rem;">📷 Prati @shakeomat</a>' +
+            '<a href="https://www.tiktok.com/@shakeomat.hr" target="_blank" rel="noopener" style="display:inline-block; padding:10px 18px; background:#000; color:#fff; border-radius:8px; font-weight:600; text-decoration:none; font-size:0.95rem; border:1px solid #25F4EE;">🎵 TikTok</a>' +
+          '</div>' +
+        '</div>';
       form.parentNode.replaceChild(successCard, form);
       // Backup za stari foot (ako forma već obrisana)
       foot.textContent = '✓ Upravo si rezervirao prvi shake. Tijelo će ti zahvaliti u srpnju.';
