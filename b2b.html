@@ -699,12 +699,7 @@ footer {
         <li><a href="index.html">Početna</a></li>
         <li><a href="#form-head">Kontakt</a></li>
         <li>
-          <select id="langSwitch" aria-label="Jezik / Language" style="background: rgba(115, 237, 255, 0.08); border: 1px solid rgba(115, 237, 255, 0.3); color: var(--white); padding: 6px 10px; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; cursor: pointer;">
-            <option value="hr" selected>HR</option>
-            <option value="en" disabled>EN — uskoro</option>
-            <option value="sl" disabled>SL — uskoro</option>
-            <option value="bs" disabled>BS — uskoro</option>
-          </select>
+          <span aria-label="Jezik" style="display:inline-block; background: rgba(115, 237, 255, 0.08); border: 1px solid rgba(115, 237, 255, 0.3); color: var(--cyan); padding: 6px 10px; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.06em;">HR</span>
         </li>
       </ul>
     </nav>
@@ -1016,7 +1011,7 @@ footer {
   var tierBadge   = document.getElementById('tierBadge');
   var tierExplain = document.getElementById('tierExplain');
 
-  var AVG_PRICE = 4.00;
+  var AVG_PRICE = 3.40; // weighted avg 5 SKU: LEAN/VEGAN €3,00 (entry) + BUILD/LIFT €3,50 (mid) + RECOVER €4,00 (premium)
   var VAT_RATE = 0.25; // PDV 25%
   var NET_PRICE = AVG_PRICE / (1 + VAT_RATE); // neto cijena (MPC - PDV)
   var CONVERSION = 0.07;
