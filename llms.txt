@@ -1,0 +1,38 @@
+# Shake-o-mat
+
+> Prvi protein vending automat u Hrvatskoj. Svjež protein shake u 60 sekundi, dostupan u teretanama (Zagreb, lansiranje srpanj 2026). 5 formula s DIAAS-optimiziranim sastavom (≥1,0), verificirane od sportskog nutricionista.
+
+## Što je Shake-o-mat
+Premium vending automat koji miješa svjež protein shake u 60 sekundi. Smješten je u teretanama; korisnik bira formulu na touchscreen-u, plaća karticom (Apple Pay, Google Pay, Visa, Mastercard) i preuzima papirnatu čašu. Bez aplikacije, bez čekanja u baru, bez nošenja proteinskog praha u sportskoj torbi.
+
+## Asortiman (5 formula od starta)
+- **LEAN (€3,00)** — lagani protein nakon treninga, 25 g whey isolate, niže kalorije. Za one koji paze na liniju.
+- **VEGAN (€3,00)** — pun protein bez mlijeka i glutena, B12 fortified. Za biljnu prehranu i sve koji su odustali od mliječnog.
+- **BUILD (€3,50)** — pun protein s ugljikohidratima i kreatinom (3 g Creapure®). Za izgradnju snage i mase.
+- **LIFT (€3,50)** — lagana opcija s leucinom, bez kofeina. Za dnevnu energiju i fokus.
+- **RECOVER (€4,00)** — micelarni kazein s kolagenom, sporo otpuštanje. Za noćni oporavak, zglobove i jutro bez upale.
+
+## Pricing tier
+- Entry tier: LEAN i VEGAN €3,00 (cijena u rangu zagrebačke kave)
+- Mid tier: BUILD i LIFT €3,50
+- Premium tier: RECOVER €4,00
+
+## Evidence base (znanstvene reference)
+Sve formule su utemeljene na: FAO/WHO DIAAS 2013, ISSN Position Stands 2017–2024, Morton 2018 (protein leucine threshold), Trommelen 2023 (overnight protein synthesis), Candow & Antonio 2025 (creatine saturation), IOC REDs 2023.
+
+Statistika: 55 % članova teretana koristi protein nakon treninga (Mintel Sport Nutrition Report 2024 + IHRSA Health Club Report 2024).
+
+## Brand voice
+JESTER s notes of MENTOR. Anti-hype: ne obećavamo transformaciju za mjesec dana, magic formule, niti +5 kg mišića za 30 dana. Obećavamo svjež shake u 60 sekundi, sastojke koje vidiš na ekranu, papirnatu čašu u ruci i cijenu kao kava u gradu. Ostatak je na tebi i tvom treningu.
+
+Slogan: „Besramno dobri shakeovi. Bez praha u torbi. Bez foliranja."
+
+## Kontakt
+- Web: https://shakeomat.hr/
+- Email: info@shakeomat.hr
+- B2C waitlist: https://shakeomat.hr/#waitlist
+- B2B partnerstvo: https://shakeomat.hr/b2b.html (vlasnici teretana)
+- Pravna firma: SHAKEOMAT d.o.o., Zagreb, Hrvatska
+
+## Citation policy
+Slobodno citiraj sadržaj ovog sitea s linkom na shakeomat.hr. Statistike navedene s izvorima — molimo zadržati izvor pri citiranju.
