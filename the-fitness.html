@@ -448,23 +448,54 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 .kv-value strong { color: var(--cyan); }
 
 .persona-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 16px 18px;
+  padding: 12px 14px;
   margin-bottom: 10px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.persona-card:hover {
+  border-color: rgba(115, 237, 255, 0.35);
+  transform: translateX(2px);
+}
+.persona-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(115, 237, 255, 0.45);
+  flex-shrink: 0;
+  object-fit: cover;
+  background: var(--bg);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+.persona-body {
+  flex: 1;
+  min-width: 0;
 }
 .persona-card .name {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900;
   font-size: 18px;
   color: var(--white);
+  line-height: 1.1;
 }
 .persona-card .name .weight {
   color: var(--cyan); font-size: 14px; margin-left: 8px;
 }
 .persona-card .meta {
-  color: var(--muted); font-size: 14px; margin-top: 4px;
+  color: var(--muted); font-size: 13.5px; margin-top: 4px;
+  line-height: 1.45;
+}
+/* Print: persona avatars stay visible */
+@media print {
+  .persona-card { background: #fff !important; border: 1px solid #999 !important; }
+  .persona-card .name { color: #000 !important; }
+  .persona-card .meta { color: #333 !important; }
+  .persona-avatar { border-color: #0058A8 !important; box-shadow: none !important; }
 }
 
 /* ---------- COMARKETING ---------- */
@@ -652,7 +683,7 @@ footer {
       <span class="eyebrow">Multi-location revenue calculator</span>
       <h2>Izračunaj prihod kroz cijelu vašu mrežu.</h2>
       <p>
-        Tri ulazne varijable koje već znate (broj lokacija, prosječan broj članova,
+        Tri varijable iz vaše dnevne ops slike (broj lokacija, prosječan broj članova,
         koliko često dolaze). Jedan ishodni broj koji vam padne u račun.
         Postotak se obračunava na <strong style="color:var(--white)">neto cijenu</strong>
         (cijena bez 25% PDV-a) &mdash; transparentno, fer, bez računovodstvenih trikova.
@@ -848,8 +879,8 @@ footer {
         <h3>Phase A waitlist je već u tijeku</h3>
         <p>
           Pokrenuli smo Meta Lead Ads za Phase A 14.05.2026. Cilj: 600+ HR gym-goers
-          koji već čekaju Shake-o-mat. Brojka koju donosimo na sljedeći meeting:
-          <em>„X članova vašeg lanca specifično je tražilo aparat."</em> To je ammo koji nitko drugi nema.
+          koji već čekaju Shake-o-mat. Brojka koja ide u sljedeći razgovor:
+          <em>„X članova vašeg lanca specifično je tražilo aparat."</em> Konkretan broj za vašu mrežu, ne generičke industry statistike.
         </p>
       </article>
 
@@ -932,36 +963,50 @@ footer {
         </div>
 
         <div>
-          <h3 style="font-size: 24px; margin-bottom: 22px;">5 persona &middot; tko je naša publika</h3>
+          <h3 style="font-size: 24px; margin-bottom: 22px;">5 persona &middot; gdje se preklapaju s vašom mrežom</h3>
 
           <div class="persona-card">
-            <div class="name">A &middot; Ivan, 28 <span class="weight">35%</span></div>
-            <div class="meta">Urbani profesionalac. 3-4 treninga/tj. Pain: prah u torbi smrdi i prosipa se. L1-L2 Schwartz.</div>
+            <img class="persona-avatar" src="face-ivan.png" alt="Ivan, 28 — urbani profesionalac" loading="lazy">
+            <div class="persona-body">
+              <div class="name">A &middot; Ivan, 28 <span class="weight">35%</span></div>
+              <div class="meta">Urbani profesionalac. 3-4 treninga/tj. Pain: prah u torbi smrdi i prosipa se. L1-L2 Schwartz.</div>
+            </div>
           </div>
 
           <div class="persona-card">
-            <div class="name">B &middot; Petra, 32 <span class="weight">30%</span></div>
-            <div class="meta">Sportašica/aktivna mama. 4-5 treninga/tj. Želi premium feel, ritual nakon treninga. L2-L3.</div>
+            <img class="persona-avatar" src="face-petra.png" alt="Petra, 32 — sportašica i aktivna mama" loading="lazy">
+            <div class="persona-body">
+              <div class="name">B &middot; Petra, 32 <span class="weight">30%</span></div>
+              <div class="meta">Sportašica/aktivna mama. 4-5 treninga/tj. Želi premium feel, ritual nakon treninga. L2-L3.</div>
+            </div>
           </div>
 
           <div class="persona-card">
-            <div class="name">C &middot; Marko, 35 <span class="weight">20%</span></div>
-            <div class="meta">Gym owner/manager (B2B). Trigger: „43 člana tvoje teretane već čeka". L4.</div>
+            <img class="persona-avatar" src="face-marko.png" alt="Marko, 35 — gym owner/manager B2B" loading="lazy">
+            <div class="persona-body">
+              <div class="name">C &middot; Marko, 35 <span class="weight">20%</span></div>
+              <div class="meta">Gym owner/manager (B2B). Trigger: „43 člana tvoje teretane već čeka". L4.</div>
+            </div>
           </div>
 
           <div class="persona-card">
-            <div class="name">D &middot; Luka, 30 <span class="weight">8%</span></div>
-            <div class="meta">Padel/cross-trainer 5-6×/tj. Trenira raspršeno (padel + outdoor + gym). L1-L2.</div>
+            <img class="persona-avatar" src="face-luka.png" alt="Luka, 30 — padel i cross-trainer" loading="lazy">
+            <div class="persona-body">
+              <div class="name">D &middot; Luka, 30 <span class="weight">8%</span></div>
+              <div class="meta">Padel/cross-trainer 5-6×/tj. Trenira raspršeno (padel + outdoor + gym). L1-L2.</div>
+            </div>
           </div>
 
           <div class="persona-card">
-            <div class="name">E &middot; Petar, 21 <span class="weight">7%</span></div>
-            <div class="meta">Student-sportaš ZG kampusi. Budget restricted. „Cijena kao kava u gradu". L2.</div>
+            <img class="persona-avatar" src="face-tomislav.png" alt="Petar, 21 — student-sportaš" loading="lazy">
+            <div class="persona-body">
+              <div class="name">E &middot; Petar, 21 <span class="weight">7%</span></div>
+              <div class="meta">Student-sportaš ZG kampusi. Budget restricted. „Cijena kao kava u gradu". L2.</div>
+            </div>
           </div>
 
           <p style="color: var(--muted); font-size: 13px; margin-top: 16px; line-height: 1.6;">
-            Marketing radi NA PERSONI, ne na audiencei. Svaki Reel ima 1 primarnu + 1 sekundarnu personu.
-            Svaki Lead Ad ima persona-specifičan vizual i hook. Nikad „svi odjednom".
+            Naš rad ide po personi, ne po generičkoj audijenci &mdash; svaki Reel ima jednu primarnu i jednu sekundarnu personu, svaki Lead Ad svoj persona-specifičan vizual i hook. Bez „svi odjednom" pristupa.
           </p>
         </div>
 
@@ -975,7 +1020,7 @@ footer {
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Marketing engine &middot; što dovodimo u prvih 90 dana</span>
-      <h2>Mi ne čekamo da članovi pronađu aparat. Mi gradimo potražnju paralelno s instalacijom.</h2>
+      <h2>Ne čekamo da članovi pronađu aparat &mdash; gradimo potražnju paralelno s instalacijom.</h2>
       <p>
         Phase A (live od 14.05.2026.) je B2C waitlist kampanja &mdash; €1.000 / 30 dana / cilj 600 leadova.
         U trenutku kad prvi aparat uđe u THE Fitness lokaciju, X članova vaše mreže već zna brand,
@@ -1063,7 +1108,7 @@ footer {
 
       <div class="co-card">
         <h4>Co-branded Reels &middot; mjesečno</h4>
-        <p>2 Reel-a mjesečno snimljeni u jednoj od THE Fitness lokacija &mdash; member POV, post-workout ritual, persona-driven. Dijelimo sve assete; tagovi @thefitness + @shakeomat. Free distribution na našem TikTok kanalu (1.200+ followers do srpnja).</p>
+        <p>2 Reel-a mjesečno snimljeni u jednoj od THE Fitness lokacija &mdash; member POV, post-workout ritual, persona-driven. Dijelimo sve assete; tagovi @thefitness + @shakeomat. Bez dodatnog troška, kroz naš TikTok kanal (1.200+ followera do srpnja).</p>
       </div>
 
       <div class="co-card">
@@ -1088,7 +1133,7 @@ footer {
 
       <div class="co-card">
         <h4>Joint PR &middot; lansiranje partnerstva</h4>
-        <p>Press release „Shake-o-mat × THE Fitness flagship partnership". Targeted outreach: Lider, Poslovni dnevnik, Forbes Hrvatska, Fitness Magazin, Lifestyle.hr. Joint kvotni o-rekorđu (vi za amenity story, mi za HR-first first-mover story).</p>
+        <p>Press release „Shake-o-mat × THE Fitness flagship partnership". Targeted outreach: Lider, Poslovni dnevnik, Forbes Hrvatska, Fitness Magazin, Lifestyle.hr. Zajedničke izjave za medije (vi za amenity story, mi za HR-first first-mover story).</p>
       </div>
 
     </div>
