@@ -783,8 +783,19 @@ footer {
 
       <div class="calc-inputs">
         <div class="input-block">
+          <label for="locations">
+            Broj lokacija (aparata)
+            <span class="value-pill" id="locationsOut">1</span>
+          </label>
+          <input type="range" id="locations" name="locations" min="1" max="10" step="1" value="1">
+          <p style="color:var(--muted); font-size:13px; margin-top:8px; line-height:1.5;">
+            Mreža s 5+ aparata automatski kvalificira za Tier 2 (25%) bez obzira na shake-ove po danu.
+          </p>
+        </div>
+
+        <div class="input-block">
           <label for="members">
-            Broj članova teretane
+            Broj članova po lokaciji
             <span class="value-pill" id="membersOut">500</span>
           </label>
           <input type="range" id="members" name="members" min="100" max="5000" step="50" value="1500">
@@ -816,7 +827,7 @@ footer {
         </div>
         <div class="calc-tier-explain" id="tierExplain"></div>
       </div>
-      <p class="calc-foot">Revenue share se obračunava na neto cijenu shake-a (cijena bez PDV-a). 20% do 50 shake-ova dnevno, 25% iznad. Dodatnih +5% ako vi sami punite i čistite aparat.</p>
+      <p class="calc-foot">Revenue share se obračunava na neto cijenu shake-a (cijena bez PDV-a). 20% do 50 shake-ova dnevno po aparatu, 25% iznad. <strong style="color:var(--cyan)">Flagship mreža s 5+ aparata: automatska Tier 2 (25%) kvalifikacija kroz sve lokacije.</strong> Dodatnih +5% ako vi sami punite i čistite aparat. Multi-location partneri: ekskluzivna ponuda &mdash; <a href="the-fitness.html" style="color:var(--green); font-weight:600;">vidi detaljnu ponudu &rarr;</a></p>
     </div>
   </div>
 </section>
@@ -1000,9 +1011,11 @@ footer {
   'use strict';
 
   // ---------- REVENUE CALCULATOR ----------
+  var locationsEl = document.getElementById('locations');
   var membersEl   = document.getElementById('members');
   var visitsEl    = document.getElementById('visits');
   var maintainsEl = document.getElementById('maintains');
+  var locationsOut= document.getElementById('locationsOut');
   var membersOut  = document.getElementById('membersOut');
   var visitsOut   = document.getElementById('visitsOut');
   var monthlyOut  = document.getElementById('monthly');
@@ -1016,29 +1029,33 @@ footer {
   var NET_PRICE = AVG_PRICE / (1 + VAT_RATE); // neto cijena (MPC - PDV)
   var CONVERSION = 0.07;
 
-  // Tier thresholds (shakes/day average) — NEW MODEL (2026-04-28)
+  // Tier thresholds (shakes/day average per machine) — NEW MODEL (2026-04-28)
   // ≤50/dan → 20% NA NETO, >50/dan → 25% NA NETO, +5% ako gym sam puni
-  function getTier(shakesPerDay, maintains) {
-    var base = shakesPerDay <= 50 ? 20 : 25;
+  // FLAGSHIP modifier: 5+ aparata u mreži → automatska Tier 2 kvalifikacija (25%)
+  function getTier(shakesPerDayPerMachine, locations, maintains) {
+    var flagship = locations >= 5;
+    var base = flagship ? 25 : (shakesPerDayPerMachine <= 50 ? 20 : 25);
     return maintains ? base + 5 : base;
   }
 
   function fmt(n) { return Math.round(n).toLocaleString('hr-HR'); }
 
   function recalc() {
+    var locations = parseInt(locationsEl.value, 10) || 1;
     var members   = parseInt(membersEl.value, 10) || 0;
     var visits    = parseInt(visitsEl.value, 10) || 0;
     var maintains = maintainsEl ? maintainsEl.checked : false;
 
+    locationsOut.textContent = locations;
     membersOut.textContent = members.toLocaleString('hr-HR');
     visitsOut.textContent  = visits;
 
-    // Shakes per day = members * weekly_visits * conversion / 7 days
-    var shakesPerDay = members * visits * CONVERSION / 7;
-    var tier = getTier(shakesPerDay, maintains);
+    // Shakes per day per machine
+    var shakesPerDayPerMachine = members * visits * CONVERSION / 7;
+    var tier = getTier(shakesPerDayPerMachine, locations, maintains);
 
-    // Revenue for gym — postotak NA NETO (cijena bez PDV-a)
-    var weeklyGym  = members * visits * CONVERSION * NET_PRICE * (tier / 100);
+    // Network-level revenue (aggregated across all locations)
+    var weeklyGym  = members * visits * CONVERSION * NET_PRICE * (tier / 100) * locations;
     var monthlyGym = weeklyGym * 4.33;
     var yearlyGym  = weeklyGym * 52;
 
@@ -1052,15 +1069,23 @@ footer {
     tierBadge.innerHTML = 'Vaš udio: <strong>' + tier + '%</strong> na neto cijenu';
 
     // Explain text
-    var shakesRound = Math.round(shakesPerDay);
-    var nextTier = '';
-    if (shakesPerDay <= 50) {
-      nextTier = ' Za 25% udio trebate prosječno 50+ shake-ova/dan.';
+    var shakesRound = Math.round(shakesPerDayPerMachine);
+    var networkShakes = shakesRound * locations;
+    var explain = 'Procjena: ~' + shakesRound + ' shake-ova/dan po aparatu';
+    if (locations > 1) {
+      explain += ' &middot; ~' + networkShakes + ' kroz cijelu mrežu od ' + locations + ' lokacija';
     }
-    tierExplain.innerHTML = 'Procjena: ~' + shakesRound + ' shake-ova/dan. (Postotak ide na neto cijenu = cijena bez PDV-a.)' + nextTier;
+    explain += '. (Postotak ide na neto cijenu = cijena bez PDV-a.)';
+    if (locations >= 5) {
+      explain += ' <strong style="color:var(--green)">Flagship mreža 5+ aparata: automatska Tier 2 (25%) kvalifikacija.</strong>';
+    } else if (shakesPerDayPerMachine <= 50) {
+      explain += ' Za 25% udio: ili 50+ shake-ova/dan po aparatu, ili 5+ aparata u mreži.';
+    }
+    tierExplain.innerHTML = explain;
   }
 
   if (membersEl && visitsEl) {
+    if (locationsEl) locationsEl.addEventListener('input', recalc);
     membersEl.addEventListener('input', recalc);
     visitsEl.addEventListener('input', recalc);
     if (maintainsEl) maintainsEl.addEventListener('change', recalc);
