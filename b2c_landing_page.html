@@ -6,19 +6,19 @@
 
 <!-- ═══ SEO ═══ -->
 <title>Shake-O-Mat | Protein Shake Odmah Nakon Treninga</title>
-<meta name="description" content="Svježi protein shake za 60 sekundi — whey, vegan, kreatin, BCAA. Dostupno u tvojoj teretani. Kartično plaćanje, 20+ okusa, bez čekanja."/>
-<meta name="keywords" content="protein shake teretana, protein automat, shake after workout, whey shake hrvatska, vegan protein shake, kreatin shake, shake-o-mat"/>
+<meta name="description" content="Svjež protein shake za 60 sekundi — pet formula za različite trenutke dana i tipove treninga. Dostupno u tvojoj teretani. Kartično plaćanje, bez praha u torbi, bez čekanja."/>
+<meta name="keywords" content="protein shake teretana, protein automat, shake after workout, shake-o-mat, protein vending hrvatska, fresh shake teretana"/>
 <meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://shakeomat.hr/b2c_landing_page.html"/>
-<link rel="alternate" hreflang="hr" href="https://shakeomat.hr/b2c_landing_page.html"/>
-<link rel="alternate" hreflang="en" href="https://shakeomat.hr/b2c_landing_page.html"/>
-<link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/b2c_landing_page.html"/>
+<link rel="canonical" href="https://shakeomat.hr/"/>
+<link rel="alternate" hreflang="hr" href="https://shakeomat.hr/"/>
+<link rel="alternate" hreflang="en" href="https://shakeomat.hr/en/"/>
+<link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/"/>
 
 <!-- ═══ Open Graph ═══ -->
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://shakeomat.hr/b2c_landing_page.html"/>
-<meta property="og:title" content="Shake-O-Mat | Protein Shake u 45 Sekundi"/>
-<meta property="og:description" content="Anabolički prozor zatvara se za 45 minuta. Svježi protein shake odmah u tvojoj teretani — bez miješanja, kartično."/>
+<meta property="og:url" content="https://shakeomat.hr/"/>
+<meta property="og:title" content="Shake-O-Mat | Protein Shake u 60 Sekundi"/>
+<meta property="og:description" content="Svjež protein shake odmah u tvojoj teretani — pet formula za svaki dan, bez praha u torbi, kartično plaćanje."/>
 <meta property="og:image" content="https://shakeomat.hr/og-b2c.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 
@@ -28,12 +28,12 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Shake-O-Mat Protein Shake",
-  "description": "Svježe miješani protein shake — whey, vegan, kreatin, BCAA, kolagen. Dostupno odmah u fitness centrima širom Hrvatske.",
+  "description": "Svježe miješani protein shake — pet formula za različite trenutke dana i tipove treninga. Dostupno odmah u fitness centrima širom Hrvatske.",
   "brand": {"@type": "Brand", "name": "Shake-O-Mat"},
   "offers": {
     "@type": "Offer",
     "priceCurrency": "EUR",
-    "price": "3.50",
+    "price": "4.50",
     "availability": "https://schema.org/InStoreOnly",
     "areaServed": {"@type": "Country", "name": "Croatia"}
   }
@@ -47,12 +47,12 @@
     {
       "@type": "Question",
       "name": "Koliko košta protein shake iz Shake-O-Mat automata?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Cijena shaka iznosi oko €3,50. Plaćanje karticom, Apple Pay ili Google Pay — bez gotovine."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Cijena shaka: LEAN €3,00 · VEGAN €3,00 · BUILD €3,50 · LIFT €3,50 · RECOVER €4,00. Plaćanje karticom, Apple Pay ili Google Pay — bez gotovine."}
     },
     {
       "@type": "Question",
       "name": "Koji proteini su dostupni u Shake-O-Mat automatu?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Shake-O-Mat nudi whey protein, vegan protein, kreatin shake, BCAA napitak i kolagen — više od 20 recepata s preciznim makronutrijentima."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Shake-O-Mat nudi 5 formula za različite trenutke dana: LEAN (lagani dani i definicija), BUILD (teški treninzi), LIFT (sredina dana i fokus), RECOVER (večernji oporavak), VEGAN (biljna rutina) — 20 kombinacija s 5 okusa."}}
     },
     {
       "@type": "Question",
@@ -119,7 +119,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:#e0ddd8;line-hei
 .nav-wa:hover{opacity:.85;}
 
 /* ════════════════════════════════
-   HERO — Anabolički prozor
+   HERO — convenience hook
 ════════════════════════════════ */
 .hero{
   min-height:100vh;display:flex;align-items:center;
@@ -215,7 +215,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:#e0ddd8;line-hei
 .s-sub{font-size:17px;color:var(--dim);max-width:580px;line-height:1.7;margin-bottom:44px;}
 
 /* ════════════════════════════════
-   SCIENCE — zašto 45 min
+   WHY — use-case (zašto Shake-o-mat)
 ════════════════════════════════ */
 .science-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .sci-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:32px;}
@@ -230,19 +230,18 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:#e0ddd8;line-hei
 /* ════════════════════════════════
    RECIPES
 ════════════════════════════════ */
-.recipe-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.recipe-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
 .recipe-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:12px;
   padding:24px 20px;position:relative;overflow:hidden;transition:border-color .2s;
 }
 .recipe-card:hover{border-color:var(--c);}
 .recipe-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.rc-whey::before{background:linear-gradient(90deg,#FF6B35,#ff9a35);}
-.rc-vegan::before{background:linear-gradient(90deg,#4CAF50,#8BC34A);}
-.rc-creatine::before{background:linear-gradient(90deg,#2196F3,#03A9F4);}
-.rc-bcaa::before{background:linear-gradient(90deg,#9C27B0,#E040FB);}
-.rc-collagen::before{background:linear-gradient(90deg,#E91E63,#FF5722);}
-.rc-recovery::before{background:linear-gradient(90deg,#FF9800,#FFC107);}
+.rc-lean::before{background:#73EDFF;}
+.rc-build::before{background:#7DFF9B;}
+.rc-recover::before{background:#FF6FB5;}
+.rc-boost::before{background:#C882FF;}
+.rc-vegan::before{background:#4ADE80;}
 .rc-icon{font-size:24px;margin-bottom:10px;}
 .rc-name{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px;}
 .rc-sub{font-size:12px;color:var(--muted);margin-bottom:14px;}
@@ -400,7 +399,7 @@ footer{
 
 <!-- ══════════ NAV ══════════ -->
 <nav class="nav">
-  <a href="./index.html" class="nav-logo">Shake-O-<span>Mat</span></a>
+  <a href="./shake-o-mat.html" class="nav-logo">Shake-O-<span>Mat</span></a>
   <div class="nav-right">
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-hr" onclick="setLang('hr')">HR</button>
@@ -422,18 +421,18 @@ footer{
     <!-- Left -->
     <div>
       <div class="hero-tag">
-        <span data-lang="hr">Anabolički Prozor</span>
-        <span data-lang="en">Anabolic Window</span>
+        <span data-lang="hr">Svjež u tvojoj teretani</span>
+        <span data-lang="en">Fresh in your gym</span>
       </div>
 
       <h1 class="hero-h1">
-        <span data-lang="hr">45 Minuta.<br/>Jedna Šansa.<br/><span class="acc">Uzmi Sada.</span></span>
-        <span data-lang="en">45 Minutes.<br/>One Chance.<br/><span class="acc">Take It Now.</span></span>
+        <span data-lang="hr">Prah Ostaje Doma.<br/>Shake Te Čeka.<br/><span class="acc">Šezdeset Sekundi.</span></span>
+        <span data-lang="en">Powder Stays Home.<br/>Your Shake Awaits.<br/><span class="acc">Sixty Seconds.</span></span>
       </h1>
 
       <p class="hero-sub">
-        <span data-lang="hr">Upravo si završio zadnju seriju. Mišići su topli, pluća rade. Ovo je <strong>45 minuta</strong> kada sve što uneseš ide direktno tamo gdje treba — i Shake-O-Mat je već spreman u tvojoj teretani.</span>
-        <span data-lang="en">You just finished your last set. Muscles warm, lungs working. This is the <strong>45 minutes</strong> when everything you take in goes exactly where it needs to go — and Shake-O-Mat is already there in your gym.</span>
+        <span data-lang="hr">Upravo si završio zadnju seriju. Umjesto da kopaš po torbi za prahom i shakerom, dođeš do aparata, tapneš ekran i za šezdeset sekundi držiš svjež shake. Bez foliranja, bez čekanja u redu.</span>
+        <span data-lang="en">You just finished your last set. Instead of digging through your bag for powder and a shaker, you walk to the machine, tap the screen, and in sixty seconds you're holding a fresh shake. No fuss, no queue.</span>
       </p>
 
       <div class="hero-ctas">
@@ -447,49 +446,49 @@ footer{
         </a>
       </div>
       <p class="hero-micro">
-        <span data-lang="hr">€3,50 · Kartično · Apple/Google Pay · Bez gotovine</span>
-        <span data-lang="en">€3.50 · Card · Apple/Google Pay · No cash needed</span>
+        <span data-lang="hr">€3,00–4,00 · Kartično · Apple/Google Pay · Bez gotovine</span>
+        <span data-lang="en">€3.00–4.00 · Card · Apple/Google Pay · No cash needed</span>
       </p>
     </div>
 
-    <!-- Timer card -->
+    <!-- Facts card -->
     <div class="timer-card">
-      <div class="timer-label-top" id="timerLabel">
-        <span data-lang="hr">Anabolički prozor zatvara se za</span>
-        <span data-lang="en">Anabolic window closes in</span>
+      <div class="timer-label-top">
+        <span data-lang="hr">Od kraja treninga do gutljaja</span>
+        <span data-lang="en">From workout's end to your sip</span>
       </div>
-      <div class="timer-display" id="timerDisplay">45:00</div>
+      <div class="timer-display">60<span style="font-size:0.4em;">s</span></div>
       <div class="timer-unit">
-        <span data-lang="hr">minuta:sekundi</span>
-        <span data-lang="en">minutes:seconds</span>
+        <span data-lang="hr">tap → biraš → gotovo</span>
+        <span data-lang="en">tap → choose → done</span>
       </div>
       <div class="timer-bar-wrap">
-        <div class="timer-bar" id="timerBar" style="width:100%;"></div>
+        <div class="timer-bar" style="width:100%;background:linear-gradient(90deg, var(--o), var(--c));"></div>
       </div>
       <p class="timer-science">
-        <span data-lang="hr"><strong>Zašto 45 min?</strong> Inzulinska osjetljivost mišića dostiže vrhunac odmah nakon treninga i opada eksponencijalno — J.Ivy, ACSM 2004.</span>
-        <span data-lang="en"><strong>Why 45 min?</strong> Muscle insulin sensitivity peaks right after training and declines exponentially — J.Ivy, ACSM 2004.</span>
+        <span data-lang="hr"><strong>Bez praha u torbi.</strong> Svjež, miješa se kad ga uzmeš — iz suhe mješavine i filtrirane vode. Kao da si ga sam napravio, samo brže.</span>
+        <span data-lang="en"><strong>No powder in your bag.</strong> Fresh, mixed when you take it — from dry blend and filtered water. Like you made it yourself, just faster.</span>
       </p>
       <div class="timer-macros">
         <div class="tmac">
-          <div class="tmac-val">30g</div>
+          <div class="tmac-val">5</div>
           <div class="tmac-lbl">
-            <span data-lang="hr">Proteina</span>
-            <span data-lang="en">Protein</span>
+            <span data-lang="hr">Formula</span>
+            <span data-lang="en">Formulas</span>
           </div>
         </div>
         <div class="tmac">
-          <div class="tmac-val">45s</div>
+          <div class="tmac-val">20</div>
           <div class="tmac-lbl">
-            <span data-lang="hr">Do shaka</span>
-            <span data-lang="en">To shake</span>
+            <span data-lang="hr">Kombinacija</span>
+            <span data-lang="en">Combinations</span>
           </div>
         </div>
         <div class="tmac">
-          <div class="tmac-val">3×</div>
+          <div class="tmac-val">24/7</div>
           <div class="tmac-lbl">
-            <span data-lang="hr">Brža apsorpcija</span>
-            <span data-lang="en">Faster uptake</span>
+            <span data-lang="hr">Dostupno</span>
+            <span data-lang="en">Available</span>
           </div>
         </div>
       </div>
@@ -515,7 +514,7 @@ footer{
     </div>
     <div class="pdiv"></div>
     <div class="pstat">
-      <div class="pstat-num">€3,50</div>
+      <div class="pstat-num">€4,00+</div>
       <div class="pstat-lbl" data-lang="hr">Po shaku</div>
       <div class="pstat-lbl" data-lang="en">Per shake</div>
     </div>
@@ -539,22 +538,24 @@ footer{
 <div style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 40px;">
   <div style="max-width:1100px;margin:0 auto;display:flex;gap:40px;align-items:center;flex-wrap:wrap;justify-content:center;">
     <div style="display:flex;align-items:center;gap:16px;flex:1;min-width:260px;max-width:380px;">
-      <img src="./face-petra.png" alt="Korisnik" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(115,237,255,0.3);">
+      <!-- TODO: zamijeni s pravom fotografijom korisnika -->
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(115,237,255,0.08);border:2px dashed rgba(115,237,255,0.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;">&#128247;</div>
       <div>
         <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;" data-lang="hr">"Shake odmah nakon zadnje serije — ne moram izlaziti iz teretane da nađem protein."</p>
         <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;display:none;" data-lang="en">"Shake right after the last set — I don't have to leave the gym to find protein."</p>
-        <p style="margin:0;font-size:12px;color:#556;font-weight:700;" data-lang="hr">Petra L. · Fitness Zagreb</p>
-        <p style="margin:0;font-size:12px;color:#556;font-weight:700;display:none;" data-lang="en">Petra L. · Fitness Zagreb</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;" data-lang="hr">Marija K. · Fitness Zagreb</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;display:none;" data-lang="en">Marija K. · Fitness Zagreb</p>
       </div>
     </div>
     <div style="width:1px;height:48px;background:var(--border);flex-shrink:0;display:none;" class="proof-divider"></div>
     <div style="display:flex;align-items:center;gap:16px;flex:1;min-width:260px;max-width:380px;">
-      <img src="./face-ivan.png" alt="Korisnik" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(115,237,255,0.3);">
+      <!-- TODO: zamijeni s pravom fotografijom korisnika -->
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(115,237,255,0.08);border:2px dashed rgba(115,237,255,0.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;">&#128247;</div>
       <div>
-        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;" data-lang="hr">"30g proteina, kartica, 60 sekundi. Jedino razumno rješenje za post-workout."</p>
-        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;display:none;" data-lang="en">"30g protein, card payment, 60 seconds. The only sensible post-workout solution."</p>
-        <p style="margin:0;font-size:12px;color:#556;font-weight:700;" data-lang="hr">Ivan M. · CrossFit Rijeka</p>
-        <p style="margin:0;font-size:12px;color:#556;font-weight:700;display:none;" data-lang="en">Ivan M. · CrossFit Rijeka</p>
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;" data-lang="hr">"Tap, kartica, 60 sekundi. Jedino razumno rješenje nakon treninga."</p>
+        <p style="margin:0 0 4px;font-size:14px;line-height:1.5;color:#c4d4f2;display:none;" data-lang="en">"Tap, card, 60 seconds. The only sensible post-workout solution."</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;" data-lang="hr">Tomislav R. · CrossFit Rijeka</p>
+        <p style="margin:0;font-size:12px;color:#556;font-weight:700;display:none;" data-lang="en">Tomislav R. · CrossFit Rijeka</p>
       </div>
     </div>
   </div>
@@ -563,57 +564,53 @@ footer{
 <!-- ══════════ SCIENCE ══════════ -->
 <section class="section" id="zasto">
   <div class="s-inner">
-    <p class="s-eye" data-lang="hr">Zašto Odmah</p>
-    <p class="s-eye" data-lang="en">Why Right Now</p>
+    <p class="s-eye" data-lang="hr">Zašto Shake-o-mat</p>
+    <p class="s-eye" data-lang="en">Why Shake-o-mat</p>
     <h2 class="s-title">
-      <span data-lang="hr">Tvoje Tijelo Ne Čeka.</span>
-      <span data-lang="en">Your Body Won't Wait.</span>
+      <span data-lang="hr">Pravi Shake. Pravi Trenutak.</span>
+      <span data-lang="en">Right Shake. Right Moment.</span>
     </h2>
     <p class="s-sub">
-      <span data-lang="hr">Istraživanja sportske nutricionistike pokazuju jasno: timing proteina nije mit — to je biokemija.</span>
-      <span data-lang="en">Sports nutrition research is clear: protein timing isn't a myth — it's biochemistry.</span>
+      <span data-lang="hr">Bez praha u torbi, bez čekanja u redu, bez foliranja. Samo svjež shake kad ti treba — u tvojoj teretani.</span>
+      <span data-lang="en">No powder in your bag, no queue, no fuss. Just a fresh shake when you need it — in your gym.</span>
     </p>
 
     <div class="science-grid">
       <div class="sci-box featured">
-        <div class="sci-stat">3×</div>
-        <div class="sci-title" data-lang="hr">Brža sinteza proteina</div>
-        <div class="sci-title" data-lang="en">Faster protein synthesis</div>
+        <div class="sci-stat">60s</div>
+        <div class="sci-title" data-lang="hr">Šezdeset sekundi do gutljaja</div>
+        <div class="sci-title" data-lang="en">Sixty seconds to your sip</div>
         <p class="sci-text">
-          <span data-lang="hr">Uzimanje 20–40g proteina unutar 45 min nakon treninga povećava mišićnu sintezu proteina do 3× više nego čekanje 2+ sata. Razlog: povišeni kortizol + mišićna glikogenoliza maksimiziraju GLUT-4 aktivnost.</span>
-          <span data-lang="en">Taking 20–40g of protein within 45 min post-training increases muscle protein synthesis up to 3× compared to waiting 2+ hours. Reason: elevated cortisol + muscle glycogenolysis maximise GLUT-4 activity.</span>
+          <span data-lang="hr">Od kraja treninga do svježeg shakea u ruci — šezdeset sekundi. Tap na ekranu, biraš formulu i okus, plaćaš karticom, uzimaš papirnatu čašu. Bez reda na baru, bez čekanja.</span>
+          <span data-lang="en">From the end of your workout to a fresh shake in hand — sixty seconds. Tap the screen, pick a formula and flavour, pay by card, grab the paper cup. No bar queue, no waiting.</span>
         </p>
-        <p class="sci-source">Ivy JL, Sports Medicine 2004; Levenhagen DK, Am J Physiol 2001</p>
       </div>
       <div class="sci-box">
-        <div class="sci-icon">⚡</div>
-        <div class="sci-title" data-lang="hr">Inzulinska osjetljivost — vrhunac odmah</div>
-        <div class="sci-title" data-lang="en">Insulin sensitivity — peak right now</div>
+        <div class="sci-icon">🎒</div>
+        <div class="sci-title" data-lang="hr">Bez praha u torbi</div>
+        <div class="sci-title" data-lang="en">No powder in your bag</div>
         <p class="sci-text">
-          <span data-lang="hr">Odmah nakon treninga mišićne stanice su maksimalno otvorene za glukozu i aminokiseline — kao prozor koji se zatvara. Protein + mala količina ugljikohidrata u tom prozoru maximizira anabolički odgovor i smanjuje katabolizam.</span>
-          <span data-lang="en">Right after training, muscle cells are maximally open to glucose and amino acids — like a window that's closing. Protein + small carbs within that window maximises anabolic response and reduces catabolism.</span>
+          <span data-lang="hr">Prah ostaje doma. Nema prosipanja po svlačionici, nema shakera koji smrdi treći dan, nema mjerica. Dođeš prazne torbe, odeš s gotovim shakeom.</span>
+          <span data-lang="en">The powder stays home. No spills in the locker room, no shaker reeking by day three, no scoops. Come empty-handed, leave with a finished shake.</span>
         </p>
-        <p class="sci-source">Tipton KD, J Nutr 2001; Burke LM, Int J Sport Nutr 2003</p>
       </div>
       <div class="sci-box">
         <div class="sci-icon">🥤</div>
-        <div class="sci-title" data-lang="hr">Tekući protein — brža apsorpcija</div>
-        <div class="sci-title" data-lang="en">Liquid protein — faster absorption</div>
+        <div class="sci-title" data-lang="hr">Svjež — miješa se kad ga uzmeš</div>
+        <div class="sci-title" data-lang="en">Fresh — mixed when you take it</div>
         <p class="sci-text">
-          <span data-lang="hr">Tekući whey protein dostiže vrhunac apsorpcije već za 60–90 minuta — brže od čvrstih izvora proteina koji zahtijevaju probavu. Svježe mješanje bez konzervansa čuva integritet aminokiselinskog profila.</span>
-          <span data-lang="en">Liquid whey protein peaks absorption within 60–90 minutes — faster than solid protein sources that require digestion. Fresh mixing without preservatives preserves the amino acid profile integrity.</span>
+          <span data-lang="hr">Nije bočica koja stoji tjedan dana u frižideru. Miješa se svježe, po narudžbi, iz suhe mješavine i filtrirane vode — kao da si ga sam napravio, samo brže i bez prljanja.</span>
+          <span data-lang="en">Not a bottle sitting in the fridge for a week. Mixed fresh, to order, from dry blend and filtered water — like you made it yourself, just faster and mess-free.</span>
         </p>
-        <p class="sci-source">Boirie Y, PNAS 1997; Tang JE, J Appl Physiol 2009</p>
       </div>
       <div class="sci-box">
-        <div class="sci-icon">🌱</div>
-        <div class="sci-title" data-lang="hr">Vegan opcija — isti rezultat</div>
-        <div class="sci-title" data-lang="en">Vegan option — same results</div>
+        <div class="sci-icon">🔀</div>
+        <div class="sci-title" data-lang="hr">Pet formula za svaki dan</div>
+        <div class="sci-title" data-lang="en">Five formulas for every day</div>
         <p class="sci-text">
-          <span data-lang="hr">Miješani biljni proteini (grašak + riža) postižu usporediv anabolički odgovor s wheyem ako dostignu 2–3g leucina po obroku. Shake-O-Mat vegan recept je formuliran prema tim kriterijima.</span>
-          <span data-lang="en">Mixed plant proteins (pea + rice) achieve comparable anabolic response to whey when reaching 2–3g leucine per serving. Shake-O-Mat's vegan recipe is formulated to those criteria.</span>
+          <span data-lang="hr">Lean za lagane dane, Build za teške treninge, Lift za sredinu dana, Recover za večer, Vegan za biljnu rutinu. Biraš prema danu, ne prema etiketi — i nikad nisi zaglavio s jednim okusom.</span>
+          <span data-lang="en">Lean for light days, Build for hard sessions, Lift for midday, Recover for the evening, Vegan for a plant-based routine. You choose by the day, not by the label — and you're never stuck with one flavour.</span>
         </p>
-        <p class="sci-source">van Vliet S, J Nutr 2015; Babault N, JISSN 2015</p>
       </div>
     </div>
   </div>
@@ -630,82 +627,45 @@ footer{
       <span data-lang="en">Choose Your Shake</span>
     </h2>
     <p class="s-sub">
-      <span data-lang="hr">Svaki recept svježe miješan na licu mjesta. Precizni makronutrijenti, bez skrivenih dodataka.</span>
-      <span data-lang="en">Every recipe freshly mixed on the spot. Precise macronutrients, no hidden additives.</span>
+      <span data-lang="hr">Svaki recept svježe miješan na licu mjesta. Biraš prema danu i treningu, ne prema etiketi.</span>
+      <span data-lang="en">Every recipe freshly mixed on the spot. Choose by your day and training, not by the label.</span>
     </p>
 
     <div class="recipe-grid">
-      <div class="recipe-card rc-whey">
-        <div class="rc-price">€3,50</div>
-        <div class="rc-icon">💪</div>
-        <div class="rc-name">Whey Classic</div>
-        <div class="rc-sub" data-lang="hr">Chocolate / Vanilla</div>
-        <div class="rc-sub" data-lang="en">Chocolate / Vanilla</div>
-        <div class="rc-macros">
-          <div class="rc-mac"><div class="rc-mac-val">30g</div><div class="rc-mac-lbl">Protein</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">5g</div><div class="rc-mac-lbl">Carbs</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">160</div><div class="rc-mac-lbl">kcal</div></div>
-        </div>
+      <div class="recipe-card rc-lean">
+        <div class="rc-price" style="color:#73EDFF;">€3,00</div>
+        <div class="rc-icon">🪶</div>
+        <div class="rc-name">LEAN</div>
+        <div class="rc-sub" data-lang="hr">Lagani dani i definicija · 5 okusa</div>
+        <div class="rc-sub" data-lang="en">Light days &amp; definition · 5 flavours</div>
+      </div>
+      <div class="recipe-card rc-build">
+        <div class="rc-price" style="color:#7DFF9B;">€3,50</div>
+        <div class="rc-icon">🔥</div>
+        <div class="rc-name">BUILD</div>
+        <div class="rc-sub" data-lang="hr">Teški treninzi · za dane kada gura · 5 okusa</div>
+        <div class="rc-sub" data-lang="en">Hard sessions · for the days it grinds · 5 flavours</div>
+      </div>
+      <div class="recipe-card rc-boost">
+        <div class="rc-price" style="color:#C882FF;">€3,50</div>
+        <div class="rc-icon">☀️</div>
+        <div class="rc-name">LIFT</div>
+        <div class="rc-sub" data-lang="hr">Sredina dana i fokus · bez težine · 5 okusa</div>
+        <div class="rc-sub" data-lang="en">Midday &amp; focus · no heaviness · 5 flavours</div>
+      </div>
+      <div class="recipe-card rc-recover">
+        <div class="rc-price" style="color:#FF6FB5;">€4,00</div>
+        <div class="rc-icon">🌙</div>
+        <div class="rc-name">RECOVER</div>
+        <div class="rc-sub" data-lang="hr">Večernji oporavak · kraj dana · 5 okusa</div>
+        <div class="rc-sub" data-lang="en">Evening recovery · end of day · 5 flavours</div>
       </div>
       <div class="recipe-card rc-vegan">
-        <div class="rc-price">€3,50</div>
+        <div class="rc-price" style="color:#4ADE80;">€3,00</div>
         <div class="rc-icon">🌱</div>
-        <div class="rc-name">Vegan Blend</div>
-        <div class="rc-sub" data-lang="hr">Grašak + Riža</div>
-        <div class="rc-sub" data-lang="en">Pea + Rice</div>
-        <div class="rc-macros">
-          <div class="rc-mac"><div class="rc-mac-val">26g</div><div class="rc-mac-lbl">Protein</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">8g</div><div class="rc-mac-lbl">Carbs</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">155</div><div class="rc-mac-lbl">kcal</div></div>
-        </div>
-      </div>
-      <div class="recipe-card rc-creatine">
-        <div class="rc-price">€3,50</div>
-        <div class="rc-icon">⚡</div>
-        <div class="rc-name">Creatine Build</div>
-        <div class="rc-sub" data-lang="hr">Whey + Kreatin</div>
-        <div class="rc-sub" data-lang="en">Whey + Creatine</div>
-        <div class="rc-macros">
-          <div class="rc-mac"><div class="rc-mac-val">28g</div><div class="rc-mac-lbl">Protein</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">5g</div><div class="rc-mac-lbl">Creatine</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">160</div><div class="rc-mac-lbl">kcal</div></div>
-        </div>
-      </div>
-      <div class="recipe-card rc-bcaa">
-        <div class="rc-price">€3,50</div>
-        <div class="rc-icon">🔥</div>
-        <div class="rc-name">BCAA Recovery</div>
-        <div class="rc-sub" data-lang="hr">Berry / Lemon</div>
-        <div class="rc-sub" data-lang="en">Berry / Lemon</div>
-        <div class="rc-macros">
-          <div class="rc-mac"><div class="rc-mac-val">10g</div><div class="rc-mac-lbl">BCAA</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">0g</div><div class="rc-mac-lbl">Fat</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">45</div><div class="rc-mac-lbl">kcal</div></div>
-        </div>
-      </div>
-      <div class="recipe-card rc-collagen">
-        <div class="rc-price">€3,50</div>
-        <div class="rc-icon">✨</div>
-        <div class="rc-name">Collagen Glow</div>
-        <div class="rc-sub" data-lang="hr">Kolagen + Vitamin C</div>
-        <div class="rc-sub" data-lang="en">Collagen + Vitamin C</div>
-        <div class="rc-macros">
-          <div class="rc-mac"><div class="rc-mac-val">10g</div><div class="rc-mac-lbl">Collagen</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">200mg</div><div class="rc-mac-lbl">Vit C</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">55</div><div class="rc-mac-lbl">kcal</div></div>
-        </div>
-      </div>
-      <div class="recipe-card rc-recovery">
-        <div class="rc-price">€3,50</div>
-        <div class="rc-icon">🌙</div>
-        <div class="rc-name">Night Recovery</div>
-        <div class="rc-sub" data-lang="hr">Kazein + Magnezij</div>
-        <div class="rc-sub" data-lang="en">Casein + Magnesium</div>
-        <div class="rc-macros">
-          <div class="rc-mac"><div class="rc-mac-val">25g</div><div class="rc-mac-lbl">Casein</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">200mg</div><div class="rc-mac-lbl">Mg</div></div>
-          <div class="rc-mac"><div class="rc-mac-val">140</div><div class="rc-mac-lbl">kcal</div></div>
-        </div>
+        <div class="rc-name">VEGAN</div>
+        <div class="rc-sub" data-lang="hr">Biljna rutina · bez mlijeka i glutena · 5 okusa</div>
+        <div class="rc-sub" data-lang="en">Plant-based · no milk or gluten · 5 flavours</div>
       </div>
     </div>
   </div>
@@ -718,8 +678,8 @@ footer{
     <p class="s-eye" data-lang="hr">Kako Funkcionira</p>
     <p class="s-eye" data-lang="en">How It Works</p>
     <h2 class="s-title">
-      <span data-lang="hr">3 Koraka. 45 Sekundi.</span>
-      <span data-lang="en">3 Steps. 45 Seconds.</span>
+      <span data-lang="hr">3 Koraka. 60 Sekundi.</span>
+      <span data-lang="en">3 Steps. 60 Seconds.</span>
     </h2>
 
     <div class="steps-row">
@@ -729,8 +689,8 @@ footer{
         <div class="step-title" data-lang="hr">Izaberi Recept</div>
         <div class="step-title" data-lang="en">Choose Recipe</div>
         <p class="step-text">
-          <span data-lang="hr">27" touch screen prikazuje sve recepte s makronutrijentima. Whey, vegan, kreatin, BCAA — po tvojim ciljevima.</span>
-          <span data-lang="en">27" touch screen shows all recipes with macronutrients. Whey, vegan, creatine, BCAA — by your goals.</span>
+          <span data-lang="hr">27" touch screen prikazuje sve recepte s makronutrijentima. LEAN, BUILD, RECOVER, LIFT — po tvojim ciljevima.</span>
+          <span data-lang="en">27" touch screen shows all recipes with macronutrients. LEAN, BUILD, RECOVER, LIFT — by your goals.</span>
         </p>
       </div>
       <div class="step featured">
@@ -739,8 +699,8 @@ footer{
         <div class="step-title" data-lang="hr">Plati Karticom</div>
         <div class="step-title" data-lang="en">Pay by Card</div>
         <p class="step-text">
-          <span data-lang="hr">Nayax card reader — Visa, Mastercard, Apple Pay, Google Pay. €3,50. Bez gotovine, bez čekanja na kusur.</span>
-          <span data-lang="en">Nayax card reader — Visa, Mastercard, Apple Pay, Google Pay. €3.50. No cash, no waiting for change.</span>
+          <span data-lang="hr">Nayax card reader — Visa, Mastercard, Apple Pay, Google Pay. €3,00–4,00. Bez gotovine, bez čekanja na kusur.</span>
+          <span data-lang="en">Nayax card reader — Visa, Mastercard, Apple Pay, Google Pay. €3.00–4.00. No cash, no waiting for change.</span>
         </p>
       </div>
       <div class="step">
@@ -784,20 +744,20 @@ footer{
       <div class="testi">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">
-          <span data-lang="hr">"Kao žena nisam htjela 'builder' shake — uzimam Collagen Glow. Koža, nokti, zglob su mi bolji. A to što mogu platiti mobitelom i ne petljati s praškom u svlačionici? Savršeno."</span>
-          <span data-lang="en">"As a woman I didn't want a 'builder' shake — I take Collagen Glow. Skin, nails, joints are all better. And being able to pay with my phone without messing with powder in the locker room? Perfect."</span>
+          <span data-lang="hr">"Kao žena nisam htjela 'builder' shake — uzimam RECOVER navečer. Kraj dana, gutljaj, gotovo. A to što mogu platiti mobitelom i ne petljati s praškom u svlačionici? Savršeno."</span>
+          <span data-lang="en">"As a woman I didn't want a 'builder' shake — I take RECOVER in the evening. End of day, a sip, done. And being able to pay with my phone without messing with powder in the locker room? Perfect."</span>
         </p>
         <div class="testi-name">Ana Šimić, 32g</div>
         <div class="testi-meta" data-lang="hr">Yoga + Pilates · Split · korisnica 3 mj.</div>
         <div class="testi-meta" data-lang="en">Yoga + Pilates · Split · 3 months user</div>
-        <div class="testi-goal" data-lang="hr">Kolagen rutina</div>
-        <div class="testi-goal" data-lang="en">Collagen routine</div>
+        <div class="testi-goal" data-lang="hr">Večernja rutina</div>
+        <div class="testi-goal" data-lang="en">Evening routine</div>
       </div>
       <div class="testi">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">
-          <span data-lang="hr">"Radim jutarnje treninge u 6h. Nema menze, nema proteinskog bara u blizini. Sad uzmem Creatine Build odmah izlazeći iz sale — za 30 min sam u uredu s makrosima odrađenima. Bez kompromisa."</span>
-          <span data-lang="en">"I train at 6am. No canteen, no protein bar nearby. Now I grab Creatine Build leaving the gym floor — 30 mins later I'm at the office with macros sorted. No compromise."</span>
+          <span data-lang="hr">"Radim jutarnje treninge u 6h. Nema menze, nema proteinskog bara u blizini. Sad uzmem BUILD odmah izlazeći iz sale — za 30 min sam u uredu s makrosima odrađenima. Bez kompromisa."</span>
+          <span data-lang="en">"I train at 6am. No canteen, no protein bar nearby. Now I grab BUILD leaving the gym floor — 30 mins later I'm at the office with macros sorted. No compromise."</span>
         </p>
         <div class="testi-name">Tomislav Kos, 35g</div>
         <div class="testi-meta" data-lang="hr">HIIT + CrossFit · Rijeka · korisnik 6 mj.</div>
@@ -827,8 +787,8 @@ footer{
           <span data-lang="en">How much is one shake?</span>
         </div>
         <div class="faq-a">
-          <span data-lang="hr">€3,50 po shaku. Plaćanje isključivo karticom ili mobilnim — Visa, Mastercard, Apple Pay, Google Pay. Bez gotovine.</span>
-          <span data-lang="en">€3.50 per shake. Card or mobile payment only — Visa, Mastercard, Apple Pay, Google Pay. No cash.</span>
+          <span data-lang="hr">LEAN €3,00 · VEGAN €3,00 · BUILD €3,50 · LIFT €3,50 · RECOVER €4,00. Plaćanje isključivo karticom ili mobilnim — Visa, Mastercard, Apple Pay, Google Pay. Bez gotovine.</span>
+          <span data-lang="en">LEAN €3.00 · VEGAN €3.00 · BUILD €3.50 · LIFT €3.50 · RECOVER €4.00. Card or mobile payment only — Visa, Mastercard, Apple Pay, Google Pay. No cash.</span>
         </div>
       </div>
       <div class="faq-item">
@@ -843,12 +803,12 @@ footer{
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <span data-lang="hr">Ima li opcija za vegan korisnika?</span>
-          <span data-lang="en">Is there a vegan option?</span>
+          <span data-lang="hr">Koji tip shaka je za mene?</span>
+          <span data-lang="en">Which shake type is right for me?</span>
         </div>
         <div class="faq-a">
-          <span data-lang="hr">Da — Vegan Blend (grašak + riža, 26g proteina). Formuliran s dovoljno leucina za usporediv anabolički odgovor s wheyem. Collagen Glow i BCAA Recovery su također bez mliječnih proteina.</span>
-          <span data-lang="en">Yes — Vegan Blend (pea + rice, 26g protein). Formulated with enough leucine for comparable anabolic response to whey. Collagen Glow and BCAA Recovery are also dairy-free.</span>
+          <span data-lang="hr">LEAN — lagani dani i definicija. BUILD — teški treninzi, za dane kada gura. LIFT — sredina dana i fokus, bez težine. RECOVER — večernji oporavak, kraj dana. VEGAN — biljna rutina, bez mlijeka i glutena. Biraš prema danu, ne prema etiketi.</span>
+          <span data-lang="en">LEAN — light days and definition. BUILD — hard sessions, for the days it grinds. LIFT — midday and focus, no heaviness. RECOVER — evening recovery, end of day. VEGAN — plant-based routine, no milk or gluten. Choose by your day, not by the label.</span>
         </div>
       </div>
       <div class="faq-item">
@@ -867,8 +827,8 @@ footer{
           <span data-lang="en">I own a gym — how can I get a machine?</span>
         </div>
         <div class="faq-a">
-          <span data-lang="hr">Posjeti <a href="./gym_landing_page.html" style="color:var(--c);">shakeomat.hr/gym_landing_page.html</a> — kompletne informacije o partnerskom programu, ROI kalkulatoru i procjeni lokacije.</span>
-          <span data-lang="en">Visit <a href="./gym_landing_page.html" style="color:var(--c);">shakeomat.hr/gym_landing_page.html</a> — full information about the partnership programme, ROI calculator, and location assessment.</span>
+          <span data-lang="hr">Posjeti <a href="https://teretane.shakeomat.hr" style="color:var(--c);">teretane.shakeomat.hr</a> — kompletne informacije o partnerskom programu, ROI kalkulatoru i besplatnoj procjeni lokacije.</span>
+          <span data-lang="en">Visit <a href="https://teretane.shakeomat.hr" style="color:var(--c);">teretane.shakeomat.hr</a> — full information about the partnership programme, ROI calculator, and free location assessment.</span>
         </div>
       </div>
     </div>
@@ -895,8 +855,8 @@ footer{
       <span data-lang="en">Ask on WhatsApp</span>
     </a>
     <p class="cta-micro">
-      <span data-lang="hr">Ili javi svojoj teretani da žele Shake-O-Mat — pa ih usmjeri na <strong>shakeomat.hr</strong></span>
-      <span data-lang="en">Or tell your gym you want Shake-O-Mat — direct them to <strong>shakeomat.hr</strong></span>
+      <span data-lang="hr">Ili javi svojoj teretani da žele Shake-O-Mat — pa ih usmjeri na <strong>teretane.shakeomat.hr</strong></span>
+      <span data-lang="en">Or tell your gym you want Shake-O-Mat — direct them to <strong>teretane.shakeomat.hr</strong></span>
     </p>
 
     <!-- Cross-link B2B -->
@@ -905,8 +865,8 @@ footer{
         <span data-lang="hr">Vlasnik ili manager teretane?</span>
         <span data-lang="en">Gym owner or manager?</span>
       </p>
-      <a href="./gym_landing_page.html" data-lang="hr">Pogledaj partnerski program → Za teretane</a>
-      <a href="./gym_landing_page.html" data-lang="en">See partnership programme → For gyms</a>
+      <a href="https://teretane.shakeomat.hr" data-lang="hr">Pogledaj partnerski program → teretane.shakeomat.hr</a>
+      <a href="https://teretane.shakeomat.hr" data-lang="en">See partnership programme → teretane.shakeomat.hr</a>
     </div>
   </div>
 </section>
@@ -915,7 +875,7 @@ footer{
 <!-- ══════════ FOOTER ══════════ -->
 <footer>
   <div>
-    <a href="./index.html" class="f-logo" style="text-decoration:none;">Shake-O-<span>Mat</span></a>
+    <a href="./shake-o-mat.html" class="f-logo" style="text-decoration:none;">Shake-O-<span>Mat</span></a>
     <div style="font-size:12px;color:#333;margin-top:6px;">Shake-O-Mat j.d.o.o. · Zagreb, Hrvatska</div>
   </div>
   <div class="f-links">
@@ -924,8 +884,8 @@ footer{
     <a href="#recepti" data-lang="hr">Recepti</a>
     <a href="#recepti" data-lang="en">Recipes</a>
     <a href="#faq">FAQ</a>
-    <a href="./gym_landing_page.html" data-lang="hr">Za teretane</a>
-    <a href="./gym_landing_page.html" data-lang="en">For gyms</a>
+    <a href="https://teretane.shakeomat.hr" data-lang="hr">Za teretane</a>
+    <a href="https://teretane.shakeomat.hr" data-lang="en">For gyms</a>
   </div>
   <div class="f-copy" data-lang="hr">© 2026 Shake-O-Mat. Sva prava pridržana.</div>
   <div class="f-copy" data-lang="en">© 2026 Shake-O-Mat. All rights reserved.</div>
@@ -934,8 +894,8 @@ footer{
 <!-- Sticky bar -->
 <div id="sticky">
   <span class="s-txt">
-    <span data-lang="hr">⏱ Anabolički prozor — uzmi protein odmah</span>
-    <span data-lang="en">⏱ Anabolic window — get protein now</span>
+    <span data-lang="hr">⏱ Svjež shake u 60 sekundi — bez praha u torbi</span>
+    <span data-lang="en">⏱ Fresh shake in 60 seconds — no powder in your bag</span>
   </span>
   <a href="https://wa.me/385XXXXXXXXX?text=Gdje%20je%20Shake-O-Mat%3F" target="_blank" class="s-cta">
     <span data-lang="hr">WhatsApp →</span>
@@ -978,11 +938,11 @@ function setLang(lang) {
   if (lang === 'en') {
     document.title = 'Shake-O-Mat | Protein Shake Right After Training';
     document.querySelector('meta[name="description"]').content =
-      'Fresh protein shake in 60 seconds — whey, vegan, creatine, BCAA. Available in your gym. Card payment, 20+ flavours, no waiting.';
+      'Fresh protein shake in 60 seconds — LEAN, BUILD, RECOVER, LIFT. Available in your gym. Card payment, 20 combinations, no waiting.';
   } else {
     document.title = 'Shake-O-Mat | Protein Shake Odmah Nakon Treninga';
     document.querySelector('meta[name="description"]').content =
-      'Svježi protein shake za 60 sekundi — whey, vegan, kreatin, BCAA. Dostupno u tvojoj teretani. Kartično plaćanje, 20+ okusa, bez čekanja.';
+      'Svježi protein shake za 60 sekundi — LEAN, BUILD, RECOVER ili LIFT. Dostupno u tvojoj teretani. Kartično plaćanje, 20 kombinacija, bez čekanja.';
   }
 }
 
@@ -992,52 +952,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setLang(saved === 'en' ? 'en' : 'hr');
 });
 
-// ── ANABOLIC WINDOW TIMER ────────────────────
-// Persists across page reloads via localStorage so urgency stays real
-(function() {
-  const TOTAL = 45 * 60; // 2700s
-  const KEY = 'som_timer_start';
-  const now = Date.now();
-
-  // Load or init start time
-  let stored = parseInt(localStorage.getItem(KEY), 10);
-  if (!stored || isNaN(stored) || now - stored > TOTAL * 1000) {
-    stored = now;
-    localStorage.setItem(KEY, stored);
-  }
-
-  function tick() {
-    const elapsedSec = Math.floor((Date.now() - stored) / 1000);
-    const remaining = Math.max(0, TOTAL - (elapsedSec % (TOTAL + 1)));
-
-    if (elapsedSec >= TOTAL) {
-      // reset cycle
-      stored = Date.now();
-      localStorage.setItem(KEY, stored);
-    }
-
-    const m = Math.floor(remaining / 60);
-    const s = remaining % 60;
-    const pct = (remaining / TOTAL) * 100;
-
-    const disp = document.getElementById('timerDisplay');
-    const bar  = document.getElementById('timerBar');
-    if (!disp) return;
-
-    disp.textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-    disp.classList.toggle('urgent', remaining < 600);
-
-    if (bar) {
-      bar.style.width = pct + '%';
-      bar.style.background = remaining < 600
-        ? 'var(--red)'
-        : 'linear-gradient(90deg, var(--o), var(--red))';
-    }
-  }
-
-  setInterval(tick, 1000);
-  tick();
-})();
+// ── FACTS CARD ───────────────────────────────
+// (Bivši "anabolic window" countdown uklonjen 2026-05-29 — pivot na use-case:
+//  statična facts kartica, bez fake-urgency timera i science-claimova.)
 
 // ── FAQ ──────────────────────────────────────
 function toggleFaq(el) {
