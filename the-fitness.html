@@ -640,6 +640,34 @@ footer {
 }
 .foot-row img { height: 30px; }
 
+/* ---------- STAT BAND ---------- */
+.stat-band { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 560px) { .stat-band { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 960px) { .stat-band { grid-template-columns: repeat(4, 1fr); } }
+.stat-box {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--cyan);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex; flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.stat-box:hover { transform: translateY(-3px); border-color: rgba(115, 237, 255, 0.45); }
+.stat-box .sb-num {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(42px, 6vw, 58px); color: var(--cyan);
+  line-height: 1; margin-bottom: 10px;
+}
+.stat-box .sb-label { color: var(--white); font-size: 15px; line-height: 1.45; font-weight: 600; }
+.stat-box .sb-src { color: var(--muted); font-size: 11.5px; margin-top: auto; padding-top: 12px; line-height: 1.4; }
+@media print {
+  .stat-box { background: #fff !important; border: 1px solid #999 !important; }
+  .stat-box .sb-num { color: #0058A8 !important; }
+  .stat-box .sb-label { color: #000 !important; }
+  .stat-box .sb-src { color: #333 !important; }
+}
+
 /* Print-friendly leave-behind */
 @media print {
   body { background: #fff; color: #000; }
@@ -680,7 +708,18 @@ footer {
 <section class="hero">
   <div class="container">
     <span class="private-tag">Povjerljivo &middot; samo za THE Fitness</span>
-    <h1>10 aparata. 10 lokacija.<br><span class="accent">Niti jedan magic claim.</span></h1>
+
+    <div class="hook-eyebrow" style="text-align:left; margin-bottom:8px;">Konzervativna procjena za THE Fitness mrežu</div>
+    <div class="hook-number" style="text-align:left; margin:0 0 8px;">&euro;<span id="hookYear">152.755</span><span class="unit">/god</span></div>
+    <p class="subline" style="margin-bottom:6px;">
+      Pasivni godišnji prihod kroz cijelu mrežu od <strong style="color:var(--white);">10 aparata</strong> &mdash;
+      bez investicije, bez angažmana osoblja, bez inventara.
+    </p>
+    <p style="color:var(--muted); font-size:14px; margin-bottom:34px;">
+      Brojka se mijenja kako pomičete klizače u kalkulatoru. Stretch scenarij prelazi &euro;250.000/god.
+    </p>
+
+    <h1 style="font-size:clamp(28px,3.6vw,46px); max-width:24ch; margin-bottom:18px;">10 aparata. 10 lokacija. <span class="accent">Niti jedan magic claim.</span></h1>
     <p class="subline">
       Ne obećavamo da će vaši članovi izgubiti pet kilograma za mjesec dana. Obećavamo besramno
       dobar shake nakon treninga, papirnatu čašu umjesto prosutog praha u torbi, i ekskluzivnu
@@ -713,24 +752,8 @@ footer {
   </div>
 </section>
 
-<!-- ============== HOOK BLOCK ============== -->
-<section style="padding-top: 40px;">
-  <div class="container">
-    <div class="hook-block">
-      <div class="hook-eyebrow">Konzervativna procjena za THE Fitness mrežu</div>
-      <div class="hook-number">€<span id="hookYear">70.500</span><span class="unit">/god</span></div>
-      <p class="hook-caption">
-        Pasivni godišnji prihod kroz cijelu mrežu od <strong style="color:var(--white);">10 aparata</strong>,
-        bez investicije, bez angažmana osoblja, bez inventara.
-        U realnom scenariju koji već vide vaši članovi u Phase A waitlistu.
-      </p>
-      <p class="hook-foot">Brojka se mijenja kako pomičete klizače dolje. Stretch scenarij prelazi €250.000/god.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ============== CALCULATOR ============== -->
-<section id="calc" style="padding-top: 0;">
+<section id="calc" style="padding-top: 24px;">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Multi-location revenue calculator</span>
@@ -970,6 +993,43 @@ footer {
   </div>
 </section>
 
+<!-- ============== DEMAND STATS (4 boxes iz B2B decka) ============== -->
+<section>
+  <div class="container">
+    <div class="section-head" style="margin-bottom: 34px;">
+      <span class="eyebrow">Potražnja već postoji &mdash; samo nema gdje otići</span>
+      <h2>Zašto će vaši članovi koristiti aparat.</h2>
+      <p>
+        Barijere koje danas koče kupnju u teretani aparat jednostavno uklanja: self-service, bez reda,
+        bez neugode kod osoblja. Brojke iz industrije govore same za sebe.
+      </p>
+    </div>
+
+    <div class="stat-band">
+      <div class="stat-box">
+        <span class="sb-num">44%</span>
+        <span class="sb-label">Previše ih je sram tražiti osoblje za pomoć u teretani.</span>
+        <span class="sb-src">PureGym Gym Fear &amp; Intimidation Report</span>
+      </div>
+      <div class="stat-box">
+        <span class="sb-num">66%</span>
+        <span class="sb-label">Potrošača odustane od kupnje kad naiđe na red.</span>
+        <span class="sb-src">QueueAway / Qminder retail queue stats (UK)</span>
+      </div>
+      <div class="stat-box">
+        <span class="sb-num">54%</span>
+        <span class="sb-label">Gen Z bira kupnju uz minimalan kontakt s osobljem.</span>
+        <span class="sb-src">InStore Mag / CXM Gen Z self-service study (n=1.500)</span>
+      </div>
+      <div class="stat-box">
+        <span class="sb-num">1,8&times;</span>
+        <span class="sb-label">Žene češće od muškaraca izbjegavaju gym zbog straha od osude (65% vs 36%).</span>
+        <span class="sb-src">Fitrated Workout Worries survey (n=1.000)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============== BRAND THINKING (marketing team angle) ============== -->
 <section id="brand">
   <div class="container">
@@ -991,24 +1051,25 @@ footer {
         <div>
           <h3 style="font-size: 24px; margin-bottom: 22px;">Brand Passport &middot; v1.0</h3>
 
-          <figure class="brand-dba-visual">
-            <img src="cup-branded.png" alt="Shake-o-mat brendirana papirnata čaša s logom i porukom članu" loading="lazy" style="object-fit:contain; max-height:300px; background:#fff;">
-            <figcaption>
-              <strong>Brendirana papirnata čaša &middot; logo + poruka članu.</strong>
-              Prepoznatljiv signature koji se ponavlja u svakom videu, oglasu i in-gym materijalu.
-              U kategoriji punoj generičkih shaker bočica, ova čaša je trenutno prepoznavanje &mdash;
-              i svaka nosi malu poruku članu nakon treninga.
-            </figcaption>
-          </figure>
-
-          <div class="kv-block">
-            <div class="kv-label">Brand essence (B2C)</div>
-            <div class="kv-value"><strong>„Besramno dobri shakeovi."</strong> &middot; Damn Good Shakes.</div>
-          </div>
-
-          <div class="kv-block">
-            <div class="kv-label">Brand essence (B2B / packaging)</div>
-            <div class="kv-value"><strong>RECOVER. INSTANTLY.</strong> &middot; ritual + dokaz</div>
+          <div style="display:flex; gap:22px; align-items:flex-start; margin-bottom:24px; flex-wrap:wrap;">
+            <figure class="brand-dba-visual" style="flex:0 0 180px; margin:0; padding:12px; align-self:stretch; display:flex; align-items:center; justify-content:center;">
+              <img src="cup-branded.png" alt="Shake-o-mat brendirana papirnata čaša s logom i porukom članu" loading="lazy" style="object-fit:contain; max-height:280px; width:100%;">
+            </figure>
+            <div style="flex:1; min-width:210px;">
+              <div class="kv-block">
+                <div class="kv-label">Brand essence (B2C)</div>
+                <div class="kv-value"><strong>„Besramno dobri shakeovi."</strong> &middot; Damn Good Shakes.</div>
+              </div>
+              <div class="kv-block">
+                <div class="kv-label">Brand essence (B2B / pakiranje)</div>
+                <div class="kv-value"><strong>RECOVER. INSTANTLY.</strong> &middot; ritual + dokaz</div>
+              </div>
+              <p style="color:var(--muted); font-size:13px; line-height:1.55; margin:14px 0 0;">
+                <strong style="color:var(--white);">Brendirana papirnata čaša s logom</strong> &mdash; prepoznatljiv
+                signature u svakom videu, oglasu i in-gym materijalu. U kategoriji punoj generičkih shaker
+                bočica trenutno je prepoznavanje, a svaka nosi malu poruku članu nakon treninga.
+              </p>
+            </div>
           </div>
 
           <div class="kv-block">
@@ -1242,7 +1303,7 @@ footer {
       <div class="tl-step">
         <div class="when">Tjedan 6</div>
         <h4>Instalacija &middot; 10 lokacija</h4>
-        <p>2h po lokaciji, naš tim. 220V utičnica (1800W), ulaz vode, prostor 70×74 cm. Bez sezonskog rasporeda &mdash; sve lokacije live u istom tjednu.</p>
+        <p>2h po lokaciji, naš tim. 220V utičnica (1800W), voda iz galona (bez vodovoda), prostor 70×74 cm. Bez sezonskog rasporeda &mdash; sve lokacije live u istom tjednu.</p>
       </div>
 
       <div class="tl-step">
