@@ -343,15 +343,10 @@
 
   .flavor-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5%;
     flex: 1;
     margin-bottom: 3%;
-  }
-
-  .flavor-grid .flavor-card:nth-child(4),
-  .flavor-grid .flavor-card:nth-child(5) {
-    /* last 2 cards center in last row when 3-col */
   }
 
   .flavor-card {
@@ -371,9 +366,8 @@
 
   .flavor-card.choco      { background: linear-gradient(160deg, rgba(120,70,40,0.5), rgba(11,18,48,0.9)); }
   .flavor-card.vanilla    { background: linear-gradient(160deg, rgba(245,210,130,0.3), rgba(11,18,48,0.9)); }
-  .flavor-card.strawberry { background: linear-gradient(160deg, rgba(255,100,120,0.3), rgba(11,18,48,0.9)); }
+  .flavor-card.cookies    { background: linear-gradient(160deg, rgba(225,215,195,0.35), rgba(11,18,48,0.9)); }
   .flavor-card.karamel    { background: linear-gradient(160deg, rgba(210,150,50,0.4), rgba(11,18,48,0.9)); }
-  .flavor-card.ljesnjak   { background: linear-gradient(160deg, rgba(140,90,40,0.4), rgba(11,18,48,0.9)); }
 
   .flavor-icon { font-size: clamp(36px, 5vw, 64px); }
 
@@ -990,17 +984,13 @@
           <div class="flavor-icon">🍦</div>
           <div class="flavor-name">Vanilija</div>
         </div>
-        <div class="flavor-card strawberry" onclick="selectFlavor('Jagoda')">
-          <div class="flavor-icon">🍓</div>
-          <div class="flavor-name">Jagoda</div>
+        <div class="flavor-card cookies" onclick="selectFlavor('Cookies &amp; Cream')">
+          <div class="flavor-icon">🍪</div>
+          <div class="flavor-name">Cookies &amp; Cream</div>
         </div>
-        <div class="flavor-card karamel" onclick="selectFlavor('Karamel')">
+        <div class="flavor-card karamel" onclick="selectFlavor('Slani karamel')">
           <div class="flavor-icon">🍮</div>
-          <div class="flavor-name">Karamel</div>
-        </div>
-        <div class="flavor-card ljesnjak" onclick="selectFlavor('Lješnjak')">
-          <div class="flavor-icon">🌰</div>
-          <div class="flavor-name">Lješnjak</div>
+          <div class="flavor-name">Slani karamel</div>
         </div>
       </div>
       <button class="cancel-btn">Odustani</button>
