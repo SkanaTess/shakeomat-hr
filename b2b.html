@@ -880,8 +880,8 @@ footer {
           </div>
 
           <div class="field full">
-            <label for="locations">Broj lokacija</label>
-            <input type="number" id="locations" name="Broj lokacija" min="1" required>
+            <label for="locations-count">Broj lokacija</label>
+            <input type="number" id="locations-count" name="Broj lokacija" min="1" required>
           </div>
 
           <div class="field full">
@@ -1123,7 +1123,7 @@ footer {
       try {
         if (typeof gtag === 'function') {
           var membersInput = document.getElementById('members-count');
-          var locInput = document.getElementById('locations');
+          var locInput = document.getElementById('locations-count');
           var members = membersInput ? parseInt(membersInput.value, 10) || 0 : 0;
           var locs = locInput ? parseInt(locInput.value, 10) || 1 : 1;
           gtag('event', 'generate_lead', {
