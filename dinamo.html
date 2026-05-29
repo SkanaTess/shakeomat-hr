@@ -281,6 +281,29 @@ section { padding: 72px 0; }
 .ptable .nm.lift { color: var(--purple); }
 .ptable .nm.recover { color: var(--pink); }
 .ptable .nm.vegan { color: var(--vegan); }
+.ptable .comp { color: var(--white); font-size: 14px; line-height: 1.45; }
+.ptable .comp span { color: var(--muted); }
+
+/* ---------- EVIDENCE BASE ---------- */
+.ev-wrap {
+  margin-top: 28px; background: var(--bg-surface);
+  border: 1px solid rgba(125, 255, 155, 0.2); border-radius: var(--radius-lg);
+  padding: 30px 26px;
+}
+.ev-wrap h3 { font-size: 24px; color: var(--white); margin-bottom: 8px; }
+.ev-wrap .lead { color: var(--muted); font-size: 15px; line-height: 1.6; max-width: 760px; }
+.ev-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 22px; }
+@media (min-width: 760px) { .ev-grid { grid-template-columns: 1fr 1fr; } }
+.ev-item {
+  padding: 16px 18px; background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line); border-radius: var(--radius); border-left: 3px solid var(--green);
+}
+.ev-item .theme {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 15px;
+  color: var(--green); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px;
+}
+.ev-item .src { color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+.ev-foot { color: var(--muted); font-size: 13px; margin-top: 20px; line-height: 1.6; font-style: italic; }
 
 /* ---------- MODEL CARDS ---------- */
 .model-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
@@ -408,7 +431,7 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
         </div>
       </div>
       <div>
-        <img src="machine-action.jpg" alt="Shake-o-mat aparat — igrač bira formulu na ekranu" class="hero-photo" loading="eager">
+        <img src="dinamo-hero.png" alt="Igrači uz Shake-o-mat aparat u teretani — svjež shake nakon treninga" class="hero-photo" loading="eager">
       </div>
     </div>
   </div>
@@ -533,11 +556,11 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
 <section style="padding-top: 40px;">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Asortiman</span>
-      <h2>Pet formula mapiranih na trenažni dan.</h2>
+      <span class="eyebrow">Asortiman i formulacijska logika</span>
+      <h2>Pet formula. Evo što je u svakoj i zašto.</h2>
       <p>
-        Svaka formula cilja drugi trenutak i tip opterećenja. Raspon pokriva regeneraciju, teške
-        sesije, lagane dane i biljnu alternativu — bez potrebe da igrač razmišlja o sastavu.
+        Svaka formula cilja drugi trenutak i tip opterećenja u mikrociklusu. Igraču je sve na gotovo —
+        stožeru dajemo punu logiku sastava, da odluka bude na temelju struke, ne marketinga.
       </p>
     </div>
 
@@ -546,47 +569,81 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
         <thead>
           <tr>
             <th>Formula</th>
-            <th>Kada</th>
-            <th>Za koga / koji dan</th>
-            <th>Cjenovni razred</th>
+            <th>Ključni sastav (radna specifikacija)</th>
+            <th>Kada / za koga</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><span class="nm recover">RECOVER</span></td>
-            <td>Poslije treninga, navečer</td>
-            <td>Default nakon sesije i prije spavanja — fokus na oporavak na kraju dana</td>
-            <td>Premium</td>
+            <td class="comp">Micelarni kazein + kolagen <span>— sporo otpuštanje, profil za kraj dana</span></td>
+            <td>Poslije treninga i prije spavanja. Default za oporavak na kraju dana.</td>
           </tr>
           <tr>
             <td><span class="nm build">BUILD</span></td>
-            <td>Teški / dvostruki trening</td>
-            <td>Dani jakog opterećenja kada igrač traži puniji napitak</td>
-            <td>Mid</td>
+            <td class="comp">Sirutka (WPC) + ugljikohidrati + kreatin monohidrat (Creapure®) <span>— za nadoknadu i jako opterećenje</span></td>
+            <td>Teški i dvostruki treninzi, dani jakog opterećenja.</td>
           </tr>
           <tr>
             <td><span class="nm lift">LIFT</span></td>
-            <td>Sredina dana, prije termina</td>
-            <td>Lagana opcija bez težine prije popodnevne sesije</td>
-            <td>Mid</td>
+            <td class="comp">Sirutka + L-leucin <span>— lagan profil, bez kofeina</span></td>
+            <td>Sredina dana ili prije popodnevnog termina. Bez težine, da ne uspava.</td>
           </tr>
           <tr>
             <td><span class="nm lean">LEAN</span></td>
-            <td>Lagani / regenerativni dani</td>
-            <td>Kontrola tjelesne mase u sezoni, lagani protein bez nepotrebnih kalorija</td>
-            <td>Entry</td>
+            <td class="comp">Izolat sirutke + elektroliti <span>— niske kalorije</span></td>
+            <td>Lagani i regenerativni dani, kontrola tjelesne mase u sezoni.</td>
           </tr>
           <tr>
             <td><span class="nm vegan">VEGAN</span></td>
-            <td>Bilo kada</td>
-            <td>Igrači na biljnoj prehrani ili s netolerancijom na mliječno</td>
-            <td>Entry</td>
+            <td class="comp">Grašak + riža (komplementarni aminokiselinski profil) + B12 <span>— bez mlijeka i glutena</span></td>
+            <td>Igrači na biljnoj prehrani ili s netolerancijom na mliječno.</td>
           </tr>
         </tbody>
       </table>
       <p style="color: var(--muted); font-size: 13px; margin-top: 14px;">
-        Svaka formula u 5 okusa (20 kombinacija). Točan nutritivni sastav i potpis sportskog nutricionista
-        dostavljamo stručnom stožeru na uvid prije postavljanja — bez marketinških obećanja, samo specifikacija.
+        Radna formulacijska specifikacija — svaka formula u 5 okusa (20 kombinacija). Puni nutritivni profil
+        (gramaže, DIAAS, energetska vrijednost) i potpis sportskog nutricionista dostavljamo stručnom stožeru
+        na uvid prije postavljanja.
+      </p>
+    </div>
+
+    <!-- Evidence base -->
+    <div class="ev-wrap">
+      <h3>Na čemu se formulacija temelji</h3>
+      <p class="lead">
+        Formule nisu „nešto iz Kine" — svaka je posljedica odluke utemeljene na recenziranoj literaturi i
+        konsenzusnim stavovima struke. Evo ključnih izvora po području, da vidite da govorimo istim jezikom kao vaš tim.
+      </p>
+      <div class="ev-grid">
+        <div class="ev-item">
+          <div class="theme">Proteinska doza i raspodjela</div>
+          <div class="src">ISSN Position Stand: Protein and Exercise (Jäger i sur., JISSN 2017) · Morton i sur., meta-analiza, Br J Sports Med 2018</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Oporavak i protein prije spavanja (RECOVER)</div>
+          <div class="src">Res i sur., Med Sci Sports Exerc 2012 (protein prije spavanja i noćni oporavak) · ISSN Nutrient Timing (Kerksick i sur., JISSN 2017)</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Kreatin monohidrat (BUILD)</div>
+          <div class="src">ISSN Position Stand: Creatine (Kreider i sur., JISSN 2017) — sigurnost i učinkovitost, dozni protokoli</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Kvaliteta proteina (DIAAS)</div>
+          <div class="src">FAO/WHO Expert Consultation 2013 — DIAAS standard za procjenu kvalitete proteina (sirutka, grašak+riža profil)</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Energetska dostupnost sportaša</div>
+          <div class="src">IOC konsenzus o relativnom energetskom deficitu u sportu (REDs) — okvir za unos kod visokog opterećenja</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Biljni protein i amino profil (VEGAN)</div>
+          <div class="src">Komplementarni grašak + riža blend za potpun esencijalni profil; B12 fortifikacija (kritični nutrient biljne prehrane)</div>
+        </div>
+      </div>
+      <p class="ev-foot">
+        Reference navodimo kao temelj formulacijskog pristupa, ne kao tvrdnju o učinku konkretnog proizvoda —
+        finalnu specifikaciju i potpis nutricionista stručni stožer dobiva na uvid prije bilo kakve odluke.
       </p>
     </div>
   </div>
