@@ -668,6 +668,95 @@ footer {
   .stat-box .sb-src { color: #333 !important; }
 }
 
+/* ---------- MOTION & POLISH (award-spirit) ---------- */
+/* scroll-reveal (class added by JS only — no-JS shows everything) */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .65s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* scroll progress bar */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%; z-index: 300;
+  background: linear-gradient(90deg, var(--blue), var(--cyan), var(--green));
+  box-shadow: 0 0 10px rgba(115, 237, 255, 0.5);
+  transition: width .12s linear;
+}
+
+/* film grain overlay */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 250; pointer-events: none; opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* hero aurora — drifting soft gradients behind content */
+.hero { overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: -25%; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(closest-side, rgba(27,162,255,.20), transparent 72%) 12% 18% / 52% 52% no-repeat,
+    radial-gradient(closest-side, rgba(125,255,155,.13), transparent 72%) 86% 26% / 48% 48% no-repeat,
+    radial-gradient(closest-side, rgba(255,111,181,.10), transparent 72%) 72% 92% / 52% 52% no-repeat;
+  animation: aurora 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.hero > .container { position: relative; z-index: 2; }
+@keyframes aurora {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(2%, -2%, 0) scale(1.06); }
+  100% { transform: translate3d(-2%, 1.5%, 0) scale(1.03); }
+}
+
+/* pull-quote band (breaks the long card valley) */
+.quote-band {
+  background:
+    radial-gradient(ellipse 70% 130% at 50% 50%, rgba(125,255,155,.08), transparent 70%),
+    var(--bg-surface);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.quote-band .qmark { color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 18px; }
+.quote-band p.q {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase;
+  font-size: clamp(28px, 4.4vw, 52px); line-height: 1.08; color: var(--white);
+  max-width: 22ch; margin: 0 auto; letter-spacing: .01em;
+}
+.quote-band p.q .hl { color: var(--green); }
+.quote-band .qsub { font-size: 15px; color: var(--muted); margin: 18px auto 0; max-width: 52ch; line-height: 1.6; }
+
+/* sticky CTA bar */
+.sticky-cta {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 120;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 12px 18px; background: rgba(5, 8, 22, 0.93);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+  transform: translateY(110%); transition: transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.sticky-cta.show { transform: translateY(0); }
+.sticky-cta .sc-txt { color: var(--muted); font-size: 13px; font-weight: 600; }
+.sticky-cta .sc-txt strong { color: var(--white); }
+@media (max-width: 600px) { .sticky-cta .sc-txt { display: none; } .sticky-cta { justify-content: center; } }
+
+/* hero trust badge */
+.trust-badge {
+  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px;
+  padding: 8px 16px; border: 1px solid rgba(125, 255, 155, 0.4); border-radius: 999px;
+  background: rgba(125, 255, 155, 0.08); color: var(--green);
+  font-size: 13px; font-weight: 700; letter-spacing: .02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero::before { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  body::after, .hero::before, .scroll-progress, .sticky-cta { display: none !important; }
+  .quote-band { background: #fff !important; }
+  .quote-band p.q { color: #000 !important; }
+  .quote-band p.q .hl, .quote-band .qmark { color: #0058A8 !important; }
+}
+
 /* Print-friendly leave-behind */
 @media print {
   body { background: #fff; color: #000; }
@@ -692,6 +781,8 @@ footer {
 
 <body>
 
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- ============== NAV ============== -->
 <header class="nav" role="banner">
   <div class="nav-inner">
@@ -709,7 +800,7 @@ footer {
   <div class="container">
     <span class="private-tag">Povjerljivo &middot; samo za THE Fitness</span>
 
-    <div class="hook-eyebrow" style="text-align:left; margin-bottom:8px;">Konzervativna procjena za THE Fitness mrežu</div>
+    <div class="hook-eyebrow" style="text-align:left; margin-bottom:8px;">Realna godišnja projekcija za THE Fitness mrežu</div>
     <div class="hook-number" style="text-align:left; margin:0 0 8px;">&euro;<span id="hookYear">152.755</span><span class="unit">/god</span></div>
     <p class="subline" style="margin-bottom:6px;">
       Pasivni godišnji prihod kroz cijelu mrežu od <strong style="color:var(--white);">10 aparata</strong> &mdash;
@@ -744,6 +835,8 @@ footer {
         <span class="l">SLA servis &middot; 0 staff angažmana</span>
       </div>
     </div>
+
+    <div class="trust-badge">&#10003;&nbsp; 90-dnevni pilot &middot; bez penala &middot; sav rizik na nama</div>
 
     <div style="display:flex; gap:14px; flex-wrap:wrap;">
       <a href="#calc" class="btn btn-primary">Izračunaj prihod mreže &darr;</a>
@@ -839,14 +932,14 @@ footer {
         <div class="calc-output" role="status" aria-live="polite">
           <div class="tier-badge" id="tierBadge">VAŠ UDIO: <strong>30%</strong> na neto cijenu</div>
           <div class="headline">
-            &euro;<span id="monthly">5.875</span><span class="unit">/mj</span>
+            &euro;<span id="monthly">12.720</span><span class="unit">/mj</span>
           </div>
           <div class="breakdown">
-            &euro;<span id="weekly">1.356</span>/tj &middot; &euro;<span id="yearly">70.500</span>/god
+            &euro;<span id="weekly">2.938</span>/tj &middot; &euro;<span id="yearly">152.755</span>/god
           </div>
           <div class="per-machine">
-            <strong>Po aparatu:</strong> €<span id="perMachineMonth">587</span>/mj &middot;
-            <strong>Po danu:</strong> <span id="totalShakes">240</span> shake-ova kroz mrežu
+            <strong>Po aparatu:</strong> €<span id="perMachineMonth">1.272</span>/mj &middot;
+            <strong>Po danu:</strong> <span id="totalShakes">514</span> shake-ova kroz mrežu
             <br><strong style="color:var(--cyan);">Vlastita investicija:</strong> €0
           </div>
         </div>
@@ -866,7 +959,7 @@ footer {
       <h3 style="font-size: 22px; margin-bottom: 18px;">Što ako se Shake-o-mat ne razvije po planu?</h3>
       <p style="color: var(--muted); margin-bottom: 20px; font-size: 15px;">
         Tri scenarija &mdash; konzervativno, target, stretch. Ne obećavamo da će biti kao stretch.
-        Ali i u najgorem scenariju, mreža THE Fitnessa zarađuje preko €60.000/god od pasivnog kanala koji prije nije postojao.
+        Ali i u najgorem scenariju, mreža THE Fitnessa zarađuje preko €70.000/god od pasivnog kanala koji prije nije postojao.
       </p>
       <table class="scenario-table">
         <thead>
@@ -883,22 +976,22 @@ footer {
             <td><strong>Konzervativno</strong> &middot; 7% konverzija</td>
             <td>~24</td>
             <td>240</td>
-            <td>€5.875</td>
-            <td>€70.500</td>
+            <td>€5.940</td>
+            <td>€71.300</td>
           </tr>
           <tr class="highlight">
             <td><strong>Target</strong> &middot; 15% konverzija (realan po Mj 6)</td>
             <td>~51</td>
             <td>510</td>
-            <td>€12.485</td>
-            <td>€149.820</td>
+            <td>€12.720</td>
+            <td>€152.755</td>
           </tr>
           <tr>
             <td><strong>Stretch</strong> &middot; 25% konverzija (Mj 12+)</td>
             <td>~86</td>
             <td>860</td>
-            <td>€21.053</td>
-            <td>€252.636</td>
+            <td>€21.200</td>
+            <td>€254.600</td>
           </tr>
         </tbody>
       </table>
@@ -993,6 +1086,15 @@ footer {
   </div>
 </section>
 
+<!-- ============== PULL-QUOTE BAND ============== -->
+<section class="quote-band">
+  <div class="container">
+    <div class="qmark">Naš signature</div>
+    <p class="q">Ne obećavamo trbušnjake do ljeta.<br><span class="hl">Obećavamo besramno dobar shake.</span></p>
+    <p class="qsub">Anti-hype ton koji gradi povjerenje umjesto da pritišće &mdash; isti registar kojim su Aldi UK, Old Spice i Surreal Cereal izgradili prepoznatljive brendove.</p>
+  </div>
+</section>
+
 <!-- ============== DEMAND STATS (4 boxes iz B2B decka) ============== -->
 <section>
   <div class="container">
@@ -1007,22 +1109,22 @@ footer {
 
     <div class="stat-band">
       <div class="stat-box">
-        <span class="sb-num">44%</span>
+        <span class="sb-num" data-to="44" data-suf="%">44%</span>
         <span class="sb-label">Previše ih je sram tražiti osoblje za pomoć u teretani.</span>
         <span class="sb-src">PureGym Gym Fear &amp; Intimidation Report</span>
       </div>
       <div class="stat-box">
-        <span class="sb-num">66%</span>
+        <span class="sb-num" data-to="66" data-suf="%">66%</span>
         <span class="sb-label">Potrošača odustane od kupnje kad naiđe na red.</span>
         <span class="sb-src">QueueAway / Qminder retail queue stats (UK)</span>
       </div>
       <div class="stat-box">
-        <span class="sb-num">54%</span>
+        <span class="sb-num" data-to="54" data-suf="%">54%</span>
         <span class="sb-label">Gen Z bira kupnju uz minimalan kontakt s osobljem.</span>
         <span class="sb-src">InStore Mag / CXM Gen Z self-service study (n=1.500)</span>
       </div>
       <div class="stat-box">
-        <span class="sb-num">1,8&times;</span>
+        <span class="sb-num" data-to="1.8" data-dec="1" data-suf="&times;">1,8&times;</span>
         <span class="sb-label">Žene češće od muškaraca izbjegavaju gym zbog straha od osude (65% vs 36%).</span>
         <span class="sb-src">Fitrated Workout Worries survey (n=1.000)</span>
       </div>
@@ -1156,8 +1258,8 @@ footer {
       <h2>Ne čekamo da članovi pronađu aparat &mdash; gradimo potražnju paralelno s instalacijom.</h2>
       <p>
         Phase A (live od 14.05.2026.) je B2C waitlist kampanja &mdash; €1.000 / 30 dana / cilj 600 leadova.
-        U trenutku kad prvi aparat uđe u THE Fitness lokaciju, X članova vaše mreže već zna brand,
-        već je upisano u waitlist, već čeka prvi shake. Marketing tim ne dobiva „vendor s plakatima" &mdash; dobiva
+        U trenutku kad prvi aparat uđe u THE Fitness lokaciju, dio vaših članova već zna brand &mdash;
+        upisani su u waitlist i čekaju prvi shake. Marketing tim ne dobiva „vendor s plakatima" &mdash; dobiva
         aktivan engine koji već radi.
       </p>
     </div>
@@ -1165,7 +1267,7 @@ footer {
     <div class="why-grid">
 
       <article class="why-card">
-        <div class="num">⚡</div>
+        <div class="num">07</div>
         <h3>Phase A waitlist (live sada)</h3>
         <p>
           Meta Lead Ads kampanja u 4 grada (ZG/ST/RI/OS), 10 km radius oko top 20 gymova. Kratak form
@@ -1175,7 +1277,7 @@ footer {
       </article>
 
       <article class="why-card">
-        <div class="num">⚡</div>
+        <div class="num">08</div>
         <h3>Content engine &middot; 32 outputa u 14 dana</h3>
         <p>
           IG @shakeomat + TikTok @shakeomat.hr + FB Page &mdash; 3-act curiosity arc (Teaser → Build → Launch).
@@ -1185,7 +1287,7 @@ footer {
       </article>
 
       <article class="why-card">
-        <div class="num">⚡</div>
+        <div class="num">09</div>
         <h3>Vizualni materijali &middot; batch produkcija</h3>
         <p>
           Produkcija u serijama &mdash; 4h snimanja mjesečno, 12 raw cutova pretvorimo u 60 outputa.
@@ -1195,7 +1297,7 @@ footer {
       </article>
 
       <article class="why-card">
-        <div class="num">⚡</div>
+        <div class="num">10</div>
         <h3>Nano influencer seed (Phase B/C)</h3>
         <p>
           10-nano shortlist HR fitness/wellness microinfluencera (2-15k followera, engagement 4%+).
@@ -1204,7 +1306,7 @@ footer {
       </article>
 
       <article class="why-card">
-        <div class="num">⚡</div>
+        <div class="num">11</div>
         <h3>Hard launch &middot; srpanj 2026.</h3>
         <p>
           Multi-channel blitz prvog dana (3 lokacije live). TikTok Ads €200/tj × 3 tj, Meta retargeting
@@ -1213,7 +1315,7 @@ footer {
       </article>
 
       <article class="why-card">
-        <div class="num">⚡</div>
+        <div class="num">12</div>
         <h3>Compliance shield &middot; RD endorsement Q3</h3>
         <p>
           Nutritionist (registered dietitian) outreach u tijeku &mdash; 70% Phase 1 marketing leverage.
@@ -1323,7 +1425,7 @@ footer {
 </section>
 
 <!-- ============== CTA ============== -->
-<section class="cta-final">
+<section class="cta-final" id="cta-final">
   <div class="container">
     <h2>Sljedeći korak je razgovor o ugovoru.</h2>
     <p>
@@ -1334,6 +1436,9 @@ footer {
       <a href="mailto:sasa@shakeomat.hr?subject=THE%20Fitness%20×%20Shake-o-mat%20flagship%20partnership" class="btn btn-primary">Dogovori follow-up call</a>
       <a href="https://wa.me/385958741708?text=THE%20Fitness%20×%20Shake-o-mat%20%E2%80%94%20želim%20nastaviti%20razgovor" class="btn btn-ghost">WhatsApp Saša</a>
     </div>
+    <p style="color: var(--muted); font-size: 14px; margin-top: 18px;">
+      Niste još za poziv? <a href="mailto:sasa@shakeomat.hr?subject=THE%20Fitness%20×%20Shake-o-mat%20—%20onepager">Pošaljite poruku</a> i poslat ćemo vam sažetak ponude na jednoj stranici.
+    </p>
 
     <p style="color: var(--muted); font-size: 13px; margin-top: 30px;">
       Saša Kanazir &middot; osnivač Shake-o-mata &middot; <a href="mailto:sasa@shakeomat.hr">sasa@shakeomat.hr</a> &middot;
@@ -1341,6 +1446,12 @@ footer {
     </p>
   </div>
 </section>
+
+<!-- ============== STICKY CTA ============== -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="sc-txt">10 aparata &middot; 0&euro; investicije &middot; do <strong>30% revenue share</strong></span>
+  <a href="#cta-final" class="btn btn-primary" style="padding:12px 24px; font-size:14px;">Dogovori call</a>
+</div>
 
 </main>
 
@@ -1457,6 +1568,29 @@ footer {
 
   recalc();
 
+  // Hero broj — count-up animacija na load (one-shot, prekida se na prvu interakciju)
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !hookYear) return;
+    var target = parseInt(hookYear.textContent.replace(/\./g, ''), 10) || 0;
+    if (!target) return;
+    var cancelled = false, startTs = null, dur = 1300;
+    function stop(){ cancelled = true; }
+    [locEl, membEl, visEl, maintEl, flagEl].forEach(function(el){
+      el.addEventListener('input', stop); el.addEventListener('change', stop);
+    });
+    pills.forEach(function(p){ p.addEventListener('click', stop); });
+    hookYear.textContent = '0';
+    function step(ts){
+      if (cancelled) return;
+      if (!startTs) startTs = ts;
+      var p = Math.min((ts - startTs) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      hookYear.textContent = fmt(target * e);
+      if (p < 1) requestAnimationFrame(step); else hookYear.textContent = fmt(target);
+    }
+    requestAnimationFrame(step);
+  })();
+
   // GA4 event on CTA click
   document.querySelectorAll('.btn-primary, .btn-ghost').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -1471,6 +1605,67 @@ footer {
       } catch (e) {}
     });
   });
+})();
+</script>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+
+  // scroll progress bar + sticky CTA
+  var sp = document.getElementById('scrollProgress');
+  var sticky = document.getElementById('stickyCta');
+  function onScroll(){
+    var d = document.documentElement;
+    var st = d.scrollTop || document.body.scrollTop;
+    var max = d.scrollHeight - d.clientHeight;
+    var pct = max > 0 ? (st / max) * 100 : 0;
+    if (sp) sp.style.width = pct + '%';
+    if (sticky){ if (st > 760) sticky.classList.add('show'); else sticky.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // scroll reveal (below-fold elements only — class added by JS so no-JS shows all)
+  if (hasIO && !reduce){
+    var els = document.querySelectorAll('.why-card, .stat-box, .co-card, .tl-step, .brand-think, .quote-band .container, .scenario-table-wrap');
+    els.forEach(function(el){ el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  }
+
+  // count-up za stat brojke kad uđu u viewport
+  function fmtN(v, dec){ return dec > 0 ? v.toFixed(dec).replace('.', ',') : Math.round(v).toString(); }
+  function countUp(el, to, dec, suf, dur){
+    var startTs = null;
+    function step(ts){
+      if (!startTs) startTs = ts;
+      var p = Math.min((ts - startTs) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmtN(to * e, dec) + suf;
+      if (p < 1) requestAnimationFrame(step); else el.textContent = fmtN(to, dec) + suf;
+    }
+    requestAnimationFrame(step);
+  }
+  var band = document.querySelector('.stat-band');
+  if (band && hasIO && !reduce){
+    var done = false;
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting && !done){
+          done = true;
+          document.querySelectorAll('.sb-num[data-to]').forEach(function(el){
+            countUp(el, parseFloat(el.getAttribute('data-to')), parseInt(el.getAttribute('data-dec') || '0', 10), el.getAttribute('data-suf') || '', 1200);
+          });
+          sio.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    sio.observe(band);
+  }
 })();
 </script>
 
