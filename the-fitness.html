@@ -668,6 +668,34 @@ footer {
   .stat-box .sb-src { color: #333 !important; }
 }
 
+/* ---------- FOUNDER ---------- */
+.founder-card {
+  display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+  background:
+    radial-gradient(ellipse 55% 130% at 0% 0%, rgba(27,162,255,.10), transparent 70%),
+    var(--bg-surface);
+  border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 32px 30px;
+}
+.founder-avatar {
+  flex: 0 0 118px; width: 118px; height: 118px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 46px;
+  color: var(--cyan); letter-spacing: .02em;
+  background: linear-gradient(135deg, rgba(27,162,255,.22), rgba(115,237,255,.08));
+  border: 2px solid rgba(115,237,255,.45); box-shadow: 0 8px 28px rgba(0,0,0,.4);
+  object-fit: cover; overflow: hidden;
+}
+.founder-body { flex: 1; min-width: 260px; }
+.founder-name { font-size: 26px; color: var(--white); margin-bottom: 4px; }
+.founder-role { color: var(--cyan); font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+.founder-bio { color: var(--muted); font-size: 15.5px; line-height: 1.65; margin-bottom: 14px; }
+.founder-contact { font-size: 14px; color: var(--muted); }
+@media print {
+  .founder-card { background: #fff !important; border: 1px solid #999 !important; }
+  .founder-avatar { background: #eef !important; color: #0058A8 !important; border-color: #0058A8 !important; box-shadow: none !important; }
+  .founder-name { color: #000 !important; } .founder-bio { color: #222 !important; } .founder-role { color: #0058A8 !important; }
+}
+
 /* ---------- MOTION & POLISH (award-spirit) ---------- */
 /* scroll-reveal (class added by JS only — no-JS shows everything) */
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .65s cubic-bezier(.2,.7,.2,1); }
@@ -1424,6 +1452,30 @@ body::after {
   </div>
 </section>
 
+<!-- ============== FOUNDER ============== -->
+<section style="padding-bottom: 0;">
+  <div class="container">
+    <div class="founder-card">
+      <div class="founder-avatar" aria-hidden="true">SK</div>
+      <div class="founder-body">
+        <span class="eyebrow" style="display:block; margin-bottom:10px;">Tko stoji iza ponude</span>
+        <h3 class="founder-name">Saša Kanazir</h3>
+        <div class="founder-role">Suosnivač Shake-o-mata &middot; UEFA A nogometni trener (GNK Dinamo)</div>
+        <p class="founder-bio">
+          Iza Shake-o-mata smo dvojica, a više od 10 godina na nogometnom terenu naučilo nas je
+          koliko oporavak nakon treninga znači. Pokrenuli smo Shake-o-mat jer dobrog, brzog
+          post-workout shakea u teretani jednostavno nije bilo &mdash; ili prah koji se prosipa po
+          torbi, ili ništa. THE Fitness ne dobiva vendora, nego partnere koji znaju kako izgleda svlačionica.
+        </p>
+        <div class="founder-contact">
+          <a href="mailto:sasa@shakeomat.hr">sasa@shakeomat.hr</a> &middot;
+          <a href="https://wa.me/385958741708">+385 95 874 1708</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============== CTA ============== -->
 <section class="cta-final" id="cta-final">
   <div class="container">
@@ -1630,7 +1682,7 @@ body::after {
 
   // scroll reveal (below-fold elements only — class added by JS so no-JS shows all)
   if (hasIO && !reduce){
-    var els = document.querySelectorAll('.why-card, .stat-box, .co-card, .tl-step, .brand-think, .quote-band .container, .scenario-table-wrap');
+    var els = document.querySelectorAll('.why-card, .stat-box, .co-card, .tl-step, .brand-think, .quote-band .container, .scenario-table-wrap, .founder-card');
     els.forEach(function(el){ el.classList.add('reveal'); });
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
