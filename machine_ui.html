@@ -466,6 +466,9 @@
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
   }
 
+  .sku-card.vegan {
+    /* Vegan placeholder for hover/border consistency — see hover override below */
+  }
   .sku-card.lean {
     background: linear-gradient(160deg, rgba(115, 237, 255, 0.3), rgba(11, 18, 48, 0.9));
   }
@@ -934,35 +937,35 @@
         <div class="sku-card lean" data-goal="LEAN" onclick="selectGoal('LEAN')">
           <div class="sku-title">LEAN</div>
           <div>
-            <div class="sku-desc">Whey isolat · 25g proteina · 16 oz · manje kalorija</div>
+            <div class="sku-desc">Lagani dani i definicija · bez nepotrebnih kalorija · 16 oz</div>
             <div class="sku-price">od €3,00</div>
           </div>
         </div>
         <div class="sku-card build" data-goal="BUILD" onclick="selectGoal('BUILD')">
           <div class="sku-title">BUILD</div>
           <div>
-            <div class="sku-desc">Whey + kreatin · 35g proteina · 16 oz · masa</div>
+            <div class="sku-desc">Teški treninzi · za dane kada gura · 16 oz</div>
             <div class="sku-price">od €3,50</div>
           </div>
         </div>
         <div class="sku-card boost" data-goal="LIFT" onclick="selectGoal('LIFT')">
           <div class="sku-title">LIFT</div>
           <div>
-            <div class="sku-desc">Whey + L-leucin · lagana opcija · 16 oz · pred trening</div>
+            <div class="sku-desc">Sredina dana i fokus · bez težine · 16 oz</div>
             <div class="sku-price">od €3,50</div>
           </div>
         </div>
         <div class="sku-card recover" data-goal="RECOVER" onclick="selectGoal('RECOVER')">
           <div class="sku-title">RECOVER</div>
           <div>
-            <div class="sku-desc">Kazein + kolagen · oporavak · 16 oz · regeneracija</div>
+            <div class="sku-desc">Večernji oporavak · kraj dana · 16 oz</div>
             <div class="sku-price">od €4,00</div>
           </div>
         </div>
         <div class="sku-card vegan" data-goal="VEGAN" onclick="selectGoal('VEGAN')">
           <div class="sku-title">VEGAN</div>
           <div>
-            <div class="sku-desc">Grašak + riža · 25g proteina · 16 oz · B12 fortified · bez mlijeka</div>
+            <div class="sku-desc">Biljna rutina · bez mlijeka i glutena · 16 oz</div>
             <div class="sku-price">od €3,00</div>
           </div>
         </div>
@@ -1014,16 +1017,16 @@
       <div class="boost-grid">
         <div class="boost-card collagen" onclick="selectBoost('Kolagen')">
           <div class="boost-name">KOLAGEN</div>
-          <div class="boost-desc">Zglobovi · koža · regeneracija</div>
+          <div class="boost-desc">Dodatak za večernji oporavak</div>
           <div class="boost-price">+€0.50</div>
         </div>
         <div class="boost-card bcaa" onclick="selectBoost('BCAA')">
           <div class="boost-name">BCAA</div>
-          <div class="boost-desc">Aminokiseline · anti-katabolizam</div>
+          <div class="boost-desc">Dodatak za duge treninge</div>
           <div class="boost-price">+€0.50</div>
         </div>
         <div class="boost-card none" onclick="selectBoost(null)">
-          <div class="boost-name">BEZ LIFTA</div>
+          <div class="boost-name">BEZ NADOGRADNJE</div>
           <div class="boost-desc">Osnovna formula</div>
           <div class="boost-price">→</div>
         </div>
