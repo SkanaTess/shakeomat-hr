@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protein kalkulator — Shake-o-mat</title>
+<meta name="description" content="Koliko proteina dnevno treba tvoje tijelo? Odgovori na 4 pitanja i dobij okvirnu preporuku. Shake-o-mat — besramno dobri shakeovi.">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: #050816;
+    color: #eee;
+    min-height: 100vh;
+    padding: 0 0 48px;
+  }
+
+  .header {
+    background: #070b1c;
+    border-bottom: 2px solid #1E90FF;
+    padding: 20px 24px 16px;
+    text-align: center;
+  }
+
+  .logo-wrap img { height: 56px; width: auto; }
+
+  .tagline {
+    font-size: 11px;
+    color: #1E90FF;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    font-weight: 700;
+  }
+
+  .container { max-width: 480px; margin: 0 auto; padding: 28px 20px 0; }
+
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .hero-title span { color: #1E90FF; }
+
+  .hero-sub { font-size: 14px; color: #8AA0C8; margin-bottom: 28px; line-height: 1.6; }
+
+  .form-group { margin-bottom: 20px; }
+
+  label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6A7CA0;
+    margin-bottom: 8px;
+  }
+
+  input[type="number"], select {
+    width: 100%;
+    background: #10172e;
+    border: 1px solid #233056;
+    border-radius: 6px;
+    color: #eee;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    padding: 14px 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.2s;
+  }
+
+  input[type="number"]:focus, select:focus { outline: none; border-color: #1E90FF; }
+  select option { background: #10172e; }
+
+  .gender-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .gender-btn {
+    background: #10172e;
+    border: 1px solid #233056;
+    border-radius: 6px;
+    color: #8AA0C8;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+
+  .gender-btn.active { background: #0d2a52; border-color: #1E90FF; color: #1E90FF; }
+
+  .calc-btn {
+    width: 100%;
+    background: #1E90FF;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .calc-btn:hover { background: #1577d6; }
+
+  .result { display: none; margin-top: 32px; background: #070b1c; border: 1px solid #1E90FF; border-radius: 12px; overflow: hidden; }
+  .result.visible { display: block; }
+
+  .result-top { background: #0a1e3a; padding: 28px 24px 20px; text-align: center; }
+  .result-number { font-family: 'Barlow Condensed', sans-serif; font-size: 80px; font-weight: 900; color: #1E90FF; line-height: 1; letter-spacing: -2px; }
+  .result-unit { font-size: 20px; color: #8AA0C8; margin-top: 4px; letter-spacing: 1px; }
+  .result-label { font-size: 13px; color: #1E90FF; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+
+  .result-body { padding: 20px 24px; }
+  .result-body p { font-size: 14px; color: #8AA0C8; line-height: 1.7; margin-bottom: 20px; }
+  .result-body strong { color: #eee; }
+
+  .shake-rec { background: #050816; border: 1px solid #233056; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+  .shake-rec .rec-label { font-size: 10px; color: #1E90FF; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; font-weight: 700; }
+  .shake-rec .rec-item { display: flex; align-items: center; justify-content: space-between; padding: 9px 10px; border-radius: 6px; border-bottom: 1px solid #10172e; font-size: 14px; }
+  .shake-rec .rec-item:last-child { border-bottom: none; }
+  .shake-rec .rec-item.picked { background: #0d2a52; border-bottom-color: transparent; }
+  .shake-rec .rec-item.picked .rec-name { color: #1E90FF; }
+  .shake-rec .rec-name { color: #eee; font-weight: 700; letter-spacing: 0.5px; }
+  .shake-rec .rec-desc { color: #8AA0C8; font-weight: 400; font-size: 13px; }
+  .shake-rec .rec-price { color: #fff; font-weight: 700; font-size: 13px; margin-left: 10px; }
+  .pick-note { font-size: 12px; color: #1E90FF; margin: 4px 0 14px; font-weight: 600; }
+
+  .cta-block { display: block; background: #1E90FF; border-radius: 8px; padding: 18px 20px; margin-top: 8px; text-decoration: none; }
+  .cta-block .cta-text { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 900; text-transform: uppercase; color: #fff; letter-spacing: 1px; line-height: 1.2; }
+  .cta-block .cta-sub { font-size: 12px; color: rgba(255,255,255,0.85); font-family: 'Barlow', sans-serif; font-weight: 400; text-transform: none; margin-top: 4px; }
+
+  .cta-secondary { display:block; text-align:center; margin-top:14px; font-size:13px; color:#8AA0C8; text-decoration:none; }
+  .cta-secondary:hover { color:#1E90FF; }
+
+  .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+  .info-box { background: #10172e; border-radius: 8px; padding: 14px; text-align: center; }
+  .info-box .val { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: #fff; }
+  .info-box .desc { font-size: 11px; color: #6A7CA0; letter-spacing: 1px; text-transform: uppercase; margin-top: 3px; }
+
+  .footer-note { text-align: center; font-size: 11px; color: #4a567a; margin-top: 32px; line-height: 1.6; }
+  .footer-note a { color: #6A7CA0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo-wrap">
+    <img src="som-logo.png" alt="Shake-o-mat">
+  </div>
+  <div class="tagline">Besramno dobri shakeovi.</div>
+</div>
+
+<div class="container">
+
+  <div style="margin-bottom: 28px; margin-top: 8px;">
+    <h1 class="hero-title">Koliko proteina<br>treba <span>tvoje</span> tijelo?</h1>
+    <p class="hero-sub">Odgovori na 4 pitanja. Dobit ćeš okvirnu preporuku za danas.</p>
+  </div>
+
+  <!-- SPOL -->
+  <div class="form-group">
+    <label>Spol</label>
+    <div class="gender-row">
+      <button class="gender-btn active" onclick="setGender('m', this)">♂ Muški</button>
+      <button class="gender-btn" onclick="setGender('z', this)">♀ Ženski</button>
+    </div>
+  </div>
+
+  <!-- TEŽINA -->
+  <div class="form-group">
+    <label>Tjelesna težina (kg)</label>
+    <input type="number" id="weight" min="40" max="200" placeholder="npr. 80" inputmode="numeric">
+  </div>
+
+  <!-- AKTIVNOST -->
+  <div class="form-group">
+    <label>Razina tjelesne aktivnosti</label>
+    <select id="activity">
+      <option value="1.2">Sjedilački stil (bez sporta)</option>
+      <option value="1.375">Lagana aktivnost (1–2× tjedno)</option>
+      <option value="1.55" selected>Umjerena aktivnost (3–4× tjedno)</option>
+      <option value="1.725">Visoka aktivnost (5–6× tjedno)</option>
+      <option value="1.9">Intenzivni treninzi (svaki dan)</option>
+    </select>
+  </div>
+
+  <!-- CILJ -->
+  <div class="form-group">
+    <label>Tvoj cilj</label>
+    <select id="goal">
+      <option value="maintain">Održavanje oblika</option>
+      <option value="build" selected>Izgradnja mišića</option>
+      <option value="lose">Mršavljenje uz očuvanje mišića</option>
+      <option value="performance">Sportska izvedba</option>
+    </select>
+  </div>
+
+  <button class="calc-btn" onclick="calculate()">IZRAČUNAJ →</button>
+
+  <!-- REZULTAT -->
+  <div class="result" id="result">
+
+    <div class="result-top">
+      <div class="result-number" id="res-number">—</div>
+      <div class="result-unit">grama proteina / dan</div>
+      <div class="result-label" id="res-label">okvirna preporuka</div>
+    </div>
+
+    <div class="result-body">
+      <p id="res-text"></p>
+
+      <div class="info-row">
+        <div class="info-box">
+          <div class="val" id="res-per-meal">—</div>
+          <div class="desc">g po obroku</div>
+        </div>
+        <div class="info-box">
+          <div class="val" id="res-per-kg">—</div>
+          <div class="desc">g / kg tjelesne mase</div>
+        </div>
+      </div>
+
+      <div class="shake-rec" style="margin-top:20px;">
+        <div class="rec-label">Pet formula u jednom aparatu</div>
+        <div class="rec-item" data-sku="lean">
+          <span class="rec-name">LEAN <span class="rec-desc">lagan post-workout</span></span>
+          <span class="rec-price">€3,00</span>
+        </div>
+        <div class="rec-item" data-sku="build">
+          <span class="rec-name">BUILD <span class="rec-desc">za dane kad gura</span></span>
+          <span class="rec-price">€3,50</span>
+        </div>
+        <div class="rec-item" data-sku="lift">
+          <span class="rec-name">LIFT <span class="rec-desc">dnevna energija</span></span>
+          <span class="rec-price">€3,50</span>
+        </div>
+        <div class="rec-item" data-sku="recover">
+          <span class="rec-name">RECOVER <span class="rec-desc">kraj dana, oporavak</span></span>
+          <span class="rec-price">€4,00</span>
+        </div>
+        <div class="rec-item" data-sku="vegan">
+          <span class="rec-name">VEGAN <span class="rec-desc">biljni, bez mlijeka</span></span>
+          <span class="rec-price">€3,00</span>
+        </div>
+      </div>
+      <div class="pick-note" id="pick-note"></div>
+
+      <a class="cta-block" id="cta-block" href="/zlist?utm_source=kalkulator&utm_medium=web&utm_campaign=protein_calc" onclick="gtag('event','generate_lead',{source:'kalkulator'});">
+        <div class="cta-text" id="cta-text">Upiši se na waitlist</div>
+        <div class="cta-sub" id="cta-sub-text">Budi prvi koji proba svoju formulu kad aparat stigne u tvoju teretanu.</div>
+      </a>
+
+      <a class="cta-secondary" href="https://open.spotify.com/playlist/7J5TCaV8LFqNlYb5U4n0zj" target="_blank" rel="noopener" onclick="gtag('event','spotify_open',{source:'kalkulator'});">Ili: 50 pjesama za tvoju sljedeću seriju → Shake-o-mat PUMP playlista</a>
+    </div>
+
+  </div>
+
+  <p class="footer-note">
+    Okvirne smjernice temeljene na ISSN / ACSM preporukama za dnevni unos proteina.<br>
+    Brojke su orijentacijske, ne nutritivna deklaracija. Za individualni plan konzultiraj nutricionista.
+  </p>
+
+</div>
+
+<script>
+  let gender = 'm';
+
+  function setGender(g, el) {
+    gender = g;
+    document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  function calculate() {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const activity = parseFloat(document.getElementById('activity').value);
+    const goal = document.getElementById('goal').value;
+
+    if (!weight || weight < 30 || weight > 300) {
+      document.getElementById('weight').style.borderColor = '#e02020';
+      document.getElementById('weight').focus();
+      return;
+    }
+    document.getElementById('weight').style.borderColor = '#233056';
+
+    // Protein multiplier (g/kg) — opće ISSN/ACSM smjernice po cilju
+    const multipliers = {
+      maintain:    gender === 'm' ? 1.6 : 1.4,
+      build:       gender === 'm' ? 2.0 : 1.8,
+      lose:        gender === 'm' ? 2.2 : 2.0,
+      performance: gender === 'm' ? 2.2 : 2.0,
+    };
+
+    const actMod = activity >= 1.725 ? 1.1 : activity >= 1.55 ? 1.0 : 0.9;
+    const multiplier = multipliers[goal] * actMod;
+
+    const totalProtein = Math.round(weight * multiplier);
+    const perMeal = Math.round(totalProtein / 4);
+    const perKg = multiplier.toFixed(1);
+
+    const labels = {
+      maintain: 'za održavanje oblika',
+      build: 'za izgradnju mišića',
+      lose: 'za mršavljenje uz mišiće',
+      performance: 'za sportsku izvedbu',
+    };
+
+    // Bez gramaže po SKU i bez naziva sastojaka (compliance — do RD potpisa)
+    const texts = {
+      maintain: `Za <strong>održavanje oblika</strong> na ${weight} kg, tijelu okvirno treba ${totalProtein} g proteina dnevno. Rasporedi na 4–5 obroka. Svjež shake nakon treninga pokrije dio toga u 60 sekundi.`,
+      build: `Za <strong>izgradnju mišića</strong> na ${weight} kg, okvirno trebaš ${totalProtein} g proteina dnevno. Prozor odmah nakon treninga je vrijedan — svjež shake u tvojoj teretani ti ga pomaže iskoristiti.`,
+      lose: `Kod <strong>mršavljenja</strong> visok unos proteina čuva mišiće. Na ${weight} kg okvirno trebaš ${totalProtein} g dnevno — više nego što većina misli.`,
+      performance: `Za <strong>sportsku izvedbu</strong> na ${weight} kg, okvirni cilj je ${totalProtein} g proteina dnevno. Prozor odmah nakon treninga je kritičan — iskoristi ga.`,
+    };
+
+    // Preporučena formula po cilju (bez gramaže)
+    const pick = {
+      maintain: 'lean',
+      build: 'build',
+      lose: 'lean',
+      performance: 'lift',
+    };
+    const pickName = { lean:'LEAN', build:'BUILD', lift:'LIFT', recover:'RECOVER', vegan:'VEGAN' };
+
+    document.getElementById('res-number').textContent = totalProtein;
+    document.getElementById('res-label').textContent = labels[goal];
+    document.getElementById('res-text').innerHTML = texts[goal];
+    document.getElementById('res-per-meal').textContent = perMeal + 'g';
+    document.getElementById('res-per-kg').textContent = perKg;
+
+    // highlight preporučenog SKU
+    document.querySelectorAll('.rec-item').forEach(it => it.classList.remove('picked'));
+    const picked = document.querySelector('.rec-item[data-sku="' + pick[goal] + '"]');
+    if (picked) picked.classList.add('picked');
+    document.getElementById('pick-note').textContent = 'Za tvoj cilj predlažemo: ' + pickName[pick[goal]] + '. Ali tvoja teretana, tvoj izbor — pet formula čeka.';
+
+    // GA4 event
+    gtag('event', 'calculator_complete', { goal: goal, total_protein: totalProtein });
+
+    const result = document.getElementById('result');
+    result.classList.add('visible');
+    setTimeout(() => result.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+</script>
+
+</body>
+</html>
