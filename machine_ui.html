@@ -775,113 +775,6 @@
     text-align: center;
   }
 
-  /* ---------- SCREEN 5 ---------- */
-  #screen-5.active {
-    display: flex;
-    flex-direction: column;
-    padding: 4% 3%;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .done-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(30px, 4.4vw, 64px);
-    color: var(--green);
-    letter-spacing: 2px;
-    text-align: center;
-    text-shadow: 0 0 40px rgba(125, 255, 155, 0.4);
-  }
-
-  .stamps {
-    display: flex;
-    gap: clamp(10px, 2vw, 26px);
-    justify-content: center;
-  }
-
-  .stamp {
-    width: clamp(60px, 9vw, 120px);
-    height: clamp(60px, 9vw, 120px);
-    border-radius: 50%;
-    border: 3px solid var(--muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(24px, 3.6vw, 48px);
-    opacity: 0;
-    transform: scale(0.5);
-    animation: stamp-pop 0.5s ease forwards;
-  }
-
-  .stamp:nth-child(1) { animation-delay: 0.1s; }
-  .stamp:nth-child(2) { animation-delay: 0.25s; }
-  .stamp:nth-child(3) { animation-delay: 0.4s; }
-  .stamp:nth-child(4) { animation-delay: 0.55s; }
-  .stamp:nth-child(5) { animation-delay: 0.7s; }
-
-  .stamp.filled {
-    background: var(--green);
-    border-color: var(--green);
-    color: var(--bg);
-    box-shadow: 0 0 30px rgba(125, 255, 155, 0.55);
-  }
-
-  @keyframes stamp-pop {
-    0%   { opacity: 0; transform: scale(0.5) rotate(-20deg); }
-    70%  { opacity: 1; transform: scale(1.15) rotate(4deg); }
-    100% { opacity: 1; transform: scale(1) rotate(0); }
-  }
-
-  .stamp-caption {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: clamp(16px, 1.6vw, 24px);
-    color: var(--white);
-    text-align: center;
-  }
-
-  .loyalty-qr-wrap {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-
-  .share-btn {
-    background: linear-gradient(135deg, #E1306C, #FD1D1D, #F77737);
-    border: none;
-    color: var(--white);
-    padding: 16px 36px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(18px, 1.8vw, 24px);
-    letter-spacing: 2px;
-    border-radius: 14px;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 0 10px 30px rgba(225, 48, 108, 0.4);
-    transition: transform 0.2s ease;
-  }
-
-  .share-btn:hover { transform: translateY(-3px); }
-
-  /* Confetti */
-  .confetti {
-    position: absolute;
-    top: -20px;
-    width: 10px; height: 14px;
-    opacity: 0.9;
-    animation: fall 3s linear infinite;
-  }
-
-  @keyframes fall {
-    0%   { transform: translateY(0) rotate(0); opacity: 1; }
-    100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
-  }
-
   /* Responsive */
   @media (max-width: 700px) {
     .device-frame { padding: 14px; border-radius: 20px; }
@@ -896,14 +789,22 @@
   body.embed .page-header { display: none; }
   body.embed .device-frame {
     max-width: 100%;
+    aspect-ratio: 1 / 1;            /* kvadrat daje dovoljno visine da sav sadržaj stane bez rezanja */
     border-radius: 18px;
     padding: 16px;
     box-shadow: 0 0 0 1px rgba(27, 162, 255, 0.12), inset 0 0 0 1px rgba(255,255,255,0.04);
   }
-  /* zadrži kiosk (landscape) raspored iako je iframe viewport < 700px */
+  /* zadrži kiosk raspored iako je iframe viewport < 700px (inače media query stacka u 1 stupac) */
   body.embed .sku-row { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2%; }
   body.embed .pay-body { flex-direction: row; }
   body.embed .tap-zone { width: 38%; }
+  /* goal ekran (5 kartica) je najviši — zbij da „Odustani" stane u kadar */
+  body.embed .sku-title { font-size: clamp(26px, 5.4vw, 100px); }
+  body.embed .sku-desc { font-size: clamp(12px, 1.3vw, 20px); }
+  body.embed #screen-2 .sku-card { padding: 2.4% 3%; }
+  body.embed #screen-2 .top-bar { margin-bottom: 2%; }
+  body.embed #screen-2 .sku-row { gap: 1.6%; margin-bottom: 2%; }
+  body.embed #screen-2 .cancel-btn { padding: 8px 24px; }
 </style>
 </head>
 <body>
