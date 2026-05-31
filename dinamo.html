@@ -89,7 +89,7 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 20px; max-width: 1180px; margin: 0 auto;
 }
-.logo img { height: 34px; width: auto; }
+.logo img { height: 42px; width: auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.35); }
 .nav-meta {
   color: var(--muted); font-size: 13px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
@@ -368,7 +368,7 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
   display: flex; flex-wrap: wrap; justify-content: space-between;
   align-items: center; gap: 20px; color: var(--muted); font-size: 14px;
 }
-.foot-row img { height: 30px; }
+.foot-row img { height: 40px; border-radius: 8px; }
 
 /* ---------- HERO PHOTO ---------- */
 .hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
@@ -379,7 +379,69 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
   box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 60px rgba(27,162,255,0.16);
 }
 
+/* ---------- THIRD-HALF HOOK BAND ---------- */
+.hook-band {
+  background:
+    radial-gradient(ellipse 80% 120% at 50% 0%, rgba(27, 162, 255, 0.16), transparent 62%),
+    linear-gradient(180deg, #0B1230 0%, #050816 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.hook-inner { max-width: 900px; margin: 0 auto; text-align: center; padding: 8px 0; }
+.hook-eyebrow {
+  color: var(--green); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; display: block;
+}
+.hook-quote {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase;
+  font-size: clamp(30px, 5vw, 56px); line-height: 1.05; color: var(--white); margin-bottom: 22px;
+}
+.hook-quote .accent { color: var(--cyan); }
+.hook-body { color: var(--muted); font-size: 18px; line-height: 1.65; max-width: 680px; margin: 0 auto; }
+.hook-body strong { color: var(--white); }
+
+/* ---------- ANTI-DOPING SAFETY ---------- */
+.doping-wrap {
+  background:
+    radial-gradient(ellipse 70% 100% at 50% 0%, rgba(125, 255, 155, 0.10), transparent 60%),
+    var(--bg-surface);
+  border: 1px solid rgba(125, 255, 155, 0.30);
+  border-radius: var(--radius-lg); padding: 40px 34px;
+}
+.doping-head { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 10px; }
+.doping-shield {
+  flex: 0 0 auto; width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(125, 255, 155, 0.12); color: var(--green);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.doping-shield svg { width: 28px; height: 28px; }
+.doping-head h3 { font-size: clamp(26px, 3.4vw, 38px); color: var(--white); }
+.doping-lead { color: var(--muted); font-size: 16px; line-height: 1.65; max-width: 820px; margin-top: 6px; }
+.doping-lead strong { color: var(--white); }
+.doping-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 26px; }
+@media (min-width: 760px) { .doping-grid { grid-template-columns: 1fr 1fr; } }
+.doping-item {
+  padding: 20px 22px; background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line); border-radius: var(--radius); border-left: 3px solid var(--green);
+}
+.doping-item h4 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 19px;
+  color: var(--white); text-transform: none; letter-spacing: 0; margin-bottom: 7px;
+  display: flex; align-items: center; gap: 9px;
+}
+.doping-item h4 .chk { color: var(--green); font-size: 18px; }
+.doping-item p { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+.doping-foot {
+  color: var(--muted); font-size: 13px; margin-top: 22px; line-height: 1.65; font-style: italic;
+  border-top: 1px solid var(--line); padding-top: 18px;
+}
+
 @media print {
+  .hook-band, .doping-wrap { background: #fff !important; }
+  .hook-quote, .doping-head h3, .doping-item h4 { color: #000 !important; }
+  .hook-body, .doping-lead, .doping-item p, .doping-foot { color: #222 !important; }
+  .hook-eyebrow, .hook-quote .accent { color: #0058A8 !important; }
+  .doping-wrap { border: 1px solid #999 !important; }
   body { background: #fff; color: #000; }
   .hero, .cta-final, section, .shakes-band, .layer-divider { background: #fff !important; padding: 24px 0; }
   h1, h2, h3, h4 { color: #000 !important; }
@@ -399,7 +461,7 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
 <!-- ============== NAV ============== -->
 <header class="nav" role="banner">
   <div class="nav-inner">
-    <a href="index.html" class="logo" aria-label="Shake-o-mat"><img src="assets/som-logo.png" alt="Shake-o-mat"></a>
+    <a href="index.html" class="logo" aria-label="Shake-o-mat"><img src="assets/som-logo-real.png" alt="Shake-o-mat — Recover. Instantly."></a>
     <span class="nav-meta">Prijedlog &middot; za GNK Dinamo</span>
   </div>
 </header>
@@ -538,6 +600,22 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
   </div>
 </section>
 
+<!-- ============== THIRD-HALF HOOK BAND ============== -->
+<section class="hook-band">
+  <div class="container">
+    <div class="hook-inner">
+      <span class="hook-eyebrow">Treće poluvrijeme</span>
+      <h2 class="hook-quote">Utakmica ima dva poluvremena.<br><span class="accent">Rezultat se brani u trećem.</span></h2>
+      <p class="hook-body">
+        Treće poluvrijeme igra se u svlačionici, u prvim minutama nakon zadnjeg zvižduka — kad se odlučuje
+        koliko će igrač imati u nogama za sljedeću utakmicu za 72 sata. Nema gledatelja i ne traje 45 minuta,
+        ali se dobiva ili gubi jednako kao i prva dva. <strong>Shake-o-mat je vaš igrač s klupe za to treće
+        poluvrijeme — uđe u igru čim svi izađu s terena.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ============== LAYER DIVIDER → STAFF ============== -->
 <section class="layer-divider" id="staff">
   <div class="container">
@@ -644,6 +722,134 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
       <p class="ev-foot">
         Reference navodimo kao temelj formulacijskog pristupa, ne kao tvrdnju o učinku konkretnog proizvoda —
         finalnu specifikaciju i potpis nutricionista stručni stožer dobiva na uvid prije bilo kakve odluke.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHY FOOTBALL (STAFF LAYER) ============== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Nogometna specifičnost</span>
+      <h2>Zašto svjež shake u svlačionici, baš u elitnom nogometu.</h2>
+      <p>
+        Oporavak nakon utakmice nije isto što i oporavak nakon teretane. Devedeset minuta repeated-sprint
+        opterećenja, ekscentrične kontrakcije pri kočenju i promjeni smjera, ispražnjen glikogen i kongestija
+        rasporeda — to su problemi specifični vašem sportu. Aparat ne rješava „oporavak općenito", nego cilja
+        prozor u kojem vaš stožer ionako već radi.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <article class="why-card">
+        <div class="ic">🕐</div>
+        <h4>Prozor u kojem tim ionako radi</h4>
+        <p>Nakon 90 minuta i ekscentričnog opterećenja mišić je maksimalno osjetljiv na protein i ugljikohidrate. Shake u ruci čim igrač izađe s terena pogađa taj prozor — bez odlaska do kuhinje ili kafića.</p>
+      </article>
+      <article class="why-card">
+        <div class="ic">📅</div>
+        <h4>Kad je sljedeća utakmica za 48–72 h</h4>
+        <p>U europskim tjednima s dvije utakmice resinteza glikogena i mišićni oporavak postaju usko grlo. Što je turnaround kraći, to ranija i dosljednija nadoknada više vrijedi — aparat čini prvi unos automatskim.</p>
+      </article>
+      <article class="why-card">
+        <div class="ic">👥</div>
+        <h4>Svih 25+ igrača, ne samo najdiscipliniraniji</h4>
+        <p>Najbolji protokol vrijedi onoliko koliko ga momčad zaista provede. Aparat na izlazu s terena pretvara protein window iz odluke pojedinca u ritual kroz koji prođe cijela momčad — stožer dobiva dosljednost.</p>
+      </article>
+      <article class="why-card">
+        <div class="ic">🌱</div>
+        <h4>Navika koja se formira u akademiji</h4>
+        <p>Mladi igrači u fazi rasta (peri-PHV) imaju povišene potrebe i najveću dobit od ranog formiranja navike. Igrač koji od juniorskih dana automatski uzme shake nakon treninga tu naviku nosi u seniorsku momčad.</p>
+      </article>
+    </div>
+
+    <!-- Football evidence base -->
+    <div class="ev-wrap">
+      <h3>Zašto baš nogomet — na čemu se temelji</h3>
+      <p class="lead">
+        Ovo nisu generičke tvrdnje o „oporavku" — svaka teza ima podlogu u recenziranoj literaturi ili
+        konsenzusnom stavu struke. Navodimo izvore po području, da govorimo istim jezikom kao vaš kondicijski i
+        liječnički tim.
+      </p>
+      <div class="ev-grid">
+        <div class="ev-item">
+          <div class="theme">Post-match glikogen i protein window</div>
+          <div class="src">ISSN Nutrient Timing Position Stand (Kerksick i sur., JISSN 2017) · post-match glikogen depletion i ekscentrično oštećenje: Nédélec i sur., Sports Medicine (football recovery pregledi)</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Kongestiran raspored i turnaround</div>
+          <div class="src">Nédélec i sur., Sports Medicine (recovery in football, tjedni s 2 utakmice) · Ranchordas i sur., pregledi nutritivnih recovery strategija u nogometu</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Proteinska doza i raspodjela</div>
+          <div class="src">ISSN Position Stand: Protein and Exercise (Jäger i sur., JISSN 2017) · Morton i sur., meta-analiza, Br J Sports Med 2018</div>
+        </div>
+        <div class="ev-item">
+          <div class="theme">Mladi sportaši i energetska dostupnost</div>
+          <div class="src">IOC konsenzus o relativnom energetskom deficitu u sportu (REDs) · konsenzus struke o nutriciji adolescentnih sportaša (peri-PHV)</div>
+        </div>
+      </div>
+      <p class="ev-foot">
+        Izvore navodimo kao podlogu pristupa, ne kao tvrdnju o učinku konkretnog proizvoda. Tamo gdje točan
+        citat ne tvrdimo sa sigurnošću, svjesno pišemo „konsenzus struke" umjesto preciznog navoda — finalnu
+        specifikaciju i potpis sportskog nutricionista stručni stožer dobiva na uvid prije odluke.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ANTI-DOPING SAFETY (STAFF LAYER) ============== -->
+<section class="shakes-band">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color: var(--green);">Doping kontrola</span>
+      <h2>Sigurno za WADA testiranje — po dizajnu, ne po sreći.</h2>
+      <p>
+        Za profesionalni klub ovo je prvo pitanje, ne zadnje: hoće li ono što igrač popije nakon treninga
+        ugroziti nalaz doping kontrole. Odgovaramo na njega prije nego ga postavite.
+      </p>
+    </div>
+
+    <div class="doping-wrap">
+      <div class="doping-head">
+        <span class="doping-shield" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </span>
+        <div>
+          <h3>Strict liability je igračev rizik. Mi ga tretiramo kao svoj.</h3>
+          <p class="doping-lead">
+            Po načelu stroge odgovornosti (WADA Code, čl. 2.1) igrač odgovara za <strong>svaku</strong> tvar u
+            svom tijelu — bez obzira na to je li dospjela namjerno ili kroz kontaminiran suplement. A kontaminacija
+            je realan problem: studije pod okriljem MOO-a (Geyer i sur.) pokazale su da značajan udio suplemenata
+            na tržištu sadrži nedeklarirane zabranjene tvari. Zato Shake-o-mat za klub gradimo oko četiri pravila.
+          </p>
+        </div>
+      </div>
+
+      <div class="doping-grid">
+        <div class="doping-item">
+          <h4><span class="chk">✓</span> Batch-certifikacija prije ulaska u klub</h4>
+          <p>Obvezujemo se da svaka mješavina prođe batch-level testiranje po standardu programa <strong>Informed Sport / NSF Certified for Sport</strong> prije nego ijedan aparat uđe u Dinamo. To je isti standard koji koriste profesionalni klubovi i nacionalni savezi.</p>
+        </div>
+        <div class="doping-item">
+          <h4><span class="chk">✓</span> Pun, deklariran sastav — bez „proprietary blend" maglice</h4>
+          <p>Svaka aktiva i njena gramaža su na etiketi. Nema skrivenih stimulansa, nema prohormona, nema neimenovanih mješavina. Kofein (samo ondje gdje formula to traži) jasno je deklariran i odvojen — nikad „skriven" u formuli.</p>
+        </div>
+        <div class="doping-item">
+          <h4><span class="chk">✓</span> Sljedivost serije (batch traceability)</h4>
+          <p>Svaka serija mješavine ima lot/šaržni broj. U slučaju kontrole možemo dokumentirati točno koju je seriju igrač konzumirao i kada — kontrolni trag koji štiti i igrača i klub.</p>
+        </div>
+        <div class="doping-item">
+          <h4><span class="chk">✓</span> Sve aktive su s dopuštene WADA liste</h4>
+          <p>Sirutka, kazein, kolagen, kreatin monohidrat, L-leucin, elektroliti, grašak/riža i B12 — nijedna nije na Prohibited listi. Kreatin nikad nije bio zabranjen; kofein je uklonjen s liste 2004. (samo monitoring). Nijedna formula ne sadrži tvar sa zabranjene liste.</p>
+        </div>
+      </div>
+
+      <p class="doping-foot">
+        Ne tražimo da nam vjerujete na riječ — prije postavljanja stručni i liječnički tim dobiva na uvid punu
+        specifikaciju, deklaracije i certifikate batch-testiranja. Anti-doping sigurnost je preduvjet suradnje,
+        ne naknadna misao.
       </p>
     </div>
   </div>
@@ -789,7 +995,7 @@ footer { background: #030611; border-top: 1px solid var(--line); padding: 30px 0
   <div class="container">
     <div class="foot-row">
       <div>
-        <img src="assets/som-logo.png" alt="Shake-o-mat">
+        <img src="assets/som-logo-real.png" alt="Shake-o-mat — Recover. Instantly.">
         <p style="margin-top: 8px; font-size: 12px;">SHAKEOMAT d.o.o. &middot; Zagreb &middot; OIB 92234222932</p>
       </div>
       <div style="text-align: right;">
