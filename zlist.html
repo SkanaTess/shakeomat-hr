@@ -133,7 +133,7 @@
   <div class="formcard" id="upis">
     <h2>Upiši se na waitlist</h2>
     <p class="lead">Pedeset Founding Member mjesta. Email je sve što tražimo — ne kupuje se.</p>
-    <form id="waitlist-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+    <form id="waitlist-form">
       <div class="field">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="ti@email.com" required autocomplete="email">
@@ -153,8 +153,6 @@
         <label for="gym">U kojoj teretani treniraš?</label>
         <input type="text" id="gym" name="gym" placeholder="npr. BlueGym Trnje" required>
       </div>
-      <input type="hidden" name="_subject" value="Novi Shake-o-mat waitlist upis">
-      <input type="text" name="_gotcha" style="display:none">
       <button type="submit" class="btn">Stavi me na listu &rarr;</button>
       <div class="err" id="form-err">Nešto je pošlo po zlu. Pokušaj ponovno ili nam piši na info@shakeomat.hr.</div>
     </form>
@@ -189,28 +187,35 @@
 
 </div>
 
+<iframe name="brevo_iframe" style="display:none" title="brevo" aria-hidden="true"></iframe>
+
 <script>
   (function(){
+    var BREVO_SERVE = "https://b38deb6b.sibforms.com/serve/MUIFAP9e9BYPE2844EIINsTYhSJzf4u6wf8PgbH8Qe5WxN6-lqsYSbn-MGhPHccxQ_k8Gl-RcSnglLKlcSBHQWTOiDf_zpG2bCMkZ_-D1nrbRlhwanMN9OxiIK-hAJpo2RRXkU4xnbA3rpTXu_If15x5GWx8NWa5rzimWISlXCe8scM1lFGCccwabB52QSDKnsqNinTyDdQ-8Bnbuw==";
     var form = document.getElementById('waitlist-form');
     var errBox = document.getElementById('form-err');
     form.addEventListener('submit', function(e){
       e.preventDefault();
       errBox.style.display = 'none';
-      var data = new FormData(form);
-      fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' } })
-        .then(function(res){
-          if (res.ok) {
-            // KONVERZIJA — fire SAMO na uspjesan submit (ne na klik)
-            gtag('event','generate_lead',{ source:'zlist', grad:(data.get('grad')||''), value:1 });
-            gtag('event','waitlist_signup',{ source:'zlist' });
-            form.style.display = 'none';
-            document.getElementById('thanks').classList.add('show');
-            document.getElementById('thanks').scrollIntoView({behavior:'smooth',block:'center'});
-          } else {
-            errBox.style.display = 'block';
-          }
-        })
-        .catch(function(){ errBox.style.display = 'block'; });
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var email = document.getElementById('email').value.trim();
+      var grad = document.getElementById('grad').value || '';
+      var gym = (document.getElementById('gym').value || '').trim();
+      // Brevo prima EMAIL preko hidden-iframe POST-a (bez CORS problema)
+      var bf = document.createElement('form');
+      bf.action = BREVO_SERVE; bf.method = 'POST'; bf.target = 'brevo_iframe'; bf.style.display = 'none';
+      function add(n, v){ var i = document.createElement('input'); i.type = 'hidden'; i.name = n; i.value = v; bf.appendChild(i); }
+      add('EMAIL', email); add('email_address_check', ''); add('locale', 'en');
+      document.body.appendChild(bf);
+      bf.submit();
+      // KONVERZIJA — fire na submit; grad/gym u GA4 za agregatnu analitiku
+      try {
+        gtag('event','generate_lead',{ source:'zlist', grad:grad, gym:gym, value:1 });
+        gtag('event','waitlist_signup',{ source:'zlist', grad:grad });
+      } catch(_){}
+      form.style.display = 'none';
+      document.getElementById('thanks').classList.add('show');
+      document.getElementById('thanks').scrollIntoView({behavior:'smooth',block:'center'});
     });
   })();
 </script>
