@@ -187,11 +187,10 @@
 
 </div>
 
-<iframe name="brevo_iframe" style="display:none" title="brevo" aria-hidden="true"></iframe>
-
 <script>
   (function(){
-    var BREVO_SERVE = "https://07e1d431.sibforms.com/serve/MUIFAH1P5pUI3FzRSXUFOYV-6mrpKrsaXH6lFaWodDGAXc_5SDwiUY2t3QwGYi_E1XifRjxnd7HoDPcDZXG57O0PixSnY5VnVT54r4vzBZcr8ht_Ns5I3hG_P5NbaYh_0Pz5kMIt1YkK0xJtL3waUYErcxYyoTSc8BdEU7HmNiddUAuZEMMxdDcjiT6LNG-UBzmLFriP_NHw6g3xGw==";
+    // Cloudflare Worker → Brevo (hvata email + grad + teretanu po kontaktu)
+    var WAITLIST_API = "https://shakeomat-waitlist.sasa-kanazir87.workers.dev";
     var form = document.getElementById('waitlist-form');
     var errBox = document.getElementById('form-err');
     form.addEventListener('submit', function(e){
@@ -201,21 +200,28 @@
       var email = document.getElementById('email').value.trim();
       var grad = document.getElementById('grad').value || '';
       var gym = (document.getElementById('gym').value || '').trim();
-      // Brevo prima EMAIL preko hidden-iframe POST-a (bez CORS problema)
-      var bf = document.createElement('form');
-      bf.action = BREVO_SERVE; bf.method = 'POST'; bf.target = 'brevo_iframe'; bf.style.display = 'none';
-      function add(n, v){ var i = document.createElement('input'); i.type = 'hidden'; i.name = n; i.value = v; bf.appendChild(i); }
-      add('EMAIL', email); add('email_address_check', ''); add('locale', 'en');
-      document.body.appendChild(bf);
-      bf.submit();
-      // KONVERZIJA — fire na submit; grad/gym u GA4 za agregatnu analitiku
-      try {
-        gtag('event','generate_lead',{ source:'zlist', grad:grad, gym:gym, value:1 });
-        gtag('event','waitlist_signup',{ source:'zlist', grad:grad });
-      } catch(_){}
-      form.style.display = 'none';
-      document.getElementById('thanks').classList.add('show');
-      document.getElementById('thanks').scrollIntoView({behavior:'smooth',block:'center'});
+      var btn = form.querySelector('button[type=submit]'); if (btn) btn.disabled = true;
+      fetch(WAITLIST_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, grad: grad, gym: gym })
+      })
+      .then(function(r){ return r.json().catch(function(){ return { ok: r.ok }; }); })
+      .then(function(res){
+        if (res && res.ok) {
+          // KONVERZIJA — fire SAMO na uspješan upis
+          try {
+            gtag('event','generate_lead',{ source:'zlist', grad:grad, gym:gym, value:1 });
+            gtag('event','waitlist_signup',{ source:'zlist', grad:grad });
+          } catch(_){}
+          form.style.display = 'none';
+          document.getElementById('thanks').classList.add('show');
+          document.getElementById('thanks').scrollIntoView({behavior:'smooth',block:'center'});
+        } else {
+          errBox.style.display = 'block'; if (btn) btn.disabled = false;
+        }
+      })
+      .catch(function(){ errBox.style.display = 'block'; if (btn) btn.disabled = false; });
     });
   })();
 </script>
