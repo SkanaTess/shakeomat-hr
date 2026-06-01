@@ -230,6 +230,17 @@ section { padding: 72px 0; }
 }
 .ha-chip strong { color: var(--cyan); font-weight: 700; }
 
+.invest-frame {
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px 16px;
+  background: linear-gradient(135deg, rgba(125,255,155,0.13), rgba(27,162,255,0.06));
+  border: 1px solid rgba(125,255,155,0.42);
+  border-radius: 14px; padding: 13px 22px; margin-bottom: 16px;
+}
+.invest-frame .iz-label { color: var(--muted); font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.invest-frame .iz-zero { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: var(--green); }
+.invest-frame .iz-sub { color: var(--white); font-size: 14.5px; font-weight: 600; }
+.invest-frame .iz-sub span { color: var(--green); }
+
 /* ---------- CALCULATOR ---------- */
 .calc-wrap {
   background: var(--bg-surface);
@@ -838,6 +849,12 @@ body::after {
   <div class="container">
     <span class="private-tag">Povjerljivo &middot; samo za THE Fitness</span>
 
+    <div class="invest-frame">
+      <span class="iz-label">Vaša investicija</span>
+      <span class="iz-zero">0 &euro;</span>
+      <span class="iz-sub">Ne ulažete ni eura &mdash; izračunajte koliko mreža može <span>zaraditi</span>.</span>
+    </div>
+
     <div class="hook-eyebrow" style="text-align:left; margin-bottom:8px;">Realna godišnja projekcija za THE Fitness mrežu</div>
     <div class="hook-number" style="text-align:left; margin:0 0 8px;">&euro;<span id="hookYear">152.755</span><span class="unit">/god</span></div>
     <div id="heroAssumptions" style="display:inline-flex; flex-wrap:wrap; gap:7px 10px; align-items:center; margin:0 0 14px;">
@@ -849,11 +866,11 @@ body::after {
       <span class="ha-chip"><strong id="haTier">30%</strong> udio</span>
     </div>
     <p class="subline" style="margin-bottom:6px;">
-      Pasivni godišnji prihod kroz cijelu mrežu od <strong style="color:var(--white);">10 aparata</strong> &mdash;
+      Pasivni godišnji prihod cijele mreže od <strong style="color:var(--white);">10 aparata</strong> &mdash;
       bez investicije, bez angažmana osoblja, bez inventara.
     </p>
     <p style="color:var(--muted); font-size:14px; margin-bottom:34px;">
-      Brojka se mijenja kako pomičete klizače u kalkulatoru. Stretch scenarij prelazi &euro;250.000/god.
+      Brojka se mijenja kako pomičete klizače u kalkulatoru. Ambiciozan scenarij prelazi &euro;250.000/god.
     </p>
 
     <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:34px;">
@@ -870,10 +887,10 @@ body::after {
       <span class="eyebrow">Kalkulator prihoda za cijelu mrežu</span>
       <h2>Izračunaj prihod kroz cijelu vašu mrežu.</h2>
       <p>
-        Tri varijable iz vaše dnevne ops slike (broj lokacija, prosječan broj članova,
-        koliko često dolaze). Jedan ishodni broj koji vam padne u račun.
+        Tri brojke iz vašeg svakodnevnog poslovanja (broj lokacija, prosječan broj članova,
+        koliko često dolaze). Jedna brojka koja vam padne na račun.
         Postotak se obračunava na <strong style="color:var(--white)">neto cijenu</strong>
-        (cijena bez 25% PDV-a) &mdash; transparentno, fer, bez računovodstvenih trikova.
+        (cijena bez 25% PDV-a) &mdash; transparentno, pošteno, bez računovodstvenih trikova.
       </p>
     </div>
 
@@ -917,13 +934,13 @@ body::after {
             </label>
             <div class="scenario-pills" id="scenarioPills">
               <div class="scenario-pill" data-conv="0.07">Konzervativno · 7%</div>
-              <div class="scenario-pill active" data-conv="0.15">Target · 15%</div>
-              <div class="scenario-pill" data-conv="0.25">Stretch · 25%</div>
+              <div class="scenario-pill active" data-conv="0.15">Ciljano · 15%</div>
+              <div class="scenario-pill" data-conv="0.25">Ambiciozno · 25%</div>
             </div>
             <p style="color:var(--muted); font-size:13px; margin-top:10px;">
               <strong>Konzervativno</strong> = 7% članova kupi shake nakon treninga (oprezna interna procjena).
-              <strong>Target</strong> = 15% (interna projekcija, prvih 6 mj).
-              <strong>Stretch</strong> = 25% (post-launch UGC + nutricionist endorsement Mj 6+).
+              <strong>Ciljano</strong> = 15% (interna projekcija, prvih 6 mj).
+              <strong>Ambiciozno</strong> = 25% (nakon lansiranja, uz objave korisnika i preporuku nutricionista, od 6. mj).
             </p>
           </div>
 
@@ -939,8 +956,8 @@ body::after {
           <div class="input-block">
             <label class="toggle-row">
               <input type="checkbox" id="flagship" checked>
-              <span><strong style="color:var(--white)">Flagship mreža (5+ aparata)</strong> &mdash;
-              automatska Tier 2 kvalifikacija (25% baseline umjesto 20%) kroz sve lokacije,
+              <span><strong style="color:var(--white)">Vodeća mreža (5+ aparata)</strong> &mdash;
+              automatski viša razina (Tier 2: 25% umjesto 20%) kroz sve lokacije,
               neovisno o broju shakeova po lokaciji</span>
             </label>
           </div>
@@ -957,7 +974,7 @@ body::after {
           </div>
           <div class="per-machine">
             <strong>Po aparatu:</strong> €<span id="perMachineMonth">1.272</span>/mj &middot;
-            <strong>Po danu:</strong> <span id="totalShakes">514</span> shakeova kroz mrežu
+            <strong>Po danu:</strong> <span id="totalShakes">514</span> shakeova u cijeloj mreži
             <br><strong style="color:var(--cyan);">Vlastita investicija:</strong> €0
           </div>
         </div>
@@ -965,10 +982,10 @@ body::after {
       </div>
 
       <p class="calc-foot">
-        Pretpostavke: prosječna MPC po shakeu €3,40 (5 SKU mix: LEAN/VEGAN €3,00 entry &middot; BUILD/LIFT €3,50 mid &middot; RECOVER €4,00 premium).
+        Pretpostavke: prosječna MPC po shakeu €3,40 (miks 5 okusa: LEAN/VEGAN €3,00 osnovni &middot; BUILD/LIFT €3,50 srednji &middot; RECOVER €4,00 premium).
         Neto cijena = MPC - 25% PDV. Postotak udjela se obračunava SAMO na neto.
         PDV ide direktno državi &mdash; niti je naša, niti je vaša zarada.
-        Procjena ne uključuje dodatnu prodaju (dodatna čaša, maloprodajni proizvodi) koja se aktivira u Q4 2026.
+        Procjena ne uključuje dodatnu prodaju (dodatna čaša, maloprodajni proizvodi) koja kreće u 4. tromjesečju 2026.
       </p>
     </div>
 
@@ -976,7 +993,7 @@ body::after {
     <div class="scenario-table-wrap">
       <h3 style="font-size: 22px; margin-bottom: 18px;">Što ako se Shake-o-mat ne razvije po planu?</h3>
       <p style="color: var(--muted); margin-bottom: 20px; font-size: 15px;">
-        Tri scenarija &mdash; konzervativno, target, stretch. Ne obećavamo da će biti kao stretch.
+        Tri scenarija &mdash; konzervativno, ciljano, ambiciozno. Ne obećavamo da će biti kao ambiciozni.
         Ali i u najgorem scenariju, mreža THE Fitnessa zarađuje preko €70.000/god od pasivnog kanala koji prije nije postojao.
       </p>
       <table class="scenario-table">
@@ -998,14 +1015,14 @@ body::after {
             <td>€71.300</td>
           </tr>
           <tr class="highlight">
-            <td><strong>Target</strong> &middot; 15% konverzija (realan po Mj 6)</td>
+            <td><strong>Ciljano</strong> &middot; 15% konverzija (realan po Mj 6)</td>
             <td>~51</td>
             <td>510</td>
             <td>€12.720</td>
             <td>€152.755</td>
           </tr>
           <tr>
-            <td><strong>Stretch</strong> &middot; 25% konverzija (Mj 12+)</td>
+            <td><strong>Ambiciozno</strong> &middot; 25% konverzija (Mj 12+)</td>
             <td>~86</td>
             <td>860</td>
             <td>€21.200</td>
@@ -1080,15 +1097,15 @@ body::after {
       </div>
       <div class="hero-stat" role="listitem">
         <span class="n">25–30%</span>
-        <span class="l">Udio u prihodu na neto cijenu &middot; 0€ CAPEX</span>
+        <span class="l">Udio u prihodu na neto cijenu &middot; 0€ ulaganja</span>
       </div>
       <div class="hero-stat" role="listitem">
         <span class="n">24h</span>
-        <span class="l">SLA servis &middot; 0 angažmana osoblja</span>
+        <span class="l">Zajamčen servis &middot; 0 angažmana osoblja</span>
       </div>
     </div>
 
-    <div class="trust-badge" style="margin-top:24px;">&#10003;&nbsp; 90-dnevni pilot &middot; bez penala &middot; sav rizik na nama</div>
+    <div class="trust-badge" style="margin-top:24px;">&#10003;&nbsp; 90-dnevni probni period &middot; bez kazni &middot; sav rizik na nama</div>
   </div>
 </section>
 
@@ -1097,8 +1114,8 @@ body::after {
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Zašto baš THE Fitness, zašto baš sad</span>
-      <h2>Šest razloga zašto ne nudimo svima isti deal.</h2>
-      <p>Ne pitchamo svakoga &mdash; THE Fitness je odabran namjerno, jer mreža koja prva uđe definira kategoriju u HR-u za sljedećih 12-24 mjeseca. I to mjesto treba biti vaše, ne nekog drugog.</p>
+      <h2>Šest razloga zašto ne nudimo svima iste uvjete.</h2>
+      <p>Ne nudimo se svima &mdash; THE Fitness je odabran namjerno, jer mreža koja prva uđe definira kategoriju u HR-u za sljedećih 12-24 mjeseca. I to mjesto treba biti vaše, ne nekog drugog.</p>
     </div>
 
     <figure style="max-width:320px; margin:0 auto 44px; padding:14px; background:linear-gradient(135deg, rgba(27,162,255,0.10), rgba(255,255,255,0.02)); border:1px solid rgba(115,237,255,0.18); border-radius:var(--radius-lg);">
@@ -1112,11 +1129,11 @@ body::after {
     <div class="why-grid">
       <article class="why-card">
         <div class="num">01</div>
-        <h3>Prvi na tržištu &middot; prozor 12-24 mj</h3>
+        <h3>Prvi na tržištu &middot; prednost 12-24 mj</h3>
         <p>
-          Model je dokazan vani &mdash; Shaker (Estonija, 15+ zemalja) i Bio-Synergy
-          (UK, u Anytime Fitnessu od 2020) skaliraju isti koncept po Europi. U Hrvatskoj
-          ga zasad ne radi nitko. Lanac koji prvi uđe = brand koji se citira kad
+          Model je dokazan u inozemstvu &mdash; Shaker (Estonija, 15+ zemalja) i Bio-Synergy
+          (UK, u Anytime Fitnessu od 2020) šire isti koncept po Europi. U Hrvatskoj
+          ga zasad ne radi nitko. Lanac koji prvi uđe = marka koja se spominje kad
           konkurencija kasnije nudi „pa imamo i mi takvo nešto".
         </p>
       </article>
@@ -1125,7 +1142,7 @@ body::after {
         <div class="num">02</div>
         <h3>Zadržavanje članova &middot; mehanika navike</h3>
         <p>
-          Shake-o-mat je daily ritual, ne mjesečna pretplata. Članovi koji koriste aparat
+          Shake-o-mat je svakodnevni ritual, ne mjesečna pretplata. Članovi koji koriste aparat
           2-3× tjedno gotovo nikad ne otkazuju &mdash; ritual postaje dio članarine,
           kao tuš ili ormarić. Interna projekcija: 12-18% više zadržanih članova u 90 dana.
         </p>
@@ -1135,8 +1152,8 @@ body::after {
         <div class="num">03</div>
         <h3>Vrhunski sadržaj bez investicije</h3>
         <p>
-          Multisport, World Class, Anytime &mdash; svi pričaju o „premium amenities" (sauna, smart cardio).
-          Nitko nema fresh-blend protein vending. THE Fitness u 60 dana postaje jedini lanac u HR
+          Multisport, World Class, Anytime &mdash; svi pričaju o „premium sadržajima" (sauna, pametni kardio).
+          Nitko nema aparat za svjež shake. THE Fitness u 60 dana postaje jedini lanac u HR
           koji nudi taj sadržaj. U vašem marketingu i prodajnoj priči novim članovima.
         </p>
       </article>
@@ -1159,7 +1176,7 @@ body::after {
           U ugovoru: 12-24 mj kategorijska ekskluziva u oba smjera. Shake-o-mat ne ulazi ni u jednu
           konkurentsku teretanu u radijusu 500 m oko vaših lokacija &mdash; u svom kvartu ostajete
           jedini s aparatom. Zauzvrat, vi ne uvodite konkurentski aparat za shakeove dok partnerstvo
-          traje. Coca-Cola, kava, snack vending i sve ostalo ostaje potpuno na vašem izboru.
+          traje. Coca-Cola, kava, automati za grickalice i sve ostalo ostaje potpuno na vašem izboru.
         </p>
       </article>
 
@@ -1167,9 +1184,9 @@ body::after {
         <div class="num">06</div>
         <h3>Marketinško partnerstvo, ne prodaja stroja</h3>
         <p>
-          Mi ne prodajemo aparat. Mi gradimo brand zajedno s vama. Co-branded Reels,
-          in-gym signage pack, member-ambassador program, zajedničke PR objave.
-          Tako i naš brand i THE Fitness rastu &mdash; jedan drugog na ramenima.
+          Mi ne prodajemo aparat. Marku gradimo zajedno s vama. Zajednički Reels,
+          promotivni materijali u teretani, program članova-ambasadora, zajedničke objave za medije.
+          Tako i naša marka i THE Fitness rastu &mdash; jedan drugog na ramenima.
         </p>
       </article>
     </div>
@@ -1179,9 +1196,9 @@ body::after {
 <!-- ============== PULL-QUOTE BAND ============== -->
 <section class="quote-band">
   <div class="container">
-    <div class="qmark">Naš signature</div>
+    <div class="qmark">Naš potpis</div>
     <p class="q">Ne obećavamo trbušnjake do ljeta.<br><span class="hl">Obećavamo besramno dobar shake.</span></p>
-    <p class="qsub">Anti-hype ton koji gradi povjerenje umjesto da pritišće &mdash; isti registar kojim su Aldi UK, Old Spice i Surreal Cereal izgradili prepoznatljive brendove.</p>
+    <p class="qsub">Pošten ton bez pretjerivanja koji gradi povjerenje umjesto da pritišće &mdash; isti registar kojim su Aldi UK, Old Spice i Surreal Cereal izgradili prepoznatljive brendove.</p>
   </div>
 </section>
 
@@ -1207,7 +1224,7 @@ body::after {
       <h2>Kako razmišljamo o brendiranju &mdash; kontekst za zajednički rad.</h2>
       <p>
         Ovo nije „kupili smo aparat iz Kine pa ga postavili u teretanu". Iza Shake-o-mata stoji
-        razrađen brand sustav &mdash; jasna esencija, prepoznatljiv vizualni identitet, biblioteka
+        razrađen sustav marke &mdash; jasna bit, prepoznatljiv vizualni identitet, biblioteka
         poštenih poruka i dvojni ton glasa (prema članovima i na pakiranju). Sve dolje je otvoreno
         za zajedničku adaptaciju s vašim timom &mdash; prikazujemo kako mi vidimo stvari, a finalni
         izvedbeni okvir gradimo zajedno s vama.
@@ -1218,7 +1235,7 @@ body::after {
       <div class="brand-think-grid">
 
         <div>
-          <h3 style="font-size: 24px; margin-bottom: 22px;">Brand Passport &middot; v1.0</h3>
+          <h3 style="font-size: 24px; margin-bottom: 22px;">Putovnica marke &middot; v1.0</h3>
 
           <div style="display:flex; gap:22px; align-items:flex-start; margin-bottom:24px; flex-wrap:wrap;">
             <figure class="brand-dba-visual" style="flex:0 0 180px; margin:0; padding:12px; align-self:stretch; display:flex; align-items:center; justify-content:center;">
@@ -1226,16 +1243,16 @@ body::after {
             </figure>
             <div style="flex:1; min-width:210px;">
               <div class="kv-block">
-                <div class="kv-label">Brand essence (B2C)</div>
+                <div class="kv-label">Bit marke (B2C)</div>
                 <div class="kv-value"><strong>„Besramno dobri shakeovi."</strong> &middot; Damn Good Shakes.</div>
               </div>
               <div class="kv-block">
-                <div class="kv-label">Brand essence (B2B / pakiranje)</div>
+                <div class="kv-label">Bit marke (B2B / pakiranje)</div>
                 <div class="kv-value"><strong>RECOVER. INSTANTLY.</strong> &middot; ritual + dokaz</div>
               </div>
               <p style="color:var(--muted); font-size:13px; line-height:1.55; margin:14px 0 0;">
                 <strong style="color:var(--white);">Brendirana papirnata čaša s logom</strong> &mdash; prepoznatljiv
-                signature u svakom videu, oglasu i in-gym materijalu. U kategoriji punoj generičkih shaker
+                potpis u svakom videu, oglasu i materijalu u teretani. U kategoriji punoj generičkih shaker
                 bočica trenutno je prepoznavanje, a svaka nosi malu poruku članu nakon treninga.
               </p>
             </div>
@@ -1245,15 +1262,15 @@ body::after {
             <div class="kv-label">Ton glasa &middot; dokaz kroz primjer</div>
             <div class="kv-value">Anti-hype, samosvjestan, ironično iskren ton &mdash; isti registar koji su
             <strong>Aldi UK</strong>, <strong>Old Spice</strong> i <strong>Surreal Cereal</strong> pretvorili
-            u prepoznatljiv brand. Nije eksperiment, nego provjeren pristup u zasićenoj kategoriji. Kod nas
+            u prepoznatljivu marku. Nije eksperiment, nego provjeren pristup u zasićenoj kategoriji. Kod nas
             zvuči ovako: <em>„Ne obećavamo trbušnjake do ljeta. Obećavamo besramno dobar shake nakon treninga."</em></div>
           </div>
 
           <div class="kv-block">
-            <div class="kv-label">Discriminator</div>
+            <div class="kv-label">Što nas razlikuje</div>
             <div class="kv-value">Jedina protein marka u HR koja je <strong>istovremeno</strong>:
             anti-hype (odbija prazna obećanja), transparentna (papiri u biou), papirnata čaša kao DBA
-            (jedinstven signature u kategoriji punoj generičkih shaker bočica).</div>
+            (jedinstven potpis u kategoriji punoj generičkih shaker bočica).</div>
           </div>
 
           <div class="kv-block">
@@ -1263,8 +1280,8 @@ body::after {
           </div>
 
           <div class="kv-block">
-            <div class="kv-label">DBA &middot; Nelson-Field 1,5s rule</div>
-            <div class="kv-value">Matte black aparat + Brand Blue <span style="display:inline-block;width:12px;height:12px;background:#1BA2FF;border-radius:2px;vertical-align:middle;"></span> rim accent + papirnata čaša &mdash; vidljivi u prvih 22 kadra svakog asseta.</div>
+            <div class="kv-label">DBA &middot; Nelson-Field pravilo 1,5 s</div>
+            <div class="kv-value">Mat crni aparat + Brand Blue <span style="display:inline-block;width:12px;height:12px;background:#1BA2FF;border-radius:2px;vertical-align:middle;"></span> rub + papirnata čaša &mdash; vidljivi u prvih 22 kadra svake objave.</div>
           </div>
         </div>
 
@@ -1295,7 +1312,7 @@ body::after {
             <img class="persona-avatar" src="persona-luka.png" alt="Luka, 30 — padel i cross-training" loading="lazy">
             <div class="persona-body">
               <div class="name">Luka, 30 <span class="weight">10%</span></div>
-              <div class="meta">Padel i cross-training 5-6× tjedno. Trenira raspršeno (padel, vani, teretana) &mdash; treba mu oporavak koji je svugdje pri ruci.</div>
+              <div class="meta">Padel i kružni trening 5-6× tjedno. Trenira raspršeno (padel, vani, teretana) &mdash; treba mu oporavak koji je svugdje pri ruci.</div>
             </div>
           </div>
 
@@ -1321,10 +1338,10 @@ body::after {
 <section>
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Co-marketing materijali &middot; što gradimo zajedno</span>
-      <h2>Mi nismo plakat na zidu. Mi smo brend koji s vama raste.</h2>
+      <span class="eyebrow">Zajednički marketing &middot; što gradimo zajedno</span>
+      <h2>Mi nismo plakat na zidu. Mi smo marka koja s vama raste.</h2>
       <p>
-        Sve dolje je uračunato u partnership &mdash; bez dodatnog troška za THE Fitness.
+        Sve navedeno uračunato je u partnerstvo &mdash; bez dodatnog troška za THE Fitness.
         Marketing tim odlučuje koliko je vidljivo i u kojem ritmu.
       </p>
     </div>
@@ -1332,33 +1349,33 @@ body::after {
     <div class="co-grid">
 
       <div class="co-card">
-        <h4>Co-branded Reels &middot; mjesečno</h4>
-        <p>2 Reela mjesečno snimljena u jednoj od THE Fitness lokacija &mdash; member POV, post-workout ritual, persona-driven. Dijelimo sve assete; tagovi @thefitness + @shakeomat. Bez dodatnog troška, kroz naš TikTok kanal.</p>
+        <h4>Zajednički Reels &middot; mjesečno</h4>
+        <p>2 Reela mjesečno snimljena u jednoj od THE Fitness lokacija &mdash; iz perspektive člana, ritual nakon treninga, prema personama. Dijelimo sve materijale; oznake @thefitness + @shakeomat. Bez dodatnog troška, kroz naš TikTok kanal.</p>
       </div>
 
       <div class="co-card">
-        <h4>In-gym signage pack</h4>
-        <p>A6 naljepnice za zrcala, A3 zidni posteri, video loop za TV ekrane u recepciji, QR naljepnice s linkom na Spotify playlistu. Sve brand-aligned, prilagođeno za THE Fitness lokacije.</p>
+        <h4>Promotivni materijali za teretanu</h4>
+        <p>A6 naljepnice za zrcala, A3 zidni posteri, video petlja za TV ekrane u recepciji, QR naljepnice s poveznicom na Spotify popis. Sve usklađeno s markom, prilagođeno za THE Fitness lokacije.</p>
       </div>
 
       <div class="co-card">
-        <h4>Member ambassador program</h4>
-        <p>Top 20 najaktivnijih THE Fitness članova biramo zajedno s vama → besplatan shake mjesec dana + brendirana oprema + UGC obaveza (1 post/tj). Pokreće organski sadržaj mreže &mdash; bez plaćenog influencer budžeta.</p>
+        <h4>Program članova-ambasadora</h4>
+        <p>20 najaktivnijih THE Fitness članova biramo zajedno s vama → besplatan shake mjesec dana + brendirana oprema + obaveza jedne objave tjedno. Pokreće organski sadržaj mreže &mdash; bez plaćanja influencera.</p>
       </div>
 
       <div class="co-card">
         <h4>Brendirano otvaranje (po lokaciji)</h4>
-        <p>Otvaranje prvih 3 lokacija: 2-satni event, besplatan shake za sve članove, fotografi, PR objava, sviranje Spotify playliste, dijeljenje stickera. Mi pokrivamo trošak; THE Fitness osigurava prostor i komunikaciju s članovima.</p>
+        <p>Otvaranje prvih 3 lokacija: 2-satni događaj, besplatan shake za sve članove, fotografi, objava za medije, sviranje Spotify popisa, dijeljenje naljepnica. Mi pokrivamo trošak; THE Fitness osigurava prostor i komunikaciju s članovima.</p>
       </div>
 
       <div class="co-card">
-        <h4>Joint PR &middot; lansiranje partnerstva</h4>
-        <p>Press release „Shake-o-mat × THE Fitness flagship partnership". Ciljani mediji: Lider, Poslovni dnevnik, Forbes Hrvatska, Fitness Magazin, Lifestyle.hr. Zajedničke izjave za medije (vi za priču o sadržaju za članove, mi za priču o prvom na hrvatskom tržištu).</p>
+        <h4>Zajednička objava za medije &middot; lansiranje partnerstva</h4>
+        <p>Priopćenje za medije „Shake-o-mat × THE Fitness — vodeće partnerstvo". Ciljani mediji: Lider, Poslovni dnevnik, Forbes Hrvatska, Fitness Magazin, Lifestyle.hr. Zajedničke izjave za medije (vi za priču o sadržaju za članove, mi za priču o prvom na hrvatskom tržištu).</p>
       </div>
 
       <div class="co-card">
         <h4>go2digital mreža &middot; dodatna vidljivost za vas</h4>
-        <p>Kroz našu suradnju s go2digital mrežom THE Fitness dobiva promociju i izvan vlastitih kanala &mdash; vaš brend i lokacije guramo zajedno s našima. Partnerstvo u kojem promoviramo i vas, ne samo aparat.</p>
+        <p>Kroz našu suradnju s go2digital mrežom THE Fitness dobiva promociju i izvan vlastitih kanala &mdash; vašu marku i lokacije guramo zajedno s našima. Partnerstvo u kojem promoviramo i vas, ne samo aparat.</p>
       </div>
 
     </div>
@@ -1377,32 +1394,32 @@ body::after {
       <div class="tl-step">
         <div class="when">Tjedan 1 &middot; svibanj</div>
         <h4>Potpis + ekskluziva</h4>
-        <p>Flagship partnership ugovor (kategorijska ekskluziva, model udjela u prihodu, SLA). LOI verzija je gotova; finalni ugovor potpisuju pravnici unutar 7 dana.</p>
+        <p>Ugovor o vodećem partnerstvu (kategorijska ekskluziva, model udjela u prihodu, dogovorena razina usluge). Pismo namjere je gotovo; konačni ugovor potpisuju pravnici unutar 7 dana.</p>
       </div>
 
       <div class="tl-step">
         <div class="when">Tjedan 2-5</div>
         <h4>Logistika + isporuka</h4>
-        <p>Strojevi stižu iz Wuhana (kineski proizvođač Wuhan Gao Sheng Wei Ye Tech). EC 1935/2004 PASS report već imamo (DLF-260328002R). Carinjenje preko EU AR-a (u tijeku).</p>
+        <p>Strojevi stižu iz Wuhana (kineski proizvođač Wuhan Gao Sheng Wei Ye Tech). EC 1935/2004 PASS izvještaj već imamo (DLF-260328002R). Carinjenje preko EU AR-a (u tijeku).</p>
       </div>
 
       <div class="tl-step">
         <div class="when">Tjedan 6</div>
         <h4>Instalacija &middot; 10 lokacija</h4>
-        <p>2h po lokaciji, naš tim. 220V utičnica (1800W), voda iz galona (bez vodovoda), prostor 70×74 cm. Bez sezonskog rasporeda &mdash; sve lokacije live u istom tjednu.</p>
+        <p>2h po lokaciji, naš tim. 220V utičnica (1800W), voda iz galona (bez vodovoda), prostor 70×74 cm. Bez sezonskog rasporeda &mdash; sve lokacije rade u istom tjednu.</p>
       </div>
 
       <div class="tl-step">
         <div class="when">Srpanj &middot; tjedan 1</div>
-        <h4>Hard launch</h4>
-        <p>Multi-channel media push, prvi shake event po lokaciji, geociljana email najava zainteresiranim članovima. Nayax dashboard uživo za THE Fitness menadžment &mdash; podaci od prve transakcije.</p>
+        <h4>Veliko lansiranje</h4>
+        <p>Medijski nastup kroz više kanala, prvi shake-događaj po lokaciji, geociljana najava e-poštom zainteresiranim članovima. Nayax nadzorna ploča uživo za upravu THE Fitnessa &mdash; podaci od prve transakcije.</p>
       </div>
     </div>
 
     <p style="color: var(--muted); font-size: 14px; margin-top: 24px; text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;">
       <strong style="color: var(--white);">Preuzimamo sav rizik:</strong>
-      90-dnevni pilot u ugovoru. Ako mreža THE Fitnessa nije zadovoljna s rezultatima nakon 90 dana,
-      aparati se uklanjaju bez ikakve penalizacije za vas. Bez obveze minimalnog prometa za THE Fitness.
+      90-dnevni probni period u ugovoru. Ako mreža THE Fitnessa nije zadovoljna s rezultatima nakon 90 dana,
+      aparati se uklanjaju bez ikakve kazne za vas. Bez obveze minimalnog prometa za THE Fitness.
       Sav rizik na našoj strani.
     </p>
   </div>
