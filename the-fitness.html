@@ -219,6 +219,16 @@ section { padding: 72px 0; }
   color: var(--muted); font-size: 13px;
   margin-top: 10px;
 }
+.ha-chip {
+  background: rgba(115, 237, 255, 0.10);
+  border: 1px solid rgba(115, 237, 255, 0.28);
+  color: var(--muted);
+  font-size: 13px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.ha-chip strong { color: var(--cyan); font-weight: 700; }
 
 /* ---------- CALCULATOR ---------- */
 .calc-wrap {
@@ -830,6 +840,14 @@ body::after {
 
     <div class="hook-eyebrow" style="text-align:left; margin-bottom:8px;">Realna godišnja projekcija za THE Fitness mrežu</div>
     <div class="hook-number" style="text-align:left; margin:0 0 8px;">&euro;<span id="hookYear">152.755</span><span class="unit">/god</span></div>
+    <div id="heroAssumptions" style="display:inline-flex; flex-wrap:wrap; gap:7px 10px; align-items:center; margin:0 0 14px;">
+      <span style="color:var(--muted); font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Za ovu projekciju:</span>
+      <span class="ha-chip"><strong id="haLoc">10</strong> lokacija</span>
+      <span class="ha-chip"><strong id="haMemb">800</strong> članova/lok.</span>
+      <span class="ha-chip"><strong id="haVis">3</strong> posjete/tj</span>
+      <span class="ha-chip"><strong id="haConv">15%</strong> konverzija</span>
+      <span class="ha-chip"><strong id="haTier">30%</strong> udio</span>
+    </div>
     <p class="subline" style="margin-bottom:6px;">
       Pasivni godišnji prihod kroz cijelu mrežu od <strong style="color:var(--white);">10 aparata</strong> &mdash;
       bez investicije, bez angažmana osoblja, bez inventara.
@@ -1462,6 +1480,12 @@ body::after {
   var totalShk  = document.getElementById('totalShakes');
   var hookYear  = document.getElementById('hookYear');
 
+  var haLoc     = document.getElementById('haLoc');
+  var haMemb    = document.getElementById('haMemb');
+  var haVis     = document.getElementById('haVis');
+  var haConv    = document.getElementById('haConv');
+  var haTier    = document.getElementById('haTier');
+
   var conversion = 0.15; // default target scenario
 
   var AVG_PRICE = 3.40;          // weighted avg 5 SKU
@@ -1513,6 +1537,15 @@ body::after {
     hookYear.textContent = fmt(yearlyNet);
 
     tierBadge.innerHTML = 'Vaš udio: <strong>' + tier + '%</strong> na neto cijenu';
+
+    // Hero „za ovu projekciju" chipovi — referenca što proizvodi glavnu brojku
+    if (haLoc) {
+      haLoc.textContent  = loc;
+      haMemb.textContent = memb.toLocaleString('hr-HR');
+      haVis.textContent  = vis;
+      haConv.textContent = Math.round(conversion * 100) + '%';
+      haTier.textContent = tier + '%';
+    }
   }
 
   // Wire inputs
