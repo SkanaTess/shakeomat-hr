@@ -335,7 +335,7 @@
   }
 
   /* ---------- SCREEN 2b — Flavor ---------- */
-  #screen-2b.active, #screen-2c.active {
+  #screen-2b.active {
     display: flex;
     flex-direction: column;
     padding: 4% 3%;
@@ -379,59 +379,6 @@
     text-transform: uppercase;
     color: var(--white);
   }
-
-  .boost-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2%;
-    flex: 1;
-  }
-
-  .boost-card {
-    border-radius: 24px;
-    padding: 5% 3%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .boost-card:hover { transform: translateY(-10px); box-shadow: 0 24px 50px rgba(0,0,0,0.4); }
-
-  .boost-card.collagen { background: linear-gradient(160deg, rgba(255,155,70,0.3), rgba(11,18,48,0.9)); }
-  .boost-card.bcaa     { background: linear-gradient(160deg, rgba(115,237,255,0.25), rgba(11,18,48,0.9)); }
-  .boost-card.none     { background: rgba(11,18,48,0.9); border: 1px solid rgba(138,160,200,0.25); }
-
-  .boost-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(28px, 4vw, 60px);
-    letter-spacing: 2px;
-    color: var(--white);
-  }
-
-  .boost-card.collagen .boost-name { color: var(--pink); }
-  .boost-card.bcaa .boost-name     { color: var(--cyan); }
-  .boost-card.none .boost-name     { color: var(--muted); font-size: clamp(20px, 2.5vw, 40px); }
-
-  .boost-desc {
-    font-size: clamp(12px, 1.3vw, 18px);
-    font-weight: 600;
-    color: var(--white);
-    opacity: 0.8;
-    line-height: 1.4;
-  }
-
-  .boost-price {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(24px, 3vw, 44px);
-    color: var(--green);
-  }
-
-  .boost-card.none .boost-price { color: var(--muted); }
 
   .sku-row {
     display: grid;
@@ -911,33 +858,6 @@
       <button class="cancel-btn">Odustani</button>
     </section>
 
-    <!-- SCREEN 2c: Add-on Selection -->
-    <section class="screen" id="screen-2c">
-      <div class="top-bar">
-        <button class="back-arrow" title="Natrag" onclick="showScreen('2b')">&larr;</button>
-        <h2 class="screen-headline">Dodaj nadogradnju?</h2>
-        <div class="step-indicator">Korak 3/3</div>
-      </div>
-      <div class="selected-goal-bar" id="selectedComboBar">LEAN · Čokolada</div>
-      <div class="boost-grid">
-        <div class="boost-card collagen" onclick="selectBoost('Kolagen')">
-          <div class="boost-name">KOLAGEN</div>
-          <div class="boost-desc">Dodatak za večernji oporavak</div>
-          <div class="boost-price">+€0.50</div>
-        </div>
-        <div class="boost-card bcaa" onclick="selectBoost('BCAA')">
-          <div class="boost-name">BCAA</div>
-          <div class="boost-desc">Dodatak za duge treninge</div>
-          <div class="boost-price">+€0.50</div>
-        </div>
-        <div class="boost-card none" onclick="selectBoost(null)">
-          <div class="boost-name">BEZ NADOGRADNJE</div>
-          <div class="boost-desc">Osnovna formula</div>
-          <div class="boost-price">→</div>
-        </div>
-      </div>
-    </section>
-
     <!-- SCREEN 3: Payment -->
     <section class="screen" id="screen-3">
       <div class="pay-header">
@@ -989,12 +909,12 @@
   } catch (e) { document.body.classList.add('embed'); }
 
   // ---------- Order state ----------
-  const order = { goal: 'BUILD', flavor: 'Čokolada', boost: null };
+  const order = { goal: 'BUILD', flavor: 'Čokolada' };
 
   const BASE_PRICES = { LEAN: 3.00, BUILD: 3.50, RECOVER: 4.00, LIFT: 3.50, VEGAN: 3.00 };
 
   function orderPrice() {
-    return (BASE_PRICES[order.goal] + (order.boost ? 0.50 : 0)).toFixed(2);
+    return BASE_PRICES[order.goal].toFixed(2);
   }
 
   function orderLabel() {
@@ -1082,15 +1002,6 @@
 
   window.selectFlavor = function(flavor) {
     order.flavor = flavor;
-    order.boost = null;
-    setAuto(false);
-    const paySku = document.querySelector('.pay-sku');
-    if (paySku) paySku.textContent = orderLabel();
-    showScreen('3');
-  };
-
-  window.selectBoost = function(boost) {
-    order.boost = boost;
     setAuto(false);
     const paySku = document.querySelector('.pay-sku');
     if (paySku) paySku.textContent = orderLabel();
