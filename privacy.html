@@ -82,6 +82,16 @@ strong { color:var(--white); }
   </ul>
   <p>Ne prodajemo podatke trećim stranama. Nikad.</p>
 
+  <h2>5a. TikTok Content Posting API</h2>
+  <p>Za objavu vlastitog marketinškog sadržaja koristimo <strong>TikTok Content Posting API</strong>. Bitno:</p>
+  <ul>
+    <li>API koristimo <strong>isključivo za objavu vlastitog sadržaja na vlastiti TikTok račun</strong> (@shakeomat.hr). Ne objavljujemo u ime drugih korisnika.</li>
+    <li>Zatraženi opsezi (scopes): <strong>video.upload</strong> (slanje videa u inbox kao draft), <strong>video.publish</strong> (izravna objava) i <strong>user.info.basic</strong> (osnovni profil vlasnika računa radi autorizacije).</li>
+    <li><strong>Ne prikupljamo niti pohranjujemo podatke drugih TikTok korisnika</strong> — pristupamo samo vlastitom računu.</li>
+    <li>Pohranjujemo samo OAuth <strong>access/refresh token</strong> (sigurno, na vlastitom poslužitelju) radi automatizacije objava. Token se može u svakom trenutku opozvati u TikTok postavkama (Sigurnost → Povezane aplikacije).</li>
+    <li>TikTok podatke <strong>ne dijelimo s trećim stranama</strong>. Brisanje na zahtjev: <a href="mailto:info@shakeomat.hr">info@shakeomat.hr</a>.</li>
+  </ul>
+
   <h2>6. Tvoja prava</h2>
   <p>Prema GDPR-u imaš pravo:</p>
   <ul>
