@@ -6,16 +6,16 @@
 Premium vending automat koji miješa svjež protein shake u 60 sekundi. Smješten je u teretanama; korisnik bira formulu na touchscreen-u, plaća karticom (Apple Pay, Google Pay, Visa, Mastercard) i preuzima papirnatu čašu. Bez aplikacije, bez čekanja u baru, bez nošenja proteinskog praha u sportskoj torbi.
 
 ## Asortiman (5 formula od starta)
-- **LEAN (€3,00)** — lagani protein nakon treninga, bez nepotrebnih kalorija. Za lagane dane i definiciju.
-- **VEGAN (€3,00)** — biljni shake bez mlijeka i glutena. Za biljnu rutinu i sve koji su odustali od mliječnog.
-- **BUILD (€3,50)** — puniji shake za teške treninge. Za dane kada tijelo traži više od običnog napitka.
-- **LIFT (€3,50)** — lagana opcija za sredinu dana ili pred trening. Čist protein bez težine i bez popodnevnog pada.
-- **RECOVER (€4,00)** — shake za kraj dana. Za večernji oporavak kada usporavaš i puniš baterije za sutra.
+- **LEAN (€3,50)** — lagani protein nakon treninga, bez nepotrebnih kalorija. Za lagane dane i definiciju.
+- **VEGAN (€3,50)** — biljni shake bez mlijeka i glutena. Za biljnu rutinu i sve koji su odustali od mliječnog.
+- **BUILD (€4,00)** — puniji shake za teške treninge. Za dane kada tijelo traži više od običnog napitka.
+- **LIFT (€4,00)** — lagana opcija za sredinu dana ili pred trening. Čist protein bez težine i bez popodnevnog pada.
+- **RECOVER (€4,50)** — shake za kraj dana. Za večernji oporavak kada usporavaš i puniš baterije za sutra.
 
 ## Pricing tier
-- Entry tier: LEAN i VEGAN €3,00 (cijena u rangu zagrebačke kave)
-- Mid tier: BUILD i LIFT €3,50
-- Premium tier: RECOVER €4,00
+- Entry tier: LEAN i VEGAN €3,50 (cijena u rangu zagrebačke kave)
+- Mid tier: BUILD i LIFT €4,00
+- Premium tier: RECOVER €4,50
 
 ## Pristup formulama
 Pet formula pokriva različite trenutke dana i tipove treninga — biraš prema danu, ne prema etiketi. Formule finaliziramo uz sportskog nutricionista prije launcha; ime i potpis objavljujemo kad krene prvi aparat. Bez magic claimova, bez obećanja transformacije.

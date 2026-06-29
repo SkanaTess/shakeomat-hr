@@ -794,35 +794,35 @@
           <div class="sku-title">LEAN</div>
           <div>
             <div class="sku-desc">Lagani dani i definicija · bez nepotrebnih kalorija · 16 oz</div>
-            <div class="sku-price">od €3,00</div>
+            <div class="sku-price">od €3,50</div>
           </div>
         </div>
         <div class="sku-card build" data-goal="BUILD" onclick="selectGoal('BUILD')">
           <div class="sku-title">BUILD</div>
           <div>
             <div class="sku-desc">Teški treninzi · za najteže dane · 16 oz</div>
-            <div class="sku-price">od €3,50</div>
+            <div class="sku-price">od €4,00</div>
           </div>
         </div>
         <div class="sku-card boost" data-goal="LIFT" onclick="selectGoal('LIFT')">
           <div class="sku-title">LIFT</div>
           <div>
             <div class="sku-desc">Sredina dana i fokus · bez težine · 16 oz</div>
-            <div class="sku-price">od €3,50</div>
+            <div class="sku-price">od €4,00</div>
           </div>
         </div>
         <div class="sku-card recover" data-goal="RECOVER" onclick="selectGoal('RECOVER')">
           <div class="sku-title">RECOVER</div>
           <div>
             <div class="sku-desc">Večernji oporavak i san · kraj dana · 16 oz</div>
-            <div class="sku-price">od €4,00</div>
+            <div class="sku-price">od €4,50</div>
           </div>
         </div>
         <div class="sku-card vegan" data-goal="VEGAN" onclick="selectGoal('VEGAN')">
           <div class="sku-title">VEGAN</div>
           <div>
             <div class="sku-desc">Biljna rutina · bez mlijeka i glutena · 16 oz</div>
-            <div class="sku-price">od €3,00</div>
+            <div class="sku-price">od €3,50</div>
           </div>
         </div>
       </div>
@@ -862,7 +862,7 @@
     <section class="screen" id="screen-3">
       <div class="pay-header">
         <h2 class="screen-headline">Plaćanje</h2>
-        <span class="pay-sku">BUILD · €3,50</span>
+        <span class="pay-sku">BUILD · €4,00</span>
       </div>
       <div class="pay-body">
         <div class="tap-zone">Prisloni karticu<br>/ mobitel</div>
@@ -911,7 +911,7 @@
   // ---------- Order state ----------
   const order = { goal: 'BUILD', flavor: 'Čokolada' };
 
-  const BASE_PRICES = { LEAN: 3.00, BUILD: 3.50, RECOVER: 4.00, LIFT: 3.50, VEGAN: 3.00 };
+  const BASE_PRICES = { LEAN: 3.50, BUILD: 4.00, RECOVER: 4.50, LIFT: 4.00, VEGAN: 3.50 };
 
   function orderPrice() {
     return BASE_PRICES[order.goal].toFixed(2);
