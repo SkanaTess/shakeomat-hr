@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Playlista za trening — Shake-o-mat</title>
+<link rel="canonical" href="https://shakeomat.hr/playlist">
+<!-- FIRST-HOP: QR/cup -> ova stranica (GA4 event + brand impression) -> Spotify. Retargeting/attribution + mijenjaš URL na jednom mjestu. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-65B9W6C4GY');
+  gtag('event','spotify_qr_scan',{source:'cup_qr',campaign:'shakeomat_pump'});
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600;700&display=swap');
+  :root{--navy:#050816;--surface:#070b1c;--blue:#1E90FF;--white:#F4F8FF;--muted:#8AA0C8;--line:#233056;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Barlow',sans-serif;background:var(--navy);color:var(--white);min-height:100vh;
+       display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;
+       background-image:radial-gradient(circle at 50% 28%,rgba(30,144,255,.16),transparent 60%);-webkit-font-smoothing:antialiased;}
+  .logo{height:56px;margin-bottom:24px;}
+  .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:14px;}
+  h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(36px,10vw,54px);line-height:.96;letter-spacing:-.5px;}
+  h1 .accent{color:var(--blue);}
+  .sub{color:var(--muted);font-size:1.05rem;margin:18px auto 30px;max-width:360px;}
+  .btn{display:inline-block;background:var(--blue);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:900;
+       text-transform:uppercase;letter-spacing:1.5px;font-size:19px;padding:17px 40px;border-radius:10px;
+       box-shadow:0 8px 30px rgba(30,144,255,.35);transition:background .2s;}
+  .btn:hover{background:#1577d6;}
+  .cross{margin-top:26px;font-size:14px;}
+  .cross a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);}
+  .bar{position:fixed;bottom:0;left:0;right:0;background:var(--blue);color:#fff;
+       font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:16px;padding:13px;}
+</style>
+</head>
+<body>
+  <img class="logo" src="som-logo.png" alt="Shake-o-mat">
+  <div class="eyebrow">Shake-o-mat Pump</div>
+  <h1>Glazba za trening.<br><span class="accent">Tvoja sljedeća serija.</span></h1>
+  <p class="sub">Pedeset pjesama koje smo složili za dizanje. Pusti i kreni.</p>
+  <a class="btn" id="cta" href="https://open.spotify.com/playlist/7J5TCaV8LFqNlYb5U4n0zj" target="_blank" rel="noopener"
+     onclick="gtag('event','spotify_open',{source:'cup_qr'})">Otvori playlistu &rarr;</a>
+  <div class="cross"><a href="zlist">Prvi Shake-o-mat stiže u Zagreb — upiši se &rarr;</a></div>
+  <div class="bar">Besramno dobar shake.</div>
+  <script>
+    /* fallback: ako korisnik ne klikne, otvori Spotify nakon 6s (GA event vec fire-an) */
+    setTimeout(function(){ window.location.href="https://open.spotify.com/playlist/7J5TCaV8LFqNlYb5U4n0zj"; }, 6000);
+  </script>
+</body>
+</html>
