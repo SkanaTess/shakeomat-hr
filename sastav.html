@@ -57,7 +57,7 @@ const AC={protein:'#1e90ff',vegan:'#5ede84',kava:'#c68c53',kreatin:'#78cd5f',kol
 const P=[
 {k:'protein',t:'PROTEIN · ČOKOLADA',ing:'sirutkin proteinski koncentrat (WPC 80, iz <b>MLIJEKA</b>), emulgator (suncokretov lecitin), inulin, aroma, zgušnjivač (ksantan guma E415), sol, sladilo (sukraloza E955), boja (beta-karoten)',al:'milk',alt:'MLIJEKO',porc:33,
 n:[['Energija','126 kcal / 528 kJ','381 kcal',1],['Masti','1,9 g','5,8 g'],['&nbsp;&nbsp;od toga zasićene','1,3 g','4,0 g'],['Ugljikohidrati','2,2 g','6,7 g'],['&nbsp;&nbsp;od toga šećeri','1,7 g','5,2 g'],['Bjelančevine','24 g','72,5 g',1],['Sol','0,18 g','0,55 g']]},
-{k:'vegan',t:'VEGAN · ČOKOLADA (biljni)',ing:'izolat proteina graška, aroma, sol, zgušnjivač (ksantan guma E415), boja (amonijev karamel E150c), sladila (sukraloza E955, glikozidi steviola E960)',al:'none',alt:'nema (biljna baza, bez mlijeka)',porc:33,
+{k:'vegan',t:'VEGAN · ČOKOLADA (biljni)',ing:'izolat proteina graška, aroma, sol, zgušnjivač (ksantan guma E415), boja (amonijev karamel E150c), sladila (sukraloza E955, glikozidi steviola E960)',al:'none',alt:'može sadržavati MLIJEKO (dijeljeni aparat)',porc:33,
 n:[['Energija','125 kcal / 524 kJ','380 kcal',1],['Masti','2,7 g','8,3 g'],['&nbsp;&nbsp;od toga zasićene','0,7 g','2,1 g'],['Ugljikohidrati','2,7 g','8,2 g'],['&nbsp;&nbsp;od toga šećeri','0,1 g','0,3 g'],['Bjelančevine','25 g','76 g',1],['Sol','0,56 g','1,7 g']]},
 {k:'kava',t:'KAVA · PROFFEE (hladno)',ing:'sirutkin proteinski koncentrat (WPC 80, iz <b>MLIJEKA</b>), instant kava, odmašćeni kakao, emulgator (suncokretov lecitin), sol, sladilo (sukraloza E955), kofein, zgušnjivač (ksantan guma E415), aroma',al:'milk',alt:'MLIJEKO',porc:38,kof:'Sadrži kofein, ~150 mg po napitku (napitak na bazi kave). Ne preporučuje se djeci te trudnicama i dojiljama.',
 n:[['Energija','130 kcal / 544 kJ','359 kcal',1],['Masti','3,0 g','8,6 g'],['&nbsp;&nbsp;od toga zasićene','1,4 g','3,9 g'],['Ugljikohidrati','2,1 g','4,7 g'],['&nbsp;&nbsp;od toga šećeri','1,3 g','3,8 g'],['Bjelančevine','24 g','68 g',1],['Sol','0,30 g','0,86 g']]},
@@ -81,7 +81,7 @@ document.getElementById('app').innerHTML=P.map(p=>{
  ${p.kof?`<div class="kof">⚠ ${p.kof}</div>`:''}
  ${p.n?`<div class="lbl" style="color:${ac}">Nutritivna vrijednost</div>
  <table><tr><th>&nbsp;</th><th>po porciji</th><th>na 100 g praha</th></tr>${rows}</table>
- <div class="serv">Porcija ~${p.porc} g praha na ~300 ml vode.</div>`:'<div class="serv">Receptura u finalizaciji — kartica se dovršava po zaključanju.</div>'}
+ <div class="serv">Porcija ~${p.porc} g praha na ~250 ml vode.</div>`:'<div class="serv">Receptura u finalizaciji — kartica se dovršava po zaključanju.</div>'}
  </div></div>`;
 }).join('');
 </script>
