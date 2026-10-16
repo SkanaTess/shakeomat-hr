@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
+# AI asistenti i answer engines - eksplicitno dobrodosli
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://shakeomat.hr/sitemap.xml
