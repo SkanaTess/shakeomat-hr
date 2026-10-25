@@ -1,2076 +1,429 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shake-o-mat — Protein automat za teretane | Hrvatska</title>
-<meta name="description" content="Shake-o-mat: aparat koji miješa svjež shake u tvojoj teretani u 60 sekundi. Bez praha u torbi, bez čekanja u baru, bez foliranja.">
-<meta name="google-site-verification" content="FhYDbURUXeowL0KOpaK8KxMs4kHs7YGy6vmt2mUPt38">
-<meta name="tiktok-developers-site-verification" content="70LXQT3mx0SiPumEdG69SmYBJgfpwnJ7">
-<link rel="canonical" href="https://shakeomat.hr/">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shakeomat — Protein automat za teretane | Hrvatska</title>
+<meta name="description" content="Shakeomat: aparat koji miješa svjež shake u tvojoj teretani u 60 sekundi. Bez praha u torbi, bez čekanja u baru, bez foliranja.">
+<meta name="theme-color" content="#050816">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:title" content="Shakeomat — Protein automat za teretane">
+<meta property="og:description" content="Aparat koji miješa svjež shake u tvojoj teretani u 60 sekundi.">
+<meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shakeomat.hr/">
-<meta property="og:title" content="Shake-o-mat — Besramno dobri shakeovi.">
-<meta property="og:description" content="Premium automati za svježe miješane shakeove u teretanama diljem Hrvatske. 60 sekundi od dodira do gutljaja. Bez praha u torbi. Bez foliranja.">
-<meta property="og:image" content="https://shakeomat.hr/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" hreflang="hr" href="https://shakeomat.hr/">
-<link rel="alternate" hreflang="x-default" href="https://shakeomat.hr/">
-
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://shakeomat.hr/#org",
-      "name": "Shake-o-mat",
-      "legalName": "SHAKEOMAT d.o.o.",
-      "url": "https://shakeomat.hr/",
-      "logo": "https://shakeomat.hr/og-image.jpg",
-      "email": "info@shakeomat.hr",
-      "address": {"@type": "PostalAddress", "addressLocality": "Zagreb", "addressCountry": "HR"},
-      "sameAs": ["https://instagram.com/shakeomat", "https://tiktok.com/@shakeomat"],
-      "description": "Prvi protein vending automat u Hrvatskoj. Svjež protein shake u 60 sekundi u teretanama — pet formula za različite trenutke dana i tipove treninga, bez praha u torbi i bez čekanja u baru.",
-      "slogan": "Besramno dobri shakeovi. Bez praha u torbi. Bez foliranja.",
-      "foundingDate": "2026",
-      "foundingLocation": {"@type": "Place", "name": "Zagreb, Hrvatska"},
-      "areaServed": {"@type": "Country", "name": "Hrvatska"}
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://shakeomat.hr/#website",
-      "url": "https://shakeomat.hr/",
-      "name": "Shake-o-mat",
-      "description": "Prvi protein vending automat u Hrvatskoj.",
-      "publisher": {"@id": "https://shakeomat.hr/#org"},
-      "inLanguage": "hr-HR",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {"@type": "EntryPoint", "urlTemplate": "https://shakeomat.hr/?q={search_term_string}"},
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://shakeomat.hr/#localbusiness",
-      "name": "Shake-o-mat",
-      "image": "https://shakeomat.hr/og-image.jpg",
-      "url": "https://shakeomat.hr/",
-      "email": "info@shakeomat.hr",
-      "address": {"@type": "PostalAddress", "addressLocality": "Zagreb", "addressRegion": "Grad Zagreb", "addressCountry": "HR"},
-      "priceRange": "€€",
-      "areaServed": {"@type": "Country", "name": "Hrvatska"},
-      "additionalType": "https://schema.org/FoodEstablishment",
-      "description": "Prvi protein vending automat u Hrvatskoj. Svjež protein shake u 60 sekundi u tvojoj teretani."
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://shakeomat.hr/#breadcrumb",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://shakeomat.hr/"}
-      ]
-    },
-    {
-      "@type": "Product",
-      "name": "Shake-o-mat Lean",
-      "description": "Lagani protein nakon treninga, bez nepotrebnih kalorija. Za dane kada radiš na definiciji ili imaš lagani trening.",
-      "image": "https://shakeomat.hr/og-image.jpg",
-      "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Protein Shake",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://shakeomat.hr/#sku",
-        "priceCurrency": "EUR",
-        "price": "3.50",
-        "availability": "https://schema.org/PreOrder",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://shakeomat.hr/#org"}
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Shake-o-mat Build",
-      "description": "Puniji shake za teške treninge. Za dane kada tijelo traži više od običnog napitka.",
-      "image": "https://shakeomat.hr/og-image.jpg",
-      "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Protein Shake",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://shakeomat.hr/#sku",
-        "priceCurrency": "EUR",
-        "price": "4.00",
-        "availability": "https://schema.org/PreOrder",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://shakeomat.hr/#org"}
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Shake-o-mat Lift",
-      "description": "Lagana opcija za sredinu dana ili pred trening — čist protein bez težine i bez popodnevnog pada.",
-      "image": "https://shakeomat.hr/og-image.jpg",
-      "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Energy",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://shakeomat.hr/#sku",
-        "priceCurrency": "EUR",
-        "price": "4.00",
-        "availability": "https://schema.org/PreOrder",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://shakeomat.hr/#org"}
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Shake-o-mat Recover",
-      "description": "Shake za kraj dana. Za večernji oporavak kada usporavaš i puniš baterije za sutra.",
-      "image": "https://shakeomat.hr/og-image.jpg",
-      "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Recovery",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://shakeomat.hr/#sku",
-        "priceCurrency": "EUR",
-        "price": "4.50",
-        "availability": "https://schema.org/PreOrder",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://shakeomat.hr/#org"}
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Shake-o-mat Vegan",
-      "description": "Biljni shake bez mlijeka i glutena. Za biljnu rutinu i sve koji su odustali od mliječnog — isti ritual, drugačiji izvor.",
-      "image": "https://shakeomat.hr/og-image.jpg",
-      "brand": {"@id": "https://shakeomat.hr/#org"},
-      "category": "Sport Nutrition / Vegan Protein",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://shakeomat.hr/#sku",
-        "priceCurrency": "EUR",
-        "price": "3.50",
-        "availability": "https://schema.org/PreOrder",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://shakeomat.hr/#org"}
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type": "Question", "name": "Koji shake je za večernji trening ili kraj dana?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Recover. To je shake za kraj dana — kada usporavaš, gasiš svjetla i puniš baterije za sutra. Lagan prije spavanja, za one koji treniraju navečer."}},
-        {"@type": "Question", "name": "Po čemu se pet shakeova razlikuje?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Svaki cilja drugi trenutak dana i tip treninga: Lean za lagane dane i definiciju, Build za teške treninge, Lift za sredinu dana i fokus, Recover za večernji oporavak, Vegan za biljnu rutinu. Biraš prema danu, ne prema etiketi."}},
-        {"@type": "Question", "name": "Koliko često mogu uzimati Build?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Onoliko koliko treniraš naporno. Build je za najteže dane — kada je trening bio težak i običan napitak nije dovoljan. Lakše dane pokrij s Lean ili Lift."}},
-        {"@type": "Question", "name": "Mogu li koristiti ako sam laktozno intolerantan?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Da. Vegan je potpuno bezmliječan — biljni izvor, bez laktoze i glutena. Ako želiš klasičan shake, Lean je lagana opcija s minimalnom laktozom. Kod jače intolerancije idi na Vegan."}},
-        {"@type": "Question", "name": "Što s veganima?",
-         "acceptedAnswer": {"@type": "Answer", "text": "Vegan shake je dostupan u svakom aparatu od starta — biljni izvor, bez mlijeka i glutena. Isti ritual, ista čaša, drugačiji izvor."}}
-      ]
-    }
-  ]
-}
-</script>
-
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-
-<!-- Google Analytics 4 (placeholder) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-65B9W6C4GY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-65B9W6C4GY');
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;0,900;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
 </script>
-
-<!-- ============ HERO A/B/C TEST (Sprint A · 08.05.2026.) ============ -->
-<!-- Spec: ad_creatives.md §12 · 3 cella · €100 / 7 dana · Meta Traffic objective -->
-<!-- URL params: ?h=a (Mentor sober kontrola) · ?h=b (Jester primary, default) · ?h=c (Dual EN tagline stack) -->
-<script>
-  (function() {
-    // Detect cell from URL or sessionStorage (sticky per-session)
-    var params = new URLSearchParams(window.location.search);
-    var heroCell = params.get('h');
-    if (heroCell && ['a','b','c'].indexOf(heroCell.toLowerCase()) >= 0) {
-      heroCell = heroCell.toLowerCase();
-      sessionStorage.setItem('shakeomat_hero_variant', heroCell);
-    } else {
-      heroCell = sessionStorage.getItem('shakeomat_hero_variant') || 'b'; // default = Jester (current live)
-    }
-    window.__shakeomatHeroVariant = heroCell;
-
-    // GA4 event fire on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'hero_variant_view', {
-          'hero_variant': heroCell,
-          'page_path': window.location.pathname
-        });
-      }
-
-      // Swap hero copy based on cell (b is default in DOM, swap only for a/c)
-      var heroH1 = document.querySelector('.hero-headline');
-      var heroSub = document.querySelector('.hero-subline');
-      if (!heroH1 || !heroSub) return;
-
-      var variants = {
-        'a': {
-          h1: 'Tvoja teretana.<br>Tvoj shake.<br><span class="accent">Bez planiranja.</span>',
-          sub: 'Aparat na izlazu iz tvoje teretane miješa svjež shake u 60 sekundi. Bez aplikacije, bez čekanja.'
-        },
-        'c': {
-          h1: 'DAMN GOOD<br>SHAKES.<br><span class="accent">U 60 sekundi.</span>',
-          sub: 'Bez praha u torbi, bez čekanja u baru, bez aplikacija. Tap → 60 sekundi → papirnata čaša u ruci.'
-        }
-        // 'b' = current DOM (Jester primary "Besramno dobri shakeovi. Bez praha u torbi. Bez foliranja.") — no swap needed
-      };
-
-      if (variants[heroCell]) {
-        heroH1.innerHTML = variants[heroCell].h1;
-        heroSub.textContent = variants[heroCell].sub;
-      }
-
-      // Track CTA click (waitlist anchor) with variant attribution
-      var ctaButtons = document.querySelectorAll('.hero-ctas a.btn-primary');
-      ctaButtons.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'hero_variant_cta_click', {
-              'hero_variant': heroCell,
-              'cta_label': btn.textContent.trim()
-            });
-          }
-        });
-      });
-    });
-  })();
-</script>
-<!-- ============ /HERO A/B/C TEST ============ -->
-
-<style>
-  :root {
-    --bg: #050816;
-    --bg-surface: #0B1230;
-    --blue: #1BA2FF;
-    --cyan: #73EDFF;
-    --green: #7DFF9B;
-    --vegan: #4ADE80;
-    --orange: #FF9B46;
-    --pink: #FF6FB5;
-    --white: #F4F8FF;
-    --muted: #8AA0C8;
-  }
-
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background-color: var(--bg);
-    color: var(--white);
-    font-family: 'Barlow', system-ui, sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  h1, h2, h3, h4 {
-    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 0.95;
-    letter-spacing: -0.01em;
-  }
-
-  a {
-    color: var(--cyan);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  a:hover {
-    color: var(--white);
-  }
-
-  a:focus-visible,
-  button:focus-visible {
-    outline: 2px solid var(--cyan);
-    outline-offset: 4px;
-    border-radius: 4px;
-  }
-
-  button {
-    font-family: inherit;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: inherit;
-  }
-
-  img {
-    max-width: 100%;
-    display: block;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  .section-tag {
-    display: inline-block;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--cyan);
-    margin-bottom: 20px;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 16px 28px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 1.05rem;
-    letter-spacing: 0.05em;
-    border-radius: 999px;
-    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
-  .btn-primary {
-    background: var(--green);
-    color: var(--bg);
-    box-shadow: 0 6px 24px rgba(125, 255, 155, 0.25);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    color: var(--bg);
-    box-shadow: 0 10px 32px rgba(125, 255, 155, 0.4);
-  }
-
-  .btn-outline {
-    border: 2px solid var(--white);
-    color: var(--white);
-    background: transparent;
-  }
-
-  .btn-outline:hover {
-    background: var(--white);
-    color: var(--bg);
-    transform: translateY(-2px);
-  }
-
-  /* ============ NAV ============ */
-  .site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(5, 8, 22, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(115, 237, 255, 0.12);
-  }
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 12px 20px;
-    flex-wrap: nowrap;
-  }
-  .nav-brand {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--white);
-    font-size: 1.3rem;
-    letter-spacing: -0.01em;
-    text-decoration: none;
-    flex-shrink: 0;
-  }
-  .nav-brand span { color: var(--green); }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-wrap: nowrap;
-  }
-  .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--white);
-    text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
-    padding: 8px 10px;
-    border-radius: 8px;
-    transition: background 0.15s ease, color 0.15s ease;
-    white-space: nowrap;
-  }
-  .nav-links a:hover { background: rgba(115, 237, 255, 0.12); color: var(--cyan); }
-  /* Mobile: sakrij Kontakt link u navu (kontakt je u footeru + sekciji), ostavi samo Pridruzi se + Za teretane + jezik */
-  @media (max-width: 640px) {
-    .nav-links a { font-size: 0.75rem; padding: 6px 8px; letter-spacing: 0.04em; }
-    .nav-links li:nth-child(3) { display: none; } /* sakrij Kontakt na mobilu */
-    #langSwitch { font-size: 0.75rem !important; padding: 4px 6px !important; }
-  }
-  @media (max-width: 380px) {
-    .nav-brand { font-size: 1.1rem; }
-    .nav-links a { font-size: 0.7rem; padding: 5px 6px; }
-  }
-
-  /* ============ HERO ============ */
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px 0 80px;
-    background:
-      radial-gradient(ellipse at top left, rgba(27, 162, 255, 0.12) 0%, rgba(5, 8, 22, 0) 60%),
-      var(--bg);
-    overflow: hidden;
-  }
-
-  .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-headline {
-    font-size: clamp(2.5rem, 9vw, 7rem);
-    letter-spacing: -0.02em;
-    line-height: 1.0;
-    margin-bottom: 24px;
-    word-break: keep-all;
-    hyphens: none;
-  }
-
-  .hero-headline span.accent {
-    color: var(--green);
-  }
-
-  .hero-subline {
-    font-size: clamp(1.05rem, 2vw, 1.35rem);
-    color: var(--muted);
-    margin-bottom: 36px;
-    max-width: 520px;
-  }
-
-  .hero-ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  /* Hero lifestyle photo */
-  .hero-visual {
-    position: relative;
-  }
-
-  .hero-photo {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    border-radius: 18px;
-    border: 1px solid rgba(115, 237, 255, 0.25);
-    box-shadow:
-      0 30px 80px rgba(0, 0, 0, 0.5),
-      0 0 60px rgba(27, 162, 255, 0.18);
-    display: block;
-    margin: 40px auto 0;
-  }
-
-  @media (min-width: 900px) {
-    .hero-photo {
-      margin: 0 0 0 auto;
-      max-width: 420px;
-    }
-  }
-
-  /* Machine silhouette (CSS) — kept as fallback/utility */
-  .machine-mockup {
-    position: relative;
-    width: 240px;
-    height: 420px;
-    margin: 40px auto 0;
-    background: linear-gradient(180deg, #141B40 0%, #0B1230 100%);
-    border-radius: 24px 24px 18px 18px;
-    border: 2px solid rgba(115, 237, 255, 0.2);
-    box-shadow:
-      0 40px 80px rgba(0, 0, 0, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    overflow: hidden;
-  }
-
-  .machine-mockup::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    height: 6px;
-    background: linear-gradient(90deg, var(--cyan), var(--blue));
-    border-radius: 3px;
-  }
-
-  .machine-screen {
-    position: absolute;
-    top: 44px;
-    left: 24px;
-    right: 24px;
-    height: 120px;
-    background: #020410;
-    border: 1px solid rgba(115, 237, 255, 0.3);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-  }
-
-  .machine-screen-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 0.75rem;
-    color: var(--cyan);
-    letter-spacing: 0.2em;
-    margin-bottom: 8px;
-  }
-
-  .machine-screen-value {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 2rem;
-    color: var(--green);
-    line-height: 1;
-  }
-
-  .machine-buttons {
-    position: absolute;
-    top: 184px;
-    left: 24px;
-    right: 24px;
-    display: flex;
-    gap: 6px;
-    justify-content: space-between;
-  }
-
-  .machine-buttons span {
-    flex: 1;
-    height: 28px;
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .machine-buttons span:nth-child(1) { border-color: var(--cyan); }
-  .machine-buttons span:nth-child(2) { border-color: var(--green); }
-  .machine-buttons span:nth-child(3) { border-color: var(--orange); }
-
-  .machine-window {
-    position: absolute;
-    bottom: 40px;
-    left: 24px;
-    right: 24px;
-    height: 120px;
-    background:
-      radial-gradient(circle at 50% 30%, rgba(27, 162, 255, 0.25), transparent 70%),
-      #020410;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 12px;
-  }
-
-  .machine-cup {
-    width: 60px;
-    height: 80px;
-    background: linear-gradient(180deg, rgba(244, 248, 255, 0.08), rgba(125, 255, 155, 0.3));
-    border: 1.5px solid var(--green);
-    border-radius: 6px 6px 10px 10px;
-    position: relative;
-  }
-
-  .machine-cup::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 6px;
-    right: 6px;
-    height: 8px;
-    background: var(--green);
-    border-radius: 2px;
-    opacity: 0.5;
-  }
-
-  .machine-base {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 24px;
-    background: #030718;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  /* Stat bar */
-  .stat-bar {
-    margin-top: 60px;
-    padding: 16px 0;
-    border-top: 1px solid rgba(115, 237, 255, 0.15);
-    border-bottom: 1px solid rgba(115, 237, 255, 0.15);
-    overflow: hidden;
-    position: relative;
-    background: rgba(11, 18, 48, 0.4);
-  }
-
-  .stat-bar-track {
-    display: inline-flex;
-    gap: 48px;
-    white-space: nowrap;
-    animation: scroll-left 30s linear infinite;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--white);
-    padding-left: 48px;
-  }
-
-  .stat-bar-track span {
-    display: inline-flex;
-    align-items: center;
-    gap: 48px;
-  }
-
-  .stat-bar-track em {
-    font-style: normal;
-    color: var(--cyan);
-    animation: pulse 2.4s ease-in-out infinite;
-  }
-
-  @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.55; }
-  }
-
-  /* ============ SECTIONS SHARED ============ */
-  section.content-section {
-    padding: 100px 0;
-  }
-
-  .section-heading {
-    font-size: clamp(2.2rem, 5vw, 3.6rem);
-    margin-bottom: 48px;
-    max-width: 820px;
-  }
-
-  /* ============ HOW IT WORKS ============ */
-  .steps-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .step-card {
-    background: var(--bg-surface);
-    border-radius: 16px;
-    padding: 32px;
-    border: 1px solid rgba(115, 237, 255, 0.08);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .step-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(115, 237, 255, 0.2);
-  }
-
-  .step-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 0.85rem;
-    color: var(--muted);
-    letter-spacing: 0.2em;
-    margin-bottom: 20px;
-  }
-
-  .step-icon {
-    width: 100%;
-    min-height: 140px;
-    height: auto;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  /* Step 1 machine mini icon */
-  .icon-machine {
-    width: 96px;
-    height: 140px;
-    background: var(--bg);
-    border: 3px solid var(--cyan);
-    border-radius: 10px;
-    position: relative;
-  }
-  .icon-machine::before {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    height: 32px;
-    background: var(--cyan);
-    border-radius: 4px;
-    opacity: 0.4;
-  }
-  .icon-machine::after {
-    content: "";
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-    height: 36px;
-    background: var(--bg);
-    border: 2px solid var(--green);
-    border-radius: 4px;
-  }
-
-  /* Step 2 pill group */
-  .goal-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-  }
-  .goal-pill {
-    padding: 12px 22px;
-    border-radius: 999px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1.15rem;
-    letter-spacing: 0.1em;
-    border: 2.5px solid;
-  }
-  .goal-pill.lean { color: var(--cyan); border-color: var(--cyan); }
-  .goal-pill.build { color: var(--green); border-color: var(--green); }
-  .goal-pill.recover { color: var(--pink); border-color: var(--pink); }
-  .goal-pill.boost { color: #C882FF; border-color: #C882FF; }
-  .goal-pill.vegan { color: var(--vegan); border-color: var(--vegan); }
-
-  /* Step 3 stopwatch */
-  .icon-stopwatch {
-    width: 120px;
-    height: 120px;
-    border: 5px solid var(--orange);
-    border-radius: 50%;
-    position: relative;
-  }
-  .icon-stopwatch::before {
-    content: "";
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 28px;
-    height: 10px;
-    background: var(--orange);
-    border-radius: 3px;
-  }
-  .icon-stopwatch::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 3px;
-    height: 42px;
-    background: var(--orange);
-    transform-origin: top center;
-    transform: translate(-50%, 0) rotate(45deg);
-    animation: tick 2s steps(12) infinite;
-  }
-
-  @keyframes tick {
-    from { transform: translate(-50%, 0) rotate(0deg); }
-    to { transform: translate(-50%, 0) rotate(360deg); }
-  }
-
-  .step-title {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-  }
-
-  .step-body {
-    color: var(--muted);
-    font-size: 1rem;
-  }
-
-  /* ============ SKU CARDS ============ */
-  .sku-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .sku-card {
-    background: var(--bg-surface);
-    border-radius: 20px;
-    padding: 36px 32px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.25s ease;
-  }
-
-  .sku-card:hover {
-    transform: translateY(-6px);
-  }
-
-  .sku-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-  }
-
-  .sku-card.lean::before { background: var(--cyan); }
-  .sku-card.build::before { background: var(--green); }
-  .sku-card.boost::before { background: #C882FF; }
-  .sku-card.recover::before { background: var(--pink); }
-  .sku-card.vegan::before { background: var(--vegan); }
-
-  .sku-icon {
-    display: inline-flex;
-    width: 48px;
-    height: 48px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    margin-bottom: 16px;
-  }
-  .sku-icon svg { width: 27px; height: 27px; }
-  .sku-card.lean .sku-icon { color: var(--cyan); background: rgba(115,237,255,0.1); }
-  .sku-card.build .sku-icon { color: var(--green); background: rgba(125,255,155,0.1); }
-  .sku-card.boost .sku-icon { color: #C882FF; background: rgba(200,130,255,0.1); }
-  .sku-card.recover .sku-icon { color: var(--pink); background: rgba(255,111,181,0.1); }
-  .sku-card.vegan .sku-icon { color: var(--vegan); background: rgba(74,222,128,0.1); }
-
-  .sku-name {
-    font-size: 3rem;
-    letter-spacing: -0.01em;
-    margin-bottom: 12px;
-  }
-
-  .sku-card.lean .sku-name { color: var(--cyan); }
-  .sku-card.build .sku-name { color: var(--green); }
-  .sku-card.boost .sku-name { color: #C882FF; }
-  .sku-card.recover .sku-name { color: var(--pink); }
-  .sku-card.vegan .sku-name { color: var(--vegan); }
-
-  .sku-macro {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--white);
-    margin-bottom: 16px;
-  }
-
-  .sku-ingredient {
-    color: var(--muted);
-    font-size: 1rem;
-    margin-bottom: 28px;
-    line-height: 1.5;
-  }
-
-  .sku-price {
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 999px;
-    background: rgba(5, 8, 22, 0.6);
-    border: 1.5px solid;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
-  }
-
-  .sku-card.lean .sku-price { color: var(--cyan); border-color: var(--cyan); }
-  .sku-card.build .sku-price { color: var(--green); border-color: var(--green); }
-  .sku-card.boost .sku-price { color: #C882FF; border-color: #C882FF; }
-  .sku-card.recover .sku-price { color: var(--pink); border-color: var(--pink); }
-  .sku-card.vegan .sku-price { color: var(--vegan); border-color: var(--vegan); }
-  .sku-price { display: none; } /* cijene skrivene dok nisu finalne */
-
-  /* ============ STATS / PROOF ============ */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-bottom: 48px;
-  }
-
-  .stat-card {
-    background: var(--bg-surface);
-    border-radius: 14px;
-    padding: 28px 20px;
-    text-align: center;
-    border: 1px solid rgba(115, 237, 255, 0.08);
-  }
-
-  .stat-value {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: var(--green);
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-
-  .stat-label {
-    font-size: 0.9rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 600;
-  }
-
-  .callout {
-    background: rgba(27, 162, 255, 0.08);
-    border-left: 4px solid var(--blue);
-    border-radius: 0 12px 12px 0;
-    padding: 28px 32px;
-    font-size: 1.15rem;
-    color: var(--white);
-    max-width: 780px;
-  }
-
-  .callout strong {
-    color: var(--cyan);
-    font-weight: 600;
-  }
-
-  /* ============ LOCATIONS ============ */
-  .locations-heading {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    margin-bottom: 40px;
-    color: var(--white);
-  }
-
-  .locations-heading span {
-    color: var(--green);
-  }
-
-  .gym-logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 16px;
-    margin-bottom: 48px;
-  }
-
-  .gym-logo {
-    background: var(--bg-surface);
-    border: 1px solid rgba(115, 237, 255, 0.15);
-    border-radius: 12px;
-    padding: 28px 20px;
-    text-align: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1.3rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--white);
-    transition: border-color 0.2s ease, transform 0.2s ease;
-  }
-
-  .gym-logo:hover {
-    border-color: var(--green);
-    transform: translateY(-3px);
-  }
-
-  .locations-ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  /* ============ CUSTOMIZATION ============ */
-  .custom-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 56px;
-    align-items: center;
-  }
-
-  .custom-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-
-  .custom-layer {
-    padding: 22px 24px;
-    border-radius: 12px;
-    background: var(--bg-surface);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--white);
-    position: relative;
-    padding-left: 52px;
-    transition: transform 0.2s ease;
-  }
-
-  .custom-layer:hover {
-    transform: translateX(6px);
-  }
-
-  .custom-layer::before {
-    content: "";
-    position: absolute;
-    left: 22px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-  }
-
-  .custom-layer.l1::before { background: var(--cyan); }
-  .custom-layer.l2::before { background: var(--green); }
-  .custom-layer.l3::before { background: var(--orange); }
-  .custom-layer.l4::before { background: var(--blue); }
-
-  .custom-heading {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    margin-bottom: 20px;
-  }
-
-  .custom-body {
-    color: var(--muted);
-    font-size: 1.05rem;
-    margin-bottom: 24px;
-    line-height: 1.7;
-  }
-
-  .custom-list {
-    list-style: none;
-    margin-bottom: 32px;
-  }
-
-  .custom-list li {
-    padding: 10px 0 10px 28px;
-    position: relative;
-    color: var(--white);
-    border-bottom: 1px solid rgba(115, 237, 255, 0.08);
-  }
-
-  .custom-list li:last-child {
-    border-bottom: none;
-  }
-
-  .custom-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 14px;
-    height: 2px;
-    background: var(--green);
-  }
-
-  /* ============ LOYALTY ============ */
-  .loyalty {
-    text-align: center;
-  }
-
-  .loyalty .section-tag {
-    display: block;
-  }
-
-  .loyalty-heading {
-    font-size: clamp(2.4rem, 6vw, 4rem);
-    margin-bottom: 20px;
-  }
-
-  .loyalty-body {
-    font-size: 1.15rem;
-    color: var(--muted);
-    max-width: 560px;
-    margin: 0 auto 48px;
-  }
-
-  .stamps {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  .stamp {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 2.5px dashed var(--muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    color: var(--muted);
-    font-size: 1.1rem;
-  }
-
-  .stamp.filled {
-    background: var(--green);
-    border: 2.5px solid var(--green);
-    color: var(--bg);
-    box-shadow: 0 0 24px rgba(125, 255, 155, 0.4);
-  }
-
-  /* ============ MACHINE SHOWCASE ============ */
-  .machine-showcase {
-    background: linear-gradient(180deg, rgba(11, 18, 48, 0.4) 0%, rgba(5, 8, 22, 0) 100%);
-  }
-  .machine-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  @media (min-width: 760px) {
-    .machine-grid {
-      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-      gap: 36px;
-      align-items: stretch;
-    }
-  }
-  .machine-card {
-    background: var(--bg-surface);
-    border: 1px solid rgba(115, 237, 255, 0.18);
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .machine-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    flex: 1 1 auto;
-  }
-  .machine-card figcaption {
-    padding: 20px 24px;
-    color: var(--white);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1.15rem;
-    line-height: 1.3;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    border-top: 1px solid rgba(115, 237, 255, 0.1);
-  }
-  .machine-card figcaption span {
-    display: block;
-    margin-top: 8px;
-    color: var(--muted);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-transform: none;
-    letter-spacing: 0;
-    line-height: 1.5;
-  }
-
-  /* ============ CUP GALLERY (2 variants) ============ */
-  .cup-gallery-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  @media (min-width: 540px) {
-    .cup-gallery-2 { grid-template-columns: 1fr 1fr; gap: 20px; }
-  }
-  .cup-gallery-2 figure {
-    margin: 0;
-    background: var(--bg-surface);
-    border: 1px solid rgba(115, 237, 255, 0.15);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-  .cup-gallery-2 figure:hover {
-    transform: translateY(-4px);
-    border-color: rgba(125, 255, 155, 0.4);
-  }
-  .cup-gallery-2 img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-  }
-  .cup-gallery-2 figcaption {
-    padding: 12px 16px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 0.95rem;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    text-align: center;
-    border-top: 1px solid rgba(115, 237, 255, 0.08);
-  }
-
-  /* ============ WAITLIST ============ */
-  .waitlist {
-    background: linear-gradient(180deg, rgba(125, 255, 155, 0.05) 0%, rgba(11, 18, 48, 0.4) 100%);
-    border-top: 1px solid rgba(125, 255, 155, 0.15);
-    border-bottom: 1px solid rgba(125, 255, 155, 0.15);
-  }
-
-  .waitlist-lead {
-    font-size: 1.1rem;
-    color: var(--muted);
-    max-width: 640px;
-    margin-bottom: 36px;
-    line-height: 1.55;
-  }
-
-  .waitlist-lead strong {
-    color: var(--green);
-    font-weight: 600;
-  }
-
-  .waitlist-form {
-    background: var(--bg-surface);
-    border: 1px solid rgba(125, 255, 155, 0.2);
-    border-radius: 16px;
-    padding: 28px 24px;
-    max-width: 760px;
-  }
-
-  .waitlist-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-
-  @media (min-width: 760px) {
-    .waitlist-row {
-      grid-template-columns: 1.4fr 1fr auto;
-      gap: 12px;
-      align-items: center;
-    }
-  }
-
-  .waitlist-form input[type="email"],
-  .waitlist-form input[type="text"] {
-    width: 100%;
-    padding: 14px 16px;
-    font-family: 'Barlow', sans-serif;
-    font-size: 16px;
-    color: var(--white);
-    background: rgba(5, 8, 22, 0.7);
-    border: 1px solid rgba(138, 160, 200, 0.3);
-    border-radius: 10px;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  .waitlist-form input:focus {
-    outline: none;
-    border-color: var(--green);
-    box-shadow: 0 0 0 3px rgba(125, 255, 155, 0.18);
-  }
-
-  .waitlist-form .btn {
-    width: 100%;
-  }
-
-  @media (min-width: 760px) {
-    .waitlist-form .btn {
-      width: auto;
-    }
-  }
-
-  .waitlist-foot {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin: 0;
-  }
-
-  .waitlist-foot.success {
-    color: var(--green);
-    font-weight: 600;
-  }
-
-  /* ============ FOOTER ============ */
-  footer.site-footer {
-    padding: 64px 0 32px;
-    border-top: 1px solid rgba(115, 237, 255, 0.1);
-    background: var(--bg-surface);
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 48px;
-  }
-
-  .footer-brand-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 1.8rem;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    margin-bottom: 8px;
-  }
-
-  .footer-brand-name span {
-    color: var(--green);
-  }
-
-  .footer-tagline {
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  .footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .footer-nav a {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.95rem;
-    color: var(--white);
-  }
-
-  .footer-nav a:hover {
-    color: var(--cyan);
-  }
-
-  .footer-social {
-    display: flex;
-    gap: 12px;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--bg);
-    border: 1px solid rgba(115, 237, 255, 0.2);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: border-color 0.2s ease, transform 0.2s ease;
-  }
-
-  .social-icon:hover {
-    border-color: var(--cyan);
-    transform: translateY(-2px);
-  }
-
-  .social-icon svg {
-    width: 18px;
-    height: 18px;
-    fill: var(--white);
-  }
-
-  .footer-legal {
-    font-size: 0.85rem;
-    color: var(--muted);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 24px;
-  }
-
-  /* ============ RESPONSIVE ============ */
-  @media (min-width: 640px) {
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .sku-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .hero-headline {
-      font-size: clamp(3rem, 8vw, 6rem);
-    }
-  }
-
-  @media (min-width: 900px) {
-    section.content-section {
-      padding: 140px 0;
-    }
-    .hero-inner {
-      grid-template-columns: 1.3fr 1fr;
-      gap: 60px;
-    }
-    .machine-mockup {
-      margin: 0 0 0 auto;
-    }
-    .steps-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-    .sku-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-    .stats-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    .custom-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-    }
-    .footer-grid {
-      grid-template-columns: 1.2fr 1fr auto;
-      align-items: start;
-    }
-    .hero-headline {
-      font-size: clamp(3.8rem, 6.5vw, 5.5rem);
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .hero-headline {
-      font-size: 5.5rem;
-    }
-  }
-
-  /* Reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
-</style>
 </head>
-<body>
+<body class="is-loading">
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__cup">
+    <div class="loader__fill" id="loaderFill"></div>
+  </div>
+  <div class="loader__count"><span id="loaderCount">0</span><small>sek</small></div>
+  <div class="loader__brand">Shakeomat</div>
+</div>
+
+<canvas id="webgl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
 
 <!-- ============ NAV ============ -->
-<nav class="site-nav" role="navigation" aria-label="Glavna navigacija">
-  <div class="container nav-inner">
-    <a href="#" class="nav-brand">Shake<span>-</span>o-mat</a>
-    <ul class="nav-links">
-      <li><a href="#waitlist">Pridruži se</a></li>
-      <li><a href="b2b.html">Za teretane</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-      <li>
-        <span aria-label="Jezik" style="display:inline-block; background: rgba(115, 237, 255, 0.08); border: 1px solid rgba(115, 237, 255, 0.3); color: var(--cyan); padding: 6px 10px; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.06em;">HR</span>
-      </li>
-    </ul>
+<header class="nav" id="nav">
+  <a href="#top" class="logo" data-scroll>Shakeomat</a>
+  <nav class="nav__links" aria-label="Glavna navigacija">
+    <a href="#kako" data-scroll>Kako radi</a>
+    <a href="#formule" data-scroll>Formule</a>
+    <a href="#aparat" data-scroll>Aparat</a>
+    <a href="#faq" data-scroll>FAQ</a>
+    <a href="#kontakt" data-scroll>Kontakt</a>
+  </nav>
+  <div class="nav__right">
+    <a class="nav__b2b" href="https://shakeomat.hr/b2b.html">Za teretane</a>
+    <span class="nav__lang">HR</span>
+    <a href="#waitlist" class="btn btn--sm btn--primary magnetic" data-scroll><span>Pridruži se</span></a>
   </div>
-</nav>
-
-<!-- ============ HERO ============ -->
-<header class="hero" role="banner">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <h1 class="hero-headline">
-          Besramno dobri<br>
-          shakeovi.<br>
-          <span class="accent">Bez praha u torbi. Bez foliranja.</span>
-        </h1>
-        <p class="hero-subline">Aparat u tvojoj teretani. Sastojci na ekranu. Svjež shake u 60 sekundi. Bez kuhinje, bez čekanja u baru, bez aplikacije.</p>
-        <div class="hero-pricing-strip" style="display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 18px;">
-          <span style="background:rgba(115,237,255,0.1); color:var(--cyan); padding:6px 12px; border-radius:999px; font-size:0.85rem; font-weight:600; border:1px solid rgba(115,237,255,0.25);">€3,50–€4,50 · cijena kao kava</span>
-          <span style="background:rgba(255,155,70,0.12); color:var(--orange); padding:6px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; border:1px solid rgba(255,155,70,0.3);">Prvih 100 = besplatan shake</span>
-        </div>
-        <div class="hero-ctas">
-          <a href="#waitlist" class="btn btn-primary">Javi mi kad stigne &rarr;</a>
-          <a href="b2b.html" class="btn btn-outline">Za vlasnike teretana</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <img src="hero-lifestyle.jpg" alt="Sportašica pored Shake-o-mat aparata u teretani — Svaki trening zaslužuje pravi završetak" class="hero-photo" loading="eager" width="600" height="1066">
-      </div>
-    </div>
-  </div>
-
-  <!-- Animated stat bar -->
-  <div class="stat-bar" aria-label="Ključne brojke">
-    <div class="stat-bar-track" id="statBarTrack">
-      <span>60 sekundi <em>od dodira do shake-a</em></span>
-      <span>·</span>
-      <span>5 formula <em>za svaki trenutak u danu</em></span>
-      <span>·</span>
-      <span>Bez investicije <em>za teretanu</em></span>
-      <span>·</span>
-      <span>U suradnji <em>sa sportskim nutricionistom</em></span>
-      <span>·</span>
-      <span>60 sekundi <em>od dodira do shake-a</em></span>
-      <span>·</span>
-      <span>5 formula <em>za svaki trenutak u danu</em></span>
-      <span>·</span>
-      <span>Bez investicije <em>za teretanu</em></span>
-      <span>·</span>
-      <span>U suradnji <em>sa sportskim nutricionistom</em></span>
-      <span>·</span>
-    </div>
-  </div>
+  <div class="nav__progress" id="navProgress"></div>
 </header>
 
-<main>
+<main id="top">
 
-<!-- ============ HOW IT WORKS ============ -->
-<section class="content-section" aria-labelledby="how-heading">
-  <div class="container">
-    <span class="section-tag">Kako radi</span>
-    <h2 class="section-heading" id="how-heading">Tri koraka do shake-a.</h2>
+  <!-- ============ HERO ============ -->
+  <section class="hero" data-state="hero" id="hero">
+    <div class="hero__inner">
+      <p class="eyebrow reveal-up">Protein automat · Zagreb · 2026</p>
+      <h1 class="hero__title">
+        <span class="line"><span class="split">Besramno</span></span>
+        <span class="line"><span class="split">dobri</span></span>
+        <span class="line"><span class="split accent">shakeovi.</span></span>
+      </h1>
+      <p class="hero__tag reveal-up">Bez praha u torbi. Bez foliranja.</p>
+      <p class="hero__sub reveal-up">Aparat u tvojoj teretani. Sastojci na ekranu. Svjež shake u 60 sekundi. Bez kuhinje, bez čekanja u baru, bez aplikacije.</p>
+      <div class="hero__cta reveal-up">
+        <a href="#waitlist" class="btn btn--primary magnetic" data-scroll><span>Javi mi kad stigne →</span></a>
+        <a href="https://shakeomat.hr/b2b.html" class="btn btn--ghost magnetic"><span>Za vlasnike teretana</span></a>
+      </div>
+      <div class="hero__chips reveal-up">
+        <span class="chip">€3,50–€4,50 · cijena kao kava</span>
+        <span class="chip chip--hot">Prvih 100 = besplatan shake</span>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Skrolaj</span>
+      <i></i>
+    </div>
+    <div class="hero__timer" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54"/><circle class="t" cx="60" cy="60" r="54" id="heroRing"/></svg>
+      <b>60</b><small>sek</small>
+    </div>
+  </section>
 
-    <div class="steps-grid">
-      <article class="step-card">
-        <div class="step-num">Korak 01</div>
-        <div class="step-icon"><div class="icon-machine" aria-hidden="true"></div></div>
-        <h3 class="step-title">Priđi aparatu</h3>
-        <p class="step-body">Na izlazu iz teretane. Bez reda, bez aplikacija. Samo dodirni ekran.</p>
-      </article>
+  <!-- ============ MARQUEE ============ -->
+  <section class="marquee" aria-label="Ključne brojke">
+    <div class="marquee__track" id="marquee">
+      <div class="marquee__set">
+        <span><b>60 sekundi</b> od dodira do shake-a</span><i>✦</i>
+        <span><b>5 formula</b> za svaki trenutak u danu</span><i>✦</i>
+        <span><b>Bez investicije</b> za teretanu</span><i>✦</i>
+        <span><b>U suradnji</b> sa sportskim nutricionistom</span><i>✦</i>
+      </div>
+    </div>
+  </section>
 
-      <article class="step-card">
-        <div class="step-num">Korak 02</div>
-        <div class="step-icon">
-          <div class="goal-pills" aria-hidden="true">
-            <span class="goal-pill lean">LEAN</span>
-            <span class="goal-pill build">BUILD</span>
-            <span class="goal-pill boost">LIFT</span>
-            <span class="goal-pill recover">RECOVER</span>
-            <span class="goal-pill vegan">VEGAN</span>
+  <!-- ============ KAKO RADI (pinned) ============ -->
+  <section class="steps" id="kako" data-state="steps">
+    <div class="steps__pin">
+      <div class="steps__head">
+        <p class="eyebrow">Kako radi</p>
+        <h2 class="h2">Tri koraka do shake-a.</h2>
+      </div>
+      <div class="steps__stage">
+        <article class="step is-active" data-step="0">
+          <span class="step__num">01</span>
+          <p class="step__k">Korak 01</p>
+          <h3 class="step__t">Priđi aparatu</h3>
+          <p class="step__d">Na izlazu iz teretane. Bez reda, bez aplikacija. Samo dodirni ekran.</p>
+        </article>
+        <article class="step" data-step="1">
+          <span class="step__num">02</span>
+          <p class="step__k">Korak 02</p>
+          <h3 class="step__t">Odaberi cilj</h3>
+          <div class="step__chips">
+            <span style="--c:var(--cyan)">LEAN</span><span style="--c:var(--orange)">BUILD</span><span style="--c:var(--green)">LIFT</span><span style="--c:var(--pink)">RECOVER</span><span style="--c:var(--vegan)">VEGAN</span>
           </div>
+          <p class="step__d">Svaki tip nosi drugačiji nutritivni profil. LEAN za definiciju. BUILD za masu. RECOVER za oporavak. LIFT za dnevnu energiju. VEGAN za biljnu opciju.</p>
+        </article>
+        <article class="step" data-step="2">
+          <span class="step__num">03</span>
+          <p class="step__k">Korak 03</p>
+          <h3 class="step__t">Uzmi shake za 60 sec</h3>
+          <p class="step__d">Miješa se svježe, po narudžbi. Uzmi čašu i nastavi dan. Gotovo.</p>
+        </article>
+      </div>
+      <div class="steps__rail" aria-hidden="true">
+        <i class="is-active"></i><i></i><i></i>
+        <span class="steps__bar" id="stepsBar"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORMULE (pinned) ============ -->
+  <section class="formulas" id="formule" data-state="formulas">
+    <div class="formulas__pin">
+      <div class="formulas__bgword" id="bgWord" aria-hidden="true">LEAN</div>
+      <div class="formulas__head">
+        <p class="eyebrow">Tvoj cilj. Tvoj shake.</p>
+        <h2 class="h2">Jedan automat. Pet shakeova. <span class="accent">Tvoja formula.</span></h2>
+      </div>
+      <div class="formulas__cards">
+        <article class="fcard is-active" data-i="0" style="--c:#73EDFF">
+          <p class="fcard__tier">Entry</p>
+          <h3 class="fcard__name">Lean</h3>
+          <p class="fcard__price">€3,50</p>
+          <p class="fcard__tag">Za lagane dane i definiciju</p>
+          <p class="fcard__d">Lagani protein nakon treninga — bez nepotrebnih kalorija. Za dane kada radiš na definiciji ili imaš lagani trening.</p>
+        </article>
+        <article class="fcard" data-i="1" style="--c:#FF9B46">
+          <p class="fcard__tier">Mid</p>
+          <h3 class="fcard__name">Build</h3>
+          <p class="fcard__price">€4,00</p>
+          <p class="fcard__tag">Za teške treninge</p>
+          <p class="fcard__d">Puniji shake za najteže dane. Kada je trening bio naporan i tijelo traži više od običnog napitka.</p>
+        </article>
+        <article class="fcard" data-i="2" style="--c:#7DFF9B">
+          <p class="fcard__tier">Mid</p>
+          <h3 class="fcard__name">Lift</h3>
+          <p class="fcard__price">€4,00</p>
+          <p class="fcard__tag">Za sredinu dana i fokus</p>
+          <p class="fcard__d">Lagana opcija za sredinu dana ili pred trening. Kada trebaš čist protein bez težine i bez popodnevnog pada.</p>
+        </article>
+        <article class="fcard" data-i="3" style="--c:#FF6FB5">
+          <p class="fcard__tier">Premium</p>
+          <h3 class="fcard__name">Recover</h3>
+          <p class="fcard__price">€4,50</p>
+          <p class="fcard__tag">Za večernji oporavak</p>
+          <p class="fcard__d">Shake za kraj dana. Kada usporavaš, gasiš svjetla i puniš baterije za sutra.</p>
+        </article>
+        <article class="fcard" data-i="4" style="--c:#4ADE80">
+          <p class="fcard__tier">Entry</p>
+          <h3 class="fcard__name">Vegan</h3>
+          <p class="fcard__price">€3,50</p>
+          <p class="fcard__tag">Za biljnu rutinu</p>
+          <p class="fcard__d">Biljni shake bez mlijeka i glutena. Za dane bez životinjskog porijekla — isti ritual, ista čaša, bez kompromisa.</p>
+        </article>
+      </div>
+      <div class="formulas__nav" id="formulaNav">
+        <button data-i="0" style="--c:#73EDFF" class="is-active">Lean</button>
+        <button data-i="1" style="--c:#FF9B46">Build</button>
+        <button data-i="2" style="--c:#7DFF9B">Lift</button>
+        <button data-i="3" style="--c:#FF6FB5">Recover</button>
+        <button data-i="4" style="--c:#4ADE80">Vegan</button>
+      </div>
+      <p class="formulas__note">Sastav potvrđuje sportski nutricionist prije launcha. Stavi se na listu i javljamo ti čim aparat stigne u tvoju teretanu — bez foliranja.</p>
+    </div>
+  </section>
+
+  <!-- ============ ZAŠTO ============ -->
+  <section class="why section" id="zasto" data-state="why">
+    <div class="wrap">
+      <p class="eyebrow reveal-up">Zašto Shakeomat</p>
+      <h2 class="h2 big split-words">Shake koji te dočeka na izlazu.</h2>
+      <div class="stats">
+        <div class="stat reveal-up"><b><span class="count" data-to="60">0</span><em>sek</em></b><p>od dodira do gutljaja</p></div>
+        <div class="stat reveal-up"><b><span class="count" data-to="20">0</span><em>+</em></b><p>kombinacija</p></div>
+        <div class="stat reveal-up"><b><span class="count" data-to="0">0</span><em>g</em></b><p>dodanog šećera</p></div>
+        <div class="stat reveal-up"><b><span class="count" data-to="100">0</span><em>%</em></b><p>svježe miješano</p></div>
+      </div>
+      <div class="why__fact reveal-up">
+        <div class="why__ring">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="86"/><circle class="p" id="halfRing" cx="100" cy="100" r="86"/></svg>
+          <span>~50%</span>
         </div>
-        <h3 class="step-title">Odaberi cilj</h3>
-        <p class="step-body">Svaki tip nosi drugačiji nutritivni profil. LEAN za definiciju. BUILD za masu. RECOVER za oporavak. LIFT za dnevnu energiju. VEGAN za biljnu opciju.</p>
-      </article>
-
-      <article class="step-card">
-        <div class="step-num">Korak 03</div>
-        <div class="step-icon"><div class="icon-stopwatch" aria-hidden="true"></div></div>
-        <h3 class="step-title">Uzmi shake za 60 sec</h3>
-        <p class="step-body">Miješa se svježe, po narudžbi. Uzmi čašu i nastavi dan. Gotovo.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SKU CARDS ============ -->
-<section class="content-section" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="sku-heading">
-  <div class="container">
-    <span class="section-tag">Tvoj cilj. Tvoj shake.</span>
-    <h2 class="section-heading" id="sku-heading">Jedan automat. Pet shakeova. Tvoja formula.</h2>
-
-    <div class="sku-grid">
-      <article class="sku-card lean">
-        <span class="sku-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></span>
-        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cyan); background:rgba(115,237,255,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(115,237,255,0.2);">Entry</span>
-        <h3 class="sku-name">Lean</h3>
-        <span class="sku-price">€3,50</span>
-        <p class="sku-macro">Za lagane dane i definiciju</p>
-        <p class="sku-ingredient">Lagani protein nakon treninga — bez nepotrebnih kalorija. Za dane kada radiš na definiciji ili imaš lagani trening.</p>
-      </article>
-
-      <article class="sku-card build">
-        <span class="sku-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
-        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green); background:rgba(125,255,155,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(125,255,155,0.2);">Mid</span>
-        <h3 class="sku-name">Build</h3>
-        <span class="sku-price">€4,00</span>
-        <p class="sku-macro">Za teške treninge</p>
-        <p class="sku-ingredient">Puniji shake za najteže dane. Kada je trening bio naporan i tijelo traži više od običnog napitka.</p>
-      </article>
-
-      <article class="sku-card boost">
-        <span class="sku-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
-        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C882FF; background:rgba(200,130,255,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(200,130,255,0.2);">Mid</span>
-        <h3 class="sku-name">Lift</h3>
-        <span class="sku-price">€4,00</span>
-        <p class="sku-macro">Za sredinu dana i fokus</p>
-        <p class="sku-ingredient">Lagana opcija za sredinu dana ili pred trening. Kada trebaš čist protein bez težine i bez popodnevnog pada.</p>
-      </article>
-
-      <article class="sku-card recover">
-        <span class="sku-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></span>
-        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--pink); background:rgba(255,111,181,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(255,111,181,0.2);">Premium</span>
-        <h3 class="sku-name">Recover</h3>
-        <span class="sku-price">€4,50</span>
-        <p class="sku-macro">Za večernji oporavak</p>
-        <p class="sku-ingredient">Shake za kraj dana. Kada usporavaš, gasiš svjetla i puniš baterije za sutra.</p>
-      </article>
-
-      <article class="sku-card vegan">
-        <span class="sku-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M12 20c5-1.5 1-7 3-11M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8zM14.1 6c-.9.8-1.6 2-1.9 3.4 1.9 0 3.2-.4 4.2-1.2 1-.8 1.6-2 1.9-3.2-1.9-.1-3.3.2-4.2 1z"/></svg></span>
-        <span class="sku-tier" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--vegan); background:rgba(74,222,128,0.08); padding:3px 8px; border-radius:999px; margin-bottom:8px; border:1px solid rgba(74,222,128,0.25);">Entry</span>
-        <h3 class="sku-name">Vegan</h3>
-        <span class="sku-price">€3,50</span>
-        <p class="sku-macro">Za biljnu rutinu</p>
-        <p class="sku-ingredient">Biljni shake bez mlijeka i glutena. Za dane bez životinjskog porijekla — isti ritual, ista čaša, bez kompromisa.</p>
-      </article>
-    </div>
-
-    <p style="text-align: center; margin-top: 32px; font-size: 0.9rem; color: var(--muted); max-width: 760px; margin-left: auto; margin-right: auto;">
-      Sastav potvrđuje sportski nutricionist prije launcha. Stavi se na listu i javljamo ti čim aparat stigne u tvoju teretanu — bez foliranja.
-    </p>
-  </div>
-</section>
-
-<!-- ============ SOCIAL PROOF ============ -->
-<section class="content-section" aria-labelledby="proof-heading">
-  <div class="container">
-    <span class="section-tag">Zašto Shake-o-mat</span>
-    <h2 class="section-heading" id="proof-heading">Shake koji te dočeka na izlazu.</h2>
-
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-value">60<span style="color: var(--muted); font-size: 0.55em;">sek</span></div>
-        <div class="stat-label">od dodira do gutljaja</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">20<span style="color:var(--muted);font-size:0.5em;">+</span></div>
-        <div class="stat-label">kombinacija</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">0g</div>
-        <div class="stat-label">dodanog šećera</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">100%</div>
-        <div class="stat-label">svježe miješano</div>
+        <p><strong>Oko 50% članova teretana</strong> koristi proteinske dodatke. Svi traže shake — odmah, bez planiranja.</p>
       </div>
     </div>
+  </section>
 
-    <div class="callout">
-      <strong>Oko 50% članova teretana</strong> koristi proteinske dodatke. Svi traže shake &mdash; odmah, bez planiranja.
-    </div>
-  </div>
-</section>
-
-<!-- ============ THE MACHINE ============ -->
-<section class="content-section machine-showcase" aria-labelledby="machine-heading">
-  <div class="container">
-    <span class="section-tag">Pravi aparat. Pravi gym.</span>
-    <h2 class="section-heading" id="machine-heading">Aparat koji stiže.</h2>
-
-    <div class="machine-grid" style="grid-template-columns: 1fr; max-width: 640px; margin: 0 auto;">
-      <figure class="machine-card">
-        <img src="machine-uskoro.png" alt="Shake-o-mat aparat s plavim LED osvjetljenjem i ekranom „USKORO" — stiže u teretane 2026." loading="lazy" width="754" height="1350">
-        <figcaption>Stiže uskoro u tvoju teretanu.<br><span>9 spremnika · automatska čaša · zasebno miješanje · samočišćenje toplinom</span></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LOCATIONS ============ -->
-<section class="content-section" id="locations" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="loc-heading">
-  <div class="container">
-    <span class="section-tag">Nađi aparat</span>
-    <h2 class="locations-heading" id="loc-heading">Stiže u <span>10 teretana</span> tijekom 2026.</h2>
-
-    <p style="text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto 40px; font-size: 1.05rem;">
-      Razgovaramo s teretanama u Zagrebu i okolici. Konkretne lokacije objavljujemo nakon potpisa ugovora — javi se na waitlist i bit ćeš prvi koji sazna kada stigne kod tebe.
-    </p>
-
-    <div class="locations-ctas">
-      <a href="#waitlist" class="btn btn-primary">Javi mi kad stigne u moju teretanu &rarr;</a>
-      <a href="b2b.html" class="btn btn-outline">Vlasnici teretana &mdash; partner program &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ANTI-CLAIM (ŠTO NE OBEĆAVAMO / ŠTO OBEĆAVAMO) ============ -->
-<section class="content-section anti-claim" id="anti-claim" aria-labelledby="anti-claim-heading" style="background: linear-gradient(180deg, rgba(11, 18, 48, 0.55) 0%, rgba(5, 8, 22, 0.85) 100%); border-top: 1px solid rgba(115, 237, 255, 0.15); border-bottom: 1px solid rgba(115, 237, 255, 0.15);">
-  <div class="container">
-    <span class="section-tag" style="color: var(--cyan);">Iskreno o tome što jesmo i što nismo</span>
-    <h2 class="section-heading" id="anti-claim-heading" style="margin-bottom: 16px;">Ne obećavamo press na 120 kg ni transformaciju za 30 dana.<br><span class="accent">Obećavamo besramno dobar shake.</span></h2>
-    <p style="text-align: center; color: var(--muted); max-width: 720px; margin: 0 auto 48px; font-size: 1.1rem; line-height: 1.55;">
-      Tržište je puno marketinga koji ti obećava transformaciju za mjesec dana, magic formule i pet kila mišića. Mi nećemo. Mi imamo aparat, papirnatu čašu, provjerene sastojke s papirima u biou, te dvadeset kombinacija. Ostatak je na tebi i tvom treningu.
-    </p>
-
-    <div style="max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid rgba(115, 237, 255, 0.2); border-radius: 12px; overflow: hidden;">
-      <div style="background: rgba(255, 155, 70, 0.08); padding: 24px; border-right: 1px solid rgba(115, 237, 255, 0.15);">
-        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.4rem; color: var(--orange); margin-bottom: 16px; letter-spacing: 0.04em;">Što NE obećavamo</h3>
-        <ul style="list-style: none; padding: 0; margin: 0; color: var(--white); line-height: 1.9;">
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Transformaciju za mjesec dana</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>„+5 kg mišića" za 30 dana</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Magic formulu ili tajni sastojak</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Eksplozivni rast bez treninga</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Zamjenu za pravu hranu</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Prah u torbi koji smrdi</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--orange);">✗</span>Aplikaciju, narudžbu, čekanje</li>
+  <!-- ============ APARAT ============ -->
+  <section class="machine" id="aparat" data-state="machine">
+    <div class="machine__grid wrap">
+      <div class="machine__media">
+        <div class="machine__frame" id="machineFrame">
+          <img src="assets/machine-uskoro.png" alt="Shakeomat aparat s natpisom USKORO u teretani" loading="lazy" id="machineImg">
+          <div class="machine__glow"></div>
+        </div>
+        <div class="machine__badge">USKORO</div>
+      </div>
+      <div class="machine__copy">
+        <p class="eyebrow reveal-up">Pravi aparat. Pravi gym.</p>
+        <h2 class="h2 big split-words">Aparat koji stiže.</h2>
+        <p class="lead reveal-up">Stiže uskoro u tvoju teretanu.</p>
+        <ul class="specs">
+          <li class="reveal-up"><b>9</b> spremnika</li>
+          <li class="reveal-up"><b>Auto</b> čaša</li>
+          <li class="reveal-up"><b>Zasebno</b> miješanje</li>
+          <li class="reveal-up"><b>Samočišćenje</b> toplinom</li>
         </ul>
-      </div>
-      <div style="background: rgba(115, 237, 255, 0.05); padding: 24px;">
-        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.4rem; color: var(--cyan); margin-bottom: 16px; letter-spacing: 0.04em;">Što obećavamo</h3>
-        <ul style="list-style: none; padding: 0; margin: 0; color: var(--white); line-height: 1.9;">
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Besramno dobar okus</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Šezdeset sekundi do shake-a</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Sastojke koje vidiš na ekranu</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Sastojci koje već poznaješ</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Svjež — miješa se kad ga uzmeš</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Papirnatu čašu u ruci</li>
-          <li style="padding-left: 24px; position: relative; margin-bottom: 8px;"><span style="position: absolute; left: 0; color: var(--cyan);">✓</span>Tap → 60 sek → gotovo</li>
-        </ul>
-      </div>
-    </div>
-
-    <p style="text-align: center; color: var(--muted); max-width: 720px; margin: 40px auto 0; font-size: 0.95rem; font-style: italic; line-height: 1.55;">
-      Imamo brojke. Dok ih nutricionist ne potpiše, ne smijemo ti ih reći. Ali okus smijemo — i besramno je dobar.
-    </p>
-  </div>
-</section>
-
-<!-- ============ WAITLIST ============ -->
-<section class="content-section waitlist" id="waitlist" aria-labelledby="waitlist-heading">
-  <div class="container">
-    <span class="section-tag">Srpanj 2026 — uskoro</span>
-    <h2 class="section-heading" id="waitlist-heading">Budi prvi u redu.</h2>
-    <p class="waitlist-lead">Javljamo ti čim aparat stigne u teretanu blizu tebe. <strong>Prvih 100 prijavljenih dobije besplatan shake</strong> na otvaranju u svojoj teretani. Bez spama, bez progoniteljskih oglasa.</p>
-
-    <form id="waitlistForm" class="waitlist-form" action="https://formsubmit.co/d13b794a8bfa6dc60fb1818902d2fb9b" method="POST" novalidate>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Nova waitlist prijava — Shakeomat B2C">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_autoresponse" value="Hvala! Javljamo ti čim aparat stigne u teretanu blizu tebe. — Shake-o-mat tim">
-      <input type="hidden" name="_next" value="https://shakeomat.hr/?signup=ok#waitlist">
-      <input type="hidden" name="izvor" value="index waitlist">
-      <div class="waitlist-row">
-        <input type="email" name="email" required placeholder="tvoj@email.hr" autocomplete="email" aria-label="Email">
-        <input type="text" name="grad_teretana" placeholder="Grad ili teretana (opcionalno)" autocomplete="off" aria-label="Grad ili teretana">
-        <button type="submit" class="btn btn-primary">Javi mi kad stigne &rarr;</button>
-      </div>
-      <label style="display:flex; align-items:flex-start; gap:8px; font-size:0.85rem; color:var(--muted); margin:14px 0 6px; line-height:1.5;">
-        <input type="checkbox" name="gdpr_consent" required style="margin-top:4px; flex-shrink:0;">
-        <span>Slažem se da Shake-o-mat koristi moj email isključivo za obavijest o lansiranju u mojoj teretani. Možeš odjaviti jednim klikom. <a href="privacy.html" style="color:var(--cyan); text-decoration:underline;">Politika privatnosti</a>.</span>
-      </label>
-      <p class="waitlist-foot" id="waitlistFoot">Bez spama, bez progoniteljskih oglasa.</p>
-    </form>
-  </div>
-</section>
-
-<!-- ============ CUP MESSAGES ============ -->
-<section class="content-section" aria-labelledby="cup-heading">
-  <div class="container">
-    <span class="section-tag">Svaki shake je drugačiji</span>
-
-    <div class="custom-grid">
-      <div class="custom-text">
-        <h2 class="custom-heading" id="cup-heading">Dvije čaše. Dva trenutka.</h2>
-        <p class="custom-body">Za prvi val biramo dvije produkcijske verzije čaše &mdash; obje za <strong>oporavak</strong>, dvije različite poruke za isti taj trenutak nakon treninga.</p>
-        <ul class="custom-list">
-          <li>„Upravo si dao sve. Sad daj tijelu što treba."</li>
-          <li>„Tijelo pamti svaki trening. I svaki oporavak."</li>
-          <li>16 oz čaša, 3-bojni tisak, EU food-safe (EC 1935/2004)</li>
-          <li>Svježe miješano — nije s police, nije od jučer</li>
-          <li>Spreman za 60 sekundi, na izlazu tvoje teretane</li>
-        </ul>
-        <a href="b2b.html" class="btn btn-primary">Za vlasnike teretana &rarr;</a>
-      </div>
-
-      <div class="custom-visual">
-        <div class="cup-gallery cup-gallery-2" aria-label="2 produkcijske verzije čaše">
-          <figure>
-            <img src="cup_upravo.jpg" alt="Shake-o-mat čaša — Upravo si dao sve. Sad daj tijelu što treba." loading="lazy" width="800" height="800">
-            <figcaption>„Upravo si dao sve."</figcaption>
-          </figure>
-          <figure>
-            <img src="cup_tijelo.jpg" alt="Shake-o-mat čaša — Tijelo pamti svaki trening. I svaki oporavak." loading="lazy" width="800" height="800">
-            <figcaption>„Tijelo pamti svaki trening."</figcaption>
-          </figure>
+        <div class="machine__count reveal-up">
+          <p class="eyebrow">Nađi aparat · Stiže u</p>
+          <p class="machine__big"><span class="count" data-to="10">0</span> teretana</p>
+          <p class="muted">tijekom 2026.</p>
+        </div>
+        <p class="reveal-up muted">Razgovaramo s teretanama u Zagrebu i okolici. Konkretne lokacije objavljujemo nakon potpisa ugovora — javi se na waitlist i bit ćeš prvi koji sazna kada stigne kod tebe.</p>
+        <div class="machine__cta reveal-up">
+          <a href="#waitlist" class="btn btn--primary magnetic" data-scroll><span>Javi mi kad stigne u moju teretanu →</span></a>
+          <a href="https://shakeomat.hr/b2b.html" class="link-arrow">Vlasnici teretana — partner program →</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ FAQ ============ -->
-<section class="content-section" id="faq" aria-labelledby="faq-heading">
-  <div class="container">
-    <span class="section-tag">Pitanja korisnika</span>
-    <h2 class="section-heading" id="faq-heading">Što ljudi najčešće pitaju.</h2>
-
-    <div style="max-width: 820px; margin: 0 auto;">
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Koji shake je za večernji trening ili kraj dana?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Recover. To je shake za kraj dana — kada usporavaš, gasiš svjetla i puniš baterije za sutra. Lagan prije spavanja, za one koji treniraju navečer.</p>
-      </details>
-
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Po čemu se pet shakeova razlikuje?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Svaki cilja drugi trenutak dana i tip treninga: <strong>Lean</strong> za lagane dane i definiciju, <strong>Build</strong> za teške treninge, <strong>Lift</strong> za sredinu dana i fokus, <strong>Recover</strong> za večernji oporavak, <strong>Vegan</strong> za biljnu rutinu. Biraš prema danu, ne prema etiketi.</p>
-      </details>
-
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Koliko često mogu uzimati Build?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Onoliko koliko treniraš naporno. Build je za najteže dane — kada je trening bio težak i običan napitak nije dovoljan. Lakše dane pokrij s Lean ili Lift.</p>
-      </details>
-
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Mogu li koristiti ako sam laktozno intolerantan?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Da. Vegan je potpuno bezmliječan — biljni izvor, bez laktoze i glutena. Ako želiš klasičan shake, Lean je lagana opcija s minimalnom laktozom. Kod jače intolerancije idi na Vegan.</p>
-      </details>
-
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Tko stoji iza shakeova?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Tim koji godinama trenira i živi fitness. Formule finaliziramo uz sportskog nutricionista prije launcha — ime i potpis objavljujemo kad krene prvi aparat. Do tada: bez magic claimova, bez obećanja transformacije. Samo besramno dobar shake.</p>
-      </details>
-
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Što s veganima?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Vegan shake je dostupan u svakom aparatu od starta — biljni izvor, bez mlijeka i glutena. Isti ritual, ista čaša, drugačiji izvor.</p>
-      </details>
-
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Mogu li ovo koristiti za mršavljenje?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Lean je niskokalorična varijanta i odlično se uklapa u kalorijski deficit. ALI Shake-o-mat NE zamjenjuje potpuni obrok — nadopunjuje. Ako trenutno primjećuješ stalan umor, gubitak menstruacije ili pad performansa, savjetuj se sa sportskim liječnikom (REDs / Relative Energy Deficiency in Sport, IOC 2023).</p>
-      </details>
-
-      <details style="background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(115, 237, 255, 0.12);">
-        <summary style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.1rem; cursor: pointer; color: var(--white);">Odakle podatak da oko 50% članova teretana koristi proteine?</summary>
-        <p style="margin-top: 12px; color: var(--muted); line-height: 1.6;">Objavljena istraživanja korištenja dodataka prehrani među redovitim vježbačima daju raspon ~40–60% (npr. studija na 459 članova teretana: 44%, pri čemu je protein najčešći suplement), uz Mintel Sport Nutrition izvještaje koji potvrđuju rastući trend. Za Hrvatsku ne postoji zaseban lokalni podatak — koristimo međunarodni raspon.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ KONTAKT FORMA ============ -->
-<section class="content-section" id="kontakt" aria-labelledby="kontakt-heading">
-  <div class="container">
-    <span class="section-tag">Kontakt</span>
-    <h2 class="section-heading" id="kontakt-heading">Imaš pitanje? Napiši nam.</h2>
-    <p style="max-width: 640px; margin: 0 auto 36px; text-align: center; color: var(--muted);">
-      Odgovaramo unutar 24 sata radnim danom. Za suradnju s teretanom — koristi <a href="b2b.html" style="color: var(--cyan);">stranicu za partnere</a>.
-    </p>
-
-    <form id="contactForm" class="waitlist-form" action="https://formsubmit.co/d13b794a8bfa6dc60fb1818902d2fb9b" method="POST" novalidate style="max-width: 640px; margin: 0 auto;">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Kontakt forma — shakeomat.hr">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_autoresponse" value="Hvala na poruci. Javljamo ti se unutar 24 sata. — Shake-o-mat tim">
-      <input type="hidden" name="_next" value="https://shakeomat.hr/?contact=ok#kontakt">
-      <input type="hidden" name="izvor" value="index kontakt">
-
-      <div style="display: grid; gap: 12px; margin-bottom: 16px;">
-        <input type="text" name="ime" required placeholder="Tvoje ime" autocomplete="name" aria-label="Ime"
-               style="background: rgba(115, 237, 255, 0.06); border: 1.5px solid rgba(115, 237, 255, 0.25); color: var(--white); padding: 14px 18px; border-radius: 10px; font-family: 'Barlow', sans-serif; font-size: 1rem;">
-        <input type="email" name="email" required placeholder="tvoj@email.hr" autocomplete="email" aria-label="Email"
-               style="background: rgba(115, 237, 255, 0.06); border: 1.5px solid rgba(115, 237, 255, 0.25); color: var(--white); padding: 14px 18px; border-radius: 10px; font-family: 'Barlow', sans-serif; font-size: 1rem;">
-        <textarea name="poruka" required rows="5" placeholder="Tvoja poruka..." aria-label="Poruka"
-                  style="background: rgba(115, 237, 255, 0.06); border: 1.5px solid rgba(115, 237, 255, 0.25); color: var(--white); padding: 14px 18px; border-radius: 10px; font-family: 'Barlow', sans-serif; font-size: 1rem; resize: vertical;"></textarea>
+  <!-- ============ ISKRENO ============ -->
+  <section class="honest section" id="iskreno" data-state="honest">
+    <div class="wrap">
+      <p class="eyebrow reveal-up">Iskreno o tome što jesmo i što nismo</p>
+      <h2 class="h2 big split-words">Ne obećavamo press na 120 kg ni transformaciju za 30 dana.</h2>
+      <p class="honest__punch reveal-up">Obećavamo <span class="accent">besramno dobar shake.</span></p>
+      <p class="lead muted reveal-up honest__intro">Tržište je puno marketinga koji ti obećava transformaciju za mjesec dana, magic formule i pet kila mišića. Mi nećemo. Mi imamo aparat, papirnatu čašu, provjerene sastojke s papirima u biou, te dvadeset kombinacija. Ostatak je na tebi i tvom treningu.</p>
+      <div class="honest__cols">
+        <div class="honest__col honest__col--no">
+          <h3>Što NE obećavamo</h3>
+          <ul>
+            <li><i>✗</i><span>Transformaciju za mjesec dana</span></li>
+            <li><i>✗</i><span>„+5 kg mišića" za 30 dana</span></li>
+            <li><i>✗</i><span>Magic formulu ili tajni sastojak</span></li>
+            <li><i>✗</i><span>Eksplozivni rast bez treninga</span></li>
+            <li><i>✗</i><span>Zamjenu za pravu hranu</span></li>
+            <li><i>✗</i><span>Prah u torbi koji smrdi</span></li>
+            <li><i>✗</i><span>Aplikaciju, narudžbu, čekanje</span></li>
+          </ul>
+        </div>
+        <div class="honest__col honest__col--yes">
+          <h3>Što obećavamo</h3>
+          <ul>
+            <li><i>✓</i><span>Besramno dobar okus</span></li>
+            <li><i>✓</i><span>Šezdeset sekundi do shake-a</span></li>
+            <li><i>✓</i><span>Sastojke koje vidiš na ekranu</span></li>
+            <li><i>✓</i><span>Sastojci koje već poznaješ</span></li>
+            <li><i>✓</i><span>Svjež — miješa se kad ga uzmeš</span></li>
+            <li><i>✓</i><span>Papirnatu čašu u ruci</span></li>
+            <li><i>✓</i><span>Tap → 60 sek → gotovo</span></li>
+          </ul>
+        </div>
       </div>
-      <button type="submit" class="btn btn-primary" style="width: 100%;">Pošalji poruku &rarr;</button>
-      <p class="waitlist-foot" style="margin-top: 12px; font-size: 0.85rem; color: var(--muted); text-align: center;">Tvoj email koristimo isključivo za odgovor na poruku.</p>
-    </form>
-  </div>
-</section>
+      <p class="honest__foot reveal-up">Imamo brojke. Dok ih nutricionist ne potpiše, ne smijemo ti ih reći. Ali okus smijemo — i besramno je dobar.</p>
+    </div>
+  </section>
 
-<!-- ============ DISCLAIMER ============ -->
-<section style="background: rgba(255, 155, 70, 0.06); padding: 24px 0; border-top: 1px solid rgba(255, 155, 70, 0.2); border-bottom: 1px solid rgba(255, 155, 70, 0.2);">
-  <div class="container">
-    <p style="text-align: center; font-size: 0.85rem; color: var(--muted); max-width: 820px; margin: 0 auto; line-height: 1.6;">
-      <strong style="color: var(--orange);">Važno:</strong> Shake-o-mat shake-ovi su dodatak prehrani, ne zamjena za potpuni obrok. Ako primjećuješ izostanak menstruacije, pad rezultata, kronični umor ili gubitak apetita — javi se sportskom liječniku prije nego pojačaš treninge (Relative Energy Deficiency in Sport, IOC 2023).
-    </p>
-  </div>
-</section>
+  <!-- ============ ČAŠE ============ -->
+  <section class="cups section" id="case" data-state="cups">
+    <div class="wrap">
+      <p class="eyebrow reveal-up">Svaki shake je drugačiji</p>
+      <h2 class="h2 big split-words">Dvije čaše. Dva trenutka.</h2>
+      <p class="lead muted reveal-up cups__intro">Za prvi val biramo dvije produkcijske verzije čaše — obje za <strong>oporavak</strong>, dvije različite poruke za isti taj trenutak nakon treninga.</p>
+      <div class="cups__grid">
+        <figure class="cup-card tilt">
+          <div class="cup-card__img"><img src="assets/cup_upravo.jpg" alt="Shakeomat čaša: Upravo si dao sve" loading="lazy"></div>
+          <figcaption>„Upravo si dao sve. Sad daj tijelu što treba."</figcaption>
+        </figure>
+        <figure class="cup-card tilt">
+          <div class="cup-card__img"><img src="assets/cup_tijelo.jpg" alt="Shakeomat čaša: Tijelo pamti svaki trening" loading="lazy"></div>
+          <figcaption>„Tijelo pamti svaki trening. I svaki oporavak."</figcaption>
+        </figure>
+      </div>
+      <ul class="cups__facts">
+        <li class="reveal-up">16 oz čaša, 3-bojni tisak, EU food-safe (EC 1935/2004)</li>
+        <li class="reveal-up">Svježe miješano — nije s police, nije od jučer</li>
+        <li class="reveal-up">Spreman za 60 sekundi, na izlazu tvoje teretane</li>
+      </ul>
+      <div class="center reveal-up"><a href="https://shakeomat.hr/b2b.html" class="link-arrow">Za vlasnike teretana →</a></div>
+    </div>
+  </section>
 
+  <!-- ============ WAITLIST ============ -->
+  <section class="waitlist section" id="waitlist" data-state="waitlist">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow reveal-up">Srpanj 2026 — uskoro</p>
+      <h2 class="h2 mega split-words">Budi prvi u redu.</h2>
+      <p class="lead reveal-up">Javljamo ti čim aparat stigne u teretanu blizu tebe.</p>
+      <div class="waitlist__perk reveal-up">
+        <span class="waitlist__100">100</span>
+        <p><strong>Prvih 100 prijavljenih dobije besplatan shake</strong> na otvaranju u svojoj teretani. Bez spama, bez progoniteljskih oglasa.</p>
+      </div>
+      <form id="waitlistForm" class="form glass reveal-up" action="https://formsubmit.co/d13b794a8bfa6dc60fb1818902d2fb9b" method="POST" novalidate>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nova waitlist prijava — Shakeomat B2C">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Hvala! Javljamo ti čim aparat stigne u teretanu blizu tebe. — Shakeomat tim">
+        <input type="hidden" name="_next" value="https://shakeomat.hr/?signup=ok#waitlist">
+        <input type="hidden" name="izvor" value="index waitlist">
+        <div class="form__row">
+          <label class="field"><input type="email" name="email" required placeholder=" " autocomplete="email"><span>tvoj@email.hr</span></label>
+          <label class="field"><input type="text" name="grad_teretana" placeholder=" " autocomplete="off"><span>Grad ili teretana (opcionalno)</span></label>
+        </div>
+        <label class="check">
+          <input type="checkbox" name="gdpr_consent" required>
+          <span class="check__box"></span>
+          <span>Slažem se da Shakeomat koristi moj email isključivo za obavijest o lansiranju u mojoj teretani. Možeš odjaviti jednim klikom. <a href="https://shakeomat.hr/privacy.html">Politika privatnosti</a>.</span>
+        </label>
+        <button type="submit" class="btn btn--primary btn--block magnetic"><span>Javi mi kad stigne →</span></button>
+        <p class="form__foot" id="waitlistFoot">Bez spama, bez progoniteljskih oglasa.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq section" id="faq" data-state="faq">
+    <div class="wrap faq__grid">
+      <div class="faq__head">
+        <p class="eyebrow reveal-up">Pitanja korisnika</p>
+        <h2 class="h2 big split-words">Što ljudi najčešće pitaju.</h2>
+      </div>
+      <div class="faq__list">
+        <details class="qa reveal-up"><summary>Koji shake je za večernji trening ili kraj dana?<i></i></summary><div class="qa__a"><p>Recover. To je shake za kraj dana — kada usporavaš, gasiš svjetla i puniš baterije za sutra. Lagan prije spavanja, za one koji treniraju navečer.</p></div></details>
+        <details class="qa reveal-up"><summary>Po čemu se pet shakeova razlikuje?<i></i></summary><div class="qa__a"><p>Svaki cilja drugi trenutak dana i tip treninga: <b>Lean</b> za lagane dane i definiciju, <b>Build</b> za teške treninge, <b>Lift</b> za sredinu dana i fokus, <b>Recover</b> za večernji oporavak, <b>Vegan</b> za biljnu rutinu. Biraš prema danu, ne prema etiketi.</p></div></details>
+        <details class="qa reveal-up"><summary>Koliko često mogu uzimati Build?<i></i></summary><div class="qa__a"><p>Onoliko koliko treniraš naporno. Build je za najteže dane — kada je trening bio težak i običan napitak nije dovoljan. Lakše dane pokrij s Lean ili Lift.</p></div></details>
+        <details class="qa reveal-up"><summary>Mogu li koristiti ako sam laktozno intolerantan?<i></i></summary><div class="qa__a"><p>Da. Vegan je potpuno bezmliječan — biljni izvor, bez laktoze i glutena. Ako želiš klasičan shake, Lean je lagana opcija s minimalnom laktozom. Kod jače intolerancije idi na Vegan.</p></div></details>
+        <details class="qa reveal-up"><summary>Tko stoji iza shakeova?<i></i></summary><div class="qa__a"><p>Tim koji godinama trenira i živi fitness. Formule finaliziramo uz sportskog nutricionista prije launcha — ime i potpis objavljujemo kad krene prvi aparat. Do tada: bez magic claimova, bez obećanja transformacije. Samo besramno dobar shake.</p></div></details>
+        <details class="qa reveal-up"><summary>Što s veganima?<i></i></summary><div class="qa__a"><p>Vegan shake je dostupan u svakom aparatu od starta — biljni izvor, bez mlijeka i glutena. Isti ritual, ista čaša, drugačiji izvor.</p></div></details>
+        <details class="qa reveal-up"><summary>Mogu li ovo koristiti za mršavljenje?<i></i></summary><div class="qa__a"><p>Lean je niskokalorična varijanta i odlično se uklapa u kalorijski deficit. ALI Shakeomat NE zamjenjuje potpuni obrok — nadopunjuje. Ako trenutno primjećuješ stalan umor, gubitak menstruacije ili pad performansa, savjetuj se sa sportskim liječnikom (REDs / Relative Energy Deficiency in Sport, IOC 2023).</p></div></details>
+        <details class="qa reveal-up"><summary>Odakle podatak da oko 50% članova teretana koristi proteine?<i></i></summary><div class="qa__a"><p>Objavljena istraživanja korištenja dodataka prehrani među redovitim vježbačima daju raspon ~40–60% (npr. studija na 459 članova teretana: 44%, pri čemu je protein najčešći suplement), uz Mintel Sport Nutrition izvještaje koji potvrđuju rastući trend. Za Hrvatsku ne postoji zaseban lokalni podatak — koristimo međunarodni raspon.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="contact section" id="kontakt" data-state="contact">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow reveal-up center">Kontakt</p>
+      <h2 class="h2 big split-words center">Imaš pitanje? Napiši nam.</h2>
+      <p class="lead muted reveal-up center">Odgovaramo unutar 24 sata radnim danom. Za suradnju s teretanom — koristi <a href="https://shakeomat.hr/b2b.html">stranicu za partnere</a>.</p>
+      <form id="contactForm" class="form glass reveal-up" action="https://formsubmit.co/d13b794a8bfa6dc60fb1818902d2fb9b" method="POST" novalidate>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Kontakt forma — shakeomat.hr">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Hvala na poruci. Javljamo ti se unutar 24 sata. — Shakeomat tim">
+        <input type="hidden" name="_next" value="https://shakeomat.hr/?contact=ok#kontakt">
+        <input type="hidden" name="izvor" value="index kontakt">
+        <div class="form__row">
+          <label class="field"><input type="text" name="ime" required placeholder=" " autocomplete="name"><span>Tvoje ime</span></label>
+          <label class="field"><input type="email" name="email" required placeholder=" " autocomplete="email"><span>tvoj@email.hr</span></label>
+        </div>
+        <label class="field field--area"><textarea name="poruka" required rows="5" placeholder=" "></textarea><span>Tvoja poruka...</span></label>
+        <button type="submit" class="btn btn--primary btn--block magnetic"><span>Pošalji poruku →</span></button>
+        <p class="form__foot">Tvoj email koristimo isključivo za odgovor na poruku.</p>
+      </form>
+      <p class="notice reveal-up"><strong>Važno:</strong> Shakeomat shake-ovi su dodatak prehrani, ne zamjena za potpuni obrok. Ako primjećuješ izostanak menstruacije, pad rezultata, kronični umor ili gubitak apetita — javi se sportskom liječniku prije nego pojačaš treninge (Relative Energy Deficiency in Sport, IOC 2023).</p>
+    </div>
+  </section>
+
+  <!-- ============ PUMP ============ -->
+  <section class="pump section" data-state="pump">
+    <div class="wrap pump__inner">
+      <div class="pump__eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div>
+        <p class="eyebrow reveal-up">Dok dižeš</p>
+        <h2 class="h2 big split-words">Tvoja sljedeća serija.</h2>
+        <p class="lead muted reveal-up">Shakeomat PUMP — 50 pjesama za teretanu. Od „Till I Collapse" do „Thunderstruck". Pusti dok čekaš shake.</p>
+        <a class="btn btn--ghost magnetic reveal-up" href="https://open.spotify.com/playlist/7J5TCaV8LFqNlYb5U4n0zj" target="_blank" rel="noopener"><span>Otvori PUMP playlistu ↗</span></a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!-- ============ FOOTER ============ -->
-<!-- ============ SPOTIFY ============ -->
-<section class="content-section" id="spotify" style="background: rgba(11, 18, 48, 0.35);" aria-labelledby="spotify-heading">
-  <div class="container" style="max-width: 640px; text-align: center;">
-    <span class="section-tag">Dok dižeš</span>
-    <h2 class="section-heading" id="spotify-heading">Tvoja sljedeća serija.</h2>
-    <p style="color: var(--muted); max-width: 520px; margin: 0 auto 28px; font-size: 1.05rem;">Shake-o-mat PUMP &mdash; 50 pjesama za teretanu. Od „Till I Collapse" do „Thunderstruck". Pusti dok čekaš shake.</p>
-    <a href="https://open.spotify.com/playlist/7J5TCaV8LFqNlYb5U4n0zj" target="_blank" rel="noopener" class="btn btn-primary" style="background: #1DB954; display: inline-flex; align-items: center; gap: 10px;" onclick="if(typeof gtag==='function')gtag('event','spotify_open',{source:'index'});">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.6 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.8-.87 7.08-.5 9.72 1.11.3.18.39.57.21.85Zm1.23-2.74a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.15-.56 11.23 1.33.37.22.49.7.26 1.07Zm.11-2.85C14.83 8.95 9.4 8.77 6.3 9.71a.93.93 0 1 1-.54-1.78c3.56-1.08 9.56-.87 13.18 1.28a.93.93 0 0 1-.96 1.59Z"/></svg>
-      Otvori PUMP playlistu
-    </a>
-  </div>
-</section>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-brand-name">Shake<span>-</span>o-mat</div>
-        <p class="footer-tagline">Svježe miješano. Odmah.</p>
-      </div>
-
-      <nav class="footer-nav" aria-label="Glavna navigacija">
-        <a href="b2b.html">Za teretane</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#faq">FAQ</a>
-        <a href="#spotify">Spotify PUMP</a>
-      </nav>
-
-      <div class="footer-social" aria-label="Društvene mreže">
-        <a href="https://www.instagram.com/shakeomat" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.26.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.42 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.17-1.06.37-2.23.42-1.26.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52 0-4.76.07-.94.04-1.45.2-1.79.33-.45.17-.77.38-1.1.72-.34.33-.55.65-.72 1.1-.13.34-.29.85-.33 1.79C3.03 8.48 3.02 8.85 3.02 12s0 3.52.07 4.76c.04.94.2 1.45.33 1.79.17.45.38.77.72 1.1.33.34.65.55 1.1.72.34.13.85.29 1.79.33 1.24.07 1.61.07 4.76.07s3.52 0 4.76-.07c.94-.04 1.45-.2 1.79-.33.45-.17.77-.38 1.1-.72.34-.33.55-.65.72-1.1.13-.34.29-.85.33-1.79.07-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.04-.94-.2-1.45-.33-1.79a2.95 2.95 0 0 0-.72-1.1 2.95 2.95 0 0 0-1.1-.72c-.34-.13-.85-.29-1.79-.33C15.52 4 15.15 4 12 4Zm0 3.04a4.96 4.96 0 1 1 0 9.92 4.96 4.96 0 0 1 0-9.92Zm0 1.8a3.16 3.16 0 1 0 0 6.32 3.16 3.16 0 0 0 0-6.32Zm5.2-2.16a1.16 1.16 0 1 1 0 2.32 1.16 1.16 0 0 1 0-2.32Z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@shakeomat" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 7.9a6.7 6.7 0 0 1-3.9-1.25v8.1a5.6 5.6 0 1 1-5.6-5.6c.27 0 .53.02.79.06v2.47a3.14 3.14 0 1 0 2.19 2.99V3h2.43a4.2 4.2 0 0 0 4.09 3.47V7.9Z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/shakeomat" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="footer-legal">
-      &copy; 2026 Shake-o-mat &middot; Zagreb &middot; <a href="#kontakt">Kontakt</a> &middot; <a href="privacy.html">Politika privatnosti</a>
-    </div>
+<footer class="footer" data-state="footer">
+  <div class="footer__big" aria-hidden="true">Shakeomat</div>
+  <div class="wrap footer__row">
+    <p class="footer__tag">Svježe miješano. Odmah.</p>
+    <nav class="footer__links">
+      <a href="https://shakeomat.hr/b2b.html">Za teretane</a>
+      <a href="#kontakt" data-scroll>Kontakt</a>
+      <a href="#faq" data-scroll>FAQ</a>
+      <a href="https://open.spotify.com/playlist/7J5TCaV8LFqNlYb5U4n0zj" target="_blank" rel="noopener">Spotify PUMP</a>
+      <a href="https://www.instagram.com/shakeomat" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@shakeomat" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.linkedin.com/company/shakeomat" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+    <p class="footer__copy">© 2026 Shakeomat · Zagreb · <a href="https://shakeomat.hr/privacy.html">Politika privatnosti</a></p>
   </div>
 </footer>
 
-<script>
-  // Pause stat bar animation when out of view (perf nicety)
-  (function() {
-    const track = document.getElementById('statBarTrack');
-    if (!track || !('IntersectionObserver' in window)) return;
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        track.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
-      });
-    }, { threshold: 0 });
-
-    io.observe(track);
-  })();
-
-  // Smooth scroll fallback for older browsers (enhance native smooth-scroll)
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
-      const id = this.getAttribute('href');
-      if (id.length <= 1) return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // Waitlist form — inline validation + GA4 conversion event + post-submit success state
-  (function() {
-    var form = document.getElementById('waitlistForm');
-    var foot = document.getElementById('waitlistFoot');
-    if (form) {
-      var emailInput = form.querySelector('input[name="email"]');
-      form.addEventListener('submit', function(e) {
-        if (!emailInput || !emailInput.value || !emailInput.validity.valid) {
-          e.preventDefault();
-          if (foot) {
-            foot.textContent = '⚠ Upiši ispravnu email adresu da te možemo obavijestiti.';
-            foot.style.color = 'var(--orange)';
-          }
-          if (emailInput) emailInput.focus();
-          return false;
-        }
-        try {
-          if (typeof gtag === 'function') {
-            gtag('event', 'generate_lead', {
-              event_category: 'waitlist',
-              event_label: 'b2c_index_waitlist',
-              value: 1
-            });
-          }
-        } catch (err) {}
-      });
-    }
-    if (form && foot && /[?&]signup=ok/.test(window.location.search)) {
-      // Replace whole form with success card — UX: form je više ne distrahira
-      var successCard = document.createElement('div');
-      successCard.className = 'waitlist-success';
-      successCard.style.cssText = 'background: linear-gradient(135deg, rgba(115, 237, 255, 0.08), rgba(125, 255, 155, 0.08)); border: 1.5px solid var(--cyan); border-radius: 14px; padding: 32px 28px; text-align: center; max-width: 560px; margin: 0 auto;';
-      successCard.innerHTML = '<div style="font-size: 2.4rem; margin-bottom: 12px;">✓</div>' +
-        '<h3 style="font-family: \'Barlow Condensed\', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.6rem; color: var(--cyan); margin-bottom: 14px; letter-spacing: 0.04em;">Spreman si.</h3>' +
-        '<p style="color: var(--white); font-size: 1.05rem; line-height: 1.6; margin-bottom: 8px;">Šaljemo ti email čim aparat stigne u tvoju teretanu.<br>Procjena: srpanj 2026.</p>' +
-        '<p style="color: var(--muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 24px;">Jedna poruka. Nema spama, nema progoniteljskih oglasa. Možeš odjaviti jednim klikom.</p>' +
-        '<div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(115,237,255,0.18);">' +
-          '<p style="color: var(--white); font-size: 0.95rem; margin-bottom: 14px; font-weight: 600;">Pošalji prijatelju — oboje preskačete red:</p>' +
-          '<div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">' +
-            '<a href="https://wa.me/?text=Upravo%20sam%20se%20upisao%20na%20waitlist%20za%20Shake-o-mat%20%E2%80%94%20protein%20vending%20automat%20za%20teretane.%20Prvih%20100%20dobiva%20besplatan%20shake.%20https%3A%2F%2Fshakeomat.hr" target="_blank" rel="noopener" style="display:inline-block; padding:10px 18px; background:#25D366; color:#fff; border-radius:8px; font-weight:600; text-decoration:none; font-size:0.95rem;">📲 WhatsApp</a>' +
-            '<a href="https://www.instagram.com/shakeomat" target="_blank" rel="noopener" style="display:inline-block; padding:10px 18px; background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; border-radius:8px; font-weight:600; text-decoration:none; font-size:0.95rem;">📷 Prati @shakeomat</a>' +
-            '<a href="https://www.tiktok.com/@shakeomat.hr" target="_blank" rel="noopener" style="display:inline-block; padding:10px 18px; background:#000; color:#fff; border-radius:8px; font-weight:600; text-decoration:none; font-size:0.95rem; border:1px solid #25F4EE;">🎵 TikTok</a>' +
-          '</div>' +
-        '</div>';
-      form.parentNode.replaceChild(successCard, form);
-      // Backup za stari foot (ako forma već obrisana)
-      foot.textContent = '✓ Upravo si rezervirao prvi shake. Tijelo će ti zahvaliti u srpnju.';
-      foot.classList.add('success');
-      try {
-        if (typeof gtag === 'function') {
-          gtag('event', 'sign_up', {
-            event_category: 'waitlist',
-            event_label: 'b2c_index_confirm'
-          });
-        }
-      } catch (err) {}
-    }
-  })();
-</script>
-
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script type="module" src="main.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4ff0d730bbfec20',t:'MTc5MjkwODU2Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
